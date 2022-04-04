@@ -1,0 +1,33 @@
+.search {
+    font-size: 16pt;
+    color:rgba(255, 255, 255, 1);
+    font-family: monospace;
+}
+
+<div class="search">
+            <form>Search Flavors Here
+                <input />
+            </form>
+        </div>   
+
+.health {
+    margin-left: 950px;
+    margin-top: 200px;
+    margin-bottom: -100px;
+    width: 400px;
+    font-size: large;
+    color: white;
+    border-style:dashed;
+    display:inline-block;
+    padding: 10px;
+    font-size: 30pt;
+    background-color: rgba(0, 0, 0, 0.5)
+
+<div class="health">Health Benefits
+            <ul>
+                <li>Boosts Metabolism</li>
+                <li>Boosts Mental Focus</li>
+                <li>Contains Antioxidants</li>
+                <li>Natural Diuretic</li>
+            </ul>
+        </div> 

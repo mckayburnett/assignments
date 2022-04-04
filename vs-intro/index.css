@@ -1,0 +1,56 @@
+html {
+    background: url('https://www.foodnavigator-latam.com/var/wrbm_gb_food_pharma/storage/images/_aliases/wrbm_large/publications/food-beverage-nutrition/foodnavigator-latam.com/news/r-d/yerba-mate-linked-to-improved-mitochondrial-function-mouse-data/8798771-1-eng-GB/Yerba-mate-linked-to-improved-mitochondrial-function-Mouse-data.jpg');
+    background-size:1080pt;
+    background-repeat: no-repeat;
+}
+.main-title {
+    background-color:rgba(50, 194, 14, .8);
+    width: 200px;
+    margin-left: 37px
+}
+.sub-title {
+    font-size: x-large;
+    
+}
+h1 {
+    color: white;
+    font-style:italic;
+    margin-left: 50px;
+    margin-bottom: -20px;
+}
+h3 {color: white;
+    margin-left: 5px;
+    width: 400px;
+}
+header {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 28pt;
+}
+.story {
+    margin-top: -250px;
+    margin-left: 990px;
+    font-size: large;
+    color: white;
+    font-size: 25pt;
+    font-family:fantasy;
+}
+p {
+    font-size:x-large;
+    width: 350px;
+    font-style:italic;
+    font-family: fantasy;
+    } 
+footer {
+    margin-top: 50px;
+    margin-left: 990px;
+}
+.link {
+    font-size:xx-large;
+    color:rgb(0, 0, 0);
+    font-style: oblique; 
+}
+.search {
+    font-size: 16pt;
+    color:rgba(255, 255, 255, 1);
+    font-family: monospace;
+}

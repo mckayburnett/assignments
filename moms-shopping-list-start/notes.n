@@ -1,0 +1,31 @@
+document.addItem.addEventListener('submit', function(event) {
+    event.preventDefault()
+
+    var listItem = document.getElementById('title').value
+    document.getElementById('list').append(listItem)
+
+    var newList = document.createElement('li')
+    document.getElementById('list').append(newList)
+
+    var edit = document.createElement('button')
+    document.getElementById('list').append(edit)
+    edit.style.width = '35px'
+    edit.style.height = '20px'
+    edit.style.marginLeft = "45%"
+    edit.textContent = 'edit'
+
+    var del = document.createElement('button')
+    document.getElementById('list').append(del)
+    del.style.width = '20px'
+    del.style.height = '20px'
+    del.style.display = 'flex'
+    del.textContent = 'X'
+    del.style.padding = '3px 3px'
+    del.addEventListener('click', function(event) {
+        
+    })
+
+    list.style.textAlign = "center"
+
+    document.getElementById('title').value = ""
+})

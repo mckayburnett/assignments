@@ -1,0 +1,96 @@
+* {
+    box-sizing:border-box;
+    font-size: 30px;
+    margin:0px;
+}
+a {
+    color: white;
+}
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgba(50, 194, 14, 0.8);
+    padding: 20px;
+    margin: 0px;
+    font-size: xx-large;
+    font-family: fantasy;
+    color: white;
+}
+h1 {
+    color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;;
+    font-style: italic;
+    font-size: 80px;
+    padding-left: 50px;
+    position: relative;
+    left: 980px;
+    top: 70px;
+    background-color: rgba(50, 194, 14, 0.8);
+    width: 210px;
+}
+h3 {color: white;
+    position: relative;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    left: 990px;
+    top: 70px;
+    font-size: 25px;
+}
+#home {
+    display: block;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    font-family: fantasy;
+}
+#shopping {
+    display: block;
+    position: relative;
+    right: 0px;
+    top: 0px;
+}
+#aboutUs {
+    display: block;
+    position: relative;
+    right: 0px;
+    top: 0px;
+}
+#faq {
+    display: block;
+    position: relative;
+    right: 0px;
+    top: 0px;
+}
+.explanation {
+    color: white;
+    font-family: fantasy;
+}
+h2 {
+    font-size: x-large;
+    padding: 10px 20px;
+    position: relative;
+    left: 750px;
+    top: 115px;
+}
+p {
+    font-size: medium;
+    display: inline-block;
+    width: 400px;
+    padding: 10px 20px;
+    position: relative;
+    left: 750px;
+    top: 95px;
+}
+img {
+    width: 280px;
+    height: 212px;
+    border-radius: 0%;
+    position: relative;
+    left: 1140px;
+    bottom: 135px;
+}
+html {
+    background: url('https://us.123rf.com/450wm/michelangeloop/michelangeloop1812/michelangeloop181200004/114530480-yerba-hot-tea-mate-drink-with-smoke-on-black-background-.jpg?ver=6');
+    background-size: 1440px 800px;
+    background-repeat:no-repeat;
+}

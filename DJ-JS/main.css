@@ -1,0 +1,16 @@
+#box {
+    font-size: 0px;
+    border: solid 3px; 
+    border-width: 2px;
+    padding: 10px 10px;
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    position: fixed;
+    margin-left: 45%;
+    margin-top: 20%;
+}
+#page {
+    width: 1000px;
+    height: 10000px;
+}
