@@ -92,6 +92,7 @@ function gameOver(){
     console.log("--------------------")
     console.log("--------------------")
     console.log("The 'game' is over.. If that's still what you want to call it.")
+    process.exit(); 
 }
 function death(){
     console.log("--------------------")
