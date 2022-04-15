@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+    <h1>Travel Form - McKay Airlines</h1>
+    <form name="form">
+        <input name="firstName" type="text" placeholder="First Name"/>
+        <input name="lastName" type="text" placeholder="Last Name"/>
+        <br>
+        <input name="age" type="number" placeholder="Age"/>
+        <br>
+        Male<input name="gender" type="radio"/>
+        Female<input name="gender" type="radio"/>
+        <br>
+        <select name="destination">
+            <option>--Destination--</option>
+            <option value="Santiago, Chile">Santiago, Chile</option>
+            <option value="Lima, Peru">Lima, Peru</option>
+            <option value="Mexico City, Mexico">Mexico City, Mexico</option>
+        </select>
+        <br>
+        Dietary Restrictions
+        <label><input name="diet" value="Vegan" type="checkbox"/>Vegan</label>
+        <label><input name="diet" value="Vegetarian" type="checkbox"/>Vegetarian</label>
+        <label><input name="diet" value="Kosher" type="checkbox"/>Kosher</label>
+        <label><input name="diet" value="Lactose Free" type="checkbox"/>Lactose Free</label>
+        <br>
+        <button name="button">Submit</button>
+    </form>
+    <script src="main.js"></script>
+</body>
+</html>

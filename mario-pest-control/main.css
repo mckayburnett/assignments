@@ -1,0 +1,80 @@
+
+h1{
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    height: 100px;
+    margin-top: 2px;
+    font-size: 70px;
+    text-decoration: solid;
+    font: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#allWrap{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+}
+#goombaWrap{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#cheepWrap{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+#bombWrap{
+    grid-column: 3/4;
+    grid-row: 1/2
+}
+form{
+    text-align: center;
+
+}
+#totalCoins{
+    text-align: center;
+    border: solid blue 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 75px;
+    margin: 10px;
+    margin-left: 46.5%;
+    margin-right: 46%;
+    font-size: xx-large;
+}
+#total{
+    color: goldenrod;
+}
+#clear{
+    text-align: center;
+}
+footer{
+    text-align: center;
+}
+#goombaImg{
+    height: 200px;
+    position: relative;
+    ;
+}
+#bombImg{
+    height: 200px;
+    position: relative;
+}
+#cheepImg{
+    height: 200px;
+    position: relative;
+    
+}
+#contact{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: underline;
+    color: red;
+}
+#info{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    color: blue;
+}

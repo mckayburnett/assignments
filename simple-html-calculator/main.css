@@ -1,0 +1,21 @@
+#additionDiv{
+    padding: 50px 20px;
+    border: dotted blue;
+    text-align: center;
+}
+
+#subtractionDiv{
+    padding: 50px 20px;
+    border: dotted red;
+    text-align: center;
+}
+
+#multiplicationDiv{
+    padding: 50px 20px;
+    border: dotted green;
+    text-align: center;
+}
+
+.head{
+     font-size: 40px;
+ }

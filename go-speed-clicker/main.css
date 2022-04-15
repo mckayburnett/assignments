@@ -1,0 +1,21 @@
+#button{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    position: absolute;
+    left: 40%;
+    right: 50%;
+    top: 30%;
+}
+
+#counter{
+    border: solid 2px;
+    display: inline-block;
+    height: 20px;
+    padding: 2px;
+}
+#counterTotal{
+    text-align: center;
+}

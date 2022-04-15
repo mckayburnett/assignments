@@ -1,0 +1,23 @@
+h1{
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+input[name="firstName"]{
+    margin-top: 20px;
+}
+input[name="gender"]{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+input[name="destination"]{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+input[name="diet"]{
+    margin-top: 20px;
+}
+button[name="button"]{
+    margin-top: 20px;
+}
