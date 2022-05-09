@@ -67,7 +67,7 @@ const sngArr = arr.reduce(function(final, data){
 console.log(sngArr)
 */
 
-/*6) Given an array of potential voters, return an object representing the results of the vote
+//6) Given an array of potential voters, return an object representing the results of the vote
 const voters = [
     {name:'Bob' , age: 30, voted: true},
     {name:'Jake' , age: 32, voted: true},
@@ -82,23 +82,23 @@ const voters = [
     {name: 'Jeff', age: 30, voted: true},
     {name: 'Zack', age: 19, voted: false}
 ]
-const voterResults = voters.reduce(function(final, voter){
-    if (voter.age <= 25){
-        final.numYoungPeople++
-    } else if (voter.age > 25 && voter.age < 36){
-        final.numMidPeople++
-    } else if (voter.age > 35){
-        final.numOldsPeople++
-    };
-    if (voter.age <= 25 && voter.voted){
-        final.numYoungVotes++
-    } else if (voter.age > 25 && voter.age < 36 && voter.voted){
-        final.numMidVotesPeople++
-    } else if (voter.age > 35 && voter.voted){
-        final.numOldVotesPeople++
-    };
-    return final
-}, {numYoungVotes: 0, numYoungPeople: 0, numMidVotesPeople: 0, numMidPeople : 0, numOldVotesPeople: 0, numOldsPeople: 0})
-
-console.log(voterResults)
-*/
+function sortedVoters(arr){
+    return arr.reduce(function(final, voter){
+        if (voter.age <= 25){
+            final.numYoungPeople++
+        } else if (voter.age > 25 && voter.age < 36){
+            final.numMidPeople++
+        } else if (voter.age > 35){
+            final.numOldsPeople++
+        };
+        if (voter.age <= 25 && voter.voted){
+            final.numYoungVotes++
+        } else if (voter.age > 25 && voter.age < 36 && voter.voted){
+            final.numMidVotesPeople++
+        } else if (voter.age > 35 && voter.voted){
+            final.numOldVotesPeople++
+        };
+        return final
+    }, {numYoungVotes: 0, numYoungPeople: 0, numMidVotesPeople: 0, numMidPeople : 0, numOldVotesPeople: 0, numOldsPeople: 0})
+}
+console.log(sortedVoters(voters))

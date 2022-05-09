@@ -99,7 +99,7 @@ const matrix = arr.map(function(name1){
 console.log(matrix)
 */
 
-/*6) Make an array of the names in `h1`s, and the ages in `h2`s
+//6) Make an array of the names in `h1`s, and the ages in `h2`s
 const arr = [
     {
         name: "Angelina Jolie",
@@ -128,4 +128,3 @@ const readyToPutInTheDOM = arr.map(function(data){
     return "<h1>" + names + "</h1>" + "<h2>" + ages + "</h2>"
 })
 console.log(readyToPutInTheDOM)
-*/

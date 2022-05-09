@@ -1,0 +1,67 @@
+html{
+    padding: 0px;
+    margin: 0px;
+    background-image: url("https://i.pinimg.com/originals/79/23/1c/79231cebc0d7b28919a2c6b1e32e77b8.jpg");
+    background-repeat: repeat;
+}
+body{
+    display: inline-grid;
+    background-color: rgba(255, 136, 0, 0.445);
+    padding-left: 70px;
+    padding-right: 70px;
+    margin: 0px;
+    width: 900px;
+}
+img{
+    max-height: 180px;
+    padding-bottom: 3px;
+}
+button{
+    margin-bottom: 25px;
+    width: 60px;
+}
+a{
+    border-top: 1px solid black;
+    padding-top: 10px;
+}
+#todoList{
+    text-align: left;
+    font-size: small;
+    padding: 0px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    display: inline-grid;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-style: oblique;
+    text-shadow: 1px 1px black;
+}
+#todoForm{
+    padding-top: 30px;
+    text-align: center;
+}
+#title{
+    padding-left: 0px;
+    padding: 5px;
+}
+#number{
+    padding-left: 0px;
+    padding: 5px;
+}
+#description{
+    padding-left: 0px;
+    padding: 5px;
+
+}
+#imgUrl{
+    padding-left: 0px;
+    padding: 5px;
+
+}
+#listTitle{
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 1px 2px black;
+}

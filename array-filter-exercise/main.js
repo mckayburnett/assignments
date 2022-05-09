@@ -44,7 +44,7 @@ const peopleWhoBelongToTheIlluminati = arr.filter(function(person){
 console.log(peopleWhoBelongToTheIlluminati)
 */
 
-/*5) Make a filtered list of all the people who are old enough to see The Matrix (older than 18)
+//5) Make a filtered list of all the people who are old enough to see The Matrix (older than 18)
 const arr = [
     { name: "Angelina Jolie", age: 80 },
     { name: "Eric Jones", age: 2 },
@@ -57,4 +57,4 @@ const ofAge = arr.filter(function(person){
         return person.name
     }
 })
-console.log(ofAge)*/
+console.log(ofAge)
