@@ -40,7 +40,7 @@ function listData(data){
             h2Title.style.textDecoration = 'line-through'
         }
         document.getElementById('todoList').appendChild(h2Title);
-       
+
         const h2des = document.createElement('h2')
         h2des.textContent = `Description: ${data[i].description}`
         document.getElementById('todoList').appendChild(h2des);
