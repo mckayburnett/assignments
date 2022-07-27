@@ -1,0 +1,166 @@
+.navbar {
+    height: 400px;    
+}
+.image {
+    position: absolute;
+    width: 100%;
+    filter: brightness(70%);
+    height: 100%;
+}
+
+.navTop {
+    display: flex;
+    margin-right: auto;
+    position: relative;
+    color: white;
+}
+
+.start {
+    font-size: 20px;
+    margin-right: auto;
+    padding-left: 80px;
+    padding-top: 20px;
+}
+
+.navTopRight {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 80px;
+    padding-top: 20px;
+
+}
+
+.navTopRight > h5 {
+    padding-left: 30px;
+    font-size: 12px;
+}
+
+.clean {
+    font-size: 80px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    color: white;
+}
+
+.subClean {
+    font-size: 24px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    color: white;
+}
+
+.blogBody {
+    padding-top: 30px;
+    text-align: start;
+    max-width: 500px;
+    position: relative;
+    padding-left: 50px;
+    top: 240px;
+    border-bottom: 1px groove;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    margin-left: 25%;
+    margin-right: 20%
+    
+}
+.title {
+    font-size: 36;
+    margin-bottom: 0px;
+    
+    
+}
+.subtitle {
+    font-size: 26;
+    font-weight: 100;
+    margin-bottom: 0px;
+}
+.posted {
+    font-size: 18;
+    display: flex;
+    color: gray;
+    font-style: italic;
+    font-family: fantasy;
+}
+.author {
+    color: black;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    top: 300px;
+    /* display: ; */
+}
+.buttonContainer {
+    left: 100px;
+    max-width: 500px;
+    margin-left: 70%;
+}
+.button {
+    background-color: #0085A1;
+    padding: 20px;
+    width: 120px;
+    margin-bottom: 30px;
+    margin-top: -20px;
+}
+.older {
+    display: inline;
+    color: white;
+    font-size: 14px;
+}
+#arrow {
+    color: white;
+    padding-left: 5px;
+    font-size: 15px;
+}
+.icons {
+    border-top: 1px groove;
+    padding-top: 10px;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 40px;
+}
+#twitter {
+    padding-right: 15px; 
+}
+#facebook {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#github {
+    padding-left: 15px;
+}
+.bottom {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.copyright {
+    font-style: italic;
+    font-family: fantasy; 
+    display: inline; 
+    color: gray;
+    padding-bottom: 20px;  
+}
+.yourWebsite {
+    font-style: italic;
+    font-family: fantasy;
+    display: inline;
+    color: gray;
+    padding-bottom: 20px;
+}
+#copyrightImg {
+    font-size: 20px;
+    padding-left: 9px;
+    padding-right: 5px;
+    color: gray;
+    padding-bottom: 20px;
+}

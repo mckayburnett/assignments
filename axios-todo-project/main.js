@@ -82,6 +82,6 @@ todoForm.addEventListener("submit", function(e){
     todoForm.price.value=""
     todoForm.imgUrl.value=""
     axios.post("https://api.vschool.io/mckayburnett/todo", newTodo)
-    .then(result => getData())
+    .then(result => getData(result))
     .catch(err => console.log(err))
 })

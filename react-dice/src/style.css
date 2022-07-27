@@ -1,0 +1,29 @@
+.page {
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding-left: 20%;
+    padding-right: 20%;
+    
+}
+.dice {
+    border: 1px solid black;
+    width: 75px;
+    height: 75px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.button {
+    position: absolute;
+    margin: 10px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    grid-row: 3/4;
+    bottom: 10%;
+}

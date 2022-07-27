@@ -1,0 +1,82 @@
+.headerContainer {
+    width: 100%;
+    max-height: 500px;
+    min-width: 500px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.img {
+    width: 100%;
+    max-height: 500px;
+    min-width: 800px;
+    position: relative;
+}
+.title {
+    position: relative;
+    top: -150px;
+    padding-left: 30px;
+    color: snow;
+    text-decoration: overline underline; 
+    text-underline-offset: 4px;
+    font-size: 45px;
+    
+}
+.icons {
+    position: relative;
+    top: -165px;
+    padding-left: 30px;
+    color: snow;
+    font-size: 30px;
+    left: 45px;
+}
+i {
+    padding-left: 50px;
+}
+.container {
+    display: inline-flex;
+
+    }
+.cardContainer {
+    background-color:lightsteelblue;
+    width: 250px;
+    border-radius: 8px;
+    
+    margin-top: 20px;
+    position: relative;
+    padding-top: 10px;
+    margin-right: 20px;
+    padding-right: 10px;
+    height: 320px;
+}
+.place {
+    padding-left: 10px;
+    margin-bottom: -20px;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: .5px black;
+}
+.price {
+    padding-left: 10px;
+    margin-bottom: -20px;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: .5px black;
+}
+.timeToGo {
+    padding-left: 10px;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: .5px black;
+}
+h5 {
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-bottom: -15px;
+    font-size: 12px;
+}
+.cardImg {
+    width: 235px;
+    height: 180px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

@@ -1,0 +1,16 @@
+.friendPet {
+    border: 1px solid black;
+    width: 250px;
+    height: 500px;
+    padding: 0px 20px 0px 20px;
+    margin: 20px;
+}
+.name {
+    text-decoration: underline;
+}
+.pets {
+        text-decoration: underline;
+
+}
+.container {
+}

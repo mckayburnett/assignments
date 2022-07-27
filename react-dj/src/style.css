@@ -1,0 +1,53 @@
+.all {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    left: 50%;
+    right: 50%;
+    position: absolute;
+}
+.square {
+    border: solid 1px black;
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+}
+.buttons {
+    grid-row: 3/4;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    left: 50%;
+    right: 50%;
+    bottom: 0%;
+}
+.b1 {
+    width: 200px;
+}
+.b2 {
+    width: 200px;
+}
+.b3 {
+    width: 200px;
+}
+.b4 {
+    width: 200px;
+}
+.b5 {
+    width: 200px;
+}
+.b6 {
+    width: 200px;
+}
+.b7 {
+    width: 200px;
+}
+.b8 {
+    width: 200px;
+}
