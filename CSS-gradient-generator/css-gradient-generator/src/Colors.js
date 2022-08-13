@@ -19,6 +19,8 @@ export default function Colors() {
         setAngle(e.target.value)
         console.log(`angle: `, angle)
     }
+    console.log('state: ', color1, color2, angle)
+
     return (
         <div>
             <Display 
