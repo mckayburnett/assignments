@@ -1,0 +1,121 @@
+.dark-nav-wrapper{
+  display:inline-block;
+  width: 100%;
+  text-align: center;
+  border: 1px black solid;
+  height: 75px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  background-color: rgba(0, 0, 0, 0.795);
+  color: white;
+  font-size: x-large;
+}
+.light-nav-wrapper{
+  display:inline-block;
+  width: 100%;
+  text-align: center;
+  border: 1px black solid;
+  border: 1px black solid;
+  height: 75px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  background-color: rgba(0, 0, 0, 0.183);
+  color: black;
+  font-size: x-large;
+}
+.light-main-wrapper{
+  text-align: center;
+  border: 1px black solid;
+  width: 99.2%;
+  align-items: center;
+  position: absolute;
+  top: 52.5%;
+  height: 680px;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.183);
+  color: black;
+}
+.dark-main-wrapper{
+  text-align: center;
+  border: 1px black solid;
+  width: 99.2%;
+  align-items: center;
+  position: absolute;
+  top: 52.5%;
+  height: 680px;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.795);
+  color: white;
+}
+.light-footer-wrapper{
+  width: 99.2%;
+  border: 1px black solid;
+  position: absolute;
+  bottom: 10px;
+  height: 61px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  background-color: rgba(0, 0, 0, 0.183);
+  color: black;
+}
+.dark-footer-wrapper{
+  width: 99.2%;
+  border: 1px black solid;
+  position: absolute;
+  bottom: 10px;
+  height: 61px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  background-color: rgba(0, 0, 0, 0.795);
+  color: white;
+}
+.dark-nav-wrapper{
+  display:inline-block;
+  border: 1px black solid;
+  width: 100%;
+  text-align: center;
+  border: 1px black solid;
+  height: 75px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  background-color: rgba(0, 0, 0, 0.795);
+  color: white;
+  font-size: x-large;
+}
+.home{
+  display: inline;
+  padding-right: 200px;
+  
+}
+.about{
+  display: inline;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+.contact{
+  display: inline;
+  padding-left: 200px;
+}
+.title{
+  margin-top: 250px;
+}
+.button{
+  height: 100px;
+  width: 200px;
+  font-size: x-large;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: red;
+  
+}
