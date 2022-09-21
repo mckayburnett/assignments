@@ -3,16 +3,11 @@ import {Context} from "./Context"
 
 function List(props){
 
-    const {uglyThings, list} = useContext(Context)
-
+    const {list} = useContext(Context)
+    
     return(
-        <div>
+        <div className="wrappersWrapper">
         {list}
-            <div>
-                <h1>{uglyThings.title}</h1>
-                <img className="image" src={uglyThings.imgUrl} alt={`${uglyThings.description}`}></img>
-                <h5>{uglyThings.description}</h5>
-            </div>
         </div>
     )
 }

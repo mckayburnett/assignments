@@ -3,7 +3,7 @@ import {Context} from "./Context"
 
 function Form(props){
 
-    const {uglyThings, post, handleChange, deleteAll} = useContext(Context) 
+    let {uglyThings, post, handleChange, editing, edit, list} = useContext(Context) 
 
     return (
         <div className="formWrapper"> 
@@ -29,8 +29,11 @@ function Form(props){
                     value={uglyThings.description}
                     onChange={handleChange}
                 />
-                <button className="button" onClick={post}>Submit</button>
-                <button className="buttonDeleteAll" onClick={deleteAll}>Delete All</button>
+                {editing ? 
+                    <button className="submit" onClick={edit}>Edit</button>
+                    :
+                    <button className="submit" onClick={post}>Submit</button>
+                }
             </form>
         </div>
     )
