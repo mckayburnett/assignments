@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react"
 const Context = React.createContext()
-//does everything twice (POST, console.logs), submit posts every time for every description letter, need to delete twice for it to work, checked won't change submit button, edit won't work.
+//does everything twice (POST, console.logs), submit posts every time for every description letter, need to delete twice for it to work, edit put won't work.
 function ContextProvider(props){
     const [uglyThings, setUglyThings] = useState([
         {
@@ -11,6 +11,7 @@ function ContextProvider(props){
     ])
 
     const [editing, setEditing] = useState(false);
+    const idArray = []
 
     const handleChange = (e) => {
         e.preventDefault();
@@ -44,12 +45,12 @@ function ContextProvider(props){
             window.location.reload()
         }
         const edit = (e) => {
+            e.preventDefault()
             const id = item._id
             setEditing(true);
-            setUglyThings({
-                id
-            })
             console.log(`id: `, id)
+            idArray.push(id)
+            console.log(`context id array: `,idArray)
         }
 
         return (
@@ -87,11 +88,16 @@ function ContextProvider(props){
     return (
         <Context.Provider value={{
             uglyThings : uglyThings,
+            setUglyThings : setUglyThings,
+            setUglyArray : setUglyArray,
+            uglyArray : uglyArray,
             post : post,
             handleChange : handleChange,
             list : list,
             editing : editing,
-            //edit : edit
+            setEditing : setEditing,
+            idArray : idArray
+            
         }}
         >
             {props.children}

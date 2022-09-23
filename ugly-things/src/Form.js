@@ -3,7 +3,28 @@ import {Context} from "./Context"
 
 function Form(props){
 
-    let {uglyThings, post, handleChange, editing, edit, list} = useContext(Context) 
+    let {uglyThings, setUglyThings, post, handleChange, editing, setEditing, edit, list, uglyArray, setUglyArray, idArray} = useContext(Context) 
+    
+    
+
+    const handleEdit = (e) => {
+        e.preventDefault();
+        setEditing(false)
+        console.log(`id array: `,idArray)
+        let lastArrayId = idArray.pop()
+        fetch(`https://api.vschool.io/mckayburnett/thing/${lastArrayId}`, {
+            method: 'PUT',
+            body: JSON.stringify({
+                title : `test`,
+                imgUrl : `test`,
+                description : `test`
+            }),
+            headers: {"Content-Type": "application/json"}
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+        .catch(err => console.log(err));
+    }
 
     return (
         <div className="formWrapper"> 
@@ -30,7 +51,7 @@ function Form(props){
                     onChange={handleChange}
                 />
                 {editing ? 
-                    <button className="submit" onClick={edit}>Edit</button>
+                    <button className="submit" onClick={handleEdit}>Edit</button>
                     :
                     <button className="submit" onClick={post}>Submit</button>
                 }
