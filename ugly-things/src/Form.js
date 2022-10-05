@@ -5,25 +5,24 @@ function Form(props){
 
     let {uglyThings, setUglyThings, post, handleChange, editing, setEditing, edit, list, uglyArray, setUglyArray, idArray} = useContext(Context) 
     
-    
+    console.log(`idArray(context): `, idArray)
+    // console.log(`form data: `, list[0].key)
+    console.log(`uglyThings: `,uglyThings.title)
 
     const handleEdit = (e) => {
-        e.preventDefault();
-        setEditing(false)
-        console.log(`id array: `,idArray)
-        let lastArrayId = idArray.pop()
-        fetch(`https://api.vschool.io/mckayburnett/thing/${lastArrayId}`, {
+        console.log(`id array: `, idArray)
+        fetch(`https://api.vschool.io/mckayburnett/thing/${idArray}`, {
             method: 'PUT',
             body: JSON.stringify({
-                title : `test`,
-                imgUrl : `test`,
-                description : `test`
+                title : uglyThings.title,
+                imgUrl : uglyThings.imgUrl,
+                description : uglyThings.description
             }),
             headers: {"Content-Type": "application/json"}
         })
         .then(res => res.json())
-        .then(data => console.log(data))
         .catch(err => console.log(err));
+        window.location.reload()
     }
 
     return (
@@ -51,7 +50,10 @@ function Form(props){
                     onChange={handleChange}
                 />
                 {editing ? 
-                    <button className="submit" onClick={handleEdit}>Edit</button>
+                    <button className="submit" onClick={()=> {
+                        handleEdit();
+                        setEditing(false);
+                    }}>Edit</button>
                     :
                     <button className="submit" onClick={post}>Submit</button>
                 }

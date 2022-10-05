@@ -11,7 +11,8 @@ function ContextProvider(props){
     ])
 
     const [editing, setEditing] = useState(false);
-    const idArray = []
+    
+    const [idArray, setIdArray] = useState([]);
 
     const handleChange = (e) => {
         e.preventDefault();
@@ -33,7 +34,7 @@ function ContextProvider(props){
                 console.log(`data: `, data)
             })
             console.log('fetch array')
-    },[uglyThings])
+    },[])
 
     const list = uglyArray.map((item) => {
         const deleteOne = () => {
@@ -49,7 +50,7 @@ function ContextProvider(props){
             const id = item._id
             setEditing(true);
             console.log(`id: `, id)
-            idArray.push(id)
+            setIdArray(id)
             console.log(`context id array: `,idArray)
         }
 
@@ -58,18 +59,15 @@ function ContextProvider(props){
                 <h1 className="listTitle">{item.title}</h1>
                 <img className="listImage" src={item.imgUrl} alt={"SOMETHING UGLY"}/>
                 <h2 className="listDescription">Description: {item.description}</h2>
-                <button className="delete" onClick={deleteOne} >Delete</button>
+                <button className="delete" onClick={deleteOne}>Delete</button>
                 <button className="edit" onClick={edit}>Edit</button>
                 
             </div>
             
         )
     })
-    
-     
 
     const post = useEffect(() => {
-        setEditing(false);
         fetch('https://api.vschool.io/mckayburnett/thing', {
             method: 'POST',
             headers: {
@@ -96,8 +94,9 @@ function ContextProvider(props){
             list : list,
             editing : editing,
             setEditing : setEditing,
-            idArray : idArray
-            
+            idArray : idArray,
+            setIdArray : setIdArray,
+
         }}
         >
             {props.children}
