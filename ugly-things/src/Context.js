@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react"
+import axios from "axios"
+
 const Context = React.createContext()
-//does everything twice (POST, console.logs), submit posts every time for every description letter, need to delete twice for it to work, edit put won't work.
+// Edit only works once page is refreshed, but window.location.reload() doesn't work. delete doesn't work. multiple post/get. edit doesn't work unless page refreshed. post doesn't work.
 function ContextProvider(props){
     const [uglyThings, setUglyThings] = useState([
         {
@@ -14,36 +16,30 @@ function ContextProvider(props){
     
     const [idArray, setIdArray] = useState([]);
 
-    const handleChange = (e) => {
-        e.preventDefault();
+    const [newInput, setNewInput] = useState({
+        title: "",
+        description: ""
+    })
+
+    function handleChange(e){
         const {name, value} = e.target
-        setUglyThings({
-            ...uglyThings,
-            [name] : value
-        })
-        
+        setNewInput(prevThing => ({...prevThing, [name]:value }))
     }
     const [uglyArray, setUglyArray] = useState([]) //api data
 
     useEffect(() => {
-        fetch(`https://api.vschool.io/mckayburnett/thing`)
-            .then(res => res.json())
-            .then(data => {
-              
-                setUglyArray(data)
-                console.log(`data: `, data)
-            })
-            console.log('fetch array')
-    },[])
+        axios.get(`https://api.vschool.io/mckayburnett/thing`)
+            .then(res => setUglyArray(res.data))
+            .catch(error => console.log(error))
+            console.log('useEffect')
+    }, [uglyArray.length])
 
     const list = uglyArray.map((item) => {
-        const deleteOne = () => {
-            fetch(`https://api.vschool.io/mckayburnett/thing/${item._id}`, {
-                method: 'DELETE',
-            })
-            .then(res => res.text())
+        const deleteOne = (id) => {
+            axios.delete(`https://api.vschool.io/mckayburnett/thing/${item._id}`)
             .then(res => console.log(res))
-            window.location.reload()
+            .catch(err => console.log(err))
+            setUglyArray(uglyArray.filter(item => (item._id !== id)))
         }
         const edit = (e) => {
             e.preventDefault()
@@ -67,21 +63,33 @@ function ContextProvider(props){
         )
     })
 
-    const post = useEffect(() => {
-        fetch('https://api.vschool.io/mckayburnett/thing', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                title: uglyThings.title,
-                imgUrl: uglyThings.imgUrl,
-                description: uglyThings.description
-            })
+    // const post = useEffect(() => {
+    //     fetch('https://api.vschool.io/mckayburnett/thing', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Accept': 'application/json',
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify({
+    //             title: uglyThings.title,
+    //             imgUrl: uglyThings.imgUrl,
+    //             description: uglyThings.description
+    //         })
+    //     })
+    //     console.log('post')
+    // },[uglyThings.title, uglyThings.imgUrl, uglyThings.description])
+
+    function postUglyThing(){
+        axios.post('https://api.vschool.io/mckayburnett/thing', {
+            title: uglyThings.title,
+            imgUrl: uglyThings.imgUrl,
+            description: uglyThings.description
         })
-        console.log('post')
-    },[uglyThings.title, uglyThings.imgUrl, uglyThings.description])
+        .then(res => setUglyArray(prev => ([
+            ...prev, res.data
+        ])))
+        .catch(err => console.log(err))
+    }
 
     return (
         <Context.Provider value={{
@@ -89,14 +97,16 @@ function ContextProvider(props){
             setUglyThings : setUglyThings,
             setUglyArray : setUglyArray,
             uglyArray : uglyArray,
-            post : post,
+            
             handleChange : handleChange,
             list : list,
             editing : editing,
             setEditing : setEditing,
             idArray : idArray,
             setIdArray : setIdArray,
-
+            postUglyThing,
+            newInput,
+            setNewInput
         }}
         >
             {props.children}
