@@ -28,19 +28,32 @@ function ContextProvider(props){
     const [uglyArray, setUglyArray] = useState([]) //api data
 
     useEffect(() => {
-        axios.get(`https://api.vschool.io/mckayburnett/thing`)
-            .then(res => setUglyArray(res.data))
-            .catch(error => console.log(error))
-            console.log('useEffect')
+        getUglyThings()
     }, [uglyArray.length])
 
+    function getUglyThings() {
+        axios.get(`https://api.vschool.io/mckayburnett/thing`)
+        .then(res => setUglyArray(res.data))
+        .catch(error => console.log(error))
+    }
+
+
+
     const list = uglyArray.map((item) => {
-        const deleteOne = (id) => {
-            axios.delete(`https://api.vschool.io/mckayburnett/thing/${item._id}`)
-            .then(res => console.log(res))
-            .catch(err => console.log(err))
-            setUglyArray(uglyArray.filter(item => (item._id !== id)))
-        }
+    //     const deleteOne = (id) => {
+    //         axios.delete(`https://api.vschool.io/mckayburnett/thing/${item._id}`)
+    //         .then(res => console.log(res))
+    //         .then(res => getUglyThings)
+    //         .catch(err => console.log(err))
+    //         setUglyArray(uglyArray.filter(item => (item._id !== id)))
+
+    function deleteOne(id) {
+        axios.delete(`https://api.vschool.io/mckayburnett/thing/${id}`)
+        .then(res => console.log(res))
+        .then(res => getUglyThings)
+        .catch(err => console.log(err))
+        setUglyArray(uglyArray.filter(item => (item._id !== id)))
+    }
         const edit = (e) => {
             e.preventDefault()
             const id = item._id
@@ -55,9 +68,8 @@ function ContextProvider(props){
                 <h1 className="listTitle">{item.title}</h1>
                 <img className="listImage" src={item.imgUrl} alt={"SOMETHING UGLY"}/>
                 <h2 className="listDescription">Description: {item.description}</h2>
-                <button className="delete" onClick={deleteOne}>Delete</button>
-                <button className="edit" onClick={edit}>Edit</button>
-                
+                <button className="delete" onClick={()=>deleteOne(item._id)}>Delete</button>
+                <button className="edit" onClick={edit}>Edit</button>  
             </div>
             
         )
@@ -79,15 +91,18 @@ function ContextProvider(props){
     //     console.log('post')
     // },[uglyThings.title, uglyThings.imgUrl, uglyThings.description])
 
-    function postUglyThing(){
-        axios.post('https://api.vschool.io/mckayburnett/thing', {
-            title: uglyThings.title,
-            imgUrl: uglyThings.imgUrl,
-            description: uglyThings.description
-        })
-        .then(res => setUglyArray(prev => ([
-            ...prev, res.data
-        ])))
+    function postUglyThing(inputs){
+        console.log("is post request function hit")
+        //axios.post('https://api.vschool.io/mckayburnett/thing', {
+         //title: uglyThings.title,
+         //imgUrl: uglyThings.imgUrl,
+         //description: uglyThings.description
+        //})
+        axios.post('https://api.vschool.io/mckayburnett/thing', inputs)
+        .then(res => 
+            res.data
+        )
+        .then(res => getUglyThings())
         .catch(err => console.log(err))
     }
 
@@ -97,7 +112,7 @@ function ContextProvider(props){
             setUglyThings : setUglyThings,
             setUglyArray : setUglyArray,
             uglyArray : uglyArray,
-            
+            getUglyThings,
             handleChange : handleChange,
             list : list,
             editing : editing,
