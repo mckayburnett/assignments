@@ -12,14 +12,14 @@ export default function App() {
             <div className="pageTop">
                 <nav className="nav">
                     <h2 className="message">Serving the Mushroom Kingdom since 1985</h2>
-                    <Link to="/home" className="home">
-                       |Home|
-                    </Link>
                     <Link to="/about" className="about">
                        |About|
                     </Link>
                     <Link to="/services" className="services">
                         |Services|
+                    </Link>
+                    <Link to="/home" className="home">
+                       |Home| 
                     </Link>
                 </nav>
                 <img src="https://see.fontimg.com/api/renderfont4/3zBwX/eyJyIjoiZHciLCJoIjoxMzAsInciOjIwMDAsImZzIjo2NSwiZmdjIjoiI0ZFMEMwQyIsImJnYyI6IiMxODFFRkYifQ/TWFyaW8gQnJvcy4gUGx1bWJpbmc/mario-world-pixel-color.png" alt="Mario Bros Plumbing" className="title"></img>
