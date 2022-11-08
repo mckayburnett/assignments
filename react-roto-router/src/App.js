@@ -18,14 +18,14 @@ export default function App() {
                     <Link to="/services" className="services">
                         |Services|
                     </Link>
-                    <Link to="/home" className="home">
+                    <Link to="/" className="home">
                        |Home| 
                     </Link>
                 </nav>
                 <img src="https://see.fontimg.com/api/renderfont4/3zBwX/eyJyIjoiZHciLCJoIjoxMzAsInciOjIwMDAsImZzIjo2NSwiZmdjIjoiI0ZFMEMwQyIsImJnYyI6IiMxODFFRkYifQ/TWFyaW8gQnJvcy4gUGx1bWJpbmc/mario-world-pixel-color.png" alt="Mario Bros Plumbing" className="title"></img>
             </div>
                 <Routes>
-                    <Route path="/home" element={<Home />} />
+                    <Route exact path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/services" element={<Services />} />
                 </Routes>

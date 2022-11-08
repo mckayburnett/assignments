@@ -13,7 +13,7 @@ export default function About() {
             <h1 className="about--mario">Mario</h1>
             <h2 className="details--mario">While Mario was spending time with his girlfriend, Peach, a giant spiked turtle came out of the toilet pipes and stole peach from Mario. Mario spent the next 20 years of his life learning the ins and outs of plumbing in hopes of one day rescuing his girlfriend from the sewers. Eventually, with the help of Peach's dad... who happens to be a mushroom... mario was able to save Peach from the spiked talking turtle, Bowser. Now, with the skills Mario learned from dedicating his life to plumbing, he started Mario Bros. Plumbing and offers his services at the most competitive prices in town! </h2>
             <h1 className="about--luigi">Luigi</h1>
-            <h2 className="details--luigi">Luigi is Mario's brother. He also helps with the plumbing.</h2>
+            <h2 className="details--luigi">Mario's brother. He also helps with the plumbing.</h2>
         </div>
     )
 }
