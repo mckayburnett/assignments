@@ -1,0 +1,111 @@
+body{
+    margin: 0px;
+    background-color: #0761AF;
+}
+.appWrapper{
+
+}
+.topNav{
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    height: 70px;
+}
+.homeLink{
+    position: absolute;
+    font-size: x-large;
+    background-color: grey;
+    border-radius: 8%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 50px; 
+    align-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: whitesmoke;
+    text-decoration: none;
+}
+.bottomNav{
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    padding: 100px;
+    margin-bottom: 100px;
+    
+}
+.gameLink{
+    position: relative;
+    padding: 50px;
+    left: 140%;
+    font-size: xx-large;
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px #000000;
+    border: 5px solid white;
+    width: 150px;
+    border-style: ridge;
+    background-color: rgba(53, 162, 23, 0.455);
+}
+.practiceLink{
+    position: relative;
+    padding: 50px;
+    margin-left: 25px;
+    left: 150%;
+    font-size: xx-large;
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px #000000;
+    border: 1px solid white;
+    width: 150px;
+    border: 5px solid white;
+    border-style: ridge;
+    background-color: rgba(53, 162, 23, 0.455);
+}
+.homeWrapper{
+
+}
+.title{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 80px;
+}
+.intro{
+    position: relative;
+    top: 20px;
+    color: white;
+    text-shadow: 2px 2px #000000;
+    padding: 50px;
+    padding-bottom: 0px;
+}
+.inputs{
+    position: relative;
+    text-align: center;
+    left: 10%;
+    top: 80px;
+    padding: 50px;
+    padding-top: 50px;
+    background-color: rgba(0, 0, 0, 0.324);
+    width: 400px;
+}
+.input1{
+    width: 250px;
+    height: 50px;
+    font-size: larger;
+}
+.input2{
+    width: 250px;
+    height: 50px;
+    font-size: larger;
+}
+.button{
+    height: 40px;
+    width: 100px;
+    font-size: larger;
+}
+.gameWrapper{
+
+}
+.practiceWrapper{
+    
+}

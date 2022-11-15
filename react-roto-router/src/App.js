@@ -2,7 +2,7 @@ import React from "react"
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom"
 import Home from "./Home.js"
 import About from "./About.js"
-import Services from "./Services"
+import Services from "./Services.js"
 import {useEffect} from "react"
 
 export default function App() {
