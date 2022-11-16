@@ -7,7 +7,7 @@ function Home(props){
 
     return(
         <div className="homeWrapper">
-            <img src="https://thegameagency.com/wp-content/uploads/2021/01/S37-Jeopardy-logo-no-flares-2021-update3.png" className="title"/>
+            <img src="https://thegameagency.com/wp-content/uploads/2021/01/S37-Jeopardy-logo-no-flares-2021-update3.png" className="title" alt="Jeopardy!"/>
             <h1 className="intro">
                 Welcome To Jeopardy!<br></br><br></br>If you wish to play against a friend, fill out the boxes below and then select 1v1. If you would like to practice by receiving random questions, simply click Practice.
             </h1>

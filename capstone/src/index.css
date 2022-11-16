@@ -104,8 +104,56 @@ body{
     font-size: larger;
 }
 .gameWrapper{
-
+    position: absolute;
 }
 .practiceWrapper{
     
+}
+.players{
+    position: absolute;
+    top: 200px;
+    width: 200px;
+    padding-left: 30px;
+}
+.player1{
+    padding-bottom: 50px;
+}
+.player2{
+    padding-top: 50px;
+}
+.name1{
+    font-size: xx-large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: whitesmoke;
+    text-shadow: 2px 2px #000000;
+    text-align: center;
+    text-decoration: underline;
+}
+.name2{
+    font-size: xx-large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: whitesmoke;
+    text-shadow: 2px 2px #000000;
+    text-align: center;
+    text-decoration: underline;
+}
+.score1{
+    font-size: xx-large;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 1px solid black;
+    height: 50px;
+    text-align: center;
+    align-content: center;
+    padding-top: 15px;
+    background-color: rgb(245, 245, 245);
+}
+.score2{
+    font-size: xx-large;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 1px solid black;
+    height: 50px;
+    text-align: center;
+    align-content: center;
+    padding-top: 15px;
+    background-color: whitesmoke;
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useContext} from "react"
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import axios from 'axios'
 import Game from "./Game.js"
@@ -7,6 +7,7 @@ import Practice from "./Practice.js"
 import {ContextProvider} from './Context'
 
 function App(props) {
+
     return (
         <div>  
             <ContextProvider>  

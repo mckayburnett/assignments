@@ -11,6 +11,7 @@ function ContextProvider(props){
     const [inputs, setInputs] = useState(initInput)
     const [save, setSave] = useState([])
 
+    
     function saveName(e){
         e.preventDefault()
         //const {name, value} = e.target
@@ -21,10 +22,7 @@ function ContextProvider(props){
             ...prev,
             inputs
         }))
-        console.log(inputs.input1, inputs.input2, "save function")
-
     }
-    console.log(save, "save")
     
     function handleChange(e){
         const {name, value} = e.target
