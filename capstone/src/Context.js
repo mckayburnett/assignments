@@ -10,7 +10,32 @@ function ContextProvider(props){
     }
     const [inputs, setInputs] = useState(initInput)
     const [save, setSave] = useState([])
+    const [questionArray, setQuestionArray] = useState([])
+    const [uncoverAnswer, setUncoverAnswer] = useState(false)
+    const [hideOptions, setHideOptions] = useState(false)
 
+    const question = questionArray.map((item) => {
+        return (
+            <div>
+                <h1 className="practiceCategory">{`Category: ${item.category.title}`}</h1>
+                <h1 className="practiceQuestion">{item.question}</h1>
+                <h1 className="practiceButton" onClick={getQuestion}>Get New Question</h1>
+                {uncoverAnswer ? 
+                <h1 className="practiceAnswer">{item.answer}</h1>
+                :
+                <h1 className="practiceUncoverAnswer" onClick={() => setUncoverAnswer(true)}>Click to Uncover Answer</h1>
+                }
+            </div>
+        )
+    })
+
+    function getQuestion(){
+        axios.get("https://jservice.io/api/random")
+        .then(res => setQuestionArray(res.data))
+        .catch(error => console.log(error))
+        console.log(`questionarray: `, questionArray)
+        setUncoverAnswer(false)
+    }
     
     function saveName(e){
         e.preventDefault()
@@ -35,7 +60,15 @@ function ContextProvider(props){
             setInputs,
             saveName,
             save,
-            handleChange
+            handleChange,
+            getQuestion,
+            questionArray,
+            setQuestionArray,
+            question,
+            uncoverAnswer,
+            setUncoverAnswer,
+            hideOptions,
+            setHideOptions, 
         }}
         >
             {props.children}

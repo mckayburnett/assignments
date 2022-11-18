@@ -157,3 +157,91 @@ body{
     padding-top: 15px;
     background-color: whitesmoke;
 }
+.practiceButton{
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 75px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    line-height: 100px;
+    width: 600px;
+    color: white;
+    text-shadow: 2px 2px #000000;
+    border: 5px solid white;
+    border-style: ridge;
+    background-color: rgba(53, 162, 23, 0.455);
+    cursor: pointer;
+}
+.practiceCategory{
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 80px;
+    line-height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70px;
+    width: 600px;
+    border: 3px solid black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    background-color: white;
+}
+.practiceQuestion{
+    position: absolute;
+    text-align: center;
+    left:0;
+    right:0;
+    top: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    width: 600px;
+    border: 3px solid black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    background-color: white;
+}
+.practiceAnswer{
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 220px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    line-height: 100px;
+    width: 600px;
+    border: 3px solid black;
+    color: black;
+    background-color: white;
+}
+.practiceUncoverAnswer{
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 220px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    line-height: 100px;
+    width: 600px;
+    color: white;
+    text-shadow: 2px 2px #000000;
+    border: 5px solid white;
+    border-style: ridge;
+    background-color: rgba(53, 162, 23, 0.455);
+    cursor: pointer;
+}

@@ -36,6 +36,7 @@ function Home(props){
                     Save
                 </button>
             </div>
+            
         </div>
     )
 }
