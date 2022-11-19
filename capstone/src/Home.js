@@ -2,6 +2,7 @@ import React, {useState, useContext} from "react"
 import {BrowerRouter as Router, Routes, Route} from "react-router-dom"
 import {Context} from "./Context"
 
+
 function Home(props){
     let {inputs, saveName, handleChange} = useContext(Context)
 
@@ -9,7 +10,7 @@ function Home(props){
         <div className="homeWrapper">
             <img src="https://thegameagency.com/wp-content/uploads/2021/01/S37-Jeopardy-logo-no-flares-2021-update3.png" className="title" alt="Jeopardy!"/>
             <h1 className="intro">
-                Welcome To Jeopardy!<br></br><br></br>If you wish to play against a friend, enter and save your names in the boxes below and then select Player vs Player in the upper-right corner. If you would like to practice by receiving random questions, simply click Practice.
+                Welcome To Jeopardy!<br></br><br></br>Enter and Save your name(s) and select Player vs Player to play against a friend, or Practice to receive single random quesitons.
             </h1>
             <div className="inputs">
                 <input

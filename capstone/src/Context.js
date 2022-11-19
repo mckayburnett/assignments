@@ -1,7 +1,11 @@
 import React, {useState} from "react"
 import axios from "axios"
+import song from "./song.mp3"
+
 
 const Context = React.createContext()
+
+
 
 function ContextProvider(props){
     const initInput = {
@@ -13,6 +17,12 @@ function ContextProvider(props){
     const [questionArray, setQuestionArray] = useState([])
     const [uncoverAnswer, setUncoverAnswer] = useState(false)
     const [hideOptions, setHideOptions] = useState(false)
+
+    let audio = new Audio(song)
+
+    const start = () => {
+        audio.play()
+    }
 
     const question = questionArray.map((item) => {
         return (
@@ -47,11 +57,12 @@ function ContextProvider(props){
             ...prev,
             inputs
         }))
+        start();
     }
-    
+ 
     function handleChange(e){
         const {name, value} = e.target
-        setInputs(newInput => ({...newInput, [name]:value }))
+        setInputs(newInput => ({...newInput, [name]:value }));
     }
 
     return(
@@ -68,7 +79,8 @@ function ContextProvider(props){
             uncoverAnswer,
             setUncoverAnswer,
             hideOptions,
-            setHideOptions, 
+            setHideOptions,
+            start 
         }}
         >
             {props.children}

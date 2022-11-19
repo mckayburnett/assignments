@@ -4,7 +4,7 @@ import {Context} from "./Context"
 
 function Practice(props){
 
-    let{getQuestion, question} = useContext(Context)
+    let{getQuestion, question, save} = useContext(Context)
      
     useEffect(() => {
         getQuestion()
@@ -12,6 +12,7 @@ function Practice(props){
     
     return(
         <div className="practiceWrapper">
+            <h1 className="welcome">Welcome {save.inputs?.input1} {`and ${save.inputs?.input2}`}!</h1>
             {question}
         </div>
     )
