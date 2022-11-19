@@ -12,7 +12,7 @@ function Practice(props){
     
     return(
         <div className="practiceWrapper">
-            <h1 className="welcome">Welcome {save.inputs?.input1} {`and ${save.inputs?.input2}`}!</h1>
+            <h1 className="welcome">Welcome {save.inputs?.input1}{save.inputs?.input2 ? ` and ${save.inputs?.input2}!`: `!`}</h1>
             {question}
         </div>
     )

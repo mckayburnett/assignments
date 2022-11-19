@@ -31,7 +31,7 @@ function ContextProvider(props){
                 <h1 className="practiceQuestion">Question: <br></br><br></br>{item.question}</h1>
                 <h1 className="practiceButton" onClick={getQuestion}>Get New Question</h1>
                 {uncoverAnswer ? 
-                <h1 className="practiceAnswer">{item.answer}</h1>
+                <h1 className="practiceAnswer">What/who is: {item.answer}</h1>
                 :
                 <h1 className="practiceUncoverAnswer" onClick={() => setUncoverAnswer(true)}>Click to Uncover Answer</h1>
                 }
