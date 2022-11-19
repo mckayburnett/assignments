@@ -18,7 +18,7 @@ function ContextProvider(props){
         return (
             <div>
                 <h1 className="practiceCategory">{`Category: ${item.category.title}`}</h1>
-                <h1 className="practiceQuestion">{item.question}</h1>
+                <h1 className="practiceQuestion">Question: <br></br><br></br>{item.question}</h1>
                 <h1 className="practiceButton" onClick={getQuestion}>Get New Question</h1>
                 {uncoverAnswer ? 
                 <h1 className="practiceAnswer">{item.answer}</h1>

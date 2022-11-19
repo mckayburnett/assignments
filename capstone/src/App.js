@@ -8,6 +8,7 @@ import {ContextProvider} from './Context'
 
 function App(props) {
 
+    
     return (
         <div>  
             <ContextProvider>  
@@ -17,7 +18,7 @@ function App(props) {
                             Home
                         </Link>
                     </div>
-                    <div className="bottomNav">
+                    <div className="sideNav">
                         <Link to="/game" className="gameLink">
                             Player vs Player
                         </Link>
