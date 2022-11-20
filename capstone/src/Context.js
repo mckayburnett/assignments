@@ -58,6 +58,7 @@ function ContextProvider(props){
             inputs
         }))
         start();
+        e.currentTarget.disabled = true;
     }
  
     function handleChange(e){
