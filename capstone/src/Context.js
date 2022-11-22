@@ -17,6 +17,8 @@ function ContextProvider(props){
     const [questionArray, setQuestionArray] = useState([])
     const [uncoverAnswer, setUncoverAnswer] = useState(false)
     const [hideOptions, setHideOptions] = useState(false)
+    const [lock, setLock] = useState(false)
+    const [gameQuestions, setGameQuestions] = useState([])
 
     let audio = new Audio(song)
 
@@ -46,7 +48,12 @@ function ContextProvider(props){
         console.log(`questionarray: `, questionArray)
         setUncoverAnswer(false)
     }
-    
+    function getGameQuestions(){
+        axios.get("https://jservice.io/api/category/", { params: {id: 27723 } })
+        .then(res => setGameQuestions(res.data))
+        .catch(error => console.log(error))
+        console.log('gameQuestions: ', gameQuestions)
+    }
     function saveName(e){
         e.preventDefault()
         //const {name, value} = e.target
@@ -65,7 +72,9 @@ function ContextProvider(props){
         const {name, value} = e.target
         setInputs(newInput => ({...newInput, [name]:value }));
     }
-
+    function lockAnswer(){
+        setLock(true)
+    }
     return(
         <Context.Provider value={{
             inputs,
@@ -81,7 +90,13 @@ function ContextProvider(props){
             setUncoverAnswer,
             hideOptions,
             setHideOptions,
-            start 
+            start,
+            lock,
+            setLock,
+            lockAnswer,
+            getGameQuestions,
+            gameQuestions,
+            setGameQuestions
         }}
         >
             {props.children}

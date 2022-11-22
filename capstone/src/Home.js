@@ -10,7 +10,7 @@ function Home(props){
         <div className="homeWrapper">
             <img src="https://thegameagency.com/wp-content/uploads/2021/01/S37-Jeopardy-logo-no-flares-2021-update3.png" className="title" alt="Jeopardy!"/>
             <h1 className="intro">
-                Welcome To Jeopardy!<br></br><br></br>Enter and Save your name(s) and select Player vs Player to play against a friend, or Practice to receive single random quesitons.
+                Welcome To Jeopardy!<br></br><br></br>Enter and Save your name(s) then select "Player vs Player" to play against a friend, or "Practice" to receive single random quesitons.
             </h1>
             <div className="inputs">
                 <input
