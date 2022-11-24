@@ -99,6 +99,7 @@ body{
 }
 .gameWrapper{
     position: absolute;
+    top: 70px;
 }
 .practiceWrapper{
     
@@ -107,7 +108,7 @@ body{
     position: absolute;
     min-width: 200px;
     padding-left: 20px;
-    top: 100px;
+    top: 30px;
 }
 .player1{
     width: 240px;
@@ -214,7 +215,7 @@ body{
 .board{
     position: relative;
     margin-left: 350px;
-    margin-top: 88px;
+    margin-top: 20px;
     border: 1px black solid;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
