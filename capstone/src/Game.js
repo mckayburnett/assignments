@@ -38,34 +38,32 @@ function Game(props){
                     />
                 </div>
             </div>
-            <div className="board">
-                <div className="boxes">
+                <div className="board">
                     <div className="cat1"></div>
-                    <div className="1val1"></div>
-                    <div className="1val2"></div>
-                    <div className="1val3"></div>
-                    <div className="1val4"></div>
-                    <div className="1val5"></div>
+                    <div className="cat1val1"></div>
+                    <div className="cat1val2"></div>
+                    <div className="cat1val3"></div>
+                    <div className="cat1val4"></div>
+                    <div className="cat1val5"></div>
                     <div className="cat2"></div>
-                    <div className="2val1"></div>
-                    <div className="2val2"></div>
-                    <div className="2val3"></div>
-                    <div className="2val4"></div>
-                    <div className="2val5"></div>
+                    <div className="cat2val1"></div>
+                    <div className="cat2val2"></div>
+                    <div className="cat2val3"></div>
+                    <div className="cat2val4"></div>
+                    <div className="cat2val5"></div>
                     <div className="cat3"></div>                   
-                    <div className="3val1"></div>
-                    <div className="3val2"></div>
-                    <div className="3val3"></div>
-                    <div className="3val4"></div>
-                    <div className="3val5"></div>
+                    <div className="cat3val1"></div>
+                    <div className="cat3val2"></div>
+                    <div className="cat3val3"></div>
+                    <div className="cat3val4"></div>
+                    <div className="cat3val5"></div>
                     <div className="cat4"></div>
-                    <div className="4val1"></div>
-                    <div className="4val2"></div>
-                    <div className="4val3"></div>
-                    <div className="4val4"></div>
-                    <div className="4val5"></div> 
-                </div>                       
-            </div>
+                    <div className="cat4val1"></div>
+                    <div className="cat4val2"></div>
+                    <div className="cat4val3"></div>
+                    <div className="cat4val4"></div>
+                    <div className="cat4val5"></div>                      
+                </div>
             <link href="https://fonts.googleapis.com/css?family=Schoolbell&v1" rel="stylesheet" />
         </div>
     )

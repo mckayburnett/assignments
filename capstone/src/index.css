@@ -213,15 +213,181 @@ body{
 }
 .board{
     position: relative;
-    width: 1000px;
-    height: 1000px;
-    
+    margin-left: 350px;
+    margin-top: 100px;
+    padding: none;
+    border: 1px black solid;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-.boxes{
+.cat1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 300px;
+    height: 100px;
     border: 1px black solid;
+}
+.cat2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 300px;
+    height: 100px;
+    border: 1px black solid;
+}
+.cat3{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    width: 300px;
+    height: 100px;
+    border: 1px black solid;
+}
+.cat4{
+    grid-column: 4/5;
+    grid-row: 1/2;
+    width: 300px;
+    height: 100px;
+    border: 1px black solid;
+}
+.cat1val1{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 300px;
+    height: 100px;
+    border: 1px black solid;
+}
+.cat1val2{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+} 
+.cat1val3{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cat1val4{
+    grid-column: 1/2;
+    grid-row: 5/6;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cat1val5{
+    grid-column: 1/2;
+    grid-row: 6/7;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cat2val1{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cat2val2{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cat2val3{
+    grid-column: 2/3;
+    grid-row: 4/5;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cat2val4{
+    grid-column: 2/3;
+    grid-row: 5/6;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cat2val5{
+    grid-column: 2/3;
+    grid-row: 6/7;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cat3val1{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cat3val2{
+    grid-column: 3/4;
+    grid-row: 3/4;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cat3val3{
+    grid-column: 3/4;
+    grid-row: 4/5;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cat3val4{
+    grid-column: 3/4;
+    grid-row: 5/6;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cat3val5{
+    grid-column: 3/4;
+    grid-row: 6/7;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cat4val1{
+    grid-column: 4/5;
+    grid-row: 2/3;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cat4val2{
+    grid-column: 4/5;
+    grid-row: 3/4;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cat4val3{
+    grid-column: 4/5;
+    grid-row: 4/5;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cat4val4{
+    grid-column: 4/5;
+    grid-row: 5/6;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cat4val5{
+    grid-column: 4/5;
+    grid-row: 6/7;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
 }
 .welcome{
     position: absolute;
