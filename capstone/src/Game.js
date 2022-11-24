@@ -39,30 +39,36 @@ function Game(props){
                 </div>
             </div>
                 <div className="board">
-                    <div className="cat1"></div>
-                    <div className="cat1val1"></div>
-                    <div className="cat1val2"></div>
-                    <div className="cat1val3"></div>
-                    <div className="cat1val4"></div>
-                    <div className="cat1val5"></div>
-                    <div className="cat2"></div>
-                    <div className="cat2val1"></div>
-                    <div className="cat2val2"></div>
-                    <div className="cat2val3"></div>
-                    <div className="cat2val4"></div>
-                    <div className="cat2val5"></div>
-                    <div className="cat3"></div>                   
-                    <div className="cat3val1"></div>
-                    <div className="cat3val2"></div>
-                    <div className="cat3val3"></div>
-                    <div className="cat3val4"></div>
-                    <div className="cat3val5"></div>
-                    <div className="cat4"></div>
-                    <div className="cat4val1"></div>
-                    <div className="cat4val2"></div>
-                    <div className="cat4val3"></div>
-                    <div className="cat4val4"></div>
-                    <div className="cat4val5"></div>                      
+                    <div className="cat1">CATEGORY</div>
+                    <div className="cat1val1">$200</div>
+                    <div className="cat1val2">$400</div>
+                    <div className="cat1val3">$600</div>
+                    <div className="cat1val4">$800</div>
+                    <div className="cat1val5">$1000</div>
+                    <div className="cat2">CATEGORY</div>
+                    <div className="cat2val1">$200</div>
+                    <div className="cat2val2">$400</div>
+                    <div className="cat2val3">$600</div>
+                    <div className="cat2val4">$800</div>
+                    <div className="cat2val5">$1000</div>
+                    <div className="cat3">CATEGORY</div>                   
+                    <div className="cat3val1">$200</div>
+                    <div className="cat3val2">$400</div>
+                    <div className="cat3val3">$600</div>
+                    <div className="cat3val4">$800</div>
+                    <div className="cat3val5">$1000</div>
+                    <div className="cat4">CATEGORY</div>
+                    <div className="cat4val1">$200</div>
+                    <div className="cat4val2">$400</div>
+                    <div className="cat4val3">$600</div>
+                    <div className="cat4val4">$800</div>
+                    <div className="cat4val5">$1000</div> 
+                    <div className="cat5">CATEGORY</div>
+                    <div className="cat5val1">$200</div>
+                    <div className="cat5val2">$400</div>
+                    <div className="cat5val3">$600</div>
+                    <div className="cat5val4">$800</div>
+                    <div className="cat5val5">$1000</div>                    
                 </div>
             <link href="https://fonts.googleapis.com/css?family=Schoolbell&v1" rel="stylesheet" />
         </div>

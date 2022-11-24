@@ -214,180 +214,462 @@ body{
 .board{
     position: relative;
     margin-left: 350px;
-    margin-top: 100px;
-    padding: none;
+    margin-top: 88px;
     border: 1px black solid;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: black;
 }
 .cat1{
     grid-column: 1/2;
     grid-row: 1/2;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px black solid;
+    margin: 5px 2.5px 2.5px 5px;
+    background-color: rgb(0, 26, 140);
+    line-height: 60px;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 0px 5px;
 }
 .cat2{
     grid-column: 2/3;
     grid-row: 1/2;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px black solid;
+    margin: 5px 2.5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    line-height: 60px;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 0px 5px;
 }
 .cat3{
     grid-column: 3/4;
     grid-row: 1/2;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px black solid;
+    margin: 5px 2.5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    line-height: 60px;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 0px 5px;
 }
 .cat4{
     grid-column: 4/5;
     grid-row: 1/2;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px black solid;
+    margin: 5px 2.5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    line-height: 60px;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 0px 5px;
+}
+.cat5{
+    grid-column: 5/6;
+    grid-row: 1/2;
+    width: 250px;
+    height: 120px;
+    border: 1px black solid;
+    margin: 5px 5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    line-height: 60px;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 0px 5px;
 }
 .cat1val1{
     grid-column: 1/2;
     grid-row: 2/3;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px black solid;
+    margin: 2.5px 2.5px 2.5px 5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .cat1val2{
     grid-column: 1/2;
     grid-row: 3/4;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 2.5px 5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 } 
 .cat1val3{
     grid-column: 1/2;
     grid-row: 4/5;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 2.5px 5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .cat1val4{
     grid-column: 1/2;
     grid-row: 5/6;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 2.5px 5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .cat1val5{
     grid-column: 1/2;
     grid-row: 6/7;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 5px 5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .cat2val1{
     grid-column: 2/3;
     grid-row: 2/3;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .cat2val2{
     grid-column: 2/3;
     grid-row: 3/4;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .cat2val3{
     grid-column: 2/3;
     grid-row: 4/5;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .cat2val4{
     grid-column: 2/3;
     grid-row: 5/6;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .cat2val5{
     grid-column: 2/3;
     grid-row: 6/7;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .cat3val1{
     grid-column: 3/4;
     grid-row: 2/3;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .cat3val2{
     grid-column: 3/4;
     grid-row: 3/4;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .cat3val3{
     grid-column: 3/4;
     grid-row: 4/5;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .cat3val4{
     grid-column: 3/4;
     grid-row: 5/6;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px; 
 }
 .cat3val5{
     grid-column: 3/4;
     grid-row: 6/7;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .cat4val1{
     grid-column: 4/5;
     grid-row: 2/3;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .cat4val2{
     grid-column: 4/5;
     grid-row: 3/4;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .cat4val3{
     grid-column: 4/5;
     grid-row: 4/5;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .cat4val4{
     grid-column: 4/5;
     grid-row: 5/6;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .cat4val5{
     grid-column: 4/5;
     grid-row: 6/7;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
     border: 1px solid black;
+    margin: 2.5px 2.5px 5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
+}
+.cat5val1{
+    grid-column: 5/6;
+    grid-row: 2/3;
+    width: 250px;
+    height: 120px;
+    border: 1px solid black;
+    margin: 2.5px 5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
+}
+.cat5val2{
+    grid-column: 5/6;
+    grid-row: 3/4;
+    width: 250px;
+    height: 120px;
+    border: 1px solid black;
+    margin: 2.5px 5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
+}
+.cat5val3{
+    grid-column: 5/6;
+    grid-row: 4/5;
+    width: 250px;
+    height: 120px;
+    border: 1px solid black;
+    margin: 2.5px 5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
+}
+.cat5val4{
+    grid-column: 5/6;
+    grid-row: 5/6;
+    width: 250px;
+    height: 120px;
+    border: 1px solid black;
+    margin: 2.5px 5px 2.5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
+}
+.cat5val5{
+    grid-column: 5/6;
+    grid-row: 6/7;
+    width: 250px;
+    height: 120px;
+    border: 1px solid black;
+    margin: 2.5px 5px 5px 2.5px;
+    background-color: rgb(0, 26, 140);
+    color: rgb(200, 170, 3);
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 5px 5px;
 }
 .welcome{
     position: absolute;
