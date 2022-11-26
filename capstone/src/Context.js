@@ -18,7 +18,11 @@ function ContextProvider(props){
     const [uncoverAnswer, setUncoverAnswer] = useState(false)
     const [hideOptions, setHideOptions] = useState(false)
     const [lock, setLock] = useState(false)
-    const [gameQuestions, setGameQuestions] = useState([])
+    const [category1, setCategory1] = useState([])
+    const [category2, setCategory2] = useState([])
+    const [category3, setCategory3] = useState([])
+    const [category4, setCategory4] = useState([])
+    const [category5, setCategory5] = useState([])
 
     let audio = new Audio(song)
 
@@ -48,11 +52,44 @@ function ContextProvider(props){
         console.log(`questionarray: `, questionArray)
         setUncoverAnswer(false)
     }
-    function getGameQuestions(){
-        axios.get("https://jservice.io/api/category/", { params: {id: 27723 } })
-        .then(res => setGameQuestions(res.data))
+    
+    const cat1 = (Math.floor(Math.random() * 27723) + 1);
+    const cat2 = (Math.floor(Math.random() * 27723) + 1);
+    const cat3 = (Math.floor(Math.random() * 27723) + 1);
+    const cat4 = (Math.floor(Math.random() * 27723) + 1);
+    const cat5 = (Math.floor(Math.random() * 27723) + 1);
+
+    
+    
+    function getCat1(){
+        axios.get("https://jservice.io/api/category/", { params: {id: `${cat1}` } })
+        .then(res => setCategory1(res.data))
         .catch(error => console.log(error))
-        console.log('gameQuestions: ', gameQuestions)
+        console.log('category1: ', category1)
+    }
+    function getCat2(){
+        axios.get("https://jservice.io/api/category/", { params: {id: `${cat2}` } })
+        .then(res => setCategory2(res.data))
+        .catch(error => console.log(error))
+        console.log('category2: ', category2)
+    }
+    function getCat3(){
+        axios.get("https://jservice.io/api/category/", { params: {id: `${cat3}` } })
+        .then(res => setCategory3(res.data))
+        .catch(error => console.log(error))
+        console.log('category3: ', category3)
+    }
+    function getCat4(){
+        axios.get("https://jservice.io/api/category/", { params: {id: `${cat4}` } })
+        .then(res => setCategory4(res.data))
+        .catch(error => console.log(error))
+        console.log('category4: ', category4)
+    }
+    function getCat5(){
+        axios.get("https://jservice.io/api/category/", { params: {id: `${cat5}` } })
+        .then(res => setCategory5(res.data))
+        .catch(error => console.log(error))
+        console.log('category5: ', category5)
     }
     function saveName(e){
         e.preventDefault()
@@ -94,9 +131,17 @@ function ContextProvider(props){
             lock,
             setLock,
             lockAnswer,
-            getGameQuestions,
-            gameQuestions,
-            setGameQuestions
+            category1,
+            setCategory1,
+            category2,
+            category3,
+            category4,
+            category5, 
+            getCat1,
+            getCat2,
+            getCat3,
+            getCat4,
+            getCat5
         }}
         >
             {props.children}
