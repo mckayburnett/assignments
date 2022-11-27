@@ -4,7 +4,7 @@ import {BrowerRouter as Router, Routes, Route} from "react-router-dom"
 
 function Game(props){
     
-    let {inputs, save, lock, setLock, lockAnswer, gameQuestions, getCat1, getCat2, getCat3, getCat4, getCat5, category1, category2, category3, category4, category5} = useContext(Context)
+    let {inputs, save, lock, setLock, lockAnswer, gameQuestions, getCat1, getCat2, getCat3, getCat4, getCat5, category1, category2, category3, category4, category5, valSelected, selected} = useContext(Context)
     
     useEffect(() => {
         getCat1();
@@ -14,7 +14,6 @@ function Game(props){
         getCat5();
     },[])
 
-    
     console.log('gameCat1: ',category1.clues)
     // console.log(category1.clues[0].question)
     console.log(category1?.clues?.[0].question)
@@ -49,8 +48,14 @@ function Game(props){
             </div>
                 <div className="board">
                     <div className="cat1">{category1.title}</div>
-                    <div className="cat1val1">$200</div>
-                    <div className="cat1val2">$400</div>
+                    {selected ? 
+                    <div className="gameQuestion" onClick={valSelected()}>{category1?.clues?.[0].question}</div> 
+                    : 
+                    <div className="cat1val1" onClick={valSelected}>$200</div>}
+                    {selected ? 
+                    <div className="gameQuestion" onClick={valSelected()}>{category1?.clues?.[1].question}</div> 
+                    : 
+                    <div className="cat1val2" onClick={valSelected}>$400</div>}
                     <div className="cat1val3">$600</div>
                     <div className="cat1val4">$800</div>
                     <div className="cat1val5">$1000</div>

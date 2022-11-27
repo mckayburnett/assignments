@@ -18,6 +18,7 @@ function ContextProvider(props){
     const [uncoverAnswer, setUncoverAnswer] = useState(false)
     const [hideOptions, setHideOptions] = useState(false)
     const [lock, setLock] = useState(false)
+    const [selected, setSelected] = useState(false)
     const [category1, setCategory1] = useState([])
     const [category2, setCategory2] = useState([])
     const [category3, setCategory3] = useState([])
@@ -59,7 +60,9 @@ function ContextProvider(props){
     const cat4 = (Math.floor(Math.random() * 27723) + 1);
     const cat5 = (Math.floor(Math.random() * 27723) + 1);
 
-    
+    function valSelected(){
+        setSelected(true)
+    }
     
     function getCat1(){
         axios.get("https://jservice.io/api/category/", { params: {id: `${cat1}` } })
@@ -141,7 +144,9 @@ function ContextProvider(props){
             getCat2,
             getCat3,
             getCat4,
-            getCat5
+            getCat5,
+            valSelected,
+            selected
         }}
         >
             {props.children}
