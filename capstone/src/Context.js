@@ -19,6 +19,7 @@ function ContextProvider(props){
     const [hideOptions, setHideOptions] = useState(false)
     const [lock, setLock] = useState(false)
     const [selected, setSelected] = useState(false)
+    const [selected2, setSelected2] = useState(false)
     const [category1, setCategory1] = useState([])
     const [category2, setCategory2] = useState([])
     const [category3, setCategory3] = useState([])
@@ -62,6 +63,9 @@ function ContextProvider(props){
 
     function valSelected(){
         setSelected(true)
+    }
+    function valSelected2(){
+        setSelected2(true)
     }
     
     function getCat1(){
@@ -146,7 +150,10 @@ function ContextProvider(props){
             getCat4,
             getCat5,
             valSelected,
-            selected
+            selected,
+            setSelected,
+            selected2,
+            valSelected2
         }}
         >
             {props.children}
