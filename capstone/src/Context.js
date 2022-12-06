@@ -17,21 +17,23 @@ function ContextProvider(props){
     const [questionArray, setQuestionArray] = useState([])
     const [uncoverAnswer, setUncoverAnswer] = useState(false)
     const [hideOptions, setHideOptions] = useState(false)
-    const [lock, setLock] = useState(false)
-    const [selected, setSelected] = useState(false)
-    const [selected2, setSelected2] = useState(false)
-    const [category1, setCategory1] = useState([])
-    const [category2, setCategory2] = useState([])
-    const [category3, setCategory3] = useState([])
-    const [category4, setCategory4] = useState([])
-    const [category5, setCategory5] = useState([])
+    const [category1, setCategory1] = useState({})
+    const [category2, setCategory2] = useState({})
+    const [category3, setCategory3] = useState({})
+    const [category4, setCategory4] = useState({})
+    const [category5, setCategory5] = useState({})
+    const [pushed1, setPushed1] = useState([])
+    const [answer, setAnswer] = useState([])
+    const [answerButton, setAnswerButton] = useState(false)
+
 
     let audio = new Audio(song)
-
+    
     const start = () => {
         audio.play()
     }
-
+    
+    
     const question = questionArray.map((item) => {
         return (
             <div>
@@ -61,43 +63,24 @@ function ContextProvider(props){
     const cat4 = (Math.floor(Math.random() * 27723) + 1);
     const cat5 = (Math.floor(Math.random() * 27723) + 1);
 
-    function valSelected(){
-        setSelected(true)
-    }
-    function valSelected2(){
-        setSelected2(true)
-    }
-    
-    function getCat1(){
+    function getCat(){
         axios.get("https://jservice.io/api/category/", { params: {id: `${cat1}` } })
         .then(res => setCategory1(res.data))
         .catch(error => console.log(error))
-        console.log('category1: ', category1)
-    }
-    function getCat2(){
         axios.get("https://jservice.io/api/category/", { params: {id: `${cat2}` } })
         .then(res => setCategory2(res.data))
         .catch(error => console.log(error))
-        console.log('category2: ', category2)
-    }
-    function getCat3(){
         axios.get("https://jservice.io/api/category/", { params: {id: `${cat3}` } })
         .then(res => setCategory3(res.data))
         .catch(error => console.log(error))
-        console.log('category3: ', category3)
-    }
-    function getCat4(){
         axios.get("https://jservice.io/api/category/", { params: {id: `${cat4}` } })
         .then(res => setCategory4(res.data))
         .catch(error => console.log(error))
-        console.log('category4: ', category4)
-    }
-    function getCat5(){
         axios.get("https://jservice.io/api/category/", { params: {id: `${cat5}` } })
         .then(res => setCategory5(res.data))
         .catch(error => console.log(error))
-        console.log('category5: ', category5)
     }
+    
     function saveName(e){
         e.preventDefault()
         //const {name, value} = e.target
@@ -116,8 +99,8 @@ function ContextProvider(props){
         const {name, value} = e.target
         setInputs(newInput => ({...newInput, [name]:value }));
     }
-    function lockAnswer(){
-        setLock(true)
+    function seeAnswer(){
+        setAnswerButton(true)
     }
     return(
         <Context.Provider value={{
@@ -135,25 +118,21 @@ function ContextProvider(props){
             hideOptions,
             setHideOptions,
             start,
-            lock,
-            setLock,
-            lockAnswer,
+            seeAnswer,
             category1,
             setCategory1,
             category2,
             category3,
             category4,
             category5, 
-            getCat1,
-            getCat2,
-            getCat3,
-            getCat4,
-            getCat5,
-            valSelected,
-            selected,
-            setSelected,
-            selected2,
-            valSelected2
+            getCat,
+            pushed1, 
+            setPushed1,
+            answer,
+            setAnswer,
+            answerButton,
+            setAnswerButton
+            
         }}
         >
             {props.children}
