@@ -88,13 +88,24 @@ function Game(props){
             answerVal2: ""
         }
     ])
+    
     function clearAll(){
         setPushed1("");
         setAnswer("");
         setAnswerButton(false);
-
+        setAnswerVals(
+            {
+            answerVal1: "",
+            answerVal2: ""
+            }
+        )
     }
-    
+    function handleChange(e){
+        const {name, value} = e.target
+        setAnswerVals({
+            [name]: value
+        })
+    }
     return(
         <div className="gameWrapper">
             <div className="players">
@@ -107,6 +118,7 @@ function Game(props){
                         placeholder="Answer Here"
                         name="answer1"
                         value={answerVals.answerVal1}
+                        onChange={handleChange}
                     />
                 </div>
                 <button className="lockButton" onClick={seeAnswer}>See Answer</button>
@@ -119,6 +131,7 @@ function Game(props){
                         placeholder="Answer Here"
                         name="answer2"
                         value={answerVals.answerVal2}
+                        onChange={handleChange}
                     />
                 </div>
             </div>
