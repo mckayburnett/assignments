@@ -11,35 +11,65 @@ function Game(props){
         getCat();
     },[])
 
-
-    function clearQAndA(){
-        setPushed1(null);
-        setAnswer(null)
+    const [score1, setScore1] = useState(0)
+    const [score2, setScore2] = useState(0)
+    const [eValue, setEValue] = useState()
+    function clickName1(){
+        if (eValue === 0){
+            setScore1(prevScore => prevScore + 200)
+        } else if (eValue === 1){
+            setScore1(prevScore => prevScore + 400)
+        } else if (eValue === 2){
+            setScore1(prevScore => prevScore + 600)
+        } else if (eValue === 3){
+            setScore1(prevScore => prevScore + 800)
+        } else if (eValue === 4){
+            setScore1(prevScore => prevScore + 1000)
+        }
+    }
+    function clickName2(){
+        if (eValue === 0){
+            setScore2(prevScore => prevScore + 200)
+        } else if (eValue === 1){
+            setScore2(prevScore => prevScore + 400)
+        } else if (eValue === 2){
+            setScore2(prevScore => prevScore + 600)
+        } else if (eValue === 3){
+            setScore2(prevScore => prevScore + 800)
+        } else if (eValue === 4){
+            setScore2(prevScore => prevScore + 1000)
+        }
     }
     function clickCategory1(e){
         setPushed1("Question: " + category1.clues[e].question);
         setAnswer("Answer: " + category1.clues[e].answer);
         setAnswerButton(false);
+        setEValue(e)
+        console.log('e value: ',eValue)
     }
     function clickCategory2(e){
         setPushed1("Question: " + category2.clues[e].question);
         setAnswer("Answer: " + category2.clues[e].answer);
         setAnswerButton(false);
+        setEValue(e)
     }
     function clickCategory3(e){
         setPushed1("Question: " + category3.clues[e].question)
         setAnswer("Answer: " + category3.clues[e].answer);
         setAnswerButton(false);
+        setEValue(e)
     }
     function clickCategory4(e){
         setPushed1("Question: " + category4.clues[e].question)
         setAnswer("Answer: " + category4.clues[e].answer);
         setAnswerButton(false);
+        setEValue(e)
     }
     function clickCategory5(e){
-        setPushed1("Question: " + category5.clues[e].question)
+        setPushed1("Question: " + category5.clues[e].question);
         setAnswer("Answer: " + category5.clues[e].answer);
         setAnswerButton(false);
+        setEValue(e)
     }
     const [answerVals, setAnswerVals] = useState([
         {
@@ -47,13 +77,18 @@ function Game(props){
             answerVal2: ""
         }
     ])
+    function clearAll(){
+        setPushed1("");
+        setAnswer("");
+        setAnswerButton(false);
+    }
     
     return(
         <div className="gameWrapper">
             <div className="players">
                 <div className="player1">
-                    <h1 className="name1" onClick={clearQAndA}>{save.inputs?.input1}</h1>
-                    <h2 className="score1">0</h2>
+                    <h1 className="name1" onClick={clickName1}>{save.inputs?.input1}</h1>
+                    <h2 className="score1">{score1}</h2>
                     <input 
                         className= {answerButton? "answer1view" : "answer1"} 
                         type="text"
@@ -64,8 +99,8 @@ function Game(props){
                 </div>
                 <button className="lockButton" onClick={seeAnswer}>See Answer</button>
                 <div className="player2">
-                    <h1 className="name2" onClick={clearQAndA}>{save.inputs?.input2}</h1>
-                    <h2 className="score2">0</h2>
+                    <h1 className="name2" onClick={clickName2}>{save.inputs?.input2}</h1>
+                    <h2 className="score2">{score2}</h2>
                     <input 
                         className= {answerButton? "answer2view" : "answer2"} 
                         type="text"
@@ -80,15 +115,16 @@ function Game(props){
             {pushed1}
             {answerButton?
                 <div>
-                    <br></br>
-                    <br></br>
                     {answer}
+                    <br></br>
+                    <br></br>
+                    <button className="clearButton" onClick={clearAll}>Clear Q&A</button>
                 </div>
                 :
                 <></>    
             }
             </div>
-        }
+            }
                 <div className="board">
                     <div className="cat1">{category1.title}</div>
                     <div className="cat1val1" onClick={()=>clickCategory1(0)}>$200</div>
