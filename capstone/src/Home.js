@@ -4,7 +4,7 @@ import {Context} from "./Context"
 
 
 function Home(props){
-    let {inputs, saveName, handleChange} = useContext(Context)
+    let {directions, inputs, saveName, handleChange} = useContext(Context)
 
     return(
         <div className="homeWrapper">

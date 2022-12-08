@@ -26,14 +26,18 @@ function ContextProvider(props){
     const [answer, setAnswer] = useState([])
     const [answerButton, setAnswerButton] = useState(false)
 
-
     let audio = new Audio(song)
     
     const start = () => {
         audio.play()
     }
     
-    
+    function directions(){
+        setTimeout(() => {
+            window.alert(`\nDirections: \n \n After selecting a value, both Players will answer below their names and then click "See Answer." Click on the name(s) of the Player(s) with the right Answer to add points!`)
+          }, 1000)
+    }
+
     const question = questionArray.map((item) => {
         return (
             <div>
@@ -104,6 +108,7 @@ function ContextProvider(props){
     }
     return(
         <Context.Provider value={{
+            directions,
             inputs,
             setInputs,
             saveName,

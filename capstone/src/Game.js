@@ -5,12 +5,13 @@ import { clear } from "@testing-library/user-event/dist/clear"
 
 function Game(props){
     
-    let {inputs, setAnswerButton, answerButton, seeAnswer, save, lock, gameQuestions, getCat, category1, category2, category3, category4, category5, pushed1, setPushed1, answer, setAnswer} = useContext(Context)
+    let {directions, inputs, setAnswerButton, answerButton, seeAnswer, save, lock, gameQuestions, getCat, category1, category2, category3, category4, category5, pushed1, setPushed1, answer, setAnswer} = useContext(Context)
     
     useEffect(() => {
         getCat();
+        directions();
     },[])
-
+    
     const [score1, setScore1] = useState(0)
     const [score2, setScore2] = useState(0)
     const [eValue, setEValue] = useState()
@@ -53,6 +54,7 @@ function Game(props){
         setAnswerButton(false);
         setEValue(e)
         setCategorySwitch1(prev => prev + String(e))
+        console.log(category1.clues)
     }
     function clickCategory2(e){
         setPushed1("Question: " + category2.clues[e].question);

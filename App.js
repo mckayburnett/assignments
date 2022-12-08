@@ -1,4 +1,5 @@
-import React from "react"
+import React, {useContext} from "react"
+import {Context} from "./Context"
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import axios from 'axios'
 import Game from "./Game.js"
@@ -8,6 +9,7 @@ import {ContextProvider} from './Context'
 
 function App(props) {
 
+    let {directions} = useContext(Context)
     
     return (
         <div>  
@@ -19,7 +21,7 @@ function App(props) {
                         </Link>
                     </div>
                     <div className="sideNav">
-                        <Link to="/game" className="gameLink">
+                        <Link to="/game" className="gameLink" onClick={this.directions}>
                             Player vs Player
                         </Link>
                         <Link to="/practice" className="practiceLink">
