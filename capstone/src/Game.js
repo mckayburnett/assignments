@@ -54,7 +54,6 @@ function Game(props){
         setAnswerButton(false);
         setEValue(e)
         setCategorySwitch1(prev => prev + String(e))
-        console.log(category1.clues)
     }
     function clickCategory2(e){
         setPushed1("Question: " + category2.clues[e].question);
@@ -101,6 +100,15 @@ function Game(props){
             answerVal2: ""
             }
         )
+        if(categorySwitch1.length === 5 && categorySwitch2.length === 5 && categorySwitch3.length === 5 && categorySwitch4.length === 5 && categorySwitch5.length === 5){
+            if(score1 > score2) {
+                window.alert(`Congratulations, ${save.inputs?.input1}!!! You are the Jeopardy Champion!`)
+            } else {
+                window.alert(`Congratulations, ${save.inputs?.input2}!!! You are the Jeopardy Champion!`)
+            }    
+        } else {
+            console.log("not yet")
+        }
     }
     function handleChange(e){
         const {name, value} = e.target
@@ -108,6 +116,7 @@ function Game(props){
             [name]: value
         })
     }
+    
     return(
         <div className="gameWrapper">
             <div className="players">
