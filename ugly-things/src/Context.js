@@ -50,7 +50,7 @@ function ContextProvider(props){
     function deleteOne(id) {
         axios.delete(`https://api.vschool.io/mckayburnett/thing/${id}`)
         .then(res => console.log(res))
-        .then(res => getUglyThings)
+        .then(res => getUglyThings) 
         .catch(err => console.log(err))
         setUglyArray(uglyArray.filter(item => (item._id !== id)))
     }
@@ -101,6 +101,7 @@ function ContextProvider(props){
         axios.post('https://api.vschool.io/mckayburnett/thing', inputs)
         .then(res => 
             res.data
+            // setUglyArray(prev=>[...prev, res.data])
         )
         .then(res => getUglyThings())
         .catch(err => console.log(err))

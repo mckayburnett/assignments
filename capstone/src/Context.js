@@ -34,7 +34,7 @@ function ContextProvider(props){
     
     function directions(){
         setTimeout(() => {
-            window.alert(`\nDirections: \n \n After selecting a value, both Players will answer below their names and then click "See Answer." Click on the name(s) of the Player(s) with the right Answer to add points!`)
+            window.alert(`\nDirections: \n \n After selecting a value, both Players will answer in the box below their names and then click "See Answer." Click on the name(s) of the Player(s) with the right Answer to add points! There is no penalty for wrong answers.`)
           }, 1000)
     }
 
@@ -61,11 +61,11 @@ function ContextProvider(props){
         setUncoverAnswer(false)
     }
     
-    const cat1 = (Math.floor(Math.random() * 27723) + 1);
-    const cat2 = (Math.floor(Math.random() * 27723) + 1);
-    const cat3 = (Math.floor(Math.random() * 27723) + 1);
-    const cat4 = (Math.floor(Math.random() * 27723) + 1);
-    const cat5 = (Math.floor(Math.random() * 27723) + 1);
+    const cat1 = (Math.floor(Math.random() * 2000) + 1);
+    const cat2 = (Math.floor(Math.random() * 2000) + 1);
+    const cat3 = (Math.floor(Math.random() * 2000) + 1);
+    const cat4 = (Math.floor(Math.random() * 2000) + 1);
+    const cat5 = (Math.floor(Math.random() * 2000) + 1);
 
     function getCat(){
         axios.get("https://jservice.io/api/category/", { params: {id: `${cat1}` } })
