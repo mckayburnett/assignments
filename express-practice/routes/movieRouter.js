@@ -33,7 +33,7 @@ movieRouter.post("/", (req, res) => {
     const newMovie = req.body
     newMovie._id = uuidv4()
     movies.push(newMovie)
-    res.send(`Succesfully added ${newMovie.title} to the database!`)
+    res.send(newMovie)
 })
 
 // Delete One
@@ -43,6 +43,14 @@ movieRouter.delete("/:movieId", (req, res) => {
     movies.splice(movieIndex, 1);
     res.send("Succesfully deleted movie!")
 
+})
+
+// Update One
+movieRouter.put("/:movieId", (req, res) => {
+    const movieId = req.params.movieId;
+    const movieIndex = movies.findIndex(movie => movie._id === movieId);
+    const updateMovie = Object.assign(movies[movieIndex], req.body);
+    res.send(updateMovie)
 })
 
 
