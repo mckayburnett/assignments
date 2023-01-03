@@ -11,6 +11,6 @@ app.use("/tvShows", require("./routes/tvShowRouter"))
 
 
 
-app.listen(9000 , () => {
-    console.log("This server is running on port 9000")
+app.listen(8000 , () => {
+    console.log("This server is running on port 8000")
 }) 

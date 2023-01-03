@@ -33,6 +33,7 @@ export default function App(){
                 setBounties(prevBounties => prevBounties.map(bounty => bounty._id !== bountyId ? bounty : res.data))
             })
             .catch(err => console.log(err))
+        console.log('testing123')
     }
 
     useEffect(() => {
@@ -53,6 +54,7 @@ export default function App(){
                     key={bounty.firstName}
                     deleteBounty={deleteBounty}
                     editBounty={editBounty}
+                    setBounties={setBounties}
                 />)
             }
         </div>

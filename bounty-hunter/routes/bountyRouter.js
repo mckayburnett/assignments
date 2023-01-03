@@ -17,7 +17,7 @@ bountyRouter.route("/")
         const newBounty = req.body;
         newBounty._id = uuidv4();
         bounties.push(newBounty);
-        res.send(`Succesfully add ${newBounty.firstName} ${newBounty.lastName} to the bounty list!`)
+        res.send(newBounty)
     })
 bountyRouter.route("/:bountyId")
     .put((req, res) => {
