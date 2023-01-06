@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 export default function AddBountyForm(props){
     
-    const initInputs = {firstName: props.firstName || "", lastName: props.lastName || "", living: props.living || true, bountyAmount: props.bountyAmount || "", type: props.type || "Jedi"}
+    const initInputs = {firstName: props.firstName || "", lastName: props.lastName || "", living: props.living || false, bountyAmount: props.bountyAmount || "", jedi: props.type || false}
     const [inputs, setInputs] = useState(initInputs)
 
     function handleChange(e){
@@ -21,6 +21,7 @@ export default function AddBountyForm(props){
     return(
         <form onSubmit={handleSubmit}>
             <input 
+                className="firstName"
                 type="text"
                 name="firstName"
                 value={inputs.firstName}
@@ -28,46 +29,52 @@ export default function AddBountyForm(props){
                 placeholder="First Name"
             />
             <input 
+                className="lastName"
                 type="text"
                 name="lastName"
                 value={inputs.lastName}
                 onChange={handleChange}
                 placeholder="Last Name"
             />
+            <div className="living-dead">
+                <input 
+                    type="radio"
+                    name="living"
+                    value= {inputs.living}
+                    onChange={handleChange}
+                /> Living
+                <input 
+                    type="radio"
+                    name="living"
+                    value= ""
+                    onChange={handleChange}
+                /> Dead
+            </div>
             <input 
-                type="radio"
-                name="living"
-                value= "true"
-                onChange={handleChange}
-            /> Living
-            <input 
-                type="radio"
-                name="living"
-                value= "false"
-                onChange={handleChange}
-            /> Dead
-            <input 
+                className="bountyAmount"
                 type="number"
                 name="bountyAmount"
                 value={inputs.bountyAmount}
                 onChange={handleChange}
                 placeholder="Bounty Amount"
             />
-            <input 
-                type="radio"
-                name="type"
-                value="Jedi"
-                onChange={handleChange}
-                placeholder="Type"
-            /> Jedi
-            <input 
-                type="radio"
-                name="type"
-                value="Sith"
-                onChange={handleChange}
-                placeholder="Type"
-            /> Sith
-            <button>{ props.btnText }</button>
+            <div className="jedi-sith">
+                <input 
+                    type="radio"
+                    name="jedi"
+                    value={inputs.jedi}
+                    onChange={handleChange}
+                    placeholder="Type"
+                /> Jedi
+                <input 
+                    type="radio"
+                    name="jedi"
+                    value=""
+                    onChange={handleChange}
+                    placeholder="Type"
+                /> Sith
+            </div>
+            <button className="addBounty-button">{ props.btnText }</button>
         </form>
     )
 }

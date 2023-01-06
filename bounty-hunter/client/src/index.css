@@ -6,8 +6,122 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.background{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.519);
+  color: white;
+  height: 50px;
+  border-bottom: solid 1px white;
+  font-size: large;
+}
+.firstName{
+  font-size: large;
+}
+.lastName{
+  font-size: large;
+}
+.saber-green{
+  position: absolute;
+  padding-top: 20px;
+  left: 0;
+  height: 80px;
+  width: 210px;
+  margin-bottom: 50px;
+}
+.saber-red{
+  position: absolute;
+  padding-top: 20px;
+  left: 0;
+  height: 70px;
+  width: 222px;
+  margin-bottom: 50px;
+}
+.skull{
+  position: absolute;
+  width: 40px;
+  padding-left: 10px;
+  filter:drop-shadow(5px 5px 5px black)
+}
+.bountyAmount{
+  font-size: large;
+
+}
+.living-dead{
+  border: 1px solid white;
+  height: 45px;
+  padding: 10px;
+  display: block;
+  width: 80px;
+}
+.jedi-sith{
+  border: 1px solid white;
+  height: 45px;
+  padding: 10px;
+  display: block;
+  width: 70px;
+}
+h1{
+  padding: 10px;
+}
+p{
+  padding: 10px;
+  display: inline;
+}
+.bounty-info{
+  display: inline;
+  color: white;
+  padding-bottom: 20px;
+  border-bottom: 2px solid white;
+  width: auto;
+}
+.delete-button{
+  background-color: red;
+  border-radius: 8px;
+
+}
+.edit-button{
+  color: white;
+  background-color: blue;
+  border-radius: 8px; 
+}
+.close-button{
+  padding: 5px;
+  border-radius: 8px;
+  background-color: red;
+}
+.addBounty-button{
+  padding: 5px;
+  border-radius: 8px;
+  background-color: blue;
+  color: white;
+  width: 100px;
+  height: 35px;
+  font-size: medium;
+}
+button{
+  padding: 5px;
+  margin: 10px;
+  display: inline;
+  transition-duration: .4s;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 9px rgba(0, 0, 0, 0.302);
+}
+button:active{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+button:hover {
+  background-color: rgb(120, 1, 120); 
+  color: white;
+}
+

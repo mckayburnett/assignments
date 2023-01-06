@@ -28,12 +28,12 @@ export default function App(){
     }
 
     function editBounty(updates, bountyId){
-        axios.put(`/bounties/${bountyId}`)
+        axios.put(`/bounties/${bountyId}`, updates)
             .then(res => {
                 setBounties(prevBounties => prevBounties.map(bounty => bounty._id !== bountyId ? bounty : res.data))
             })
             .catch(err => console.log(err))
-        console.log('testing123')
+        window.location.reload()
     }
 
     useEffect(() => {
@@ -42,10 +42,12 @@ export default function App(){
 
     return (
         <div className="bounty-container">
+            <img src="https://c4.wallpaperflare.com/wallpaper/1005/822/563/star-wars-death-star-at-at-space-wallpaper-preview.jpg" alt="" className="background"/>
             <AddBountyForm 
                 submit={addBounty}
                 btnText="Add Bounty"
                 key={bounties.firstName}
+                editBounty={editBounty}
             />
             {
             bounties.map(bounty =>
@@ -55,7 +57,7 @@ export default function App(){
                     deleteBounty={deleteBounty}
                     editBounty={editBounty}
                     setBounties={setBounties}
-                />)
+                />) 
             }
         </div>
     )
