@@ -46,7 +46,7 @@ export default function AddBountyForm(props){
                 <input 
                     type="radio"
                     name="living"
-                    value= ""
+                    value= {inputs.living}
                     onChange={handleChange}
                 /> Dead
             </div>
@@ -69,7 +69,7 @@ export default function AddBountyForm(props){
                 <input 
                     type="radio"
                     name="jedi"
-                    value=""
+                    value={inputs.jedi}
                     onChange={handleChange}
                     placeholder="Type"
                 /> Sith
