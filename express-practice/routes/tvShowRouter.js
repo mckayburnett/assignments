@@ -13,10 +13,15 @@ tvShowRouter.get("/", (req, res) => {
     res.send(tvShows)
 })
 
-tvShowRouter.get("/:tvShowId", (req, res) => {
+tvShowRouter.get("/:tvShowId", (req, res, next) => {
     const tvShowId = req.params.tvShowId;
     const foundShow = tvShows.find(tvShow => tvShow._id === tvShowId)
-    res.send(foundShow)
+    if(!foundShow){
+        const error = new Error(`The item with ID: ${tvShowId} was not found.`)
+        res.status(500)
+        return next(error)
+    }
+    res.status(200).send(foundShow)
 })
 
 // tvShowRouter.route("/")

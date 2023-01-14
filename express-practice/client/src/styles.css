@@ -46,3 +46,6 @@ button{
     background-color: cornflowerblue;
     color: whitesmoke;
 }
+.filter-form{
+    width: 200px;
+}
