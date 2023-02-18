@@ -3,7 +3,7 @@ import AddBountyForm from "./AddBountyForm"
 
 export default function Bounty(props){
     
-    let { firstName, lastName, living, bountyAmount, jedi, _id, editBounty } = props
+    let { firstName, lastName, living, bountyAmount, type, _id, editBounty } = props
     const [editToggle, setEditToggle] = useState(false)
     console.log(living)
 
@@ -12,7 +12,7 @@ export default function Bounty(props){
             { !editToggle ?
                 <div className="bounty-info">
                     <h1>{ firstName } { lastName } 
-                        {jedi ? 
+                        {type === "jedi" ? 
                             <img 
                                 className="saber-green"
                                 src="https://www.pngarts.com/files/3/Green-Lightsaber-PNG-Pic.png" alt="green"/> 
@@ -21,7 +21,7 @@ export default function Bounty(props){
                                 className="saber-red"
                                 src="https://www.pngarts.com/files/3/Red-Lightsaber-Free-PNG-Image.png" alt="red"/>
                         }
-                        {!living ? <img
+                        {living === "dead" ? <img
                                     className="skull"
                                     src="https://www.pngarts.com/files/2/Skull-Bones-Transparent.png"
                                     alt="dead"/>
@@ -29,9 +29,9 @@ export default function Bounty(props){
                             <></>
                         }
                     </h1>
-                    <p>Status: {living ? "Alive" : "Dead"}</p>
+                    <p>Status: {living === "alive"? "Alive" : "Dead"}</p>
                     <p>Bounty Amount: { bountyAmount }</p>
-                    <p>Type: {`${jedi ? "Jedi" : "Sith"}`}</p>
+                    <p>Type: {`${type === "jedi" ? "Jedi" : "Sith"}`}</p>
                     <button
                         className="delete-button"
                         onClick={() => props.deleteBounty(_id)}
@@ -52,7 +52,7 @@ export default function Bounty(props){
                         lastName = { lastName }
                         living = { living }
                         bountyAmount = { bountyAmount }
-                        jedi = { jedi }
+                        type = { type }
                         _id = { _id }
                         btnText = "Submit Edit"
                         submit = { editBounty }

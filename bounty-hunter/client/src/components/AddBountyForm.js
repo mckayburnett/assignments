@@ -2,13 +2,36 @@ import React, { useState } from "react"
 
 export default function AddBountyForm(props){
     
-    const initInputs = {firstName: props.firstName || "", lastName: props.lastName || "", living: props.living || false, bountyAmount: props.bountyAmount || "", jedi: props.type || false}
+    const initInputs = {
+        firstName: props.firstName || "", 
+        lastName: props.lastName || "", 
+        living: props.living || "", 
+        bountyAmount: props.bountyAmount || "", 
+        type: props.type || ""
+}
+
     const [inputs, setInputs] = useState(initInputs)
 
     function handleChange(e){
+        console.log(e.target.value)
         const { name, value } = e.target
         setInputs(prevInputs => ({...prevInputs, [name]: value}))
     }
+
+    // function radioChange(e){
+    //     const { value } = e.target
+    //     console.log(value)
+    //     setInputs(prevInputs => {
+    //         return {
+    //             ...prevInputs, 
+    //             living: value
+    //         }
+    //     })
+    // }
+
+    // function typeChange(e){
+    //     const { value } = e.target
+    // }
 
     function handleSubmit(e){
         e.preventDefault()
@@ -40,13 +63,13 @@ export default function AddBountyForm(props){
                 <input 
                     type="radio"
                     name="living"
-                    value= {inputs.living}
+                    value= "alive"
                     onChange={handleChange}
                 /> Living
                 <input 
                     type="radio"
                     name="living"
-                    value= {inputs.living}
+                    value= "dead"
                     onChange={handleChange}
                 /> Dead
             </div>
@@ -61,15 +84,15 @@ export default function AddBountyForm(props){
             <div className="jedi-sith">
                 <input 
                     type="radio"
-                    name="jedi"
-                    value={inputs.jedi}
+                    name="type"
+                    value="jedi"
                     onChange={handleChange}
                     placeholder="Type"
                 /> Jedi
                 <input 
                     type="radio"
-                    name="jedi"
-                    value={inputs.jedi}
+                    name="type"
+                    value="sith"
                     onChange={handleChange}
                     placeholder="Type"
                 /> Sith

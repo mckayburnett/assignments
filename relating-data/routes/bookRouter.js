@@ -37,6 +37,31 @@ bookRouter.post("/:authorID", (req, res, next) => {
     })
 })
 
+//Like a book
+bookRouter.put("/like/:bookID", (req, res, next) => {
+    Book.findOneAndUpdate(
+        { _id: req.params.bookID },
+        { $inc: { likes: 1 } },
+        { new: true },
+        (err, updatedBook) => {
+            if(err){
+                res.status(500)
+                return next(err)
+            }
+            return res.status(201).send(updatedBook)
+        }
+    )
+})
 
+//Find books by likes range
+bookRouter.get("/search/bylikes", (req, res, next) => {
+    Book.where("likes").gte(req.query.likeamount).exec((err, book) => {
+        if(err){
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(book)
+    })
+})
 
 module.exports = bookRouter

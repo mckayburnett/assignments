@@ -20,7 +20,7 @@ function attackAgain(){
         run();
     } else if (attackAgain1 === 'p' || attackAgain1 === 'print'){
        print(); attackAgain();
-    } else if (attackAgain !== 'f' || attackAgain !== 'r' || attackAgain !== 'p' || attackAgain !== 'print'){
+    } else if (attackAgain1 !== 'f' || attackAgain1 !== 'r' || attackAgain1 !== 'p' || attackAgain1 !== 'print'){
         incorrectCommand(); attackAgain();
     }
 }    
@@ -34,7 +34,7 @@ function attackDmg(){
         console.log("Your attack was strong enough to destroy your enemy. The CryptoCurrency " + reward + " was added to your Virtual Inventory.")
         virtualInv.push(reward);
         walk();
-    } else if (monsterLife >= 0){
+    } else if (monsterLife > 0){
         console.log("Your attack was not strong enough to destroy your enemy. Your enemy attacked you in return.")
         attacked();
     }    
