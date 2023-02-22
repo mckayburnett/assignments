@@ -52,12 +52,10 @@ export default function App(){
         <Link to="/" className="signOutLink">
           Sign Out
         </Link>
-      </nav>
-      <div className="signIn">
         <Link to="/sales" className="signInLink">
           Sign In
         </Link>
-      </div>
+      </nav>
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/sales" element={<Sales />}/>
