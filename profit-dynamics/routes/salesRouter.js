@@ -1,9 +1,9 @@
 const express = require("express")
-const data = express.Router()
+const salesRouter = express.Router()
 const Data = require("../models/data.js")
 
 //get all
-data.get("/", (req, res, next) => {
+salesRouter.get("/", (req, res, next) => {
     Data.find((err, data) => {
         if(err){
             res.status(500)
@@ -14,7 +14,7 @@ data.get("/", (req, res, next) => {
 })
 
 //get one
-data.get("/", (req, res, next) => {
+salesRouter.get("/", (req, res, next) => {
     Data.findById((err, data) => {
         if(err){
             res.status(500)
@@ -25,7 +25,7 @@ data.get("/", (req, res, next) => {
 })
 
 //post
-data.post("/", (req, res, next) => {
+salesRouter.post("/", (req, res, next) => {
     if (req.body.sales){
         Data.create(req.body.sales, function(err){
           if(err)
@@ -48,7 +48,7 @@ data.post("/", (req, res, next) => {
     }
 })
 //update
-data.put("/:dataId", (req, res, next) => {
+salesRouter.put("/:dataId", (req, res, next) => {
     Data.findOneAndUpdate(
         { _id: req.params.dataId },
         req.body,
@@ -64,7 +64,7 @@ data.put("/:dataId", (req, res, next) => {
 })
 
 //delete one
-data.delete("/:dataId", (req, res, next) => {
+salesRouter.delete("/:dataId", (req, res, next) => {
     Data.findOneAndDelete({ _id: req.params.dataId },
     (err, deletedData) => {
         if(err){
@@ -75,4 +75,4 @@ data.delete("/:dataId", (req, res, next) => {
     })
 })
 
-module.exports = data
+module.exports = salesRouter

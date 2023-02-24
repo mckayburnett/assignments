@@ -8,7 +8,7 @@ app.use(morgan("dev"))
 
 mongoose.connect("mongodb://localhost:27017/fake-data-db", () => console.log("connected to fake-data-db"))
 
-app.use("/sales", require("./routes/sales.js"))
+app.use("/sales", require("./routes/salesRouter.js"))
 
 app.use((err, req, res, next) => {
     console.log(err)
