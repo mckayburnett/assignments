@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
+import SalesData from "./SalesData"
 
 
 export default function Sales(props){
@@ -11,8 +12,6 @@ const [sales, setSales] = useState([])
     axios.get("/sales")
       .then(res => setSales(res.data))
       .catch(err => console.log(err.response.data.errMsg))
-    console.log("working")
-    console.log(sales)
   }
   function addSale(newSale){
     axios.post("/sales", newSale)
@@ -44,6 +43,15 @@ const [sales, setSales] = useState([])
     return (
         <div className="salesWrapper">
             <img src="https://cdn.fansshare.com/pictures/wallpaperbackground/good-background-colors-free-wallpapers-color-photo-color-backgrounds-815378648.jpg" alt="" className="salesBackground"/>
+            <SalesData 
+                {...sales}
+                sales={sales}
+                key={sales.date}
+                getSales={getSales}
+                addSale={addSale}
+                deleteSale={deleteSale}
+                editSale={editSale}
+            />
         </div>
     )
 }

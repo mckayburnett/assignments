@@ -319,3 +319,34 @@ body {
   position: fixed;
   width: 100%;
 }
+/*SalesData page*/
+.clientName{
+  position: absolute;
+  color: whitesmoke;
+  text-shadow: #0b8824 2px 2px 2px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  letter-spacing: 10px;
+  font-size: 80px;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dataWrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.day{
+  grid-column: 1/2;
+  color: white;
+  position: absolute;
+  display: inline-block;
+  text-orientation: upright;
+}
+.orders{
+  grid-column: 2/3;
+  color: white;
+  position: absolute;
+  display: inline-block;
+  text-orientation: upright;
+}
