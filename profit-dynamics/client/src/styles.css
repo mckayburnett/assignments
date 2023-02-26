@@ -5,6 +5,9 @@ body {
 .navbar{
   background-color: black;
   height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
 }
 .homeLink{
   color: white;
@@ -333,15 +336,14 @@ body {
   transform: translate(-50%, -50%);
 }
 .dataWrapper{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  
 }
 .day{
-  grid-column: 1/2;
   color: white;
-  position: absolute;
-  display: inline-block;
-  text-orientation: upright;
+  position: relative;
+  width: 200px;
+  height: 100px;
+  margin: 0
 }
 .orders{
   grid-column: 2/3;
@@ -349,4 +351,12 @@ body {
   position: absolute;
   display: inline-block;
   text-orientation: upright;
+}
+.dropDown{
+  width: 120px;
+  position: absolute;
+  font-size: medium;
+  text-align: center;
+  margin-left: 20px;
+  margin-top: 60px;
 }

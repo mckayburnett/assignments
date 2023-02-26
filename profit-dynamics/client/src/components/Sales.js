@@ -6,6 +6,7 @@ import SalesData from "./SalesData"
 export default function Sales(props){
     
 const [sales, setSales] = useState([])
+const [push, setPush] = useState([])
 
 //axios functions
   function getSales(){
@@ -38,20 +39,32 @@ const [sales, setSales] = useState([])
     getSales()
     console.log("sales: ", sales)
   },[])
-    
 
+  for(let i = 0; i < sales.length; i++){
+    console.log("test",sales[i].day)
+    push.push(sales[i].day)
+  }
+  console.log("push",push)
+  
     return (
         <div className="salesWrapper">
             <img src="https://cdn.fansshare.com/pictures/wallpaperbackground/good-background-colors-free-wallpapers-color-photo-color-backgrounds-815378648.jpg" alt="" className="salesBackground"/>
-            <SalesData 
-                {...sales}
-                sales={sales}
-                key={sales.date}
-                getSales={getSales}
-                addSale={addSale}
-                deleteSale={deleteSale}
-                editSale={editSale}
-            />
+            <select className="dropDown">
+              {
+                push.map(value => <option key={value} value={value}>{value}</option>)
+              }
+            </select>
+            {
+            sales.map(sale => 
+              <SalesData 
+                  sales={sale}
+                  key={sale.date}
+                  getSales={getSales}
+                  addSale={addSale}
+                  deleteSale={deleteSale}
+                  editSale={editSale}
+              />)
+            }
         </div>
     )
 }
