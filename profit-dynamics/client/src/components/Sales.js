@@ -6,7 +6,8 @@ import SalesData from "./SalesData"
 export default function Sales(props){
     
 const [sales, setSales] = useState([])
-const [push, setPush] = useState([])
+const [dateOne, setDateOne] = useState([])
+const [dateTwo, setDateTwo] = useState([])
 
 //axios functions
   function getSales(){
@@ -40,20 +41,30 @@ const [push, setPush] = useState([])
     console.log("sales: ", sales)
   },[])
 
-  for(let i = 0; i < sales.length; i++){
-    console.log("test",sales[i].day)
-    push.push(sales[i].day)
+  function handleChange1(e){
+    console.log("date: ",e.target.value)
+    setDateOne(Date.parse(e.target.value))
+    console.log(dateOne)
   }
-  console.log("push",push)
+  function handleChange2(e){
+    console.log("date: ",e.target.value)
+    setDateTwo(Date.parse(e.target.value))
+    console.log(dateTwo)
+  }
   
     return (
         <div className="salesWrapper">
             <img src="https://cdn.fansshare.com/pictures/wallpaperbackground/good-background-colors-free-wallpapers-color-photo-color-backgrounds-815378648.jpg" alt="" className="salesBackground"/>
-            <select className="dropDown">
-              {
-                push.map(value => <option key={value} value={value}>{value}</option>)
-              }
+          <div className="dates">
+            <p className="drop1Title">--Starting Date--</p> 
+            <p className="drop2Title">--Ending Date--</p>
+            <select className="dropDown1" onChange={handleChange1}>
+              {sales.map((sale) => <option value={sale.day}>{sale.day}</option>)}
             </select>
+            <select className="dropDown2" onChange={handleChange2}>
+              {sales.map((sale) => <option value={sale.day}>{sale.day}</option>)}
+            </select>
+          </div>
             {
             sales.map(sale => 
               <SalesData 

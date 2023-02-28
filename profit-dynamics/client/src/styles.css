@@ -352,11 +352,41 @@ body {
   display: inline-block;
   text-orientation: upright;
 }
-.dropDown{
-  width: 120px;
+.dates{
+  position: relative;
+}
+.drop1Title{
+  color: white;
   position: absolute;
   font-size: medium;
   text-align: center;
-  margin-left: 20px;
-  margin-top: 60px;
+  margin-left: 30px;
+  margin-top: 30px;
+  z-index: 1100;
 }
+.dropDown1{
+  width: 150px;
+  font-size: medium;
+  text-align: center;
+  margin-left: 30px;
+  margin-top: 60px;
+  z-index: 1100;
+}
+.drop2Title{
+  font-size: medium;
+  color: white;
+  position: absolute;
+  text-align: center;
+  margin-left: 230px;
+  margin-top: 30px;
+  z-index: 1100;
+}
+.dropDown2{
+  font-size: medium;
+  width: 150px;
+  text-align: center;
+  margin-left: 50px;
+  margin-top: 60px;
+  z-index: 1100;
+}
+
