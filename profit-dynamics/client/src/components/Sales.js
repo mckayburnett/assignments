@@ -8,6 +8,7 @@ export default function Sales(props){
 const [sales, setSales] = useState([])
 const [dateOne, setDateOne] = useState([])
 const [dateTwo, setDateTwo] = useState([])
+const [graphSales, setGraphSales] = useState([])
 
 //axios functions
   function getSales(){
