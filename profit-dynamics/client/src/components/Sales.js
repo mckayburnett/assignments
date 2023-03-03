@@ -42,15 +42,17 @@ const [dateTwo, setDateTwo] = useState([])
   },[])
 
   function handleChange1(e){
-    console.log("date: ",e.target.value)
+    // console.log("date: ",e.target.value)
     setDateOne(Date.parse(e.target.value))
-    console.log(dateOne)
   }
   function handleChange2(e){
-    console.log("date: ",e.target.value)
+    // console.log("date: ",e.target.value)
     setDateTwo(Date.parse(e.target.value))
-    console.log(dateTwo)
   }
+  
+  console.log((sales.filter(sale => Date.parse(sale.day) <= dateTwo && Date.parse(sale.day) >= dateOne)))
+  
+  
   
     return (
         <div className="salesWrapper">
@@ -65,6 +67,7 @@ const [dateTwo, setDateTwo] = useState([])
               {sales.map((sale) => <option value={sale.day}>{sale.day}</option>)}
             </select>
           </div>
+          
             {
             sales.map(sale => 
               <SalesData 
