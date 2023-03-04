@@ -339,11 +339,18 @@ body {
   
 }
 .day{
-  color: white;
+  color: whitesmoke;
   position: relative;
-  width: 200px;
+  font-size: x-large;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  width: 400px;
   height: 100px;
-  margin: 0
+  margin: 0;
+  text-align: center;
+  top: 70px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .orders{
   grid-column: 2/3;

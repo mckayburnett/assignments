@@ -39,7 +39,7 @@ const [graphSales, setGraphSales] = useState([])
   }
   useEffect(() => {
     getSales()
-    console.log("sales: ", sales)
+    //console.log("sales: ", sales)
   },[])
 
   function handleChange1(e){
@@ -51,7 +51,12 @@ const [graphSales, setGraphSales] = useState([])
     setDateTwo(Date.parse(e.target.value))
   }
   
-  console.log((sales.filter(sale => Date.parse(sale.day) <= dateTwo && Date.parse(sale.day) >= dateOne)))
+  //my baby
+  useEffect(() => {
+    setGraphSales(sales.filter(sale => Date.parse(sale.day) <= dateTwo && Date.parse(sale.day) >= dateOne))
+  }, [dateOne, dateTwo])
+  
+  console.log(graphSales)
   
   
   
@@ -68,18 +73,9 @@ const [graphSales, setGraphSales] = useState([])
               {sales.map((sale) => <option value={sale.day}>{sale.day}</option>)}
             </select>
           </div>
-          
-            {
-            sales.map(sale => 
               <SalesData 
-                  sales={sale}
-                  key={sale.date}
-                  getSales={getSales}
-                  addSale={addSale}
-                  deleteSale={deleteSale}
-                  editSale={editSale}
-              />)
-            }
+                  graphSales={graphSales}
+              />
         </div>
     )
 }
