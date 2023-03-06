@@ -1,6 +1,7 @@
 /*app*/
 body {
   margin: 0;
+  max-width: 100%;
 }
 .navbar{
   background-color: black;
@@ -318,6 +319,9 @@ body {
   }
 }
 /*sales page*/
+.salesWrapper{
+  width: 100%;
+}
 .salesBackground{
   position: fixed;
   width: 100%;
@@ -396,4 +400,10 @@ body {
   margin-top: 60px;
   z-index: 1100;
 }
-
+.graphContainer{
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+}

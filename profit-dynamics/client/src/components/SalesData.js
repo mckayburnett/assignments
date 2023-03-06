@@ -36,18 +36,16 @@ export default function SalesData(props){
             <div className="dataWrapper">
                 {graphSales[1] ? <h1 className="day">{graphSales[0].day} - {graphSales[graphSales.length-1].day}</h1> : <h1 className="day">Date</h1>}
             </div>
-            <div className="container mt-5">
-        <h2>React Google Line Chart Example</h2>
-        <Chart
-          width={'700px'}
-          height={'410px'}
-          chartType="LineChart"
-          loader={<div>Loading Chart</div>}
-          data={LineData}
-          options={LineChartOptions}
-          rootProps={{ 'data-testid': '2' }}
-        />
-      </div>
+            <div className="graphContainer">
+                <Chart
+                    chartType="LineChart"
+                    height={"600px"}
+                    loader={<div>Loading Chart</div>}
+                    data={LineData}
+                    options={LineChartOptions}
+                    rootProps={{ 'data-testid': '2' }}
+                />
+            </div>
         </div>
     )
 }
