@@ -23,12 +23,15 @@ export default function SalesData(props){
     [7, 27, 0],
     ]
     const LineChartOptions = {
+        legend: {
+            position: 'top'
+          },
         hAxis: {
             title: 'Date',
         },
         vAxes: {
             0: {title: `${dataSet1}`},
-            1: {title2: `${dataSet2}`}
+            1: {title: `${dataSet2}`}
         },
         series: {
             0: {targetAxisIndex:0},
