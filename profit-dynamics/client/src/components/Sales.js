@@ -81,6 +81,7 @@ const [dataSet2, setDataSet2] = useState([])
               {sales.map((sale) => <option value={sale.day}>{sale.day}</option>)}
             </select>
             <select className="dropDown3" onChange={handleChange3}>
+              <option value=""></option>
               <option value="Units">Units</option>
               <option value="Discounts">Discounts</option>
               <option value="Gross Sales">Gross Sales</option>
@@ -93,6 +94,7 @@ const [dataSet2, setDataSet2] = useState([])
               <option value="Units per Transaction">Units per Transaction</option>
             </select>
             <select className="dropDown4" onChange={handleChange4}>
+              <option value=""></option>
               <option value="Units">Units</option>
               <option value="Discounts">Discounts</option>
               <option value="Gross Sales">Gross Sales</option>
