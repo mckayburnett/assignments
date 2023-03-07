@@ -9,6 +9,8 @@ const [sales, setSales] = useState([])
 const [dateOne, setDateOne] = useState([])
 const [dateTwo, setDateTwo] = useState([])
 const [graphSales, setGraphSales] = useState([])
+const [dataSet1, setDataSet1] = useState([])
+const [dataSet2, setDataSet2] = useState([])
 
 //axios functions
   function getSales(){
@@ -50,6 +52,12 @@ const [graphSales, setGraphSales] = useState([])
     // console.log("date: ",e.target.value)
     setDateTwo(Date.parse(e.target.value))
   }
+  function handleChange3(e){
+    setDataSet1(e.target.value)
+  }
+  function handleChange4(e){
+    setDataSet2(e.target.value)
+  }
   
   //my baby
   useEffect(() => {
@@ -58,23 +66,49 @@ const [graphSales, setGraphSales] = useState([])
   
   console.log(graphSales)
   
-  
-  
     return (
         <div className="salesWrapper">
             <img src="https://cdn.fansshare.com/pictures/wallpaperbackground/good-background-colors-free-wallpapers-color-photo-color-backgrounds-815378648.jpg" alt="" className="salesBackground"/>
           <div className="dates">
             <p className="drop1Title">--Starting Date--</p> 
             <p className="drop2Title">--Ending Date--</p>
+            <p className="drop3Title">--Data Set 1--</p>
+            <p className="drop4Title">--Data Set 2--</p>
             <select className="dropDown1" onChange={handleChange1}>
               {sales.map((sale) => <option value={sale.day}>{sale.day}</option>)}
             </select>
             <select className="dropDown2" onChange={handleChange2}>
               {sales.map((sale) => <option value={sale.day}>{sale.day}</option>)}
             </select>
+            <select className="dropDown3" onChange={handleChange3}>
+              <option value="Units">Units</option>
+              <option value="Discounts">Discounts</option>
+              <option value="Gross Sales">Gross Sales</option>
+              <option value="Net Sales">Net Sales</option>
+              <option value="Orders">Orders</option>
+              <option value="Returns">Returns</option>
+              <option value="Shipping">Shipping</option>
+              <option value="Taxes">Taxes</option>
+              <option value="Total Sales">Total Sales</option>
+              <option value="Units per Transaction">Units per Transaction</option>
+            </select>
+            <select className="dropDown4" onChange={handleChange4}>
+              <option value="Units">Units</option>
+              <option value="Discounts">Discounts</option>
+              <option value="Gross Sales">Gross Sales</option>
+              <option value="Net Sales">Net Sales</option>
+              <option value="Orders">Orders</option>
+              <option value="Returns">Returns</option>
+              <option value="Shipping">Shipping</option>
+              <option value="Taxes">Taxes</option>
+              <option value="Total Sales">Total Sales</option>
+              <option value="Units per Transaction">Units per Transaction</option>
+            </select>
           </div>
               <SalesData 
                   graphSales={graphSales}
+                  dataSet1={dataSet1}
+                  dataSet2={dataSet2}
               />
         </div>
     )

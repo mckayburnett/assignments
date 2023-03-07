@@ -5,10 +5,14 @@ import Chart from 'react-google-charts'
 export default function SalesData(props){
     
     const graphSales = props.graphSales
+    const dataSet1 = props.dataSet1
+    const dataSet2 = props.dataSet2
     console.log(graphSales)
-    
+    console.log(dataSet1)
+    console.log(dataSet2)
+
     const LineData = [
-    ['x', 'dogs', 'cats'],
+    ['x', `${dataSet1}`, `${dataSet2}`],
     [0, 0, 0],
     [1, 10, 5],
     [2, 23, 15],
@@ -19,20 +23,28 @@ export default function SalesData(props){
     [7, 27, 0],
     ]
     const LineChartOptions = {
-    hAxis: {
-        title: 'Time',
-    },
-    vAxis: {
-        title: 'Popularity',
-    },
-    series: {
-        1: { curveType: 'function' },
-    },
+        hAxis: {
+            title: 'Date',
+        },
+        vAxes: {
+            0: {title: `${dataSet1}`},
+            1: {title2: `${dataSet2}`}
+        },
+        series: {
+            0: {targetAxisIndex:0},
+            1: {targetAxisIndex:1}
+
+        },
+        animation: {
+            duration: 500,
+            easing: 'in',
+            startup: true
+        }
     }
 
     return(
         <div className="salesDataWrapper">
-            <h1 className="clientName">Finops</h1>
+            <h1 className="clientName">Dynamic Development</h1>
             <div className="dataWrapper">
                 {graphSales[1] ? <h1 className="day">{graphSales[0].day} - {graphSales[graphSales.length-1].day}</h1> : <h1 className="day">Date</h1>}
             </div>

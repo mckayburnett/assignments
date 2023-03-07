@@ -93,7 +93,7 @@ console.log(emails)
           />
           { confirmToggle ?
           <div>
-            <p className="credentials">Credentials Confirmed!</p>
+            <p className="credentials">Credentials Confirmed</p>
             <Link 
             to="/sales" 
             className="signInLink"
