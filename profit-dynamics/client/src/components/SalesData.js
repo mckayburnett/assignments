@@ -15,21 +15,17 @@ export default function SalesData(props){
     console.log("day",graphSales.map((sale) => sale.day))
     console.log("graph line", graphLine)
     
-    // useEffect(()=> {
-    //     for(let i = 0; i < graphLine.length; i ++){
-    //     lineData.push(graphLine[i])
-    //     }
-    //     console.log("...",graphLine)
-    // },[graphLine])
-       
+    useEffect(()=> {
+        graphLine.forEach((item) => lineData.push(item))
+    },[graphLine])
 
+    
+    
     const lineData = [
         ['x', dataSet1, dataSet2],
         graphLine[0],
-        graphLine[1],
-        graphLine[2],
-        graphLine[3],
-        graphLine[4]
+        graphLine[1]
+        
     ]
     
     console.log("line data",lineData)
