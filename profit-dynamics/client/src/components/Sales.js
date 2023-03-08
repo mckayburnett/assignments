@@ -83,28 +83,28 @@ const [dataSet2, setDataSet2] = useState([])
             <select className="dropDown3" onChange={handleChange3}>
               <option value=""></option>
               <option value="Units">Units</option>
-              <option value="Discounts">Discounts</option>
-              <option value="Gross Sales">Gross Sales</option>
-              <option value="Net Sales">Net Sales</option>
-              <option value="Orders">Orders</option>
-              <option value="Returns">Returns</option>
-              <option value="Shipping">Shipping</option>
-              <option value="Taxes">Taxes</option>
-              <option value="Total Sales">Total Sales</option>
-              <option value="Units per Transaction">Units per Transaction</option>
+              <option value="discounts">Discounts</option>
+              <option value="gross_sales">Gross Sales</option>
+              <option value="net_sales">Net Sales</option>
+              <option value="orders">Orders</option>
+              <option value="returns">Returns</option>
+              <option value="shipping">Shipping</option>
+              <option value="taxes">Taxes</option>
+              <option value="total_sales">Total Sales</option>
+              <option value="units_per_transaction">Units per Transaction</option>
             </select>
             <select className="dropDown4" onChange={handleChange4}>
               <option value=""></option>
               <option value="Units">Units</option>
-              <option value="Discounts">Discounts</option>
-              <option value="Gross Sales">Gross Sales</option>
-              <option value="Net Sales">Net Sales</option>
-              <option value="Orders">Orders</option>
-              <option value="Returns">Returns</option>
-              <option value="Shipping">Shipping</option>
-              <option value="Taxes">Taxes</option>
-              <option value="Total Sales">Total Sales</option>
-              <option value="Units per Transaction">Units per Transaction</option>
+              <option value="discounts">Discounts</option>
+              <option value="gross_sales">Gross Sales</option>
+              <option value="net_sales">Net Sales</option>
+              <option value="orders">Orders</option>
+              <option value="returns">Returns</option>
+              <option value="shipping">Shipping</option>
+              <option value="taxes">Taxes</option>
+              <option value="total_sales">Total Sales</option>
+              <option value="units_per_transaction">Units per Transaction</option>
             </select>
           </div>
               <SalesData 

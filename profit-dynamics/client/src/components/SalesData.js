@@ -7,24 +7,34 @@ export default function SalesData(props){
     const graphSales = props.graphSales
     const dataSet1 = props.dataSet1
     const dataSet2 = props.dataSet2
-    console.log(graphSales)
+    console.log("graph sales" , graphSales)
     console.log("dataSet1",dataSet1)
     console.log("dataSet2",dataSet2)
-
+ 
+    const graphLine = graphSales.map((sale) => [sale.day, sale.Units, sale.orders])
+    console.log("day",graphSales.map((sale) => sale.day))
+    console.log("graph line", graphLine)
     
-        const LineData = [
-        ['x', `${dataSet1}`, `${dataSet2}`],
-        [0, 0, 0],
-        [1, 10, 5],
-        [2, 23, 15],
-        [3, 17, 9],
-        [4, 18, 10],
-        [5, 9, 5],
-        [6, 11, 3],
-        [7, 27, 0]
-        ]
-        
-    const LineChartOptions = {
+    // useEffect(()=> {
+    //     for(let i = 0; i < graphLine.length; i ++){
+    //     lineData.push(graphLine[i])
+    //     }
+    //     console.log("...",graphLine)
+    // },[graphLine])
+       
+
+    const lineData = [
+        ['x', dataSet1, dataSet2],
+        graphLine[0],
+        graphLine[1],
+        graphLine[2],
+        graphLine[3],
+        graphLine[4]
+    ]
+    
+    console.log("line data",lineData)
+    
+    const lineChartOptions = {
         legend: {
             position: 'top'
           },
@@ -60,8 +70,8 @@ export default function SalesData(props){
                         chartType="LineChart"
                         height={"600px"}
                         loader={<div>Loading Chart</div>}
-                        data={LineData}
-                        options={LineChartOptions}
+                        data={lineData}
+                        options={lineChartOptions}
                         rootProps={{ 'data-testid': '2' }}
                     />
                     
