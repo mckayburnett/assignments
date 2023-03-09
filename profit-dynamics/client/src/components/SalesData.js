@@ -12,22 +12,25 @@ export default function SalesData(props){
     console.log("dataSet2",dataSet2)
  
     const graphLine = graphSales.map((sale) => [sale.day, sale.Units, sale.orders])
+    const day = graphSales.map((sale) => sale.day)
+    const num = day.length-1
     console.log("day",graphSales.map((sale) => sale.day))
     console.log("graph line", graphLine)
     
-    useEffect(()=> {
-        graphLine.forEach((item) => lineData.push(item))
-    },[graphLine])
+    // useEffect(()=> {
+    //     graphLine.forEach((item) => lineData.push(item))
+    // },[graphLine])
 
     
+  
+
     
     const lineData = [
         ['x', dataSet1, dataSet2],
-        graphLine[0],
-        graphLine[1]
         
     ]
-    
+    const test = lineData.concat(graphLine)
+    console.log("test", test)
     console.log("line data",lineData)
     
     const lineChartOptions = {
@@ -66,7 +69,7 @@ export default function SalesData(props){
                         chartType="LineChart"
                         height={"600px"}
                         loader={<div>Loading Chart</div>}
-                        data={lineData}
+                        data={test}
                         options={lineChartOptions}
                         rootProps={{ 'data-testid': '2' }}
                     />
