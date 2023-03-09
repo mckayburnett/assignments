@@ -16,8 +16,8 @@ export default function SalesData(props){
     const num = day.length-1
     console.log("day",graphSales.map((sale) => sale.day))
     console.log("graph line", graphLine)
-    console.log("testing1",`${graphSales[0].dataSet1}`)
-    console.log("testing2",`${graphSales[0].dataSet2}`)
+    // console.log("testing1",`${graphSales[0].dataSet1}`)
+    // console.log("testing2",`${graphSales[0].dataSet2}`)
     // useEffect(()=> {
     //     graphLine.forEach((item) => lineData.push(item))
     // },[graphLine])

@@ -23,6 +23,8 @@ body {
   border: 1px solid white;
   padding: 5px;
   border-radius: 5px;
+  z-index: 1100;
+
 }
 .homeLink:link{
   text-decoration: none;
@@ -37,6 +39,8 @@ body {
   border: 1px solid white;
   padding: 5px;
   border-radius: 5px;
+  z-index: 1100;
+
 
 }
 .signOutLink:link{
@@ -343,8 +347,10 @@ body {
   font-weight: 400;
   letter-spacing: 10px;
   font-size: 80px;
-  width: 100%;
-  top: -40px;
+  width: 1000px;
+  top: 5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   z-index: 1100;
 }
