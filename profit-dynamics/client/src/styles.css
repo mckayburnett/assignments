@@ -335,7 +335,7 @@ body {
   width: 100%;
 }
 .salesBackground{
-  position: absolute;
+  position: fixed;
   width: 100%;
 }
 /*SalesData page*/
