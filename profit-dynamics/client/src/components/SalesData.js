@@ -7,6 +7,7 @@ export default function SalesData(props){
     const graphSales = props.graphSales
     const dataSet1 = props.dataSet1
     const dataSet2 = props.dataSet2
+    const radio = props.radio
 
     console.log("graph sales" , graphSales)
     console.log("dataSet1",dataSet1)
@@ -14,20 +15,26 @@ export default function SalesData(props){
  
     const graphLine = graphSales.map((sale) => [sale.day, sale[dataSet1], sale[dataSet2]])
     console.log("graph line", graphLine)
+
+    const newNum = graphSales.map((sale) => sale[dataSet2]/sale[dataSet1])
+    const graphLine2 = graphSales.map((sale) => [sale.day, sale[dataSet1], parseFloat((sale[dataSet2]/sale[dataSet1]))])
+    console.log("test",graphLine2)
     
     const lineData = [
         ['x', dataSet1, dataSet2],
         
     ]
-    const newLineData = lineData.concat(graphLine)
+    const newLineData = radio==="integer" ? lineData.concat(graphLine) : lineData.concat(graphLine2)
     
-    console.log("new ine data",newLineData)
-    //console.log("test", graphSales.map((sale) => sale.concat(dataSet1)))
+    console.log("new line data", newLineData)
     
     const lineChartOptions = {
         legend: {
             position: 'top'
           },
+        // colors: 
+        //     ['red', 'blue']
+        // ,
         hAxis: {
             title: 'Date',
         },
