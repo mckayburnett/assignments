@@ -16,7 +16,6 @@ export default function SalesData(props){
     const graphLine = graphSales.map((sale) => [sale.day, sale[dataSet1], sale[dataSet2]])
     console.log("graph line", graphLine)
 
-    const newNum = graphSales.map((sale) => sale[dataSet2]/sale[dataSet1])
     const graphLine2 = graphSales.map((sale) => [sale.day, sale[dataSet1], parseFloat((sale[dataSet2]/sale[dataSet1]))])
     console.log("test",graphLine2)
     
@@ -24,7 +23,7 @@ export default function SalesData(props){
         ['x', dataSet1, dataSet2],
         
     ]
-    const newLineData = radio==="integer" ? lineData.concat(graphLine) : lineData.concat(graphLine2)
+    const newLineData = radio!=="integer" ? lineData.concat(graphLine2) : lineData.concat(graphLine)
     
     console.log("new line data", newLineData)
     
