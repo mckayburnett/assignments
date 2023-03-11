@@ -345,13 +345,14 @@ body {
   text-shadow: #0b8824 2px 2px 2px;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 400;
-  letter-spacing: 10px;
-  font-size: 80px;
-  width: 1000px;
-  top: 5px;
+  letter-spacing: 5px;
+  font-size: 30px;
+  width: 500px;
+  top: 10px;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  border: 2px white solid;
   z-index: 1100;
 }
 .dataWrapper{
@@ -472,4 +473,15 @@ body {
   left: 50%;
   top: 60%;
   transform: translate(-50%, -50%);
+}
+.editButton{
+  position: absolute;
+  bottom: 0;
+  margin: 20px;
+  background-color: blue;
+  border-radius: 5px;
+  border: 2px red solid;
+  color: white;
+  cursor: pointer;
+  
 }

@@ -9,6 +9,12 @@ export default function SalesData(props){
     const dataSet2 = props.dataSet2
     const radio = props.radio
 
+    const [edit, setEdit] = useState(false)
+    function handleEdit(){
+        setEdit(true)
+        console.log(edit)
+    }
+
     console.log("graph sales" , graphSales)
     console.log("dataSet1",dataSet1)
     console.log("dataSet2",dataSet2)
@@ -21,9 +27,9 @@ export default function SalesData(props){
     
     const lineData = [
         ['x', dataSet1, dataSet2],
-        
+
     ]
-    const newLineData = radio!=="integer" ? lineData.concat(graphLine2) : lineData.concat(graphLine)
+    const newLineData = radio==="percentage" ? lineData.concat(graphLine2) : lineData.concat(graphLine)
     
     console.log("new line data", newLineData)
     
@@ -70,8 +76,8 @@ export default function SalesData(props){
                         options={lineChartOptions}
                         rootProps={{ 'data-testid': '2' }}
                     />
-                    
             </div>
+            <button className="editButton" onClick={handleEdit}>Edit Graph</button>
         </div>
     )
 }
