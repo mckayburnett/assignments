@@ -125,7 +125,7 @@ const [radio, setRadio] = useState([])
               value="percentage"
               onChange={handleChangeRadio}
               placeholder="Type"
-            />Percentage (of Data Set 1)
+            />Percentage (Data Set 2 of Data Set 1)
           </div>
               <SalesData 
                   graphSales={graphSales}

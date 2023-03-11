@@ -77,7 +77,11 @@ export default function SalesData(props){
                         rootProps={{ 'data-testid': '2' }}
                     />
             </div>
-            <button className="editButton" onClick={handleEdit}>Edit Graph</button>
+            <button 
+                className="customizeButton" 
+                onClick={handleEdit}
+            >Customize Graph
+            </button>
         </div>
     )
 }
