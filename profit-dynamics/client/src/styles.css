@@ -485,3 +485,57 @@ body {
   cursor: pointer;
   padding: 5px 3px 
 }
+/*customizeBox*/
+.customizeBox{
+  position: absolute;
+  border: 1px black solid;
+  width: 20%;
+  height: 20%;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 50%;
+  background-color: rgb(245, 243, 240);
+  padding: 10px;
+  text-align: center;
+}
+.colors1{
+  font-size: medium;
+  display: inline;
+  position:absolute;
+  left: 0;
+  margin-left: 10px;
+  top: 20%
+}
+.colors2{
+  font-size: medium;
+  display: inline;
+  position: absolute;
+  right: 80px;
+  margin-right: 10px;
+  top: 20%
+}
+.chartType{
+  font-size: medium;
+  display: inline;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  margin-left: 10px;
+  z-index: 1100;
+  margin-top: 0;
+}
+.radioButtons{
+  position: absolute;
+  left: -10px;
+  bottom: 23%;
+}
+.closeButton{
+  font-size: medium;
+  display: inline;
+  position:absolute;
+  left: 0;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  bottom: 0;
+  cursor: pointer;
+}

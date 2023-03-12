@@ -7,12 +7,31 @@ export default function SalesData(props){
     const graphSales = props.graphSales
     const dataSet1 = props.dataSet1
     const dataSet2 = props.dataSet2
-    const radio = props.radio
+
+//const edit = false
+//const edit = useState(false) => false, fx()
+//const [edit, setEdit] = useState(false)
 
     const [edit, setEdit] = useState(false)
     function handleEdit(){
         setEdit(true)
         console.log(edit)
+    }
+    const [color1, setColor1] = useState()
+    const [color2, setColor2] = useState()
+    function handleColor1(e){
+        setColor1(e.target.value)
+    }
+    function handleColor2(e){
+        setColor2(e.target.value)
+    }
+    const [chart, setChart] = useState()
+    function handleChart(e){
+        setChart(e.target.value)
+    }
+    const [radio, setRadio] = useState([])
+    function handleChangeRadio(e){
+        setRadio(e.target.value)
     }
 
     console.log("graph sales" , graphSales)
@@ -33,13 +52,14 @@ export default function SalesData(props){
     
     console.log("new line data", newLineData)
     
-    const lineChartOptions = {
+    
+    const lineChartOptions = color1 && color2 ? {
         legend: {
             position: 'top'
           },
-        // colors: 
-        //     ['red', 'blue']
-        // ,
+        colors: 
+             [`${color1}`, `${color2}`]
+        ,
         hAxis: {
             title: 'Date',
         },
@@ -58,6 +78,32 @@ export default function SalesData(props){
             startup: true
         }
     }
+    :
+    {
+    legend: {
+        position: 'top'
+      },
+    colors: 
+         ["red", "blue"]
+    ,
+    hAxis: {
+        title: 'Date',
+    },
+    vAxes: {
+        0: {title: `${dataSet1}`},
+        1: {title: `${dataSet2}`}
+    },
+    series: {
+        0: {targetAxisIndex:0},
+        1: {targetAxisIndex:1}
+
+    },
+    animation: {
+        duration: 500,
+        easing: 'in',
+        startup: true
+    }
+}
     
 
     return(
@@ -69,7 +115,7 @@ export default function SalesData(props){
             <div className="graphContainer">
                 
                     <Chart
-                        chartType="LineChart"
+                        chartType={chart ? chart : "LineChart"}
                         height={"600px"}
                         loader={<div>Loading Chart</div>}
                         data={newLineData}
@@ -82,6 +128,55 @@ export default function SalesData(props){
                 onClick={handleEdit}
             >Customize Graph
             </button>
+            {
+            edit ? 
+                <div className="customizeBox">Customization
+                    <select className="colors1" onChange={handleColor1}>
+                        <option value="">--Line 1 Color--</option> 
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="black">Black</option>
+                        <option value="yellow">Yellow</option>
+                    </select>
+                    <select className="colors2" onChange={handleColor2}>
+                        <option value="">--Line 2 Color--</option>                        
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                        <option value="black">Black</option>
+                        <option value="yellow">Yellow</option>
+                    </select>
+                    <select className="chartType" onChange={handleChart}>
+                        <option value="">--Chart Type--</option>
+                        <option value="LineChart">Line Chart</option>
+                        <option value="BarChart">Bar Chart</option>
+                        <option value="AreaChart">Area Chart</option>
+                        <option value="ColumnChart">Column Chart</option>
+                    </select>
+                    <div className="radioButtons">
+                        <input
+                            className="integer"
+                            type="radio"
+                            name="type"
+                            value="integer"
+                            onChange={handleChangeRadio}
+                            placeholder="Type"
+                        />Integer
+                        <input
+                            className="percentage"
+                            type="radio"
+                            name="type"
+                            value="percentage"
+                            onChange={handleChangeRadio}
+                            placeholder="Type"
+                        />Percentage (Data Set 2 of Data Set 1)
+                    </div>
+                    <button className="closeButton" onClick={() => setEdit(false)}>Close</button>
+                </div>
+                :
+                <></>
+            }
         </div>
     )
 }

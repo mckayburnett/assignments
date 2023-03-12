@@ -11,7 +11,7 @@ const [dateTwo, setDateTwo] = useState([])
 const [graphSales, setGraphSales] = useState([])
 const [dataSet1, setDataSet1] = useState([])
 const [dataSet2, setDataSet2] = useState([])
-const [radio, setRadio] = useState([])
+
 
 //axios functions
   function getSales(){
@@ -58,9 +58,6 @@ const [radio, setRadio] = useState([])
   }
   function handleChange4(e){
     setDataSet2(e.target.value)
-  }
-  function handleChangeRadio(e){
-    setRadio(e.target.value)
   }
   
   //my baby
@@ -110,28 +107,11 @@ const [radio, setRadio] = useState([])
               <option value="total_sales">Total Sales</option>
               <option value="units_per_transaction">Units per Transaction</option>
             </select>
-            <input
-              className="integer"
-              type="radio"
-              name="type"
-              value="integer"
-              onChange={handleChangeRadio}
-              placeholder="Type"
-            />Integer
-            <input
-              className="percentage"
-              type="radio"
-              name="type"
-              value="percentage"
-              onChange={handleChangeRadio}
-              placeholder="Type"
-            />Percentage (Data Set 2 of Data Set 1)
           </div>
               <SalesData 
                   graphSales={graphSales}
                   dataSet1={dataSet1}
                   dataSet2={dataSet2}
-                  radio={radio}
               />
         </div>
     )
