@@ -64,8 +64,8 @@ export default function SalesData(props){
             title: 'Date',
         },
         vAxes: {
-            0: {title: `${dataSet1}`},
-            1: {title: `${dataSet2}`}
+            0: {title: `${dataSet1||0}`},
+            1: {title: `${dataSet2||0}`}
         },
         series: {
             0: {targetAxisIndex:0},
@@ -80,30 +80,31 @@ export default function SalesData(props){
     }
     :
     {
-    legend: {
-        position: 'top'
-      },
-    colors: 
-         ["red", "blue"]
-    ,
-    hAxis: {
-        title: 'Date',
-    },
-    vAxes: {
-        0: {title: `${dataSet1}`},
-        1: {title: `${dataSet2}`}
-    },
-    series: {
-        0: {targetAxisIndex:0},
-        1: {targetAxisIndex:1}
+        legend: {
+            position: 'top'
+        },
+        colors: 
+            ["red", "blue"]
+        ,
+        hAxis: {
+            title: 'Date',
+        },
+        vAxes: {
+            0: {title: `${dataSet1}`},
+            1: {title: `${dataSet2}`}
+        },
+        series: {
+            0: {targetAxisIndex:0},
+            1: {targetAxisIndex:1}
 
-    },
-    animation: {
-        duration: 500,
-        easing: 'in',
-        startup: true
-    }
+        },
+        animation: {
+            duration: 500,
+            easing: 'in',
+            startup: true
+        }
 }
+
     
 
     return(
@@ -129,24 +130,13 @@ export default function SalesData(props){
             >Customize Graph
             </button>
             {
-            edit ? 
+            edit ?
+            <draggable> 
                 <div className="customizeBox">Customization
-                    <select className="colors1" onChange={handleColor1}>
-                        <option value="">--Line 1 Color--</option> 
-                        <option value="red">Red</option>
-                        <option value="green">Green</option>
-                        <option value="blue">Blue</option>
-                        <option value="black">Black</option>
-                        <option value="yellow">Yellow</option>
-                    </select>
-                    <select className="colors2" onChange={handleColor2}>
-                        <option value="">--Line 2 Color--</option>                        
-                        <option value="red">Red</option>
-                        <option value="green">Green</option>
-                        <option value="blue">Blue</option>
-                        <option value="black">Black</option>
-                        <option value="yellow">Yellow</option>
-                    </select>
+                    <p className="line1">Line 1 Color</p>
+                    <p className="line2">Line 2 Color</p>
+                    <input className="colors1" type='color' onChange={handleColor1}></input>
+                    <input className="colors2" type='color' onChange={handleColor2}></input>
                     <select className="chartType" onChange={handleChart}>
                         <option value="">--Chart Type--</option>
                         <option value="LineChart">Line Chart</option>
@@ -174,6 +164,7 @@ export default function SalesData(props){
                     </div>
                     <button className="closeButton" onClick={() => setEdit(false)}>Close</button>
                 </div>
+            </draggable>
                 :
                 <></>
             }
