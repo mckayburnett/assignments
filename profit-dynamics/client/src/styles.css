@@ -7,6 +7,9 @@ body {
   margin: 0;
   width: 100%;
 }
+img{
+  z-index: 0;
+}
 .navbar{
   background-color: black;
   height: 70px;
@@ -337,6 +340,7 @@ body {
 .salesBackground{
   position: fixed;
   width: 100%;
+  z-index: -1;
 }
 .toggleChartButton{
   position: absolute;
@@ -353,8 +357,8 @@ body {
   z-index: 1100;
 }
 .toggleChartButton2{
-  position: absolute;
-  top: 200px;
+  position: sticky;
+  top: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 20px;
@@ -367,7 +371,7 @@ body {
   box-shadow: #0000009f 1px 1px;
   z-index: 1100;
 }
-/*SalesData page*/
+/*Sales page*/
 .clientName{
   position: absolute;
   color: whitesmoke;
@@ -419,7 +423,7 @@ body {
   text-align: center;
   margin-left: 30px;
   margin-top: 40px;
-  z-index: 1100;
+  z-index: 100;
 }
 .dropDown1{
   width: 150px;
@@ -436,7 +440,7 @@ body {
   text-align: center;
   margin-left: 230px;
   margin-top: 40px;
-  z-index: 1100;
+  z-index: 100;
 }
 .dropDown2{
   font-size: medium;
@@ -453,7 +457,7 @@ body {
   text-align: center;
   margin-left: 430px;
   margin-top: 40px;
-  z-index: 1100;
+  z-index: 100;
 }
 .dropDown3{
   font-size: medium;
@@ -470,7 +474,7 @@ body {
   text-align: center;
   margin-left: 630px;
   margin-top: 40px;
-  z-index: 1100;
+  z-index: 100;
 }
 .dropDown4{
   font-size: medium;
@@ -582,4 +586,19 @@ body {
   margin-bottom: 10px;
   bottom: 0;
   cursor: pointer;
+}
+/*sales data*/
+.salesDataContainer{
+  color: black;
+  background-color: white;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 0px;
+  border-radius: 5px;
+  z-index: 1100;
+  border: 1px blue solid;
+  text-align: center;
+  width: 97%;
+  
 }

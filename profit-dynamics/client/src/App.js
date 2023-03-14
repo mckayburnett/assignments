@@ -61,6 +61,7 @@ console.log(emails)
         >
           Home
         </Link>
+        <h1 className="clientName">Dynamic Development</h1>
         <Link 
           to="/" 
           className="signOutLink"

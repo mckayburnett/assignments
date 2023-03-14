@@ -76,7 +76,6 @@ function toggleChart(){
     return (
         <div className="salesWrapper">
             <img src="https://cdn.fansshare.com/pictures/wallpaperbackground/good-background-colors-free-wallpapers-color-photo-color-backgrounds-815378648.jpg" alt="" className="salesBackground"/>
-          <h1 className="clientName">Dynamic Development</h1>
           <div className="dates">
             <p className="drop1Title">--Starting Date--</p> 
             <p className="drop2Title">--Ending Date--</p>
@@ -127,14 +126,16 @@ function toggleChart(){
                   dataSet2={dataSet2}
               />
               :
+              graphSales.map(sale =>
               <SalesData
+                  {...sale}
                   getSales={getSales}
                   addSale={addSale}
                   deleteSale={deleteSale}
                   editSale={editSale}
                   graphSales={graphSales}
                   viewChart={viewChart}
-              />
+              />)
             }
         </div>
     )
