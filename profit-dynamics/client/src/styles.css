@@ -338,6 +338,10 @@ body {
   position: fixed;
   width: 100%;
 }
+.toggleChartButton{
+  position: absolute;
+  z-index: 1100;
+}
 /*SalesData page*/
 .clientName{
   position: absolute;
@@ -478,12 +482,13 @@ body {
   position: absolute;
   bottom: 0;
   margin: 20px;
-  background-color: blue;
+  background-color: rgb(247, 247, 247);
   border-radius: 5px;
-  border: 2px red solid;
-  color: white;
+  border: 2px black solid;
+  color: black;
   cursor: pointer;
-  padding: 5px 3px 
+  padding: 5px 3px; 
+  box-shadow: #0000009f 1px 1px;
 }
 /*customizeBox*/
 .customizeBox{

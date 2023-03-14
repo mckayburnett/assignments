@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
+import ChartData from "./ChartData"
 import SalesData from "./SalesData"
 
 
@@ -11,6 +12,11 @@ const [dateTwo, setDateTwo] = useState([])
 const [graphSales, setGraphSales] = useState([])
 const [dataSet1, setDataSet1] = useState([])
 const [dataSet2, setDataSet2] = useState([])
+
+const [viewChart, setViewChart] = useState(true)
+function toggleChart(){
+  setViewChart(false)
+}
 
 
 //axios functions
@@ -108,11 +114,26 @@ const [dataSet2, setDataSet2] = useState([])
               <option value="units_per_transaction">Units per Transaction</option>
             </select>
           </div>
-              <SalesData 
+        { viewChart ? 
+          <button onClick={toggleChart} className="toggleChartButton">View/Manipulate Data</button>
+          :
+          <button onClick={() => setViewChart(true)} className="toggleChartButton">View Chart</button>
+        }
+            { viewChart ? 
+              <ChartData 
                   graphSales={graphSales}
                   dataSet1={dataSet1}
                   dataSet2={dataSet2}
               />
+              :
+              <SalesData
+                  getSales={getSales}
+                  addSale={addSale}
+                  deleteSale={deleteSale}
+                  editSale={editSale}
+                  graphSales={graphSales}
+              />
+            }
         </div>
     )
 }
