@@ -76,6 +76,7 @@ function toggleChart(){
     return (
         <div className="salesWrapper">
             <img src="https://cdn.fansshare.com/pictures/wallpaperbackground/good-background-colors-free-wallpapers-color-photo-color-backgrounds-815378648.jpg" alt="" className="salesBackground"/>
+          <h1 className="clientName">Dynamic Development</h1>
           <div className="dates">
             <p className="drop1Title">--Starting Date--</p> 
             <p className="drop2Title">--Ending Date--</p>
@@ -117,7 +118,7 @@ function toggleChart(){
         { viewChart ? 
           <button onClick={toggleChart} className="toggleChartButton">View/Manipulate Data</button>
           :
-          <button onClick={() => setViewChart(true)} className="toggleChartButton">View Chart</button>
+          <button onClick={() => setViewChart(true)} className="toggleChartButton2">Back to Chart</button>
         }
             { viewChart ? 
               <ChartData 
@@ -132,6 +133,7 @@ function toggleChart(){
                   deleteSale={deleteSale}
                   editSale={editSale}
                   graphSales={graphSales}
+                  viewChart={viewChart}
               />
             }
         </div>

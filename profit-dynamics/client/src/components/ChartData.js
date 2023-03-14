@@ -106,7 +106,7 @@ export default function ChartData(props){
 
     return(
         <div className="salesDataWrapper">
-            <h1 className="clientName">Dynamic Development</h1>
+            
             <div className="dataWrapper">
                 {graphSales[1] ? <h1 className="day">{graphSales[0].day} - {graphSales[graphSales.length-1].day}</h1> : <h1 className="day">Date</h1>}
             </div>

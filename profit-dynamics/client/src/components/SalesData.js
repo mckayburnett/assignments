@@ -3,13 +3,14 @@ import axios from "axios"
 
 export default function SalesData(props){
 
-let { getSales, addSale, editSale, deleteSale, graphSales } = props
+let { getSales, addSale, editSale, deleteSale, graphSales, viewChart } = props
 
+console.log("sales data",graphSales.day)
 
 
     return (
         <div className="salesDataContainer">
-            <h1>Hello World</h1>
+            {graphSales.map((sale) => <h1>{sale.day}</h1>)}
         </div>
     )
 
