@@ -119,6 +119,34 @@ function toggleChart(){
           :
           <button onClick={() => setViewChart(true)} className="toggleChartButton2">Back to Chart</button>
         }
+          { viewChart ? 
+            <></>
+          :
+            <div className="titles">
+              <h3>Date</h3>
+              <h3>Orders</h3>
+              <h3>Gross Sales</h3>
+              <h3>Discounts</h3>
+              <h3>Returns</h3>
+              <h3>Net Sales</h3>
+              <h3>Shipping</h3>
+              <h3>Taxes</h3>
+              <h3>Total Sales</h3>
+              <h3>Units per Transaction</h3>
+              <h3>Units</h3>
+            </div>
+          }
+          {/* <p>{ day }</p>
+            <p>{ orders }</p>
+            <p>{ gross_sales }</p>
+            <p>{ discounts }</p>
+            <p>{ returns }</p>
+            <p>{ net_sales }</p>
+            <p>{ shipping }</p>
+            <p>{ taxes }</p>
+            <p>{ total_sales }</p>
+            <p>{ units_per_transaction }</p>
+            <p>{ Units }</p> */}
             { viewChart ? 
               <ChartData 
                   graphSales={graphSales}
@@ -135,7 +163,7 @@ function toggleChart(){
                   editSale={editSale}
                   graphSales={graphSales}
                   viewChart={viewChart}
-              />)
+              />) 
             }
         </div>
     )

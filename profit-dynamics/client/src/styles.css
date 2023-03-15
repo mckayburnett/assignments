@@ -600,5 +600,19 @@ img{
   border: 1px blue solid;
   text-align: center;
   width: 97%;
-  
+  z-index: 0;
+}
+.titles{
+  color: black;
+  background-color: white;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 0px;
+  border-radius: 5px;
+  z-index: 1100;
+  border: 1px blue solid;
+  text-align: center;
+  width: 97%;
+  z-index: 0;
 }
