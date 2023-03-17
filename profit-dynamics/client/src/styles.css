@@ -621,3 +621,59 @@ img{
   width: 100px;
   cursor: pointer;
 }
+/*Edit Sales*/
+.formContainer{
+  width: 97%;
+}
+form{
+  color: black;
+  background-color: white;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 0px;
+  border-radius: 5px;
+  margin: 0px;
+  z-index: 1100;
+  border: 1px blue solid;
+  text-align: center;
+  align-content: center;
+}
+.day{
+  grid-column: 1/2;
+}
+.orders{
+  grid-column: 2/3
+}
+.grossSales{
+  grid-column: 3/4;
+}
+.discounts{
+  grid-column: 4/5
+}
+.returns{
+  grid-column: 5/6;
+}
+.netSales{
+  grid-column: 6/7;
+}
+.shipping{
+  grid-column: 7/8;
+}
+.taxes{
+  grid-column: 8/9;
+}
+.totalSales{
+  grid-column: 9/10;
+}
+.unitsPerTransaction{
+  grid-column: 10/11;
+}
+.Units{
+  grid-column: 11/12;
+}
+.submitEdit{
+  margin: 10px;
+  width: 100px;
+  cursor: pointer;
+}

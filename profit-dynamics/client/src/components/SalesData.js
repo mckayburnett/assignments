@@ -23,7 +23,7 @@ const [editToggle, setEditToggle] = useState(false)
                     <p>{ total_sales }</p>
                     <p>{ units_per_transaction }</p>
                     <p>{ Units }</p>
-                    <button className="salesEdit" onClick={() => setEditToggle(prevToggle => !prevToggle)}>Edit</button>
+                    <button className="salesEdit" onClick={() => setEditToggle(true)}>Edit</button>
                 </div>
             :
             <>
@@ -44,7 +44,7 @@ const [editToggle, setEditToggle] = useState(false)
                 />
                 <button
                         className="closeEdit" 
-                        onClick={() => setEditToggle(prevToggle => !prevToggle)}
+                        onClick={() => setEditToggle(false)}
                     >
                         Close
                     </button>

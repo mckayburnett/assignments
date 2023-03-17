@@ -32,24 +32,98 @@ export default function EditSales(props){
     }
 
     return(
-        <form onSubmit={handleSubmit}>
-            <input 
-                className="day"
-                type="text"
-                name="day"
-                value={inputs.day}
-                onChange={handleChange}
-                placeHolder="mm/dd/yyyy"
-            />
-            <input 
-                className="orders"
-                type="text"
-                name="orders"
-                value={inputs.day}
-                onChange={handleChange}
-                placeHolder="mm/dd/yyyy"
-            />
-        </form>
-
+        <div className="formContainer">
+            <form onSubmit={handleSubmit}>
+                <input 
+                    className="day"
+                    type="text"
+                    name="day"
+                    value={inputs.day}
+                    onChange={handleChange}
+                    placeholder="mm/dd/yyyy"
+                />
+                <input 
+                    className="orders"
+                    type="text"
+                    name="orders"
+                    value={inputs.orders}
+                    onChange={handleChange}
+                    placeholder="Orders"
+                />
+                <input 
+                    className="grossSales"
+                    type="number"
+                    name="gross_sales"
+                    value={inputs.gross_sales}
+                    onChange={handleChange}
+                    placeholder="Gross Sales"
+                />
+                <input 
+                    className="discounts"
+                    type="number"
+                    name="discounts"
+                    value={inputs.discounts}
+                    onChange={handleChange}
+                    placeholder="Discounts"
+                />
+                <input 
+                    className="returns"
+                    type="number"
+                    name="returns"
+                    value={inputs.returns}
+                    onChange={handleChange}
+                    placeholder="Returns"
+                />
+                <input 
+                    className="netSales"
+                    type="number"
+                    name="net_sales"
+                    value={inputs.net_sales}
+                    onChange={handleChange}
+                    placeholder="Net Sales"
+                />
+                <input 
+                    className="shipping"
+                    type="number"
+                    name="shipping"
+                    value={inputs.shipping}
+                    onChange={handleChange}
+                    placeholder="Shipping"
+                />
+                <input 
+                    className="taxes"
+                    type="number"
+                    name="taxes"
+                    value={inputs.taxes}
+                    onChange={handleChange}
+                    placeholder="Taxes"
+                />
+                <input 
+                    className="totalSales"
+                    type="number"
+                    name="total_sales"
+                    value={inputs.total_sales}
+                    onChange={handleChange}
+                    placeholder="Total Sales"
+                />
+                <input 
+                    className="unitsPerTransaction"
+                    type="number"
+                    name="units_per_transaction"
+                    value={inputs.units_per_transaction}
+                    onChange={handleChange}
+                    placeholder="Units per Transaction"
+                />
+                <input 
+                    className="units"
+                    type="number"
+                    name="Units"
+                    value={inputs.Units}
+                    onChange={handleChange}
+                    placeholder="Units"
+                />
+                <button className="submitEdit">Submit</button>
+            </form>
+        </div>
     )
 }
