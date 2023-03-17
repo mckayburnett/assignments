@@ -32,10 +32,9 @@ export default function EditSales(props){
     }
 
     return(
-        <div className="formContainer">
             <form onSubmit={handleSubmit}>
                 <input 
-                    className="day"
+                    className="editDay"
                     type="text"
                     name="day"
                     value={inputs.day}
@@ -43,7 +42,7 @@ export default function EditSales(props){
                     placeholder="mm/dd/yyyy"
                 />
                 <input 
-                    className="orders"
+                    className="editOrders"
                     type="text"
                     name="orders"
                     value={inputs.orders}
@@ -124,6 +123,5 @@ export default function EditSales(props){
                 />
                 <button className="submitEdit">Submit</button>
             </form>
-        </div>
     )
 }

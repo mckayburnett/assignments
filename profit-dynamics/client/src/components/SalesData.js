@@ -26,7 +26,7 @@ const [editToggle, setEditToggle] = useState(false)
                     <button className="salesEdit" onClick={() => setEditToggle(true)}>Edit</button>
                 </div>
             :
-            <>
+            <div className="editSales">
                 < EditSales 
                     editSale={editSale}
                     day={day}
@@ -43,12 +43,11 @@ const [editToggle, setEditToggle] = useState(false)
                     _id={_id}
                 />
                 <button
-                        className="closeEdit" 
-                        onClick={() => setEditToggle(false)}
-                    >
-                        Close
-                    </button>
-            </>
+                    className="closeEdit" 
+                    onClick={() => setEditToggle(false)}
+                > Close
+                </button>
+            </div>
             }
         </div>
     )

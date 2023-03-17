@@ -623,7 +623,7 @@ img{
 }
 /*Edit Sales*/
 .formContainer{
-  width: 97%;
+  
 }
 form{
   color: black;
@@ -633,44 +633,82 @@ form{
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   padding: 0px;
   border-radius: 5px;
-  margin: 0px;
   z-index: 1100;
   border: 1px blue solid;
   text-align: center;
+  width: 97%;
+  z-index: 0;
+  text-align: center;
+  align-items: center;
   align-content: center;
+  align-self: center;
 }
-.day{
+.editDay{
   grid-column: 1/2;
+  position: relative;
+  text-align: center;
+  width: 100px;
 }
-.orders{
-  grid-column: 2/3
+.editOrders{
+  grid-column: 2/3;
+  position: relative;
+  text-align: center;
+  width: 100px;
 }
 .grossSales{
-  grid-column: 3/4;
+  grid-column: 3/4;;
+  position: relative;
+  text-align: center;
+  width: 100px;
 }
 .discounts{
-  grid-column: 4/5
+  grid-column: 4/5;
+  position: relative;
+  text-align: center;
+  width: 100px;
 }
 .returns{
-  grid-column: 5/6;
+  grid-column: 5/6;;
+  position: relative;
+  text-align: center;
+  width: 100px;
 }
 .netSales{
-  grid-column: 6/7;
+  grid-column: 6/7;;
+  position: relative;
+  text-align: center;
+  width: 100px;
 }
 .shipping{
-  grid-column: 7/8;
+  grid-column: 7/8;;
+  position: relative;
+  text-align: center;
+  width: 100px;
 }
 .taxes{
-  grid-column: 8/9;
+  grid-column: 8/9;;
+  position: relative;
+  text-align: center;
+  width: 100px;
 }
 .totalSales{
-  grid-column: 9/10;
+  grid-column: 9/10;;
+  position: relative;
+  text-align: center;
+  width: 100px;
 }
 .unitsPerTransaction{
-  grid-column: 10/11;
+  grid-column: 10/11;;
+  position: relative;
+  text-align: center;
+  width: 100px;
 }
-.Units{
-  grid-column: 11/12;
+.units{
+  grid-column: 11/12;;
+  position: relative;
+  text-align: center;
+  align-self: center;
+  width: 100px;
 }
 .submitEdit{
   margin: 10px;
