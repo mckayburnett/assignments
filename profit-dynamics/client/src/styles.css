@@ -593,7 +593,7 @@ img{
   background-color: white;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   padding: 0px;
   border-radius: 5px;
   z-index: 1100;
@@ -607,7 +607,7 @@ img{
   background-color: white;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   padding: 0px;
   border-radius: 5px;
   z-index: 1100;
@@ -615,4 +615,9 @@ img{
   text-align: center;
   width: 97%;
   z-index: 0;
+}
+.salesEdit{
+  margin: 10px;
+  width: 100px;
+  cursor: pointer;
 }

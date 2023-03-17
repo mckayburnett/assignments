@@ -134,19 +134,9 @@ function toggleChart(){
               <h3>Total Sales</h3>
               <h3>Units per Transaction</h3>
               <h3>Units</h3>
+              <h3></h3>
             </div>
           }
-          {/* <p>{ day }</p>
-            <p>{ orders }</p>
-            <p>{ gross_sales }</p>
-            <p>{ discounts }</p>
-            <p>{ returns }</p>
-            <p>{ net_sales }</p>
-            <p>{ shipping }</p>
-            <p>{ taxes }</p>
-            <p>{ total_sales }</p>
-            <p>{ units_per_transaction }</p>
-            <p>{ Units }</p> */}
             { viewChart ? 
               <ChartData 
                   graphSales={graphSales}
