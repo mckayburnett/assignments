@@ -102,7 +102,7 @@ export default function ChartData(props){
         }
 }
 
-    
+    console.log("testing testing", lineChartOptions.vAxes)
 
     return(
         <div className="salesDataWrapper">

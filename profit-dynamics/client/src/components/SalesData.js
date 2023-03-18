@@ -41,12 +41,10 @@ const [editToggle, setEditToggle] = useState(false)
                     units_per_transaction={units_per_transaction}
                     Units={Units}
                     _id={_id}
+                    editToggle={editToggle}
+                    setEditToggle={setEditToggle}
                 />
-                <button
-                    className="closeEdit" 
-                    onClick={() => setEditToggle(false)}
-                > Close
-                </button>
+                
             </div>
             }
         </div>

@@ -27,7 +27,7 @@ export default function EditSales(props){
     }
     function handleSubmit(e){
         e.preventDefault()
-        props.editSales(inputs, props._id)
+        props.editSale(inputs, props._id)
         setInputs(initInputs)
     }
 
@@ -122,6 +122,11 @@ export default function EditSales(props){
                     placeholder="Units"
                 />
                 <button className="submitEdit">Submit</button>
+                <button
+                    className="closeEdit" 
+                    onClick={() => props.setEditToggle(false)}
+                > Close
+                </button>
             </form>
     )
 }

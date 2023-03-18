@@ -636,6 +636,7 @@ form{
   z-index: 1100;
   border: 1px blue solid;
   text-align: center;
+  height: 51.37px;
   width: 97%;
   z-index: 0;
   text-align: center;
@@ -647,7 +648,7 @@ form{
   grid-column: 1/2;
   position: relative;
   text-align: center;
-  width: 100px;
+  max-width: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
   top: 25%;
@@ -656,7 +657,7 @@ form{
   grid-column: 2/3;
   position: relative;
   text-align: center;
-  width: 100px;
+  max-width: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
   top: 25%;
@@ -665,7 +666,7 @@ form{
   grid-column: 3/4;;
   position: relative;
   text-align: center;
-  width: 100px;
+  max-width: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
   top: 25%;
@@ -674,7 +675,7 @@ form{
   grid-column: 4/5;
   position: relative;
   text-align: center;
-  width: 100px;
+  max-width: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
   top: 25%;
@@ -683,7 +684,7 @@ form{
   grid-column: 5/6;;
   position: relative;
   text-align: center;
-  width: 100px;
+  max-width: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
   top: 25%;
@@ -692,7 +693,7 @@ form{
   grid-column: 6/7;;
   position: relative;
   text-align: center;
-  width: 100px;
+  max-width: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
   top: 25%;
@@ -701,7 +702,7 @@ form{
   grid-column: 7/8;;
   position: relative;
   text-align: center;
-  width: 100px;
+  max-width: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
   top: 25%;
@@ -710,7 +711,7 @@ form{
   grid-column: 8/9;;
   position: relative;
   text-align: center;
-  width: 100px;
+  max-width: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
   top: 25%;
@@ -719,7 +720,7 @@ form{
   grid-column: 9/10;;
   position: relative;
   text-align: center;
-  width: 100px;
+  max-width: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
   top: 25%;
@@ -728,7 +729,7 @@ form{
   grid-column: 10/11;;
   position: relative;
   text-align: center;
-  width: 100px;
+  max-width: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
   top: 25%;
@@ -737,13 +738,22 @@ form{
   grid-column: 11/12;;
   position: relative;
   text-align: center;
-  width: 100px;
+  max-width: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
   top: 25%;
 }
 .submitEdit{
+  grid-column: 12/13;
   margin: 10px;
-  width: 100px;
+  margin-left: 70px;
+  max-width: 60px;
+  cursor: pointer;
+}
+.closeEdit{
+  position: absolute;
+  grid-column: 12/13;
+  max-width: 100px;
+  margin: 10px;
   cursor: pointer;
 }

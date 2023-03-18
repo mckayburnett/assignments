@@ -87,8 +87,7 @@ function toggleChart(){
             <select className="dropDown2" onChange={handleChange2}>
               {sales.map((sale) => <option value={sale.day}>{sale.day}</option>)}
             </select>
-            <select className="dropDown3" onChange={handleChange3}>
-              <option value=""></option>
+            <select className="dropDown3" onChange={handleChange3} defaultValue="Units">
               <option value="Units">Units</option>
               <option value="discounts">Discounts</option>
               <option value="gross_sales">Gross Sales</option>
@@ -100,8 +99,7 @@ function toggleChart(){
               <option value="total_sales">Total Sales</option>
               <option value="units_per_transaction">Units per Transaction</option>
             </select>
-            <select className="dropDown4" onChange={handleChange4}>
-              <option value=""></option>
+            <select className="dropDown4" onChange={handleChange4} defaultValue="Units">
               <option value="Units">Units</option>
               <option value="discounts">Discounts</option>
               <option value="gross_sales">Gross Sales</option>
