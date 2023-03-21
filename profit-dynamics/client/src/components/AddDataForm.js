@@ -1,24 +1,23 @@
-import React, { useState, useEffect } from "react"
-import axios from "axios"
-import { PromiseProvider } from "mongoose"
+import React, {useState} from "react"
 
-export default function EditSales(props){
+export default function AddDataForm(props){
 
-    const initInputs = {
-        day: props.day || "",
-        orders: props.orders || "",
-        gross_sales: props.gross_sales || "",
-        discounts: props.discounts || "",
-        returns: props.returns || "",
-        net_sales: props.net_sales || "",
-        shipping: props.shipping || "",
-        taxes: props.taxes || "",
-        total_sales: props.total_sales || "",
-        units_per_transaction: props.units_per_transaction || "",
-        Units: props.Units || ""
-    }
+const {addSale, viewAdd, setViewAdd} = props
+const initInputs = {
+    day: props.day || "",
+    orders: props.orders || "",
+    gross_sales: props.gross_sales || "",
+    discounts: props.discounts || "",
+    returns: props.returns || "",
+    net_sales: props.net_sales || "",
+    shipping: props.shipping || "",
+    taxes: props.taxes || "",
+    total_sales: props.total_sales || "",
+    units_per_transaction: props.units_per_transaction || "",
+    Units: props.Units || ""
+}
 
-    const [inputs, setInputs] = useState(initInputs)
+const [inputs, setInputs] = useState(initInputs)
 
     function handleChange(e){
         console.log(e.target.value)
@@ -27,14 +26,16 @@ export default function EditSales(props){
     }
     function handleSubmit(e){
         e.preventDefault()
-        props.editSale(inputs, props._id)
+        addSale(inputs, props._id)
         setInputs(initInputs)
     }
 
     return(
-            <form onSubmit={handleSubmit}>
+        <div>
+            <form onSubmit={handleSubmit} className="addForm">
+                <h1 className="addTitle">Add Data Form</h1>
                 <input 
-                    className="editDay"
+                    className="addDay"
                     type="text"
                     name="day"
                     value={inputs.day}
@@ -42,7 +43,7 @@ export default function EditSales(props){
                     placeholder="mm/dd/yyyy"
                 />
                 <input 
-                    className="editOrders"
+                    className="addOrders"
                     type="number"
                     name="orders"
                     value={inputs.orders}
@@ -50,7 +51,7 @@ export default function EditSales(props){
                     placeholder="Orders"
                 />
                 <input 
-                    className="grossSales"
+                    className="addGrossSales"
                     type="number"
                     name="gross_sales"
                     value={inputs.gross_sales}
@@ -58,7 +59,7 @@ export default function EditSales(props){
                     placeholder="Gross Sales"
                 />
                 <input 
-                    className="discounts"
+                    className="addDiscounts"
                     type="number"
                     name="discounts"
                     value={inputs.discounts}
@@ -66,7 +67,7 @@ export default function EditSales(props){
                     placeholder="Discounts"
                 />
                 <input 
-                    className="returns"
+                    className="addReturns"
                     type="number"
                     name="returns"
                     value={inputs.returns}
@@ -74,7 +75,7 @@ export default function EditSales(props){
                     placeholder="Returns"
                 />
                 <input 
-                    className="netSales"
+                    className="addNetSales"
                     type="number"
                     name="net_sales"
                     value={inputs.net_sales}
@@ -82,7 +83,7 @@ export default function EditSales(props){
                     placeholder="Net Sales"
                 />
                 <input 
-                    className="shipping"
+                    className="addShipping"
                     type="number"
                     name="shipping"
                     value={inputs.shipping}
@@ -90,7 +91,7 @@ export default function EditSales(props){
                     placeholder="Shipping"
                 />
                 <input 
-                    className="taxes"
+                    className="addTaxes"
                     type="number"
                     name="taxes"
                     value={inputs.taxes}
@@ -98,7 +99,7 @@ export default function EditSales(props){
                     placeholder="Taxes"
                 />
                 <input 
-                    className="totalSales"
+                    className="addTotalSales"
                     type="number"
                     name="total_sales"
                     value={inputs.total_sales}
@@ -106,7 +107,7 @@ export default function EditSales(props){
                     placeholder="Total Sales"
                 />
                 <input 
-                    className="unitsPerTransaction"
+                    className="addUnitsPerTransaction"
                     type="number"
                     name="units_per_transaction"
                     value={inputs.units_per_transaction}
@@ -114,19 +115,22 @@ export default function EditSales(props){
                     placeholder="Units per Transaction"
                 />
                 <input 
-                    className="units"
+                    className="addUnits"
                     type="number"
                     name="Units"
                     value={inputs.Units}
                     onChange={handleChange}
                     placeholder="Units"
                 />
-                <button className="submitEdit">Submit</button>
-                <button
-                    className="closeEdit" 
-                    onClick={() => props.setEditToggle(false)}
-                > Close
-                </button>
+                <div className="addButtons">
+                    <button className="submitAdd">Submit</button>
+                    <button
+                        className="closeAdd" 
+                        onClick={() => setViewAdd(false)}
+                    > Close
+                    </button>
+                </div>
             </form>
+        </div>
     )
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import axios from "axios"
 import ChartData from "./ChartData"
 import SalesData from "./SalesData"
+import AddDataForm from "./AddDataForm"
 
 
 export default function Sales(props){
@@ -12,7 +13,7 @@ const [dateTwo, setDateTwo] = useState([])
 const [graphSales, setGraphSales] = useState([])
 const [dataSet1, setDataSet1] = useState([])
 const [dataSet2, setDataSet2] = useState([])
-
+const [viewAdd, setViewAdd] = useState(false)
 const [viewChart, setViewChart] = useState(true)
 function toggleChart(){
   setViewChart(false)
@@ -37,6 +38,7 @@ function toggleChart(){
       .then(res => {
         setSales(prevSales => prevSales.filter(sale => sale._id !== saleId))
       })
+      .catch(err => console.log(err))
   }
   function editSale(updates, saleId){
     axios.put(`/sales/${saleId}`, updates)
@@ -117,6 +119,15 @@ function toggleChart(){
           :
           <button onClick={() => setViewChart(true)} className="toggleChartButton2">Back to Chart</button>
         }
+        { viewAdd ? 
+              <AddDataForm 
+                  addSale={addSale}
+                  viewAdd={viewAdd}
+                  setViewAdd={setViewAdd}
+              />
+              :
+              <></>
+            }
           { viewChart ? 
             <></>
           :
@@ -132,9 +143,10 @@ function toggleChart(){
               <h3>Total Sales</h3>
               <h3>Units per Transaction</h3>
               <h3>Units</h3>
-              <h3></h3>
+              <button className="addData" onClick={() => setViewAdd(true)}>Add Data</button>
             </div>
           }
+          
             { viewChart ? 
               <ChartData 
                   graphSales={graphSales}
@@ -151,8 +163,12 @@ function toggleChart(){
                   editSale={editSale}
                   graphSales={graphSales}
                   viewChart={viewChart}
+                  viewAdd={viewAdd}
+                  setViewAdd={setViewAdd}
               />) 
             }
+            
+
         </div>
     )
 }

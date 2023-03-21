@@ -62,7 +62,7 @@ export default function ChartData(props){
         },
         vAxes: {
             0: {title: `${dataSet1||0}`},
-            1: {title: `${dataSet2||0}`}
+            1: {title: `${dataSet2||1}`}
         },
         series: {
             0: {targetAxisIndex:0},
@@ -87,8 +87,8 @@ export default function ChartData(props){
             title: 'Date',
         },
         vAxes: {
-            0: {title: `${dataSet1}`},
-            1: {title: `${dataSet2}`}
+            0: {title: `${dataSet1||0}`},
+            1: {title: `${dataSet2||1}`}
         },
         series: {
             0: {targetAxisIndex:0},
