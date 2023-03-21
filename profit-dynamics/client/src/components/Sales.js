@@ -50,7 +50,7 @@ function toggleChart(){
   }
   useEffect(() => {
     getSales()
-    //console.log("sales: ", sales)
+    console.log("sales: ", sales)
   },[])
 
   function handleChange1(e){
@@ -152,6 +152,7 @@ function toggleChart(){
                   graphSales={graphSales}
                   dataSet1={dataSet1}
                   dataSet2={dataSet2}
+                  sales={sales}
               />
               :
               graphSales.map(sale =>

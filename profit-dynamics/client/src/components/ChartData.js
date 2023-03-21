@@ -8,9 +8,7 @@ export default function ChartData(props){
     const dataSet1 = props.dataSet1
     const dataSet2 = props.dataSet2
 
-//const edit = false
-//const edit = useState(false) => false, fx()
-//const [edit, setEdit] = useState(false)
+    console.log("testing123", props.sales)
 
     const [edit, setEdit] = useState(false)
     function handleEdit(){
@@ -41,7 +39,6 @@ export default function ChartData(props){
     console.log("dataSet2",dataSet2)
  
     const graphLine = graphSales.map((sale) => [sale.day, sale[dataSet1], sale[dataSet2]])
-
     const graphLine2 = graphSales.map((sale) => [sale.day, sale[dataSet1], parseFloat((sale[dataSet2]/sale[dataSet1]))])
     
     const lineData = [
@@ -49,13 +46,16 @@ export default function ChartData(props){
 
     ]
     const newLineData = radio==="percentage" ? lineData.concat(graphLine2) : lineData.concat(graphLine)
+
+    let lineColors = color1 || color2 ? [`${color1||"red"}`, `${color2||"blue"}`] : ["red", "blue"]
     
-    const lineChartOptions = color1 && color2 ? {
+    
+    const lineChartOptions = {
         legend: {
             position: 'top'
           },
         colors: 
-             [`${color1}`, `${color2}`]
+             lineColors
         ,
         hAxis: {
             title: 'Date',
@@ -75,32 +75,6 @@ export default function ChartData(props){
             startup: true
         }
     }
-    :
-    {
-        legend: {
-            position: 'top'
-        },
-        colors: 
-            ["red", "blue"]
-        ,
-        hAxis: {
-            title: 'Date',
-        },
-        vAxes: {
-            0: {title: `${dataSet1||0}`},
-            1: {title: `${dataSet2||1}`}
-        },
-        series: {
-            0: {targetAxisIndex:0},
-            1: {targetAxisIndex:1}
-
-        },
-        animation: {
-            duration: 500,
-            easing: 'in',
-            startup: true
-        }
-}
 
     console.log("testing testing", lineChartOptions.vAxes)
 
