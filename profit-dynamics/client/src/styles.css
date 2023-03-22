@@ -794,7 +794,7 @@ form{
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 1100;
-  background-color: #aad9ff;
+  background-color: #65a1fd;
   border:rgb(0, 0, 0) 3px solid;
 }
 .addTitle{
@@ -802,11 +802,13 @@ form{
   text-align: center;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  font-family:sans-serif;
   top: 30px;
-  border: 1px rgb(0, 0, 0) solid;
   padding: 2px 15px;
-  background-color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0);
 }
 .addDay{
   position: relative;
