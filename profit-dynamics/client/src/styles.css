@@ -484,6 +484,16 @@ img{
   margin-top: 70px;
   z-index: 1100;
 }
+.generateButton{
+  font-size: large;
+  width: 150px;
+  text-align: center;
+  margin-left: 40px;
+  margin-top: 70px;
+  box-shadow: #ffffff 1px 1px;
+  cursor: pointer;
+  z-index: 1100;
+}
 .integer{
   font-size: medium;
   width: 10px;

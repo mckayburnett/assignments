@@ -41,15 +41,23 @@ export default function ChartData(props){
     const graphLine = graphSales.map((sale) => [sale.day, sale[dataSet1], sale[dataSet2]])
     const graphLine2 = graphSales.map((sale) => [sale.day, sale[dataSet1], parseFloat((sale[dataSet2]/sale[dataSet1]))])
     
-    const lineData = [
-        ['x', dataSet1, dataSet2],
+    
+
+    let lineData = [
+        dataSet1.length > 0 && dataSet2 > 0 ?
+            ['x', dataSet1, dataSet2]
+            :
+            ['x', "Units", "Net Sales"]
 
     ]
     const newLineData = radio==="percentage" ? lineData.concat(graphLine2) : lineData.concat(graphLine)
 
+    console.log("datasets", dataSet1, dataSet2)
+    console.log("linedata", lineData)
     let lineColors = color1 || color2 ? [`${color1||"red"}`, `${color2||"blue"}`] : ["red", "blue"]
     
-    
+    let axes = dataSet1.length > 0 && dataSet2 > 0 ? {0: {title: `${dataSet1}`}, 1: {title: `${dataSet2}`}} : {0: {title: "Units"}, 1: {title: "Net Sales"}}
+
     const lineChartOptions = {
         legend: {
             position: 'top'
@@ -60,10 +68,7 @@ export default function ChartData(props){
         hAxis: {
             title: 'Date',
         },
-        vAxes: {
-            0: {title: `${dataSet1||0}`},
-            1: {title: `${dataSet2||1}`}
-        },
+        vAxes: axes,
         series: {
             0: {targetAxisIndex:0},
             1: {targetAxisIndex:1}
@@ -80,7 +85,6 @@ export default function ChartData(props){
 
     return(
         <div className="salesDataWrapper">
-            
             <div className="dataWrapper">
                 {graphSales[1] ? <h1 className="day">{graphSales[0].day} - {graphSales[graphSales.length-1].day}</h1> : <h1 className="day">Date</h1>}
             </div>
@@ -102,7 +106,6 @@ export default function ChartData(props){
             </div>
             {
             edit ?
-            <draggable> 
                 <div className="customizeBox">Customization
                     <p className="line1">Line 1 Color</p>
                     <p className="line2">Line 2 Color</p>
@@ -135,7 +138,6 @@ export default function ChartData(props){
                     </div>
                     <button className="closeButton" onClick={() => setEdit(false)}>Close</button>
                 </div>
-            </draggable>
                 :
                 <></>
             }
