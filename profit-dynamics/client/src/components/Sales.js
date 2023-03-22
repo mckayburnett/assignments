@@ -116,7 +116,11 @@ function toggleChart(){
               <option value="total_sales">Total Sales</option>
               <option value="units_per_transaction">Units per Transaction</option>
             </select>
-            <button className="generateButton" onClick={() =>setGenerate(true)}>Generate Chart</button>
+            { !generate ?
+              <button className="generateButton" onClick={() =>setGenerate(true)}>Generate Chart</button>
+              :
+              <button className="generateButton" onClick={() =>setGenerate(false)}>Remove Chart</button>
+            }
           </div>
         { viewChart && generate ? 
           <button onClick={toggleChart} className="toggleChartButton">View/Manipulate Data</button>
