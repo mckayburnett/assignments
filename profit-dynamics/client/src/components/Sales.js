@@ -74,7 +74,7 @@ function toggleChart(){
     setGraphSales(sales.filter(sale => Date.parse(sale.day) <= dateTwo && Date.parse(sale.day) >= dateOne))
   }, [dateOne, dateTwo])
   
-  console.log(graphSales)
+  console.log("generate", generate)
   
     return (
         <div className="salesWrapper">
@@ -90,7 +90,7 @@ function toggleChart(){
             <select className="dropDown2" onChange={handleChange2}>
               {sales.map((sale) => <option value={sale.day}>{sale.day}</option>)}
             </select>
-            <select className="dropDown3" onChange={handleChange3} defaultValue="Units">
+            <select className="dropDown3" onChange={handleChange3}>
               <option value=""></option>
               <option value="Units">Units</option>
               <option value="discounts">Discounts</option>
@@ -103,7 +103,7 @@ function toggleChart(){
               <option value="total_sales">Total Sales</option>
               <option value="units_per_transaction">Units per Transaction</option>
             </select>
-            <select className="dropDown4" onChange={handleChange4} defaultValue="Units">
+            <select className="dropDown4" onChange={handleChange4}>
               <option value=""></option>
               <option value="Units">Units</option>
               <option value="discounts">Discounts</option>
@@ -116,12 +116,14 @@ function toggleChart(){
               <option value="total_sales">Total Sales</option>
               <option value="units_per_transaction">Units per Transaction</option>
             </select>
-            <button className="generateButton" onClick={() => setGenerate(true)}>Generate Chart</button>
+            <button className="generateButton" onClick={() =>setGenerate(true)}>Generate Chart</button>
           </div>
-        { viewChart ? 
+        { viewChart && generate ? 
           <button onClick={toggleChart} className="toggleChartButton">View/Manipulate Data</button>
-          :
+          : generate ? 
           <button onClick={() => setViewChart(true)} className="toggleChartButton2">Back to Chart</button>
+          :
+          <></>
         }
         { viewAdd ? 
               <AddDataForm 
@@ -151,14 +153,14 @@ function toggleChart(){
             </div>
           }
           
-            { viewChart ? 
+            { viewChart && generate ? 
               <ChartData 
                   graphSales={graphSales}
                   dataSet1={dataSet1}
                   dataSet2={dataSet2}
                   sales={sales}
               />
-              :
+              : generate ?
               graphSales.map(sale =>
               <SalesData
                   {...sale}
@@ -170,7 +172,9 @@ function toggleChart(){
                   viewChart={viewChart}
                   viewAdd={viewAdd}
                   setViewAdd={setViewAdd}
-              />) 
+              />)
+              :
+              <></> 
             }
             
 
