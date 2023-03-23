@@ -69,16 +69,16 @@ function toggleChart(){
     setDataSet2(e.target.value)
   }
   
+const mappedDates = sales.map((sale) => sale.day).sort((a, b) => a > b ? 1 : -1)
+const dropdownDates = mappedDates.map((sale) => <option value={sale}>{sale}</option>)
+
   //my baby
   useEffect(() => {
-    setGraphSales(sales.filter(sale => Date.parse(sale.day) <= dateTwo && Date.parse(sale.day) >= dateOne))
+    setGraphSales(sales.filter(sale => Date.parse(sale.day) <= dateTwo && Date.parse(sale.day) >= dateOne).sort((a, b) => a.day > b.day ? 1 : -1))
   }, [dateOne, dateTwo])
   
-  
-const mappedDates = sales.map((sale) => sale.day)
-const orderedDates = mappedDates.sort((a, b) => a > b ? 1 : -1)
-console.log("ordered", orderedDates)
-const dropdownDates = orderedDates.map((sale) => <option value={sale}>{sale}</option>)
+  console.log("#1 graphsales", graphSales)
+
 
 
     return (
