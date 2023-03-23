@@ -74,8 +74,13 @@ function toggleChart(){
     setGraphSales(sales.filter(sale => Date.parse(sale.day) <= dateTwo && Date.parse(sale.day) >= dateOne))
   }, [dateOne, dateTwo])
   
-  console.log("generate", generate)
   
+const mappedDates = sales.map((sale) => sale.day)
+const orderedDates = mappedDates.sort((a, b) => a > b ? 1 : -1)
+console.log("ordered", orderedDates)
+const dropdownDates = orderedDates.map((sale) => <option value={sale}>{sale}</option>)
+
+
     return (
         <div className="salesWrapper">
             <img src="https://cdn.fansshare.com/pictures/wallpaperbackground/good-background-colors-free-wallpapers-color-photo-color-backgrounds-815378648.jpg" alt="" className="salesBackground"/>
@@ -85,10 +90,10 @@ function toggleChart(){
             <p className="drop3Title">--Data Set 1--</p>
             <p className="drop4Title">--Data Set 2--</p>
             <select className="dropDown1" onChange={handleChange1}>
-              {sales.map((sale) => <option value={sale.day}>{sale.day}</option>)}
+              {dropdownDates}
             </select>
             <select className="dropDown2" onChange={handleChange2}>
-              {sales.map((sale) => <option value={sale.day}>{sale.day}</option>)}
+              {dropdownDates}
             </select>
             <select className="dropDown3" onChange={handleChange3}>
               <option value=""></option>
