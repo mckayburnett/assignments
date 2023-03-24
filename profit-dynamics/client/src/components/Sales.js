@@ -77,7 +77,6 @@ const dropdownDates = mappedDates.map((sale) => <option value={sale}>{sale}</opt
     setGraphSales(sales.filter(sale => Date.parse(sale.day) <= dateTwo && Date.parse(sale.day) >= dateOne).sort((a, b) => a.day > b.day ? 1 : -1))
   }, [dateOne, dateTwo])
   
-  console.log("#1 graphsales", graphSales)
 
 
 

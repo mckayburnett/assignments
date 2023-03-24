@@ -8,8 +8,6 @@ export default function ChartData(props){
     const dataSet1 = props.dataSet1
     const dataSet2 = props.dataSet2
 
-    console.log("testing123", props.sales)
-
     const [edit, setEdit] = useState(false)
     function handleEdit(){
         setEdit(true)
@@ -35,8 +33,6 @@ export default function ChartData(props){
     }
 
     console.log("graph sales" , graphSales)
-    console.log("dataSet1",dataSet1)
-    console.log("dataSet2",dataSet2)
  
     const graphLine = graphSales.map((sale) => [sale.day, sale[dataSet1], sale[dataSet2]])
     const graphLine2 = graphSales.map((sale) => [sale.day, sale[dataSet1], parseFloat((sale[dataSet2]/sale[dataSet1]))])
@@ -44,19 +40,13 @@ export default function ChartData(props){
     
 
     let lineData = [
-        dataSet1.length > 0 && dataSet2 > 0 ?
             ['x', dataSet1, dataSet2]
-            :
-            ['x', "Units", "Net Sales"]
-
     ]
     const newLineData = radio==="percentage" ? lineData.concat(graphLine2) : lineData.concat(graphLine)
 
-    console.log("datasets", dataSet1, dataSet2)
-    console.log("linedata", lineData)
     let lineColors = color1 || color2 ? [`${color1||"red"}`, `${color2||"blue"}`] : ["red", "blue"]
     
-    let axes = dataSet1.length > 0 && dataSet2 > 0 ? {0: {title: `${dataSet1}`}, 1: {title: `${dataSet2}`}} : {0: {title: "Units"}, 1: {title: "Net Sales"}}
+    let axes = {0: {title: `${dataSet1}`}, 1: {title: `${dataSet2}`}}
 
     const lineChartOptions = {
         legend: {
