@@ -34,7 +34,7 @@ export default function ChartData(props){
 
     console.log("graph sales" , graphSales)
  
-    const graphLine = graphSales.map((sale) => [sale.day, sale[dataSet1], sale[dataSet2]])
+    const graphLine = graphSales.map((sale) => [sale.day, (sale[dataSet1] < 0 ? sale[dataSet1]*-1 : sale[dataSet1]), (sale[dataSet2] < 0 ? sale[dataSet2]*-1 : sale[dataSet2])])
     const graphLine2 = graphSales.map((sale) => [sale.day, sale[dataSet1], parseFloat((sale[dataSet2]/sale[dataSet1]))])
     
     
@@ -43,7 +43,7 @@ export default function ChartData(props){
             ['x', dataSet1, dataSet2]
     ]
     const newLineData = radio==="percentage" ? lineData.concat(graphLine2) : lineData.concat(graphLine)
-
+    console.log(newLineData)
     let lineColors = color1 || color2 ? [`${color1||"red"}`, `${color2||"blue"}`] : ["red", "blue"]
     
     let axes = {0: {title: `${dataSet1}`}, 1: {title: `${dataSet2}`}}
