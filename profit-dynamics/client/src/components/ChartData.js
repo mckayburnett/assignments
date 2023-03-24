@@ -35,7 +35,7 @@ export default function ChartData(props){
     console.log("graph sales" , graphSales)
  
     const graphLine = graphSales.map((sale) => [sale.day, (sale[dataSet1] < 0 ? sale[dataSet1]*-1 : sale[dataSet1]), (sale[dataSet2] < 0 ? sale[dataSet2]*-1 : sale[dataSet2])])
-    const graphLine2 = graphSales.map((sale) => [sale.day, sale[dataSet1], parseFloat((sale[dataSet2]/sale[dataSet1]))])
+    const graphLine2 = graphSales.map((sale) => [sale.day, (sale[dataSet1] < 0 ? sale[dataSet1]*-1 : sale[dataSet1]), parseFloat((sale[dataSet2] < 0 ? sale[dataSet2]*-1 : sale[dataSet2])/(sale[dataSet1] < 0 ? sale[dataSet1]*-1 : sale[dataSet1]))])
     
     
 
