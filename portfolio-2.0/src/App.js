@@ -17,6 +17,7 @@ export default function App (){
       </nav>
       <body>
         <img className="me" src={pic00} alt="" />
+        {/* make strong red*/}
         <h1 className="intro anim-typewriter">{ `Hello. I'm `}<strong>MCKAY BURNETT,</strong></h1>
         <h1 className="intro-2 anim-typewriter">{` a Full-Stack Developer, and this is my PORTFOLIO." `}</h1>
       </body>
