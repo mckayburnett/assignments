@@ -1,5 +1,5 @@
 html{
-  
+  background-color: rgb(244, 244, 244);
 }
 body {
   margin: 0;
@@ -17,35 +17,79 @@ code {
     monospace;
 }
 
-nav{
+.nav{
+  position: sticky;
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(45deg, rgb(0, 0, 0), rgb(39, 45, 96));
+  padding: 20px;
+  height: 40px;
+  color: white;
+  z-index: 1100;
+}
+.logo{
 
+}
+.nav-links{
+  display: flex;
+  gap: 5em;
 }
 
 /* Title */
-.test{
+.intro{
   position: relative;
-  top: 50%;  
-  width: 24em;
+  top: 50px;  
+  width: 500px;
   margin: 0 auto;
-  border-right: 2px solid rgba(255,255,255,.75);
-  font-size: 180%;
+  font-size: 50px;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   transform: translateY(-50%);
   font-family: 'Roboto', sans-serif;
+  color:  rgb(39, 45, 96);
+  border-right: .15em solid rgb(39, 45, 96)
+}
+.intro-2{
+  position: relative;
+  top: 50px;  
+  width: 500px;
+  margin: 0 auto;
+  font-size: 50px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+  font-family: 'Roboto', sans-serif;
+  color:  rgb(39, 45, 96);
+  border-right: .15em solid rgb(39, 45, 96)
 }
 /* Animation */
 .anim-typewriter{
-animation: typewriter 4s steps(82) 1s 1 normal both,
-           blinkTextCursor 500ms steps(82) infinite normal;
+  animation: typing 3s steps(82) forwards,
+  blinkTextCursor 1.2s infinite normal;
 }
-@keyframes typewriter{
-from{width: 0;}
-to{width: 100%;}
+@keyframes typing{
+  from{width: 0;}
+  to{width: 58%;}
 }
 @keyframes blinkTextCursor{
-from{border-right-color: rgba(255,255,255,.75);}
-to{border-right-color: transparent;}
+  from{border-right-color:  transparent;}
+  to{border-right-color: .15em solid rgb(39, 45, 96);}
+}
+
+@keyframes typing2{
+  from{width: 0;}
+  to{width: 58%;}
+}
+@keyframes blinkTextCursor2{
+  from{border-right-color:  transparent;}
+  to{border-right-color: .15em solid rgb(39, 45, 96);}
+}
+
+.me{
+  position: absolute;
+  bottom: 0;
 }
