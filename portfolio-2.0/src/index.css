@@ -1,0 +1,51 @@
+html{
+  
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+strong {
+  font-weight: bold;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+nav{
+  font-family: 'Roboto', sans-serif;
+
+}
+
+/* Title */
+.test{
+  position: relative;
+  top: 50%;  
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255,255,255,.75);
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+  font-family: 'Roboto', sans-serif;
+}
+/* Animation */
+.anim-typewriter{
+animation: typewriter 4s steps(82) 1s 1 normal both,
+           blinkTextCursor 500ms steps(82) infinite normal;
+}
+@keyframes typewriter{
+from{width: 0;}
+to{width: 100%;}
+}
+@keyframes blinkTextCursor{
+from{border-right-color: rgba(255,255,255,.75);}
+to{border-right-color: transparent;}
+}
