@@ -1,8 +1,23 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Typewriter from "typewriter-effect"
 import pic00 from "./images/pic00.png"
+import typing from "./typing.mp3"
 
 export default function App (){
+
+  //setTimeout(() => typing.play(), 500)
+  let audio = new Audio(typing)
+  
+  //enter button
+  const [enter, setEnter] = useState(false)
+  function handleEnter(){
+    setEnter(true);
+    audio.play()
+  }
+
+  
+
+  
 
   return (
     <div className="appWrap">        
@@ -17,31 +32,43 @@ export default function App (){
           <h1>Contact</h1>
         </div>
       </nav>
+    {enter ? 
       <body>
         <img className="me" src={pic00} alt="" />
         <div className="typewriter">
           <Typewriter
 
             onInit={(typewriter) => {
+
               typewriter
-              .typeString(`{ Hello! /}`)
-              .pauseFor(1500)
-              .deleteAll(20)
+                .changeDelay(50)
+                .typeString(`{ Hello! /}`)
+                .pauseFor(1500)
+                .deleteAll(20)
 
-              .typeString("My name is <strong>MCKAY BURNETT</strong>")
-              .pauseFor(1000)
-              .deleteAll(10)
+                .changeDelay(50)
+                .typeString("My name is <strong>MCKAY BURNETT</strong>")
+                .pauseFor(1500)
+                .deleteAll(10)
 
-              .typeString("I'm a <strong>FULL-STACK DEVELOPER</strong> and...")
-              .pauseFor(1000)
-              .deleteAll(5)
+                .changeDelay(50)
+                .typeString("I'm a <strong>FULL-STACK DEVELOPER</strong> and...<br></br>")
+                .pauseFor(1500)
 
-              .typeString("This is my <strong>PORTFOLIO</strong>")
-              .start();
+                .changeDelay(50)
+                .typeString("This is my <strong>PORTFOLIO</strong>")
+                .start();
+
             }}
           />
         </div>
       </body>
+      :
+      <div className="enterContainer">
+        <button className="enter" onClick={handleEnter}>Enter</button>
+        <img className="me-2" src={pic00} alt="" />
+      </div>
+      }
     </div>
   )
 }
