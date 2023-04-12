@@ -1,4 +1,5 @@
 import React from "react"
+import Typewriter from "typewriter-effect"
 import pic00 from "./images/pic00.png"
 
 export default function App (){
@@ -6,6 +7,7 @@ export default function App (){
   return (
     <div className="appWrap">        
       <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"></link>
+      <link href="https://fonts.googleapis.com/css?family=Inspiration&display=swap" rel="stylesheet"></link>
       <nav className="nav">
         <h1 className="logo">McKay Burnett</h1>
         <div className="nav-links">
@@ -17,9 +19,28 @@ export default function App (){
       </nav>
       <body>
         <img className="me" src={pic00} alt="" />
-        {/* make strong red*/}
-        <h1 className="intro anim-typewriter">{ `Hello. I'm `}<strong>MCKAY BURNETT,</strong></h1>
-        <h1 className="intro-2 anim-typewriter">{` a Full-Stack Developer, and this is my PORTFOLIO." `}</h1>
+        <div className="typewriter">
+          <Typewriter
+
+            onInit={(typewriter) => {
+              typewriter
+              .typeString(`{ Hello! /}`)
+              .pauseFor(1500)
+              .deleteAll(20)
+
+              .typeString("My name is <strong>MCKAY BURNETT</strong>")
+              .pauseFor(1000)
+              .deleteAll(10)
+
+              .typeString("I'm a <strong>FULL-STACK DEVELOPER</strong> and...")
+              .pauseFor(1000)
+              .deleteAll(5)
+
+              .typeString("This is my <strong>PORTFOLIO</strong>")
+              .start();
+            }}
+          />
+        </div>
       </body>
     </div>
   )

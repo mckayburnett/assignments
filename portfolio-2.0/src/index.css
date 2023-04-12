@@ -1,5 +1,5 @@
 html{
-  background-color: rgb(244, 244, 244);
+  background: linear-gradient(90deg, rgb(198, 198, 198), rgb(255, 255, 255));
 }
 body {
   margin: 0;
@@ -30,7 +30,7 @@ code {
   z-index: 1100;
 }
 .logo{
-
+  font-family: 'Inspiration';
 }
 .nav-links{
   display: flex;
@@ -38,57 +38,22 @@ code {
 }
 
 /* Title */
-.intro{
+.typewriter{
   position: relative;
-  top: 50px;  
-  width: 500px;
-  margin: 0 auto;
-  font-size: 50px;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  transform: translateY(-50%);
+  top: 200px;
+  left: 0px;
   font-family: 'Roboto', sans-serif;
-  color:  rgb(39, 45, 96);
-  border-right: .15em solid rgb(39, 45, 96)
-}
-.intro-2{
-  position: relative;
-  top: 50px;  
-  width: 500px;
-  margin: 0 auto;
-  font-size: 50px;
+  font-weight: 800;
+  font-size: 40px;
   text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  transform: translateY(-50%);
-  font-family: 'Roboto', sans-serif;
-  color:  rgb(39, 45, 96);
-  border-right: .15em solid rgb(39, 45, 96)
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:rgb(39, 45, 96)
 }
-/* Animation */
-.anim-typewriter{
-  animation: typing 3s steps(82) forwards,
-  blinkTextCursor 1.2s infinite normal;
+strong{
+  color: red;
 }
-@keyframes typing{
-  from{width: 0;}
-  to{width: 58%;}
-}
-@keyframes blinkTextCursor{
-  from{border-right-color:  transparent;}
-  to{border-right-color: .15em solid rgb(39, 45, 96);}
-}
-
-@keyframes typing2{
-  from{width: 0;}
-  to{width: 58%;}
-}
-@keyframes blinkTextCursor2{
-  from{border-right-color:  transparent;}
-  to{border-right-color: .15em solid rgb(39, 45, 96);}
-}
-
 .me{
   position: absolute;
   bottom: 0;
