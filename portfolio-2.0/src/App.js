@@ -12,12 +12,12 @@ export default function App (){
   const [enter, setEnter] = useState(false)
   function handleEnter(){
     setEnter(true);
-    audio.play()
+    setInterval(() => {
+      audio.play()}, 300, 1500)
+    
+    //setTimeout(() => audio.play(), 1000)
   }
 
-  
-
-  
 
   return (
     <div className="appWrap">        
