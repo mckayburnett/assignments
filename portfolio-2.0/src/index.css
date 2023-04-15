@@ -16,7 +16,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+.appWrapper{
+  display: flex;
+}
 .nav{
   position: sticky;
   font-family: 'Roboto', sans-serif;
@@ -213,5 +215,13 @@ strong{
   right: 0;
   top: 5px;
   padding-right: 10px; 
+}
+
+/* about me page */
+.aboutMeWrapper{
+  position: relative;
+  border: 1px black solid;
+  width: 100%;
+  margin-left: 100%;
 }
 
