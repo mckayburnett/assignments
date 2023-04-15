@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import Typewriter from "typewriter-effect"
 import pic00 from "./images/pic00.png"
 import typing from "./typing.mp3"
+import { FaArrowRight } from 'react-icons/fa'
 
 export default function App (){
 
@@ -10,14 +11,38 @@ export default function App (){
   
   //enter button
   const [enter, setEnter] = useState(false)
+  const [showButton, setShowButton] = useState(false)
   function handleEnter(){
     setEnter(true);
-    setInterval(() => {
-      audio.play()}, 300, 1500)
-    
-    //setTimeout(() => audio.play(), 1000)
+    setTimeout(() => {
+      setShowButton(true);
+    }, 7300)
+    setTimeout(() => {
+      audio.play()
+      setTimeout(() => {
+        audio.pause()
+      }, 1100)
+    }, 300);
+    setTimeout(() => {
+      audio.play()
+      setTimeout(() => {
+        audio.pause()
+        setTimeout(() => {
+          audio.play()
+          setTimeout(() => {
+            audio.pause()
+            setTimeout(() => {
+              audio.play()
+              setTimeout(() => {
+                audio.pause()
+              }, 1200)
+            }, 1700)
+          }, 2900)
+        }, 1300)
+      }, 2200)
+    }, 2700);
   }
-
+console.log(showButton)
 
   return (
     <div className="appWrap">        
@@ -27,6 +52,7 @@ export default function App (){
         <h1 className="logo">McKay Burnett</h1>
         <div className="nav-links">
           <h1>Top</h1>
+          <h1>About</h1>
           <h1>Proficiency</h1>
           <h1>Portfolio</h1>
           <h1>Contact</h1>
@@ -62,6 +88,7 @@ export default function App (){
             }}
           />
         </div>
+        <button className={showButton ? `button-aboutMe` : `hidden`}>About Me <FaArrowRight className="arrow"/></button>
       </body>
       :
       <div className="enterContainer">
