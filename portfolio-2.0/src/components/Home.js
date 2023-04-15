@@ -53,7 +53,7 @@ export default function Home(){
   }
   
   return (
-    <div className="appWrap">        
+    <div className="homeWrapper">        
       <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"></link>
       <link href="https://fonts.googleapis.com/css?family=Inspiration&display=swap" rel="stylesheet"></link>
       <nav className="nav">
