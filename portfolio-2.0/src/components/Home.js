@@ -45,10 +45,11 @@ export default function Home(){
 
   //about me button
   function clickAboutMe(){
-    window.scrollTo({
-      left: auto,
-      behavior: "smooth",
-    });
+    window.scrollBy({
+       left: window.innerWidth, 
+       top: 0,
+        behavior: "smooth"
+      });
   }
   
   return (
