@@ -114,6 +114,8 @@ code {
 }
 strong{
   color: red;
+  font-weight: 1000;
+  color: linear-gradient(90deg, red, rgb(11, 122, 170))
 }
 /* pic */
 .me{
