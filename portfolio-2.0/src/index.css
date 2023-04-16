@@ -246,5 +246,17 @@ strong{
 }
 .aboutMe-pic{
   border-radius: 150px;
+  position: absolute;
+  left: 80px;
+  top: 25%;
 }
-
+.explosionContainer{
+  position: absolute;
+  left: 0;
+  top: 25%;
+  size: 50vw;
+}
+.explosion{
+  position: absolute;
+  color: white;
+}
