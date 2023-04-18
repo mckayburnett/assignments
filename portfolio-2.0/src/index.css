@@ -33,6 +33,16 @@ code {
 }
 .logo{
   font-family: 'Inspiration';
+  background-color: red;
+  background-image: linear-gradient(45deg, #9d261b, #5600f5);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  background-repeat: repeat;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0.0px;
+
 }
 .nav-links{
   display: flex;
@@ -245,18 +255,10 @@ strong{
   background: linear-gradient(90deg, rgb(7, 91, 164), rgb(255, 123, 0));
 }
 .aboutMe-pic{
-  border-radius: 150px;
+  border-radius: 50%;
   position: absolute;
-  left: 80px;
-  top: 25%;
-}
-.explosionContainer{
-  position: absolute;
-  left: 0;
-  top: 25%;
-  size: 50vw;
-}
-.explosion{
-  position: absolute;
-  color: white;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1100;
 }
