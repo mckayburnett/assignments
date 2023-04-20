@@ -252,17 +252,17 @@ strong{
   width: 100%;
   height: 100%;
   margin-left: 100%;
-  background: linear-gradient(90deg, rgb(7, 91, 164), rgb(255, 123, 0));
+  background: linear-gradient(90deg, rgb(7, 91, 164), rgb(0, 0, 0));
 }
 .aboutMe-pic{
-  border-radius: 50%;
   position: absolute;
-  top: 35%;
+  border-radius: 10px;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 1100;
-  height: 22vw;
-  width: 22vw;
+  height: 400px;
+  width: 460px;
 }
 .aboutMe-description{
   position: absolute;
@@ -271,12 +271,16 @@ strong{
   transform: translate(-50%, 0);
   z-index: 1100;
   text-align: center;
+  color: white;
 }
 .aboutMe-strong{
   font-size: 36px;
   font-weight: 800;
 }
 .aboutMe-background{
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  width: 70vw;
+  top: 3vw;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
