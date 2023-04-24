@@ -19,7 +19,7 @@ export default function AboutMe (){
         :
         <div className="compEmpty">
             <img className="aboutMe-background" src={pic02} alt="" />
-            <textarea className="textArea">fdsafdsafds</textarea>
+            <button className="aboutMe-Button" onClick={() => setMeButton(true)}>fdsafdsafds</button>
         </div>
         }
     </div>

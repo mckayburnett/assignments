@@ -279,8 +279,16 @@ strong{
 }
 .aboutMe-background{
   position: absolute;
-  width: 70vw;
-  top: 3vw;
+  width: 80%;
+  height: 100%;
+  top: 40px;
   left: 50%;
   transform: translate(-50%, 0);
+}
+.aboutMe-Button{
+  position: absolute;
+  left: 65%;
+  top: 40%;
+  transform: translate(-50%, 0);
+  z-index: 1100;
 }
