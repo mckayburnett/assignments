@@ -254,21 +254,28 @@ strong{
   margin-left: 100%;
   background: linear-gradient(90deg, rgb(7, 91, 164), rgb(0, 0, 0));
 }
+.compFull{
+  position: absolute;
+  left: 50%;
+  top: 120px;
+  transform: translate(-50%, 0);
+  width: 50%;
+  height: 59%;
+  border: 3px solid black;
+  z-index: 1100;
+}
 .aboutMe-pic{
   position: absolute;
-  border-radius: 10px;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, 0);
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 50%;
+  padding: 10px;
+  border-radius: 20px;
   z-index: 1100;
-  height: 400px;
-  width: 460px;
 }
 .aboutMe-description{
   position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translate(-50%, 0);
   z-index: 1100;
   text-align: center;
   color: white;
