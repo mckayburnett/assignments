@@ -256,10 +256,10 @@ strong{
 }
 .compFull{
   position: absolute;
-  left: 50%;
+  left: 50.5%;
   top: 120px;
   transform: translate(-50%, 0);
-  width: 50%;
+  width: 51%;
   height: 59%;
   border: 3px solid black;
   z-index: 1100;
@@ -276,21 +276,28 @@ strong{
 }
 .aboutMe-description{
   position: absolute;
+  top: 0;
+  right: 0;
+  width: 65%;
+  font-size: 200%;
   z-index: 1100;
   text-align: center;
   color: white;
+  padding: 0px 10px 0px 10px;
+  text-align: left;
 }
 .aboutMe-strong{
   font-size: 36px;
   font-weight: 800;
 }
-.aboutMe-background{
+.aboutMe-laptop{
   position: absolute;
   width: 80%;
   height: 100%;
   top: 40px;
   left: 50%;
   transform: translate(-50%, 0);
+  
 }
 .aboutMe-Button{
   position: absolute;
