@@ -41,11 +41,7 @@ export default function AboutMe (){
     //coding button
     let audio = new Audio(coding)
     function handleCoding(){
-        setTimeout(() => {
-            setMeButton(true);
-            clearTimeout()
-            setDelayedButton(true);
-        }, 500)
+        setMeButton(true)
         audio.play()
     }
     return (
@@ -53,11 +49,12 @@ export default function AboutMe (){
         { meButton ? 
         <>
             <img className="aboutMe-laptop" src={pic02} alt="" />
-            <div className={delayedButton ? "compFull" : "hidden"}>
+            <div className={ meButton ? "compFull" : "compEmpty" }>
                 <img className="aboutMe-pic" src={pic01} alt="" />
                 <h2 className="aboutMe-description"><h1 className="description-one">Front and Back-End developer</h1><br></br>I'm a Utah based Front and Back-End developer. To me, Computer Programming isn't just a career, it's a hobby. I love creating clean, effective, and useful code that makes life easier!</h2>
                 <strong className="aboutMe-strong">McKay Burnett</strong>
                 <img className="aboutMe-pic2" src={pic03} alt="" />
+                <button className="button-aboutMe">View Proficiency</button>
             </div>
         </>
         :
