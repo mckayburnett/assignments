@@ -54,18 +54,6 @@ export default function Home(){
   
   return (
     <div className="homeWrapper">        
-      <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"></link>
-      <link href="https://fonts.googleapis.com/css?family=Inspiration&display=swap" rel="stylesheet"></link>
-      <nav className="nav">
-        <h1 className="logo">McKay Burnett</h1>
-        <div className="nav-links">
-          <h1>Top</h1>
-          <h1>About</h1>
-          <h1>Proficiency</h1>
-          <h1>Portfolio</h1>
-          <h1>Contact</h1>
-        </div>
-      </nav>
     {enter ? 
       <body>
         <img className="me" src={pic00} alt="" />
