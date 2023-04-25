@@ -4,7 +4,7 @@ import pic00 from "../images/pic00.png"
 import typing from "../typing.mp3"
 import { FaArrowRight } from 'react-icons/fa'
 
-export default function Home(){
+const Home = React.forwardRef((props, ref) => {
 
   //setTimeout(() => typing.play(), 500)
   let audio = new Audio(typing)
@@ -53,7 +53,7 @@ export default function Home(){
   }
   
   return (
-    <div className="homeWrapper">        
+    <div className="homeWrapper" id="home" ref={ref}>        
     {enter ? 
       <body>
         <img className="me" src={pic00} alt="" />
@@ -94,4 +94,6 @@ export default function Home(){
       }
     </div>
   )
-}
+})
+
+export default Home

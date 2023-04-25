@@ -7,7 +7,7 @@ import { FaArrowRight } from 'react-icons/fa'
 
 
 
-export default function AboutMe (){
+const AboutMe = React.forwardRef((props, ref) => {
 
     //laptop button
     const [meButton, setMeButton] = useState(false)
@@ -57,7 +57,7 @@ export default function AboutMe (){
       }
 
     return (
-    <div className="aboutMeWrapper" >
+    <div className="aboutMeWrapper" id="about" ref={ref} >
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css?family=Inspiration&display=swap" rel="stylesheet"></link>
         { meButton ? 
@@ -84,4 +84,6 @@ export default function AboutMe (){
         }
     </div>
     )
-}
+})
+
+export default AboutMe
