@@ -269,24 +269,38 @@ strong{
   position: absolute;
   top: 15px;
   left: 12px;
-  width: 30%;
-  height: 50%;
+  width: 10vw;
   border-radius: 20px;
-  border: 5px black solid;
   z-index: 1100;
+  -webkit-filter: drop-shadow(5px 5px 5px #000000);
+  filter: drop-shadow(5px 5px 5px #000000);
+}
+.aboutMe-pic2{
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 10vw;
+  border-radius: 20px;
+  z-index: 1100;
+  -webkit-filter: drop-shadow(5px 5px 5px #000000);
+  filter: drop-shadow(5px 5px 5px #000000);
+}
+.description-one{
+  font-weight: 1000;
 }
 .aboutMe-description{
   position: absolute;
-  top: 0;
+  top: 50px;
   right: 0;
   width: 65%;
   font-size: 1.5vw;
   z-index: 1100;
   text-align: center;
   color: white;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 20px 0px 10px;
   text-align: left;
   text-shadow: rgb(9, 255, 0) 1px 0 10px;
+  font-weight: 1000;  
 }
 .aboutMe-strong{
   position: absolute;
@@ -304,16 +318,52 @@ strong{
 .aboutMe-laptop{
   position: absolute;
   width: 80%;
+  min-width: 870px;
   height: 100%;
+  min-height: 590px;
   top: 40px;
   left: 50%;
   transform: translate(-50%, 0);
-  
+  filter: brightness(50%)
 }
-.aboutMe-Button{
+.codeButton{
   position: absolute;
-  left: 65%;
-  top: 40%;
+  right: 10%;
+  top: 50%;
   transform: translate(-50%, 0);
   z-index: 1100;
+  border: 3px rgb(9, 255, 0) solid;
+  background-color: black;
+  color: rgb(9, 255, 0);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+.compEmpty{
+  position: absolute;
+  left: 50.5%;
+  top: 15vh;
+  transform: translate(-50%, 0);
+  width: 51%;
+  min-width: 558px;
+  height: 58%;
+  min-height: 350px;;
+  z-index: 1100;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.code{
+  position: absolute;
+  font-size: 1.6vh;
+  width: 50%;
+  top: 0;
+  min-height: 300px;
+  padding: 0px 10px 0px 10px;
+  color: rgb(9, 255, 0);
+  text-shadow: 1px 2px 0px rgba(0, 0, 0, 1);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
