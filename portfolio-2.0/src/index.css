@@ -264,6 +264,11 @@ strong{
   width: 51%;
   height: 59%;
   z-index: 1100;
+  transition: opacity 2000ms 5s;
+  opacity: 1;
+}
+.hidden{
+  opacity: 0;
 }
 .aboutMe-pic{
   position: absolute;
