@@ -34,7 +34,7 @@ code {
 .logo{
   font-family: 'Inspiration';
   background-color: red;
-  background-image: linear-gradient(45deg, #9d261b, #5600f5);
+  background-image: linear-gradient(45deg, rgb(9, 255, 0), #5600f5);
   background-size: 100%;
   -webkit-background-clip: text;
   background-repeat: repeat;
@@ -105,7 +105,7 @@ code {
   position:absolute;
   height: 100%;
   width: 100%;
-  background: linear-gradient(90deg, rgb(0, 248, 4),rgb(7, 91, 164));
+  background: linear-gradient(90deg,rgb(41, 41, 41),rgb(0, 0, 0));
 }
 /* Title */
 .typewriter{
@@ -120,13 +120,14 @@ code {
   justify-content: center;
   align-items: center;
   color:rgb(238, 237, 237);
+  text-shadow: rgb(9, 255, 0) 1px 0 10px;
   /* -webkit-text-stroke-width: 0.01px;
   -webkit-text-stroke-color: rgb(0, 0, 0); */
 }
 strong{
   font-weight: 1000;
-  background-color: red;
-  background-image: linear-gradient(45deg, #9d261b, #5600f5);
+  background-color: black;
+  background-image: linear-gradient(45deg, rgb(9, 255, 0), #5600f5);
   background-size: 100%;
   -webkit-background-clip: text;
   background-repeat: repeat;
@@ -134,6 +135,7 @@ strong{
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
   -webkit-text-stroke-width: 0.0px;
+  text-shadow: none;
 }
 /* pic */
 .me{
@@ -252,7 +254,7 @@ strong{
   width: 100%;
   height: 100%;
   margin-left: 100%;
-  background: linear-gradient(90deg, rgb(7, 91, 164), rgb(0, 0, 0));
+  background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
 }
 .compFull{
   position: absolute;
@@ -261,17 +263,16 @@ strong{
   transform: translate(-50%, 0);
   width: 51%;
   height: 59%;
-  border: 3px solid black;
   z-index: 1100;
 }
 .aboutMe-pic{
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 15px;
+  left: 12px;
   width: 30%;
   height: 50%;
-  padding: 10px;
   border-radius: 20px;
+  border: 5px black solid;
   z-index: 1100;
 }
 .aboutMe-description{
@@ -279,16 +280,26 @@ strong{
   top: 0;
   right: 0;
   width: 65%;
-  font-size: 200%;
+  font-size: 1.5vw;
   z-index: 1100;
   text-align: center;
   color: white;
   padding: 0px 10px 0px 10px;
   text-align: left;
+  text-shadow: rgb(9, 255, 0) 1px 0 10px;
 }
 .aboutMe-strong{
-  font-size: 36px;
+  position: absolute;
+  font-family: 'Inspiration';
+  font-size: 3vw;
+  padding-right: 30px;
   font-weight: 800;
+  right: 0;
+  top: 10px;
+  background-image: linear-gradient(45deg, rgb(9, 255, 0), #5600f5);
+  background-color: black;
+  text-shadow: rgb(0, 0, 0) 1px 0 0px;
+
 }
 .aboutMe-laptop{
   position: absolute;
