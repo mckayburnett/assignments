@@ -488,19 +488,19 @@ strong{
   z-index: -1;
 }
 .icons{
-  position: absolute;
+  position: relative;
   display: flex-wrap;
   align-items: center;
   align-content: center;
   align-self: center;
   text-align: center;
   justify-content: space-between;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   z-index: 1100;
   color: white;
   font-size: 10vw;
-  top: 20%;
+  top: 160px;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -534,14 +534,13 @@ strong{
 .html:hover, .html:focus, .html:active {
   -webkit-animation-name: html;
   animation-name: html;
-  -webkit-animation-duration: 0.15s;
-  animation-duration: 0.15s;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-
 .css{
   color:#0c68be;
   margin: 3%;
@@ -570,10 +569,10 @@ strong{
   }
 }
 .css:hover, .css:focus, .css:active {
-  -webkit-animation-name: html;
-  animation-name: html;
-  -webkit-animation-duration: 0.15s;
-  animation-duration: 0.15s;
+  -webkit-animation-name: css;
+  animation-name: css;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
@@ -604,10 +603,10 @@ strong{
   }
 }
 .js:hover, .js:focus, .js:active {
-  -webkit-animation-name: html;
-  animation-name: html;
-  -webkit-animation-duration: 0.15s;
-  animation-duration: 0.15s;
+  -webkit-animation-name: js;
+  animation-name: js;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
@@ -638,10 +637,10 @@ strong{
   }
 }
 .react:hover, .react:focus, .react:active {
-  -webkit-animation-name: html;
-  animation-name: html;
-  -webkit-animation-duration: 0.15s;
-  animation-duration: 0.15s;
+  -webkit-animation-name: react;
+  animation-name: react;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
@@ -672,10 +671,10 @@ strong{
   }
 }
 .node:hover, .node:focus, .node:active {
-  -webkit-animation-name: html;
-  animation-name: html;
-  -webkit-animation-duration: 0.15s;
-  animation-duration: 0.15s;
+  -webkit-animation-name: node;
+  animation-name: node;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
@@ -706,10 +705,10 @@ strong{
   }
 }
 .mongo:hover, .mongo:focus, .mongo:active {
-  -webkit-animation-name: html;
-  animation-name: html;
-  -webkit-animation-duration: 0.15s;
-  animation-duration: 0.15s;
+  -webkit-animation-name: mongo;
+  animation-name: mongo;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
@@ -740,10 +739,10 @@ strong{
   }
 }
 .express:hover, .express:focus, .express:active {
-  -webkit-animation-name: html;
-  animation-name: html;
-  -webkit-animation-duration: 0.15s;
-  animation-duration: 0.15s;
+  -webkit-animation-name: express;
+  animation-name: express;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
@@ -774,10 +773,10 @@ strong{
   }
 }
 .git:hover, .git:focus, .git:active {
-  -webkit-animation-name: html;
-  animation-name: html;
-  -webkit-animation-duration: 0.15s;
-  animation-duration: 0.15s;
+  -webkit-animation-name: git;
+  animation-name: git;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
@@ -790,11 +789,11 @@ strong{
   text-align: center;
   margin: 3%;
 }
-#mongoose{
+#Mongoose{
   width: 11vw;
   padding-bottom: 40px;
 }
-@-webkit-keyframes mongoose {
+@-webkit-keyframes Mongoose {
   50% {
     -webkit-transform: translateX(3px) rotate(2deg);
     transform: translateX(3px) rotate(2deg);
@@ -804,7 +803,7 @@ strong{
     transform: translateX(-3px) rotate(-2deg);
   }
 }
-@keyframes mongoose {
+@keyframes Mongoose {
   50% {
     -webkit-transform: translateX(3px) rotate(2deg);
     transform: translateX(3px) rotate(2deg);
@@ -814,21 +813,21 @@ strong{
     transform: translateX(-3px) rotate(-2deg);
   }
 }
-#mongoose:hover, #mongoose:focus, #mongoose:active {
-  -webkit-animation-name: html;
-  animation-name: html;
-  -webkit-animation-duration: 0.15s;
-  animation-duration: 0.15s;
+#Mongoose:hover, #Mongoose:focus, #Mongoose:active {
+  -webkit-animation-name: mongoose;
+  animation-name: mongoose;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-#gCharts{
+#GoogleCharts{
   width: 10vw;
   padding-bottom: 20px;
 }
-@-webkit-keyframes gCharts {
+@-webkit-keyframes GoogleCharts {
   50% {
     -webkit-transform: translateX(3px) rotate(2deg);
     transform: translateX(3px) rotate(2deg);
@@ -838,7 +837,7 @@ strong{
     transform: translateX(-3px) rotate(-2deg);
   }
 }
-@keyframes gCharts {
+@keyframes GoogleCharts {
   50% {
     -webkit-transform: translateX(3px) rotate(2deg);
     transform: translateX(3px) rotate(2deg);
@@ -848,13 +847,34 @@ strong{
     transform: translateX(-3px) rotate(-2deg);
   }
 }
-#gCharts:hover, #gCharts:focus, #gCharts:active {
-  -webkit-animation-name: html;
-  animation-name: html;
-  -webkit-animation-duration: 0.15s;
-  animation-duration: 0.15s;
+#GoogleCharts:hover, #GoogleCharts:focus, #GoogleCharts:active {
+  -webkit-animation-name: gCharts;
+  animation-name: gCharts;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+}
+.textContainer{
+  position:absolute;
+  width: 100%;
+  height: 120px;
+  top: 90px;
+  border: 3px greenyellow solid;
+}
+.iconText{
+  color: whitesmoke;
+  font-size: 4vw;
+  position: absolute;
+  top: 70px;
+  padding: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: opacity 700ms 5s;
+  opacity: 1;
+}
+.iconTextHidden{
+  opacity: 0;
 }

@@ -15,39 +15,33 @@ import GCharts from "../images/GCharts.png"
 
 const Proficiency = React.forwardRef((props, ref) => {
 
+    const [showText, setShowText] = useState(false)
+    const [text, setText] = useState("")
+    function enterIcon(e){
+        setText(e.target.id)
+        setShowText(true)
+    }
+    function leaveIcon(){
+        setText("")
+        setShowText(false)
+    }
 
     return (
         <div className="proficiencyWrapper" id="" ref={ref}>
             <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"></link>
             <link href="https://fonts.googleapis.com/css?family=Inspiration&display=swap" rel="stylesheet"></link>
+            <h1 className={showText ? `iconText` : `iconTextHidden`}>{text}</h1>
             <div className="icons">
-                <div>
-                    <FaHtml5 className="html" />
-                    <p className="htmlText">HTML5</p>
-                </div> 
-                <div>
-                    <FaCss3Alt className="css" />
-                    <p className="cssText">CSS3</p>
-                </div>    
-                <div>
-                    <TbBrandJavascript className="js" />
-
-                <div></div>
-                    <p className="jsText">JavaScript</p>
-                    <FaReact className="react"  />
-                    <p className="reactText">ReactJS</p>
-                    <FaNodeJs className="node"  />
-                    <p className="nodeText">Node.js</p>
-                    <SiMongodb className="mongo"  />
-                    <p className="mongoText">MongoDB</p>
-                    <img src={mongoose} className="pngIcon" id="mongoose" alt=""/>
-                    <p className="mongooseText">Mongoose</p>
-                    <SiExpress className="express"  />
-                    <p className="expressText">Express</p>
-                    <FaGitAlt className="git"  />
-                    <p className="gitText">Git</p>
-                    <img src={GCharts} className="pngIcon" id="gCharts" alt=""/>
-                    <p className="gChartsText">Google Charts</p>
+                <FaHtml5 className="html" id="HTML5" onMouseEnter={enterIcon} onMouseLeave={leaveIcon}/>
+                <FaCss3Alt className="css" id="CSS3" onMouseEnter={enterIcon} onMouseLeave={leaveIcon}/>
+                <TbBrandJavascript className="js" id="JavaScript" onMouseEnter={enterIcon} onMouseLeave={leaveIcon}/>
+                <FaReact className="react" id="ReactJS" onMouseEnter={enterIcon} onMouseLeave={leaveIcon}/>
+                <FaNodeJs className="node" id="Node.js" onMouseEnter={enterIcon} onMouseLeave={leaveIcon}/>
+                <SiMongodb className="mongo" id="MongoDB" onMouseEnter={enterIcon} onMouseLeave={leaveIcon}/>
+                <img src={mongoose} className="pngIcon" id="Mongoose" alt="" onMouseEnter={enterIcon} onMouseLeave={leaveIcon}/>
+                <SiExpress className="express" id="Express" onMouseEnter={enterIcon} onMouseLeave={leaveIcon}/>
+                <FaGitAlt className="git" id="Git" onMouseEnter={enterIcon} onMouseLeave={leaveIcon}/>
+                <img src={GCharts} className="pngIcon" id="GoogleCharts" alt="" onMouseEnter={enterIcon} onMouseLeave={leaveIcon}/>
             </div>
         </div>
         
