@@ -21,16 +21,33 @@ const Proficiency = React.forwardRef((props, ref) => {
             <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"></link>
             <link href="https://fonts.googleapis.com/css?family=Inspiration&display=swap" rel="stylesheet"></link>
             <div className="icons">
-                <FaHtml5 className="html" />
-                <FaCss3Alt className="css" />
-                <TbBrandJavascript className="js"  />
-                <FaReact className="react"  />
-                <FaNodeJs className="node"  />
-                <SiMongodb className="mongo"  />
-                <img src={mongoose} className="pngIcon" id="mongoose" alt=""/>
-                <SiExpress className="express"  />
-                <FaGitAlt className="git"  />
-                <img src={GCharts} className="pngIcon" id="gCharts" alt=""/>
+                <div>
+                    <FaHtml5 className="html" />
+                    <p className="htmlText">HTML5</p>
+                </div> 
+                <div>
+                    <FaCss3Alt className="css" />
+                    <p className="cssText">CSS3</p>
+                </div>    
+                <div>
+                    <TbBrandJavascript className="js" />
+
+                <div></div>
+                    <p className="jsText">JavaScript</p>
+                    <FaReact className="react"  />
+                    <p className="reactText">ReactJS</p>
+                    <FaNodeJs className="node"  />
+                    <p className="nodeText">Node.js</p>
+                    <SiMongodb className="mongo"  />
+                    <p className="mongoText">MongoDB</p>
+                    <img src={mongoose} className="pngIcon" id="mongoose" alt=""/>
+                    <p className="mongooseText">Mongoose</p>
+                    <SiExpress className="express"  />
+                    <p className="expressText">Express</p>
+                    <FaGitAlt className="git"  />
+                    <p className="gitText">Git</p>
+                    <img src={GCharts} className="pngIcon" id="gCharts" alt=""/>
+                    <p className="gChartsText">Google Charts</p>
             </div>
         </div>
         
