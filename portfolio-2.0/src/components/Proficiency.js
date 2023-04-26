@@ -1,4 +1,16 @@
 import React, { useState } from "react"
+import FaHtml5 from "react-icons/fa"
+import FaCss3Alt from "react-icons/fa"
+import TbBrandJavascript from "react-icons/tb"
+import FaReact from "react-icons/fa"
+import FaNodeJs from "react-icons/fa"
+import SiMongodb from "react-icons/si"
+import mongoose from "../images/mongoose.png"
+import SiExpress from "react-icons/si"
+import FaGitAlt from "react-icons/si"
+import GCharts from "../images/GCharts.png"
+
+
 
 
 const Proficiency = React.forwardRef((props, ref) => {
