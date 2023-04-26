@@ -487,3 +487,42 @@ strong{
   background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
   z-index: -1;
 }
+.icons{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 80px;
+  z-index: 1100;
+  color: white;
+  font-size: 15vw;
+  top: 120px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.html{
+  color:#ff7315
+}
+.css{
+  color:#0c68be
+}
+.js{
+ color: orange;
+}
+.react{
+  color: rgb(0, 195, 255);
+}
+.node{
+  color: rgb(80, 151, 67);
+}
+.mongo{
+  color: green;
+}
+.express{
+  color: rgb(164, 164, 164)
+}
+.git{
+  color: rgb(224, 75, 20);
+}
+.pngIcon{
+  width: 15vw;
+}
