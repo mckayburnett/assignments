@@ -64,7 +64,7 @@ const Home = React.forwardRef((props, ref) => {
 
               typewriter
                 .changeDelay(50)
-                .typeString(`{ Hello! /}`)
+                .typeString(`{"Hello!"}`)
                 .pauseFor(1500)
                 .deleteAll(20)
 

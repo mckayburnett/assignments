@@ -11,7 +11,6 @@ const AboutMe = React.forwardRef((props, ref) => {
 
     //laptop button
     const [meButton, setMeButton] = useState(false)
-    const [delayedButton, setDelayedButton] = useState(false)
 
     //coding string
     const str = `<div className="aboutMeWrapper">
