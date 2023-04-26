@@ -489,8 +489,11 @@ strong{
 }
 .icons{
   position: absolute;
-  display: flex;
+  display: flex-wrap;
   align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
   justify-content: space-between;
   width: 100%;
   height: 100%;
@@ -528,4 +531,9 @@ strong{
 }
 .pngIcon{
   width: 15vw;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  
 }
