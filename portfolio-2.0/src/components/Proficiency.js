@@ -27,10 +27,10 @@ const Proficiency = React.forwardRef((props, ref) => {
                 <FaReact className="react"  />
                 <FaNodeJs className="node"  />
                 <SiMongodb className="mongo"  />
-                <img src={mongoose} className="pngIcon" alt=""/>
+                <img src={mongoose} className="pngIcon" id="mongoose" alt=""/>
                 <SiExpress className="express"  />
                 <FaGitAlt className="git"  />
-                <img src={GCharts} className="pngIcon" alt=""/>
+                <img src={GCharts} className="pngIcon" id="gCharts" alt=""/>
             </div>
         </div>
         
