@@ -88,7 +88,7 @@ const Home = React.forwardRef((props, ref) => {
       </body>
       :
       <div className="enterContainer">
-        <button className="enter" onClick={handleEnter}>Enter</button>
+        <button className="enter" onClick={handleEnter}>Begin Tour</button>
         <img className="me-2" src={pic00} alt="" />
       </div>
       }
