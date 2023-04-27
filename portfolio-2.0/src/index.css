@@ -884,3 +884,12 @@ strong{
   transition: opacity 700ms 5s;
   opacity: 1;
 }
+/*projects page*/
+.projectsWrapper{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-left: 300%;
+  background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
+  z-index: -1;
+}

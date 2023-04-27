@@ -27,7 +27,7 @@ const Proficiency = React.forwardRef((props, ref) => {
     }
 
     return (
-        <div className="proficiencyWrapper" id="" ref={ref}>
+        <div className="proficiencyWrapper" id="proficiency" ref={ref}>
             <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"></link>
             <link href="https://fonts.googleapis.com/css?family=Inspiration&display=swap" rel="stylesheet"></link>
             <h1 className={showText ? `iconText` : `iconTextHidden`}>{text}</h1>
