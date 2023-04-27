@@ -19,18 +19,18 @@ const Proficiency = React.forwardRef((props, ref) => {
     const [text, setText] = useState("")
     function enterIcon(e){
         setText(e.target.id)
-        
+        setShowText(true);
     }
     function leaveIcon(){
         setText("")
-        
+        setShowText(false)
     }
 
     return (
         <div className="proficiencyWrapper" id="" ref={ref}>
             <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"></link>
             <link href="https://fonts.googleapis.com/css?family=Inspiration&display=swap" rel="stylesheet"></link>
-            <h1 className={`iconText`}>{text}</h1>
+            <h1 className={showText ? `iconText` : `iconTextHidden`}>{text}</h1>
             <div className="icons">
                 <FaHtml5 className="html" id="HTML5" onMouseEnter={enterIcon} onMouseLeave={leaveIcon}/>
                 <FaCss3Alt className="css" id="CSS3" onMouseEnter={enterIcon} onMouseLeave={leaveIcon}/>
