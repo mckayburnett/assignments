@@ -814,8 +814,8 @@ strong{
   }
 }
 #Mongoose:hover, #Mongoose:focus, #Mongoose:active {
-  -webkit-animation-name: mongoose;
-  animation-name: mongoose;
+  -webkit-animation-name: Mongoose;
+  animation-name: Mongoose;
   -webkit-animation-duration: 0.25s;
   animation-duration: 0.25s;
   -webkit-animation-timing-function: linear;
@@ -848,8 +848,8 @@ strong{
   }
 }
 #GoogleCharts:hover, #GoogleCharts:focus, #GoogleCharts:active {
-  -webkit-animation-name: gCharts;
-  animation-name: gCharts;
+  -webkit-animation-name: GoogleCharts;
+  animation-name: GoogleCharts;
   -webkit-animation-duration: 0.25s;
   animation-duration: 0.25s;
   -webkit-animation-timing-function: linear;
