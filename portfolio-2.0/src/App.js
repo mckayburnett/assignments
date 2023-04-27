@@ -14,7 +14,7 @@ export default function App (){
   
 
   return (
-    <div clasName="appWrapper">
+    <div className="appWrapper">
       <Nav homeRef={homeRef} aboutRef={aboutRef} proficiencyRef={proficiencyRef} projectsRef={projectsRef}/>
       <Home ref={homeRef} />
       <AboutMe ref={aboutRef} />

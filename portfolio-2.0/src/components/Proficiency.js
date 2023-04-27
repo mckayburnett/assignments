@@ -9,12 +9,12 @@ import mongoose from "../images/mongoose.png"
 import {SiExpress} from "react-icons/si"
 import {FaGitAlt} from "react-icons/fa"
 import GCharts from "../images/GCharts.png"
-
-
+import { FaArrowRight } from 'react-icons/fa'
 
 
 const Proficiency = React.forwardRef((props, ref) => {
 
+    //cursor functions and state
     const [showText, setShowText] = useState(false)
     const [text, setText] = useState("")
     function enterIcon(e){
@@ -25,6 +25,15 @@ const Proficiency = React.forwardRef((props, ref) => {
         setText("")
         setShowText(false)
     }
+
+    //button
+    function clickProjects(){
+        window.scrollBy({
+           left: window.innerWidth, 
+           top: 0,
+            behavior: "smooth"
+          });
+      }
 
     return (
         <div className="proficiencyWrapper" id="proficiency" ref={ref}>
@@ -43,6 +52,7 @@ const Proficiency = React.forwardRef((props, ref) => {
                 <FaGitAlt className="git" id="Git" onMouseEnter={enterIcon} onMouseLeave={leaveIcon}/>
                 <img src={GCharts} className="pngIcon" id="GoogleCharts" alt="" onMouseEnter={enterIcon} onMouseLeave={leaveIcon}/>
             </div>
+            <button className="button-projects" onClick={clickProjects}>Projects <FaArrowRight className="arrow"/></button>
         </div>
         
     )
