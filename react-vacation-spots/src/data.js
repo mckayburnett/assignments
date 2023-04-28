@@ -4,7 +4,7 @@ export default [
       place: "Meridian, Idaho",
       price: 40,
       timeToGo: "Spring",
-      img: "https://boisedev.com/wp-content/uploads/2021/11/Screen-Shot-2021-11-10-at-3.06.25-PM.png"
+      img: "https://www.hubblehomes.com/images/headerimage/meridian-idaho-new-homes-hubble-homes.jpg"
     },
     {
       id: 1,
@@ -33,5 +33,12 @@ export default [
       price: 400,
       timeToGo: "Spring",
       img: "https://www.state.gov/wp-content/uploads/2022/02/Lebanon-2109x1406.png"
+    },
+    {
+      id: 5,
+      place: "Chile",
+      price: 500,
+      timeToGo: "Fall",
+      img: "https://lp-cms-production.imgix.net/2021-02/shutterstockRF_1034336518.jpg"
     }
   ]

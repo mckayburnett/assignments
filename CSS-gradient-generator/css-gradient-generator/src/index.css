@@ -1,5 +1,14 @@
+.page{
+  background: linear-gradient(0deg, #0040ff, #201374);
+  -moz-background: linear-gradient(0deg, #0040ff, #201374);
+  -webkit: linear-gradient(0deg, #0040ff, #201374);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  
+}
 .displayContainer{
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 5px;
   height: 500px;
   width: 49%;
@@ -7,7 +16,7 @@
   max-width: 50%;
 }
 .colorsContainer{
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 5px;
   height: 500px;
   width: 49%;
@@ -18,7 +27,7 @@
   display: inline;
 }
 .colorDisplay{
-  border: 1px solid black;
+  border: 1px solid white;
   height: 300px;
 }
 .code{
@@ -32,12 +41,14 @@
 }
 .title{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
   letter-spacing: 5px;
   text-align: center;
   font-variant: petite-caps;
 }
 .options{
   text-align: center;
+  color: white;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-variant: petite-caps;
   letter-spacing: 3px;
@@ -52,6 +63,7 @@
 .color1{
   font-size: 30px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
   font-variant: petite-caps;
   text-align: left;
   grid-column: 1/2;
@@ -59,6 +71,7 @@
 }
 .colorText1{
   font-size: 30px;
+  color: white;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-variant: petite-caps;
   text-align: left;
@@ -74,6 +87,7 @@
 }
 .color2{
   font-size: 30px;
+  color: white;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-variant: petite-caps;
   text-align: left;
@@ -82,6 +96,7 @@
 }
 .colorText2{
   font-size: 30px;
+  color: white;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-variant: petite-caps;
   text-align: left;
@@ -97,6 +112,7 @@
 }
 .angle{
   font-size: 30px;
+  color: white;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-variant: petite-caps;
   text-align: left;
