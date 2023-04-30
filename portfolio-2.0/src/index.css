@@ -968,3 +968,8 @@ strong{
   background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
   z-index: -1;
 }
+.projectExample{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
