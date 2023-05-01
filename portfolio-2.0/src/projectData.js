@@ -1,68 +1,67 @@
-import React, { useState, useEffect } from "react"
-import dynamicDevelopmentLLC from "../../images/dynamicDevelopmentLLC.png"
-import jeopardy from "../../images/jeopardy.png"
-import bountyHunter from "../../images/bountyHunter.png"
-import memeGenerator from "../../images/memeGenerator.png"
-import simulationRPG from "../../images/simulationRPG.png"
-import gradientCodeGenerator from "../../images/gradientCodeGenerator.png"
-import vacationSpots from "../../images/vacationSpots.png"
-import travelJournal from "../../images/travelJournal.png"
-import cssZenGarden from "../../images/cssZenGarden.png"
+import dynamicDevelopmentLLC from "./images/dynamicDevelopmentLLC.png"
+import jeopardy from "./images/jeopardy.png"
+import bountyHunter from "./images/bountyHunter.png"
+import memeGenerator from "./images/memeGenerator.png"
+import simulationRPG from "./images/simulationRPG.png"
+import gradientCodeGenerator from "./images/gradientCodeGenerator.png"
+import vacationSpots from "./images/vacationSpots.png"
+import travelJournal from "./images/travelJournal.png"
+import cssZenGarden from "./images/cssZenGarden.png"
 
 
 export default [
     {
         id: 0,
         title: "Dynamic Development LLC",
-        image: {dynamicDevelopmentLLC},
+        image: dynamicDevelopmentLLC,
         description: ""
     },
     {
         id: 1,
         title: "Jeopardy",
-        image: {jeopardy},
+        image: jeopardy,
         description: ""
     },
     {
         id: 2, 
         title: "Bounty Hunter",
-        image: {bountyHunter},
+        image: bountyHunter,
         description: ""
     },
     {
         id: 3,
         title: "Meme Generator",
-        image: {memeGenerator},
+        image: memeGenerator,
         description: ""
     },
     {
         id: 4,
         title: "Simulation  RPG",
-        image: {simulationRPG},
+        image: simulationRPG,
         description: ""
     },
     {
         id: 5,
         title: "Gradient Code Generator",
-        image: {gradientCodeGenerator},
+        image: gradientCodeGenerator,
         description: ""
     },
     {
         id: 6,
         title: "Vacation Spots",
-        image: {vacationSpots},
+        image: vacationSpots,
         description: ""
     },
     {
         id: 7,
         title: "Travel Journal",
-        image: {travelJournal},
+        image: travelJournal,
         description: ""
     },
     {
         id: 8,
         title: "CSS Zen Garden",
-        image: {cssZenGarden},
+        image: cssZenGarden,
         description: ""
     }
 ]
