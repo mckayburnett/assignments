@@ -969,7 +969,10 @@ strong{
   z-index: -1;
 }
 .templateWrapper{
-  
+  position: relative;
+  display: inline-flex;
+  top: 80px;
+  padding: 10px;
 }
 .templateImage{
   width: 30vw;
