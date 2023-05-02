@@ -5,6 +5,11 @@ const Projects = React.forwardRef((props, ref) => {
 
     const projectTemplate = projectData.map(project => {
         console.log(project)
+        return(
+            <div className="templateWrapper">
+                <img className="templateImage"src={project.image} alt="" />
+            </div>
+        )
     })
     
     return (
