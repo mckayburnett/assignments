@@ -17,7 +17,11 @@ const Projects = React.forwardRef((props, ref) => {
         "Travel Journal",
         "CSS Zen Garden",
     ]
-    let num = 7;
+    //arrows
+    const [num, setNum] = useState(7);
+    function add(){
+        
+    }
 
     const projectTemplate = projectData.map(project => {
         console.log("project",project)
@@ -38,7 +42,7 @@ const Projects = React.forwardRef((props, ref) => {
                 <div className="titles-arrows">
                     <h1 className="titles">{titles[num]}</h1>
                     <div className="projectsArrows">
-                        <FaAngleDoubleLeft className="projectsArrow-left"/> <FaAngleDoubleRight className="projectsArrow-right"/>
+                        <FaAngleDoubleLeft onClick={() => {setNum(num - 1)}} className="projectsArrow-left"/> <FaAngleDoubleRight onClick={() => {setNum(num + 1)}}className="projectsArrow-right"/>
                     </div>
                 </div>
             </div>
