@@ -993,14 +993,14 @@ strong{
   left: 50%;
   transform: translate(-50%, 0);
   bottom: 0;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 .projectsArrow-left{
   font-size: 3vw;
   color:rgb(238, 237, 237);
   box-shadow: rgb(9, 255, 0) 1px 0 10px;
   margin-right: 30px;
-  top: 20px;
+  top: 40px;
   cursor: pointer;
 }
 .projectsArrow-right{
@@ -1008,7 +1008,7 @@ strong{
   color:rgb(238, 237, 237);
   box-shadow: rgb(9, 255, 0) 1px 0 10px;
   margin-left: 30px;
-  top: 20px;
+  top: 40px;
   cursor: pointer;
 }
 .templateWrapper{
@@ -1019,13 +1019,14 @@ strong{
   right: 0;
 }
 .templateImage{
-  width: 35vw;
+  width: 50vw;
+  max-height: 80vh;
   display: inline-block;
   border-radius: 10px;
   position: absolute;
   top: 0;
   bottom: 0;
   margin: auto;
-  left: 25%;
+  left: -50px;
   vertical-align: middle;
 }
