@@ -17,16 +17,26 @@ const Projects = React.forwardRef((props, ref) => {
         "Travel Journal",
         "CSS Zen Garden",
     ]
+    const [view, setView] = useState(false)
     //arrows
     const [num, setNum] = useState(7);
-    function add(){
-        
+    function right(){
+        { num < 7 ?    
+            setNum(num + 1)
+            :
+            console.log("nope")
+        }
     }
-
+    function left(){
+        { num > 0 ?    
+            setNum(num - 1)
+            :
+            console.log("nope")
+        }
+    }
+    //templates
     const projectTemplate = projectData.map(project => {
-        console.log("project",project)
         templates.push(project)
-        console.log("templates", templates[0])
         return(
             <div className="templateWrapper">
                 <div className="template">
@@ -35,19 +45,37 @@ const Projects = React.forwardRef((props, ref) => {
             </div>
         )
     })
+    //templates view all
+    const allTemplates = projectData.map(project => {
+        return(
+            <div className="allTemplatesWrapper">
+                <img className="allTemplatesImage"src={project.image} alt="" />
+            </div>
+        )
+    })
     
     return (
-        <div className="projectsWrapper" id="projects" ref={ref}>
+        <>
+            {view ? 
+            <div className="projectsWrapper" id="projects" ref={ref}>
+                <button className="viewSingle" onClick={() => setView(false)}>View Single Project</button>
+                { allTemplates }
+            </div>
+            :
+            <div className="projectsWrapper" id="projects" ref={ref}>
             <div className="titlesWrapper">
                 <div className="titles-arrows">
                     <h1 className="titles">{titles[num]}</h1>
                     <div className="projectsArrows">
-                        <FaAngleDoubleLeft onClick={() => {setNum(num - 1)}} className="projectsArrow-left"/> <FaAngleDoubleRight onClick={() => {setNum(num + 1)}}className="projectsArrow-right"/>
+                        <FaAngleDoubleLeft onClick={left} className="projectsArrow-left"/> <FaAngleDoubleRight onClick={right}className="projectsArrow-right"/>
                     </div>
                 </div>
+                <button className="viewAll" onClick={() => setView(true)}>View All</button>
             </div>
-            {projectTemplate}
+            { projectTemplate }
         </div>
+            }
+        </>
     )
 
 })
