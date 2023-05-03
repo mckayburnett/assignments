@@ -968,15 +968,34 @@ strong{
   background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
   z-index: -1;
 }
-.templateWrapper{
-  position: relative;
-  display: inline-flex;
+.titlesWrapper{
+  position: absolute;
+  width: 50%;
   top: 80px;
-  padding: 10px;
+  left: 0;
+  height: 50%;
+}
+.titles{
+  position: absolute;
+  color:rgb(238, 237, 237);
+  text-shadow: rgb(9, 255, 0) 1px 0 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 3vw;
+  cursor: pointer;
+}
+.templateWrapper{
+  position: absolute;
+  top: 100px;
+  width: 50%;
+  height: 100%;
+  right: 0;
 }
 .templateImage{
   width: 30vw;
-  height: 20vw;
   border: 2px white solid;
   border-radius: 10px;
+  position: absolute;
+  left: 25%;
 }
