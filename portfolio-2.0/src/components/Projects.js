@@ -17,7 +17,7 @@ const Projects = React.forwardRef((props, ref) => {
         "Travel Journal",
         "CSS Zen Garden",
     ]
-    let num = 6;
+    let num = 7;
 
     const projectTemplate = projectData.map(project => {
         console.log("project",project)
@@ -35,9 +35,11 @@ const Projects = React.forwardRef((props, ref) => {
     return (
         <div className="projectsWrapper" id="projects" ref={ref}>
             <div className="titlesWrapper">
-                <h1 className="titles">{titles[num]}</h1>
-                <div className="projectsArrows">
-                    <FaAngleDoubleLeft className="projectsArrow-left"/> <FaAngleDoubleRight className="projectsArrow-right"/>
+                <div className="titles-arrows">
+                    <h1 className="titles">{titles[num]}</h1>
+                    <div className="projectsArrows">
+                        <FaAngleDoubleLeft className="projectsArrow-left"/> <FaAngleDoubleRight className="projectsArrow-right"/>
+                    </div>
                 </div>
             </div>
             {projectTemplate}
