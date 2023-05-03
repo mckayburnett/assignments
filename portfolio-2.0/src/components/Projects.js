@@ -34,6 +34,10 @@ const Projects = React.forwardRef((props, ref) => {
             console.log("nope")
         }
     }
+    //clicking templates
+    function handleClick(e){
+        console.log(e)
+    }
     //templates
     const projectTemplate = projectData.map(project => {
         templates.push(project)
@@ -51,7 +55,7 @@ const Projects = React.forwardRef((props, ref) => {
     const allTemplates = projectData.map(project => {
         return(
             <div className="allTemplatesWrapper">
-                <img className="allTemplatesImage"src={project.image} alt="" />
+                <img className="allTemplatesImage"src={project.image} alt="" onClick={handleClick} />
             </div>
         )
     })
