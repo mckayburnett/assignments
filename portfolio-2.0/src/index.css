@@ -996,15 +996,15 @@ strong{
   text-shadow: rgb(9, 255, 0) 1px 0 10px;
   left: 50%;
   transform: translate(-50%, 0);
-  top: 55%;
+  top: 250px;
 }
 .projectsArrow-left{
   font-size: 3vw;
   color:rgb(238, 237, 237);
   box-shadow: rgb(9, 255, 0) 1px 0 10px;
-  margin-right: 120px;
   border-radius: 5px;
   cursor: pointer;
+  margin: 20px;
 }
 .projectsArrow-left:hover{
   border: 2px solid rgb(9, 255, 0);
@@ -1013,9 +1013,9 @@ strong{
   font-size: 3vw;
   color:rgb(238, 237, 237);
   box-shadow: rgb(9, 255, 0) 1px 0 10px;
-  margin-left: 120px;
   border-radius: 5px;
   cursor: pointer;
+  margin: 20px;
 }
 .projectsArrow-right:hover{
   border: 2px solid rgb(9, 255, 0);
@@ -1031,6 +1031,7 @@ strong{
   font-size: 2vw;
   transform: translate(-50%, 0);
   cursor: pointer;
+  margin-top: 20px;
 }
 .viewAll:hover{
   border: 2px solid rgb(9, 255, 0);
@@ -1043,7 +1044,7 @@ strong{
   height: 100%;
   right: 0;
 }
-.templateImage{
+.templateSpot{
   width: 50vw;
   max-height: 80vh;
   display: inline-block;
@@ -1054,6 +1055,12 @@ strong{
   margin: auto;
   left: -50px;
   vertical-align: middle;
+}
+.templateImage{
+  width: 50vw;
+  border: 2px white solid;
+  border-radius: 5px;
+  max-height: 80vh;
 }
 .viewSingle{
   position: absolute;
