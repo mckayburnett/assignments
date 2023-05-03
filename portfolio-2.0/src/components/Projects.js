@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
 import projectData from "../projectData.js"
+import { FaAngleDoubleRight } from "react-icons/fa"
+import { FaAngleDoubleLeft } from "react-icons/fa"
 
 const Projects = React.forwardRef((props, ref) => {
 
@@ -15,7 +17,7 @@ const Projects = React.forwardRef((props, ref) => {
         "Travel Journal",
         "CSS Zen Garden",
     ]
-    let num = 0
+    let num = 6;
 
     const projectTemplate = projectData.map(project => {
         console.log("project",project)
@@ -24,7 +26,7 @@ const Projects = React.forwardRef((props, ref) => {
         return(
             <div className="templateWrapper">
                 <div className="template">
-                    <img className="templateImage"src={project.image} alt="" />
+                    <img className="templateImage"src={templates[num]?.image} alt="" />
                 </div>
             </div>
         )
@@ -34,7 +36,9 @@ const Projects = React.forwardRef((props, ref) => {
         <div className="projectsWrapper" id="projects" ref={ref}>
             <div className="titlesWrapper">
                 <h1 className="titles">{titles[num]}</h1>
-                
+                <div className="projectsArrows">
+                    <FaAngleDoubleLeft className="projectsArrow-left"/> <FaAngleDoubleRight className="projectsArrow-right"/>
+                </div>
             </div>
             {projectTemplate}
         </div>
