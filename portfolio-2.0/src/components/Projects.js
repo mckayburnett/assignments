@@ -45,11 +45,8 @@ const Projects = React.forwardRef((props, ref) => {
         return(
             <div className="templateWrapper">
                 <div className="template">
-                    <div className="template-inner">
-                        <img className="templateImage-front"src={templates[num]?.image} alt="" />
-                        <div className="templateImage-back">
-                            
-                        </div>
+                    <div className="templateSpot">
+                        <img className="templateImage"src={templates[num]?.image} alt="" />
                     </div>
                 </div>
             </div>
