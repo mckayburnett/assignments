@@ -21,22 +21,23 @@ const Projects = React.forwardRef((props, ref) => {
     //arrows
     const [num, setNum] = useState(7);
     function right(){
-        { num < 7 ?    
+        { num < 8 &&   
             setNum(num + 1)
-            :
-            console.log("nope")
         }
     }
     function left(){
-        { num > 0 ?    
+        { num > 0 &&    
             setNum(num - 1)
-            :
-            console.log("nope")
         }
     }
     //clicking templates
     function handleClick(e){
-        console.log(e)
+        setNum(e.target.alt)
+        setView(false)
+        window.scrollTo({
+            top: 0, 
+            behavior: 'auto'
+        })
     }
     //templates
     const projectTemplate = projectData.map(project => {
@@ -44,8 +45,11 @@ const Projects = React.forwardRef((props, ref) => {
         return(
             <div className="templateWrapper">
                 <div className="template">
-                    <div className="templateSpot">
-                        <img className="templateImage"src={templates[num]?.image} alt="" />
+                    <div className="template-inner">
+                        <img className="templateImage-front"src={templates[num]?.image} alt="" />
+                        <div className="templateImage-back">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -55,7 +59,7 @@ const Projects = React.forwardRef((props, ref) => {
     const allTemplates = projectData.map(project => {
         return(
             <div className="allTemplatesWrapper">
-                <img className="allTemplatesImage"src={project.image} alt="" onClick={handleClick} />
+                <img className="allTemplatesImage"src={project.image} alt={project.id} onClick={handleClick} />
             </div>
         )
     })
