@@ -1075,12 +1075,11 @@ strong{
   vertical-align: middle;
 }
 .templateImage-details{
-  opacity: 15%;
   width: 50vw;
+  height: 80vh;
   border: 3px white solid;
   border-radius: 10px;
-  max-height: 80vh;
-  background: rgb(255, 255, 255);
+
 }
 .seeDetails{
   position: absolute;

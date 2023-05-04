@@ -58,7 +58,9 @@ const Projects = React.forwardRef((props, ref) => {
                 { details ? 
                 <div className="template-details">
                     <div className="templateSpot-details">
-                        <img className="templateImage-details" src={templates[num]?.image} alt="" />
+                        <div className="templateImage-details">
+                            
+                        </div>
                     </div>
                 </div>
                 :
