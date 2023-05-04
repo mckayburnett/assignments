@@ -17,7 +17,10 @@ const Projects = React.forwardRef((props, ref) => {
         "Travel Journal",
         "CSS Zen Garden",
     ]
+
+    //choose single or all projects view
     const [view, setView] = useState(false)
+
     //arrows
     const [num, setNum] = useState(7);
     function right(){
@@ -30,7 +33,8 @@ const Projects = React.forwardRef((props, ref) => {
             setNum(num - 1)
         }
     }
-    //clicking templates
+
+    //clicking Alltemplates
     function handleClick(e){
         setNum(e.target.alt)
         setView(false)
@@ -39,6 +43,13 @@ const Projects = React.forwardRef((props, ref) => {
             behavior: 'auto'
         })
     }
+
+    //clicking see project details
+    const [details, setDetails] = useState(false)
+    function seeDetails(){
+        setDetails(true)
+    }
+
     //templates
     const projectTemplate = projectData.map(project => {
         templates.push(project)
@@ -46,7 +57,8 @@ const Projects = React.forwardRef((props, ref) => {
             <div className="templateWrapper">
                 <div className="template">
                     <div className="templateSpot">
-                        <img className="templateImage"src={templates[num]?.image} alt="" />
+                        <img className="templateImage" src={templates[num]?.image} alt="" />
+                        <button className="seeDetails" onClick={seeDetails}>See Project Details</button>
                     </div>
                 </div>
             </div>
@@ -55,7 +67,7 @@ const Projects = React.forwardRef((props, ref) => {
     //templates view all
     const allTemplates = projectData.map(project => {
         return(
-            <div className="allTemplatesWrapper">
+             <div className="allTemplatesWrapper">
                 <img className="allTemplatesImage"src={project.image} alt={project.id} onClick={handleClick} />
             </div>
         )

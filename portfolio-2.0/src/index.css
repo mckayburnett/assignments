@@ -1062,6 +1062,30 @@ strong{
   border-radius: 10px;
   max-height: 80vh;
 }
+.templateImage-details{
+  opacity: 0%;
+  width: 50vw;
+  border: 3px white solid;
+  border-radius: 10px;
+  max-height: 80vh;
+  background: rgb(255, 255, 255);
+}
+.seeDetails{
+  position: absolute;
+  color:white;
+  background-color: black;
+  box-shadow: rgba(9, 255, 0, 0.132) 1px 0 10px;
+  border-radius: 5px;
+  left: 50%;
+  bottom: 0;
+  font-size: 2vw;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  margin-top: 20px;
+}
+.seeDetails:hover{
+  border: 2px solid rgb(9, 255, 0);
+}
 .viewSingle{
   position: absolute;
   color:white;
