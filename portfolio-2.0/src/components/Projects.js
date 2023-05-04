@@ -55,12 +55,20 @@ const Projects = React.forwardRef((props, ref) => {
         templates.push(project)
         return(
             <div className="templateWrapper">
+                { details ? 
+                <div className="template-details">
+                    <div className="templateSpot-details">
+                        <img className="templateImage-details" src={templates[num]?.image} alt="" />
+                    </div>
+                </div>
+                :
                 <div className="template">
                     <div className="templateSpot">
                         <img className="templateImage" src={templates[num]?.image} alt="" />
                         <button className="seeDetails" onClick={seeDetails}>See Project Details</button>
                     </div>
                 </div>
+                }
             </div>
         )
     })
