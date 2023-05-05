@@ -1103,6 +1103,7 @@ strong{
 .skillsUsed{
   color:#d9ff00;
   text-shadow: rgb(123, 92, 92) 1px 0 10px;
+  font-size: 28px;
 }
 .description-details{
   position: absolute;
@@ -1116,6 +1117,32 @@ strong{
 .skills-details{
   position: absolute;
   bottom: 40px;
+  font-size: 50px;
+}
+.mongoose-details{
+  width: 60px;
+  padding-bottom: 10px;
+  filter: brightness(0) invert(1);
+}
+.gCharts-details{
+  padding-bottom: 5px;
+  width: 50px;
+  filter: brightness(0) invert(1);
+}
+.backButton-details{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color:white;
+  background-color: black;
+  box-shadow: rgba(9, 255, 0, 0.132) 1px 0 10px;
+  border-radius: 5px;
+  margin: 0 20px 20px 0;
+  font-size: 1vw;
+  cursor: pointer;
+}
+.backButton-details:hover{
+  border: 2px solid rgb(9, 255, 0);
 }
 .seeDetails{
   position: absolute;

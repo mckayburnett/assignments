@@ -7,6 +7,16 @@ import gradientCodeGenerator from "./images/gradientCodeGenerator.png"
 import vacationSpots from "./images/vacationSpots.png"
 import travelJournal from "./images/travelJournal.png"
 import cssZenGarden from "./images/cssZenGarden.png"
+import {FaHtml5} from "react-icons/fa"
+import {FaCss3Alt} from "react-icons/fa"
+import {TbBrandJavascript} from "react-icons/tb"
+import {FaReact} from "react-icons/fa"
+import {FaNodeJs} from "react-icons/fa"
+import {SiMongodb} from "react-icons/si"
+import mongoose from "./images/mongoose.png"
+import {SiExpress} from "react-icons/si"
+import {FaGitAlt} from "react-icons/fa"
+import GCharts from "./images/GCharts.png"
 
 
 export default [
@@ -14,8 +24,12 @@ export default [
         id: 0,
         title: "Dynamic Development LLC",
         image: dynamicDevelopmentLLC,
-        description: "",
-        keyPoints: ""
+        description: "This is a web app built from the ground up for financial consulting. It pulls numbers from a database and uses a custom schema for specific data points. The numbers are displayed on a graph using two selected dates to compare data points. The numbers can also be viewed in a table. Contains a customizable and dynamic graph. Currently being used by Dynamic Development LLC.",
+        keyPoints: `Uses MongoDB to store data. 
+        Schema was built with Mongoose. 
+        Custom API connection. 
+        Data can be manipulated in-app (add, delete, edit).`,
+        skillsUsed: <><FaHtml5 /> <FaCss3Alt /> <TbBrandJavascript /> <FaReact /> <SiMongodb /> <img src={mongoose} className="mongoose-details"/>  <SiExpress /> <FaGitAlt /> <img src={GCharts} className="gCharts-details"/></> 
     },
     {
         id: 1,

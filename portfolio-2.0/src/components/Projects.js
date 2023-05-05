@@ -76,8 +76,9 @@ const Projects = React.forwardRef((props, ref) => {
                     <div className="templateSpot-details">
                         <div className="details">
                             <h3 className="description-details"><h2 className="description">Description</h2> {templates[num]?.description}</h3>
-                            <h3 className="keyPoints-details"><h2 className="keyPoints">Key Points</h2> {templates[num]?.keyPoints}</h3>
-                            <h3 className="skills-details"><h2 className="skillsUsed">Skills Used</h2> </h3>
+                            <h3 className="keyPoints-details" style = {{ whiteSpace: 'pre-line'}}><h2 className="keyPoints">Key Points</h2> {templates[num]?.keyPoints}</h3>
+                            <h3 className="skills-details"><h2 className="skillsUsed">Skills Used</h2> {templates[num]?.skillsUsed} </h3>
+                            <button className="backButton-details" onClick={() => setDetails(false)}>Back</button>
                         </div>
                     </div>
                 </div>
