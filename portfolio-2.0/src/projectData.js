@@ -14,55 +14,64 @@ export default [
         id: 0,
         title: "Dynamic Development LLC",
         image: dynamicDevelopmentLLC,
-        description: ""
+        description: "",
+        keyPoints: ""
     },
     {
         id: 1,
         title: "Jeopardy",
         image: jeopardy,
-        description: ""
+        description: "",
+        keyPoints: ""
     },
     {
         id: 2, 
         title: "Bounty Hunter",
         image: bountyHunter,
-        description: ""
+        description: "",
+        keyPoints: ""
     },
     {
         id: 3,
         title: "Meme Generator",
         image: memeGenerator,
-        description: ""
+        description: "",
+        keyPoints: ""
     },
     {
         id: 4,
         title: "Simulation  RPG",
         image: simulationRPG,
-        description: ""
+        description: "",
+        keyPoints: ""
     },
     {
         id: 5,
         title: "Gradient Code Generator",
         image: gradientCodeGenerator,
-        description: ""
+        description: "",
+        keyPoints: ""
     },
     {
         id: 6,
         title: "Vacation Spots",
         image: vacationSpots,
-        description: ""
+        description: "",
+        keyPoints: ""
     },
     {
         id: 7,
         title: "Travel Journal",
         image: travelJournal,
-        description: ""
+        description: "",
+        keyPoints: ""
     },
     {
         id: 8,
         title: "CSS Zen Garden",
         image: cssZenGarden,
-        description: ""
+        description: "",
+        keyPoints: ""
     }
 ]
         // <img src={dynamicDevelopmentLLC} alt="" className="dDLLC"></img>

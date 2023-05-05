@@ -1079,7 +1079,36 @@ strong{
   height: 80vh;
   border: 3px white solid;
   border-radius: 10px;
-
+  color: white;
+}
+.details{
+  height: 80vh;
+  border: 3px white solid;
+  border-radius: 10px;
+  color: white;
+  padding-left: 20px;
+}
+.description{
+  color: red;
+}
+.keyPoints{
+  color:rgb(0, 195, 255)
+}
+.skillsUsed{
+  color:#d9ff00
+}
+.description-details{
+  position: absolute;
+  top: 40px;
+}
+.keyPoints-details{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.skills-details{
+  position: absolute;
+  bottom: 40px;
 }
 .seeDetails{
   position: absolute;
