@@ -29,7 +29,7 @@ export default [
         Schema was built with Mongoose. 
         Custom API connection. 
         Data can be manipulated in-app (add, delete, edit).`,
-        skillsUsed: <><FaHtml5 /> <FaCss3Alt /> <TbBrandJavascript /> <FaReact /> <SiMongodb /> <img src={mongoose} className="mongoose-details"/>  <SiExpress /> <FaGitAlt /> <img src={GCharts} className="gCharts-details"/></> 
+        skillsUsed: <><FaHtml5 className="html-details"/> <FaCss3Alt className="css-details"/> <TbBrandJavascript className="js-details"/> <FaReact className="react-details"/> <SiMongodb className="mongo-details"/> <img src={mongoose} className="mongoose-details"/>  <SiExpress className="express-details"/> <FaGitAlt className="git-details"/> <img src={GCharts} className="gCharts-details"/></> 
     },
     {
         id: 1,
