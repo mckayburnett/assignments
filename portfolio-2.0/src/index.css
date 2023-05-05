@@ -1087,15 +1087,22 @@ strong{
   border-radius: 10px;
   color: white;
   padding-left: 20px;
+  color:rgb(238, 237, 237);
+  text-shadow: rgb(9, 255, 0) 1px 0 10px;
 }
 .description{
   color: red;
+  text-shadow: rgb(105, 79, 79) 1px 0 10px;
+
 }
 .keyPoints{
-  color:rgb(0, 195, 255)
+  color:rgb(0, 195, 255);
+  text-shadow: rgb(56, 92, 132) 1px 0 10px;
+
 }
 .skillsUsed{
-  color:#d9ff00
+  color:#d9ff00;
+  text-shadow: rgb(123, 92, 92) 1px 0 10px;
 }
 .description-details{
   position: absolute;
