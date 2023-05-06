@@ -33,38 +33,45 @@ export default [
     },
     {
         id: 1,
-        title: "Jeopardy",
+        title: "Jeopardy!",
         image: jeopardy,
-        description: "",
-        keyPoints: ""
+        description: "A remake of the popular Jeopardy! game. This uses a pre-existing API to connect to a database containing Jeopardy! questions and answers. The game allows for single player practice questions or a two player 1v1. Each question has the same point value that it had on TV, as well a running point total for each player.",
+        keyPoints: `Uses axios to make API calls to Jeopardy! database.
+        React Router navigates between pages.
+        React Context is used to seamlessly access data accross components.`,
+        skillsUsed: <><FaHtml5 className="html-details"/> <FaCss3Alt className="css-details"/> <TbBrandJavascript className="js-details"/> <FaReact className="react-details"/> <FaGitAlt className="git-details"/></>
     },
     {
         id: 2, 
         title: "Bounty Hunter",
         image: bountyHunter,
-        description: "",
-        keyPoints: ""
+        description: "test test test",
+        keyPoints: "test test test",
+        skillsUsed: <><FaHtml5 className="html-details"/> <FaCss3Alt className="css-details"/> <TbBrandJavascript className="js-details"/> <FaReact className="react-details"/> <SiMongodb className="mongo-details"/> <img src={mongoose} className="mongoose-details"/>  <SiExpress className="express-details"/> <FaGitAlt className="git-details"/></>
     },
     {
         id: 3,
         title: "Meme Generator",
         image: memeGenerator,
         description: "",
-        keyPoints: ""
+        keyPoints: "",
+        skillsUsed: <><FaHtml5 className="html-details"/> <FaCss3Alt className="css-details"/> <TbBrandJavascript className="js-details"/> <FaReact className="react-details"/> <FaGitAlt className="git-details"/></>
     },
     {
         id: 4,
         title: "Simulation  RPG",
         image: simulationRPG,
         description: "",
-        keyPoints: ""
+        keyPoints: "",
+        skillsUsed: <><TbBrandJavascript className="js-details"/> <FaNodeJs className="node-details" /> <FaGitAlt className="git-details"/></>
     },
     {
         id: 5,
         title: "Gradient Code Generator",
         image: gradientCodeGenerator,
         description: "",
-        keyPoints: ""
+        keyPoints: "",
+        skillsUsed: <></>
     },
     {
         id: 6,

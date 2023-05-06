@@ -1088,37 +1088,42 @@ strong{
   color: white;
   padding-left: 15px;
   color:rgb(238, 237, 237);
-  text-shadow: rgb(9, 255, 0) 1px 0 10px;
+  text-shadow: rgb(9, 255, 0, .5) 1px 0 10px;
   font-size: 1vw;
+}
+.descriptionWrapper{
+  position: absolute;
+  top: 0;
+}
+.keyPointsWrapper{
+  position: absolute;
+  bottom: 50%;
+  transform: translate(0, 50%);
+}
+.skillsUsedWrapper{
+  position: absolute;
+  bottom: 0;
 }
 .description{
   color: red;
   text-shadow: rgb(105, 79, 79) 1px 0 10px;
-
 }
 .keyPoints{
   color:rgb(0, 195, 255);
   text-shadow: rgb(56, 92, 132) 1px 0 10px;
-
 }
 .skillsUsed{
   color:#d9ff00;
   text-shadow: rgb(123, 92, 92) 1px 0 10px;
-  font-size: 1.7vw;
 }
 .description-details{
-  position: absolute;
-  top: 40px;
+
 }
 .keyPoints-details{
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
+
 }
 .skills-details{
-  position: absolute;
-  bottom: 0;
-  font-size: 50px;
+  font-size: 3vw;
 }
 .html-details{
   color:#ff7315;
@@ -1129,6 +1134,9 @@ strong{
 .js-details{
   color: orange;
 }
+.node-details{
+  color: rgb(80, 151, 67);
+}
 .react-details{
   color: rgb(0, 195, 255);
 }
@@ -1136,13 +1144,15 @@ strong{
   color: green;
 }
 .mongoose-details{
-  width: 60px;
+  width: 3vw;
+  vertical-align: center;
   padding-bottom: 10px;
   /* filter: brightness(0) invert(1); */
 }
 .gCharts-details{
+  vertical-align: center;
+  width: 3vw;
   padding-bottom: 5px;
-  width: 50px;
   /* filter: brightness(0) invert(1); */
 }
 .express-details{
