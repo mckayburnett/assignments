@@ -40,6 +40,8 @@ const Projects = React.forwardRef((props, ref) => {
     //clicking Alltemplates
     function handleClick(e){
         setNum(e.target.alt)
+        console.log(e.target.alt)
+        console.log("num", num)
         setView(false)
         window.scrollTo({
             top: 0, 
