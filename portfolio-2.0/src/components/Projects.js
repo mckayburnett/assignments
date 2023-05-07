@@ -59,26 +59,20 @@ const Projects = React.forwardRef((props, ref) => {
         return(
             <div className="templateWrapper">
                 { details ? 
-                <div className="template-details">
-                        <div className="templateImage-details" style={{background: `url(${templates[num]?.image})`, backgroundSize: `100%`, opacity: num < 4 ? "1%" : num >= 4 && num < 7 ? "3%" : num === 7 ? "5%" : "10%", width: "50vw", height: "80vh", border: "none"}}>
-                        </div>
-                    <div className="templateSpot-details">
-                        <div className="details">
-                            <div className="descriptionWrapper">
-                                <h2 className="description">Description</h2> 
-                                <h3 className="description-details">{templates[num]?.description}</h3>
-                            </div>
-                            <div className="keyPointsWrapper">
-                                <h2 className="keyPoints">Key Points</h2> 
-                                <h3 className="keyPoints-details" style = {{ whiteSpace: 'pre-line'}}>{templates[num]?.keyPoints}</h3>
-                            </div>
-                            <div className="skillsUsedWrapper">
-                                <h2 className="skillsUsed">Skills Used</h2> 
-                                <h2 className="skills-details">{templates[num]?.skillsUsed}</h2>
-                            </div>
-                            <button className="backButton-details" onClick={() => setDetails(false)}>Back</button>
-                        </div>
+                <div className="details">
+                    <div className="descriptionWrapper">
+                        <h2 className="description">Description</h2> 
+                        <h3 className="description-details">{templates[num]?.description}</h3>
                     </div>
+                    <div className="keyPointsWrapper">
+                        <h2 className="keyPoints">Key Points</h2> 
+                        <h3 className="keyPoints-details" style = {{ whiteSpace: 'pre-line'}}>{templates[num]?.keyPoints}</h3>
+                    </div>
+                    <div className="skillsUsedWrapper">
+                        <h2 className="skillsUsed">Skills Used</h2> 
+                        <h2 className="skills-details">{templates[num]?.skillsUsed}</h2>
+                    </div>
+                    <button className="backButton-details" onClick={() => setDetails(false)}>Back</button>
                 </div>
                 :
                 <div className="template">
@@ -109,17 +103,17 @@ const Projects = React.forwardRef((props, ref) => {
             </div>
             :
             <div className="projectsWrapper" id="projects" ref={ref}>
-            <div className="titlesWrapper">
-                <div className="titles-arrows">
-                    <h1 className="titles">{titles[num]}</h1>
-                    <div className="projectsArrows">
-                        <FaAngleDoubleLeft onClick={left} className="projectsArrow-left"/> <FaAngleDoubleRight onClick={right}className="projectsArrow-right"/>
+                <div className="titlesWrapper">
+                    <div className="titles-arrows">
+                        <h1 className="titles">{titles[num]}</h1>
+                        <div className="projectsArrows">
+                            <FaAngleDoubleLeft onClick={left} className="projectsArrow-left"/> <FaAngleDoubleRight onClick={right}className="projectsArrow-right"/>
+                        </div>
                     </div>
+                    <button className="viewAll" onClick={() => setView(true)}>View All</button>
                 </div>
-                <button className="viewAll" onClick={() => setView(true)}>View All</button>
+                { projectTemplate }
             </div>
-            { projectTemplate }
-        </div>
             }
         </>
     )

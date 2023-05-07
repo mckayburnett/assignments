@@ -1074,22 +1074,20 @@ strong{
   left: -50px;
   vertical-align: middle;
 }
-.templateImage-details{
-  width: 50vw;
-  height: 80vh;
-  border: 3px white solid;
-  border-radius: 10px;
-  color: white;
-}
 .details{
+  position: absolute;
   height: 80vh;
+  width: 47vw;
   border: 3px white solid;
   border-radius: 10px;
   color: white;
   padding-left: 15px;
+  padding-right: 15px;
   color:rgb(238, 237, 237);
   text-shadow: rgb(9, 255, 0, .5) 1px 0 10px;
   font-size: 1vw;
+  top: 100px;
+  background: linear-gradient(45deg, rgb(0, 0, 0), rgb(39, 45, 96));
 }
 .descriptionWrapper{
   position: absolute;
