@@ -1104,15 +1104,15 @@ strong{
 }
 .description{
   color: red;
-  text-shadow: rgb(105, 79, 79) 1px 0 10px;
+  text-shadow: rgb(184, 135, 135) 1px 0 10px;
 }
 .keyPoints{
   color:rgb(0, 195, 255);
-  text-shadow: rgb(56, 92, 132) 1px 0 10px;
+  text-shadow: rgb(105, 146, 192) 1px 0 10px;
 }
 .skillsUsed{
   color:#d9ff00;
-  text-shadow: rgb(123, 92, 92) 1px 0 10px;
+  text-shadow: rgb(194, 192, 66) 1px 0 10px;
 }
 .description-details{
 
