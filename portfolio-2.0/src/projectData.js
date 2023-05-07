@@ -71,37 +71,30 @@ export default [
         image: gradientCodeGenerator,
         description: "",
         keyPoints: "",
-        skillsUsed: <></>
+        skillsUsed: <><FaHtml5 className="html-details"/> <FaCss3Alt className="css-details"/> <TbBrandJavascript className="js-details"/> <FaReact className="react-details"/> <FaGitAlt className="git-details"/></>
     },
     {
         id: 6,
         title: "Vacation Spots",
         image: vacationSpots,
         description: "",
-        keyPoints: ""
+        keyPoints: "",
+        skillsUsed: <><FaHtml5 className="html-details"/> <FaCss3Alt className="css-details"/> <TbBrandJavascript className="js-details"/> <FaReact className="react-details"/> <FaGitAlt className="git-details"/></>
     },
     {
         id: 7,
         title: "Travel Journal",
         image: travelJournal,
         description: "",
-        keyPoints: ""
+        keyPoints: "",
+        skillsUsed: <><FaHtml5 className="html-details"/> <FaCss3Alt className="css-details"/> <TbBrandJavascript className="js-details"/> <FaReact className="react-details"/> <FaGitAlt className="git-details"/></>
     },
     {
         id: 8,
         title: "CSS Zen Garden",
         image: cssZenGarden,
         description: "",
-        keyPoints: ""
+        keyPoints: "",
+        skillsUsed: <><FaHtml5 className="html-details"/> <FaCss3Alt className="css-details"/> <FaGitAlt className="git-details"/></>
     }
 ]
-        // <img src={dynamicDevelopmentLLC} alt="" className="dDLLC"></img>
-        // <img src={jeopardy} alt="" className="jeopardy"></img>
-        // <img src={bountyHunter} alt="" className="bountyHunter"></img>
-        // <img src={memeGenerator} alt="" className="memeGenerator"></img>
-        // <img src={simulationRPG} alt="" className="simulationRPG"></img>
-        // <img src={gradientCodeGenerator} alt="" className="gradientCodeGenerator"></img>
-        // <img src={vacationSpots} alt="" className="vacationSpots"></img>
-        // <img src={travelJournal} alt="" className="travelJournal"></img>
-        // <img src={cssZenGarden} alt="" className="cssZenGarden"></img>
-
