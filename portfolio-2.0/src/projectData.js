@@ -68,15 +68,18 @@ export default [
         id: 4,
         title: "Simulation  RPG",
         image: simulationRPG,
-        description: "A Role Playing Game made using Node.js. and the readline module.",
-        keyPoints: ``,
+        description: "A Role Playing Game made using Node.js. and the readline module. Users use the terminal to give their information (name, fears, heroes), which is stored and later used as part of the simulation game. Prompts are given to continue on an adventure where the user will fight, run, and/or obtain winnings.",
+        keyPoints: `"readline-sync" is used to communicate with the user through giving prompts and recording answers.
+        Due to termianl use, console.log() is also used to communicate with user.
+        All decisions/actions performed by the user involve conditionals.
+        `,
         skillsUsed: <><TbBrandJavascript className="js-details"/> <FaNodeJs className="node-details" /> <FaGitAlt className="git-details"/></>
     },
     {
         id: 5,
         title: "Gradient Code Generator",
         image: gradientCodeGenerator,
-        description: "",
+        description: "A website for other coders. Here, the user can use two color pickers and an angle selector to create a color gradient. The code for the colors appears below the color display.",
         keyPoints: "",
         skillsUsed: <><FaHtml5 className="html-details"/> <FaCss3Alt className="css-details"/> <TbBrandJavascript className="js-details"/> <FaReact className="react-details"/> <FaGitAlt className="git-details"/></>
     },
