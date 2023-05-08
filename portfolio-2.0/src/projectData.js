@@ -57,8 +57,10 @@ export default [
         id: 3,
         title: "Meme Generator",
         image: memeGenerator,
-        description: "A group build website dedicated to memes. This web app sends requests to a meme API containing a list meme.",
+        description: "A group build website dedicated to memes. This web app sends requests to a meme API containing a list of meme pictures. The user is able to scroll through the list of pictures, select one, and then type a top and bottom line for it. The user is able to save a list below of edited memes.",
         keyPoints: `Makes HTTP requests using "fetch".
+        Memes are saved in an array displayed as a list at the bottom of the web page.
+        React useEffect is used to control data fetching.
         `,
         skillsUsed: <><FaHtml5 className="html-details"/> <FaCss3Alt className="css-details"/> <TbBrandJavascript className="js-details"/> <FaReact className="react-details"/> <FaGitAlt className="git-details"/></>
     },
@@ -66,8 +68,8 @@ export default [
         id: 4,
         title: "Simulation  RPG",
         image: simulationRPG,
-        description: "",
-        keyPoints: "",
+        description: "A Role Playing Game made using Node.js. and the readline module.",
+        keyPoints: ``,
         skillsUsed: <><TbBrandJavascript className="js-details"/> <FaNodeJs className="node-details" /> <FaGitAlt className="git-details"/></>
     },
     {
