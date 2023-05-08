@@ -79,8 +79,10 @@ export default [
         id: 5,
         title: "Gradient Code Generator",
         image: gradientCodeGenerator,
-        description: "A website for other coders. Here, the user can use two color pickers and an angle selector to create a color gradient. The code for the colors appears below the color display.",
-        keyPoints: "",
+        description: "A website for other coders. Here, the user can use two color pickers and an angle selector to create a color gradient. The color is displayed on the left of the screen. The code for the colors appears below the color display.",
+        keyPoints: `Gives styling code for CSS.
+        Includes -webkit and -moz styling (for Chrome, Safari, and Firefox).
+        Website is fully dynamic. `,
         skillsUsed: <><FaHtml5 className="html-details"/> <FaCss3Alt className="css-details"/> <TbBrandJavascript className="js-details"/> <FaReact className="react-details"/> <FaGitAlt className="git-details"/></>
     },
     {
