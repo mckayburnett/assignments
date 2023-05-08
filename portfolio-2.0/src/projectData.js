@@ -45,16 +45,21 @@ export default [
         id: 2, 
         title: "Bounty Hunter",
         image: bountyHunter,
-        description: "test test test",
-        keyPoints: "test test test",
+        description: "This was created to demonstrate the use of API and database connection. This web app is a Star Wars themed bounty tracker. The user is able to create a bounty target (first and last name), give an alive or dead status, declare the bounty amount, and choose between Jedi or Sith. Once added, the bounties are able to be deleted or edited. ",
+        keyPoints: `Uses MongoDB to store data.
+        Axios is used to make API calls to database.
+        Schema was built with Mongoose.
+        User can Post, Edit, and Delete.
+        `,
         skillsUsed: <><FaHtml5 className="html-details"/> <FaCss3Alt className="css-details"/> <TbBrandJavascript className="js-details"/> <FaReact className="react-details"/> <SiMongodb className="mongo-details"/> <img src={mongoose} className="mongoose-details"/>  <SiExpress className="express-details"/> <FaGitAlt className="git-details"/></>
     },
     {
         id: 3,
         title: "Meme Generator",
         image: memeGenerator,
-        description: "",
-        keyPoints: "",
+        description: "A group build website dedicated to memes. This web app sends requests to a meme API containing a list meme.",
+        keyPoints: `Makes HTTP requests using "fetch".
+        `,
         skillsUsed: <><FaHtml5 className="html-details"/> <FaCss3Alt className="css-details"/> <TbBrandJavascript className="js-details"/> <FaReact className="react-details"/> <FaGitAlt className="git-details"/></>
     },
     {
