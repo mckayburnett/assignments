@@ -100,15 +100,19 @@ export default [
         title: "Travel Journal",
         image: travelJournal,
         description: "This was created to be used as an online travel journal. The user is able to code in locations, dates, description, and pictures. There is also a link for the location on google maps.",
-        keyPoints: "",
+        keyPoints: `Uses a hard-coded data file designed to easily add new travels.
+        Data is mapped over in App file to render each travel section.
+        `,
         skillsUsed: <><FaHtml5 className="html-details"/> <FaCss3Alt className="css-details"/> <TbBrandJavascript className="js-details"/> <FaReact className="react-details"/> <FaGitAlt className="git-details"/></>
     },
     {
         id: 8,
         title: "CSS Zen Garden",
         image: cssZenGarden,
-        description: "",
-        keyPoints: "",
+        description: "A fully responsive front-end web site designed to perfectly mimic the CSS Zen Garden. This website is meant to demonstrate the power of CSS3 and what design can accomplish for a website.",
+        keyPoints: `Responsize window sizing.
+        Code includes several media queries to accomodate any size.
+        Implements different fonts from an imported font kit.`,
         skillsUsed: <><FaHtml5 className="html-details"/> <FaCss3Alt className="css-details"/> <FaGitAlt className="git-details"/></>
     }
 ]
