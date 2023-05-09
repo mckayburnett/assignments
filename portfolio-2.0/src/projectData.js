@@ -89,15 +89,17 @@ export default [
         id: 6,
         title: "Vacation Spots",
         image: vacationSpots,
-        description: "",
-        keyPoints: "",
+        description: "This is a simple React app used to show Card Components. It displays different vacationing spots with average prices and best seasons to travel there. Cards rendered inline and responsive.",
+        keyPoints: `Uses a hard-coded data file designed to easily add new spots.
+        Data is mapped over in App file to render each card.
+        `,
         skillsUsed: <><FaHtml5 className="html-details"/> <FaCss3Alt className="css-details"/> <TbBrandJavascript className="js-details"/> <FaReact className="react-details"/> <FaGitAlt className="git-details"/></>
     },
     {
         id: 7,
         title: "Travel Journal",
         image: travelJournal,
-        description: "",
+        description: "This was created to be used as an online travel journal. The user is able to code in locations, dates, description, and pictures. There is also a link for the location on google maps.",
         keyPoints: "",
         skillsUsed: <><FaHtml5 className="html-details"/> <FaCss3Alt className="css-details"/> <TbBrandJavascript className="js-details"/> <FaReact className="react-details"/> <FaGitAlt className="git-details"/></>
     },
