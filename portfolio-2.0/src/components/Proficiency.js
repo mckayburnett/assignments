@@ -40,7 +40,7 @@ const Proficiency = React.forwardRef((props, ref) => {
             <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"></link>
             <link href="https://fonts.googleapis.com/css?family=Inspiration&display=swap" rel="stylesheet"></link>
             <h1 className={showText ? `iconText` : `iconTextHidden`}>{text}</h1>
-            <div className="icons">
+            <div className="icons-proficiency">
                 <FaHtml5 className="html" id="HTML5" onMouseEnter={enterIcon} onMouseLeave={leaveIcon}/>
                 <FaCss3Alt className="css" id="CSS3" onMouseEnter={enterIcon} onMouseLeave={leaveIcon}/>
                 <TbBrandJavascript className="js" id="JavaScript" onMouseEnter={enterIcon} onMouseLeave={leaveIcon}/>

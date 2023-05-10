@@ -378,12 +378,15 @@ strong{
   top: 50%;
   transform: translate(-50%, 0);
   z-index: 1100;
-  border: 3px rgb(9, 255, 0) solid;
+  box-shadow: rgb(9, 255, 0) 1px 0 10px;
   background-color: black;
   color: rgb(9, 255, 0);
   border-radius: 5px;
   padding: 10px;
   cursor: pointer;
+}
+.codeButton:hover{
+  border: 2px solid rgb(9, 255, 0);
 }
 .compEmpty{
   position: absolute;
@@ -495,7 +498,7 @@ strong{
   background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
   z-index: -1;
 }
-.icons{
+.icons-proficiency{
   position: relative;
   display: flex-wrap;
   align-items: center;
@@ -1234,4 +1237,68 @@ strong{
   margin-left: 400%;
   background: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
   z-index: -1;
+}
+form{
+  position: absolute;
+  display: flexbox;
+  width: 60vw;
+  height: 80vh;
+  z-index: 1100;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+input{
+  position: relative;
+  width: 100%;
+  height: 10vh;
+  border-radius: 40px;
+  font-size: 200%;
+  padding: 10px;
+  margin-top: 5%;
+  text-align: center;
+}
+.submit{
+  position: absolute;
+  border-radius: 40px;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+  background-color: white;
+  font-size: 200%;
+  width: 30%;
+  padding: 20px;
+  margin-top: 5%;
+  cursor: pointer;
+  z-index: 1100;
+}
+.submit:hover{
+  border: 2px solid rgb(9, 255, 0);
+}
+.icons-contact{
+  position: absolute;
+  bottom: 0;
+  font-size: 5vw;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.linkedin{
+  color: white;
+  cursor: pointer;
+}
+.linkedin:hover{
+  color: #48ff00 
+}
+.github{
+  color: white;
+  cursor: pointer;
+}
+.github:hover{
+  color: #48ff00 
+}
+.resume{
+  color: white;
+  cursor: pointer;
+}
+.resume:hover{
+  color: #48ff00 
 }
