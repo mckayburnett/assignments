@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-export default function Nav({ homeRef, aboutRef, proficiencyRef, projectsRef }){
+export default function Nav({ homeRef, aboutRef, proficiencyRef, projectsRef, contactRef }){
     
 const scrollIntoView = (ref) => {
     if (ref.current) {
@@ -18,7 +18,7 @@ const scrollIntoView = (ref) => {
                     <h1 className="nav-about" onClick={() => {scrollIntoView(aboutRef)}}>About</h1>
                     <h1 className="nav-proficiency" onClick={() => {scrollIntoView(proficiencyRef)}}>Proficiency</h1>
                     <h1 className="nav-portfolio" onClick={() => {scrollIntoView(projectsRef)}}>Projects</h1>
-                    <h1 className="nav-contact">Contact</h1>
+                    <h1 className="nav-contact" onClick={() => {scrollIntoView(contactRef)}}>Contact</h1>
                 </div>
             </nav>
         </div>
