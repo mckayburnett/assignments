@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { FaLinkedin } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 import { FaFileAlt } from "react-icons/fa"
+import resume from "../images/resume.png"
 
 const Contact = React.forwardRef((props, ref) => {
 
@@ -15,7 +16,7 @@ const Contact = React.forwardRef((props, ref) => {
                 <button type="submit" className="submit">Send</button>
             </form>
             <div className="icons-contact">
-                <FaLinkedin className="linkedin"/> <FaGithub className="github"/> <FaFileAlt className="resume"/>
+                <FaLinkedin className="linkedin" onClick={() => window.location.href = 'https://www.linkedin.com/in/mckay-burnett/'}/> <FaGithub className="github" onClick={() => window.location.href = 'https://github.com/mckayburnett'}/> <a href = {resume} target = "_blank"><FaFileAlt className="resume" /></a>
             </div>
         </div>
     )

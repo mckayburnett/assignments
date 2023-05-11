@@ -1286,7 +1286,8 @@ input{
   cursor: pointer;
 }
 .linkedin:hover{
-  color: #48ff00 
+  color: #48ff00;
+   
 }
 .github{
   color: white;
