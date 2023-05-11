@@ -16,7 +16,7 @@ const Contact = React.forwardRef((props, ref) => {
                 <button type="submit" className="submit">Send</button>
             </form>
             <div className="icons-contact">
-                <FaLinkedin className="linkedin" onClick={() => window.location.href = 'https://www.linkedin.com/in/mckay-burnett/'}/> <FaGithub className="github" onClick={() => window.location.href = 'https://github.com/mckayburnett'}/> <a href = {resume} target = "_blank"><FaFileAlt className="resume" /></a>
+                <FaLinkedin className="linkedin" title="LinkedIn" onClick={() => window.location.href = 'https://www.linkedin.com/in/mckay-burnett/'}/> <FaGithub className="github" title="Github" onClick={() => window.location.href = 'https://github.com/mckayburnett'}/> <a href = {resume} target = "_blank"><FaFileAlt className="resume" title="resume"/></a>
             </div>
         </div>
     )
