@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import projectData from "../projectData.js"
 import { FaAngleDoubleRight } from "react-icons/fa"
 import { FaAngleDoubleLeft } from "react-icons/fa"
+import { FaArrowRight } from "react-icons/fa"
 
 
 const Projects = React.forwardRef((props, ref) => {
@@ -54,6 +55,14 @@ const Projects = React.forwardRef((props, ref) => {
     function seeDetails(){
         setDetails(true)
     }
+
+    function clickContact(){
+        window.scrollBy({
+           left: window.innerWidth, 
+           top: 0,
+            behavior: "smooth"
+          });
+      }
 
     //templates
     const projectTemplate = projectData.map(project => {
@@ -115,6 +124,7 @@ const Projects = React.forwardRef((props, ref) => {
                     <button className="viewAll" onClick={() => setView(true)}>View All</button>
                 </div>
                 { projectTemplate }
+                <button className="button-contact" onClick={clickContact}>Contact<FaArrowRight className="arrow"/></button>
             </div>
             }
         </>

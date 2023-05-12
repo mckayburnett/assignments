@@ -1181,10 +1181,10 @@ strong{
   position: absolute;
   color:white;
   background-color: black;
-  box-shadow: rgba(9, 255, 0, 0.132) 1px 0 10px;
+  box-shadow: rgb(9, 255, 0) 1px 0 10px;
   border-radius: 5px;
   left: 50%;
-  bottom: 0;
+  top: 50%;
   font-size: 2vw;
   transform: translate(-50%, 0);
   cursor: pointer;
@@ -1228,6 +1228,78 @@ strong{
 .allTemplatesImage:hover{
   border: 2px solid rgb(9, 255, 0);
 }
+.button-contact{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 20px;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vw;
+    transition: opacity 700ms 5s;
+    opacity: 1;
+    z-index: 1100;
+  }
+  .button-contact:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-projects 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-button-projects {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .button-contact:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
 
 /*Contact Page*/
 .contactWrapper{
@@ -1244,9 +1316,17 @@ form{
   width: 60vw;
   height: 80vh;
   z-index: 1100;
-  top: 80px;
+  top: 0;
   left: 50%;
   transform: translate(-50%, 0);
+}
+.contactTitle{
+  text-shadow: rgb(9, 255, 0) 1px 0 10px;
+  color: white;
+  text-align: center;
+  font-size: 400%;
+  top: 80px;
+  position: relative;
 }
 input{
   position: relative;
@@ -1277,8 +1357,10 @@ input{
 .icons-contact{
   position: absolute;
   bottom: 0;
-  font-size: 5vw;
-  left: 50%;
+  right: 0;
+  font-size: 4vw;
+  text-align: center;
+  margin-left: 50%;
   transform: translate(-50%, 0);
 }
 .linkedin{
@@ -1287,7 +1369,6 @@ input{
 }
 .linkedin:hover{
   color: #48ff00;
-   
 }
 .github{
   color: white;
