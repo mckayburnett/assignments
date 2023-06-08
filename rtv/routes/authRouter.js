@@ -4,7 +4,7 @@ const User = require('../models/user.js')
 const jwt = require('jsonwebtoken')
 
 //signup
-authRouter.post('signup', (req, res, next) => {
+authRouter.post('/signup', (req, res, next) => {
     User.findOne({ username: req.body.username }, (err, user) => {
         if(err){
             res.status(500)
@@ -41,7 +41,7 @@ authRouter.post('/login', (req, res, next) => {
             res.status(403)
             return next (new Error('Username and/or Password incorrect'))
         }
-        const token = jwt.sign(user.toObect(), process.env.SECRET)
+        const token = jwt.sign(user.toObject(), process.env.SECRET)
         return res.status(200).send ({ token, user })
     })
 })
