@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
 const initInputs = {
-  title: "",
-  description: "",
+  issue: "",
+  comment: "",
   imgUrl: ""
 }
 
@@ -31,22 +31,22 @@ export default function TodoForm(props){
     <form onSubmit={handleSubmit}>
       <input 
         type="text" 
-        name="title" 
+        name="issue" 
         value={title} 
         onChange={handleChange} 
-        placeholder="Title"/>
+        placeholder="Issue"/>
       <input 
         type="text" 
-        name="description" 
+        name="comment" 
         value={description} 
         onChange={handleChange} 
-        placeholder="Description"/>
+        placeholder="Comment"/>
       <input 
         type="text" 
         name="imgUrl" 
         value={imgUrl} 
         onChange={handleChange} 
-        placeholder="Image Url"/>
+        placeholder="Image Url (optional)"/>
       <button>Add Issue</button>
     </form>
   )
