@@ -7,7 +7,7 @@ export default function IssueList(props){
 
   return (
     <div className="todo-list">
-       { issues.map(issue => <Issue {...issue} key={issue._id}/>) } 
+       {issues ?  issues.map(issue => <Issue {...issue} key={issue._id}/>) : null } 
     </div>
   )
 }

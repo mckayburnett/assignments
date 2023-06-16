@@ -24,21 +24,23 @@ export default function TodoForm(props){
     e.preventDefault()
     addIssue(inputs)
     setInputs(initInputs)
+    console.log('issues', inputs)
   }
 
-  const { title, description, imgUrl } = inputs
+  const { issue, comment, imgUrl } = inputs
+
   return (
     <form onSubmit={handleSubmit}>
       <input 
         type="text" 
         name="issue" 
-        value={title} 
+        value={issue} 
         onChange={handleChange} 
         placeholder="Issue"/>
       <input 
         type="text" 
         name="comment" 
-        value={description} 
+        value={comment} 
         onChange={handleChange} 
         placeholder="Comment"/>
       <input 

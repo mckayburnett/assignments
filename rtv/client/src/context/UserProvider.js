@@ -73,12 +73,13 @@ export default function UserProvider(props){
     }
 
     function addIssue(newIssue){
-        userAxios.post('/api/todo', newIssue)
+        userAxios.post('/api/issue', newIssue)
             .then(res => {
                 setUserState(prevState => ({
                     ...prevState,
                     issues: [...prevState.issues, res.data]
                 }))
+                console.log('userstate',userState)
             })
             .catch(err => console.log(err.response.data.errMsg))
     }
