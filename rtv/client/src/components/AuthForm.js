@@ -25,7 +25,7 @@ export default function AuthForm(props){
         name="password" 
         onChange={handleChange} 
         placeholder="Password"/>
-      <button>{ btnText }</button>
+      <button className="signUpIn">{ btnText }</button>
     </form>
   )
 }

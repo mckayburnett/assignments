@@ -105,3 +105,11 @@
   padding: 8px;
   border-radius: 5px
 }
+
+
+.signUpIn{
+  cursor: pointer;
+}
+.member{
+  cursor: pointer;
+}

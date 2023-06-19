@@ -11,7 +11,7 @@ export default function App() {
   const { token, logout } = useContext(UserContext)
   return (
     <div className="App">
-      <Navbar logout={logout}/>
+      { token && <Navbar logout={logout}/>}
       <Routes>
         <Route 
           path="/"

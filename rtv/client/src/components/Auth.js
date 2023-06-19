@@ -31,7 +31,7 @@ export default function Auth(){
   return (
     <div className="auth-container">
       <h1>Rock The Vote</h1>
-      { !toggle ?
+      { toggle ?
         <>
           <AuthForm 
             handleChange={handleChange}
@@ -39,7 +39,7 @@ export default function Auth(){
             inputs={inputs}
             btnText="Sign up"
           />
-          <p onClick={() => setToggle(prev => !prev)}>Already a member?</p>
+          <p className="member" onClick={() => setToggle(prev => !prev)}>Already a member?</p>
         </>
       :
         <>
@@ -49,7 +49,7 @@ export default function Auth(){
             inputs={inputs}
             btnText="Login"
           />
-          <p onClick={() => setToggle(prev => !prev)}>Not a member?</p>
+          <p className="member" onClick={() => setToggle(prev => !prev)}>Not a member?</p>
         </>
       }
     </div>
