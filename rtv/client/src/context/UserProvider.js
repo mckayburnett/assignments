@@ -12,13 +12,20 @@ userAxios.interceptors.request.use(config => {
 })
 
 export default function UserProvider(props){
+    //user
     const initState = { 
-    user: JSON.parse(localStorage.getItem("user")) || {},
-    token: localStorage.getItem("token") || "",
-    issues: []
-}
-
+        user: JSON.parse(localStorage.getItem("user")) || {},
+        token: localStorage.getItem("token") || "",
+        issues: []
+    }
     const [userState, setUserState] = useState(initState)
+
+    //public
+    const initPublic = {
+        user: "",
+        issues: []
+    }
+    const [publicState, setPublicState] = useState(initPublic)
 
     function signup(credentials){
         axios.post('/auth/signup', credentials)
@@ -57,20 +64,23 @@ export default function UserProvider(props){
         setUserState({
             user: {},
             token: "",
-            todos: []
+            issues: []
         })
     }
 
-    // function getAllIssues(){
-    //     axios.get('/api/issue')
-    //     .then(res => {
-    //         setUserState(prevState => ({
-    //             ...prevState,
-    //             issues: res.data
-    //         }))
-    //     })
-    //     .catch(err => console.log(err.response.data.errMsg))
-    // }
+    function getAllIssues(){
+        userAxios.get('/api/issue')
+        .then(res => {
+            setPublicState(prevState => ({
+                ...prevState,
+                issues: res.data
+            }))
+            console.log("publicState",publicState.issues)
+            console.log('res.data', res.data)
+        })
+        .catch(err => console.log(err.response.data.errMsg))
+        
+    }
 
     function getUserIssues(){
         userAxios.get('/api/issue/user')
@@ -103,7 +113,8 @@ export default function UserProvider(props){
                 login,
                 logout,
                 addIssue,
-                // getAllIssues
+                getAllIssues,
+                ...publicState
             }}
         >
             { props.children }

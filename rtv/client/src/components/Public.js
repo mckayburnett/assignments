@@ -5,12 +5,13 @@ import IssueList from "./IssueList.js"
 
 export default function Public(){
 
-  const { /*getAllIssues*/ user: { username }, addIssue, issues } = useContext(UserContext)
+  const { getAllIssues, user: { username }, addIssue, issues, publicState } = useContext(UserContext)
 
   useEffect(() => {
-    // getAllIssues()
-  })
-  console.log(IssueList)
+    getAllIssues()
+  },[])
+
+console.log("public page",publicState)
 
   return (
     <div className="public">
