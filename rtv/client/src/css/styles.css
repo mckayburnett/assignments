@@ -113,3 +113,44 @@
 .member{
   cursor: pointer;
 }
+/* profile */
+.inputComment{
+  height: 150px;
+  width: 300px;
+  vertical-align: text-top;
+  
+}
+/* public */
+.publicIssueWrapper{
+  padding: 20px;
+  align-self: center;
+  background-color: rgba(221, 221, 221, 0.6);
+  align-items: center;
+  border: red 1px solid;
+}
+.publicInfoContainer{
+  text-align: center;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.publicImage{
+  grid-column: 1/2;
+}
+.publicWords{
+  text-align: left;
+  grid-column: 2/3;
+}
+.publicIssue{
+  font-size: larger;
+  font: 700;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+strong{
+  font: 700;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(13, 13, 177);
+}
+.publicComment{
+  font: caption;
+}

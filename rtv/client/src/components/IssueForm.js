@@ -33,22 +33,23 @@ export default function IssueForm(props){
     <form onSubmit={handleSubmit}>
       <input 
         type="text" 
+        name="imgUrl" 
+        value={imgUrl} 
+        onChange={handleChange} 
+        placeholder="Image Url (optional)"/>
+      <input 
+        type="text" 
         name="issue" 
         value={issue} 
         onChange={handleChange} 
         placeholder="Issue"/>
       <input 
+        className="inputComment"
         type="text" 
         name="comment" 
         value={comment} 
         onChange={handleChange} 
         placeholder="Comment"/>
-      <input 
-        type="text" 
-        name="imgUrl" 
-        value={imgUrl} 
-        onChange={handleChange} 
-        placeholder="Image Url (optional)"/>
       <button>Add Issue</button>
     </form>
   )

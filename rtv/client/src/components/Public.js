@@ -5,7 +5,7 @@ import PublicIssueList from './PublicIssueList.js'
 
 export default function Public(){
 
-  const { user: { username }, addIssue, issues, publicState } = useContext(UserContext)
+  const { user: { username }, addIssue, issues, publicState, makePublic } = useContext(UserContext)
 
 
 console.log("public page",publicState)
