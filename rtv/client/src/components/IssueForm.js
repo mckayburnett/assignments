@@ -6,7 +6,7 @@ const initInputs = {
   imgUrl: ""
 }
 
-export default function TodoForm(props){
+export default function IssueForm(props){
 
   const { addIssue } = props
 

@@ -22,8 +22,8 @@ export default function UserProvider(props){
 
     //public
     const initPublic = {
-        user: "",
-        issues: []
+        pubUser: JSON.parse(localStorage.getItem("user")) || {},
+        pubIssues: []
     }
     const [publicState, setPublicState] = useState(initPublic)
 
@@ -48,11 +48,18 @@ export default function UserProvider(props){
             const { user, token } = res.data
             localStorage.setItem("token", token)
             localStorage.setItem("user" , JSON.stringify(user))
+            getAllIssues()
+            setPublicState(prevPublicState => ({
+                ...prevPublicState,
+                user
+            }))
+            console.log(publicState)
             getUserIssues()
             setUserState(prevUserState => ({
                 ...prevUserState,
                 user, 
                 token
+            
             }))
         })
         .catch(err => console.log(err.response.data.errMsg))
@@ -73,10 +80,11 @@ export default function UserProvider(props){
         .then(res => {
             setPublicState(prevState => ({
                 ...prevState,
+                // user: res.user,
                 issues: res.data
             }))
             console.log("publicState",publicState.issues)
-            console.log('res.data', res.data)
+            console.log('res.data', res)
         })
         .catch(err => console.log(err.response.data.errMsg))
         
@@ -113,8 +121,7 @@ export default function UserProvider(props){
                 login,
                 logout,
                 addIssue,
-                getAllIssues,
-                ...publicState
+                publicState
             }}
         >
             { props.children }
