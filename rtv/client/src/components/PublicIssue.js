@@ -12,6 +12,9 @@ export default function PublicIssue(props){
                 <div className="publicWords">
                     <h1 className="publicIssue">{issue}</h1>
                     <h2 className="publicComment"><strong>{user}{" "}</strong>{" "}{comment}</h2>
+                    <button className="addComment"></button>
+                    <button className="like">like</button>
+                    <button className="dislike">dislike</button>                    
                 </div>
             </div>
         </div>

@@ -126,25 +126,26 @@
   align-self: center;
   background-color: rgba(221, 221, 221, 0.6);
   align-items: center;
-  border: red 1px solid;
+  border: black 1px solid;
 }
 .publicInfoContainer{
   text-align: center;
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
 }
 .publicImage{
-  grid-column: 1/2;
+  grid-column: 2/3;
 }
 .publicWords{
   text-align: left;
-  grid-column: 2/3;
+  grid-column: 3/4;
 }
 .publicIssue{
   font-size: larger;
   font: 700;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 20px;
 }
 strong{
   font: 700;
@@ -153,4 +154,19 @@ strong{
 }
 .publicComment{
   font: caption;
+}
+.publicButtons{
+
+}
+.likeButtons{
+
+}
+.like{
+
+}
+.disklike{
+
+}
+.addComment{
+  
 }
