@@ -14,6 +14,14 @@ const issueSchema = new Schema({
         type: String,
         required: false
     },
+    like:{
+        type: Boolean,
+        required: false
+    },
+    dislike:{
+        type: Boolean,
+        required: false
+    },
     user: {
         type: Schema.Types.ObjectId,
         ref: "User",

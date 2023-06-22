@@ -124,22 +124,27 @@
 .publicIssueWrapper{
   padding: 20px;
   align-self: center;
-  background-color: rgba(221, 221, 221, 0.6);
+  background-color: #eee9;
   align-items: center;
   border: black 1px solid;
 }
 .publicInfoContainer{
   text-align: center;
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
 }
 .publicImage{
   grid-column: 2/3;
+  display: flex;
+  justify-content: space-around;
 }
 .publicWords{
   text-align: left;
   grid-column: 3/4;
+  border: 1px black solid;
+  border-radius: 20px;
+  padding: 10px;
 }
 .publicIssue{
   font-size: larger;
@@ -155,12 +160,22 @@ strong{
 .publicComment{
   font: caption;
 }
-.like{
-
-}
-.disklike{
-
+.publicIcons{
+  grid-column: 3/4;
+  display: inline-flex;
+  justify-content: space-between;
+  padding-top: 10px;
 }
 .addComment{
-
+  font-size: 30px;
+  cursor: pointer;
+}
+.like{
+  font-size: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.dislike{
+  font-size: 30px;
+  cursor: pointer;
 }
