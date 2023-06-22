@@ -14,12 +14,12 @@ const issueSchema = new Schema({
         type: String,
         required: false
     },
-    like:{
-        type: Boolean,
+    likes:{
+        type: Number,
         required: false
     },
-    dislike:{
-        type: Boolean,
+    dislikes:{
+        type: Number,
         required: false
     },
     user: {

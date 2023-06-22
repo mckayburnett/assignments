@@ -60,4 +60,20 @@ issueRouter.put('/:issueId', (req, res, next) => {
     })
 })
 
+//like or dislike issue
+issueRouter.put('/like/:issueId', (req, res, next) => {
+    Issue.findOneAndUpdate(
+        {_id: req.params.issueId},
+        {$inc: {likes: 1}},
+        {new: true},
+        (err, updatedIssue) => {
+            if(err){
+                res.status(500)
+                return next(err)
+            }
+            return res.status(201).send(updatedIssue)
+        }
+    )
+})
+
 module.exports = issueRouter

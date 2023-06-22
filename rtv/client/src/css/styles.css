@@ -167,15 +167,36 @@ strong{
   padding-top: 10px;
 }
 .addComment{
-  font-size: 30px;
+  font-size: 35px;
   cursor: pointer;
 }
-.like{
-  font-size: 30px;
+.publicLikes{
+  display:inline-flex;
+}
+.likeGroup{
   margin-right: 20px;
-  cursor: pointer;
+  display: inline-flex
 }
-.dislike{
+.thumbsUp{
   font-size: 30px;
   cursor: pointer;
+  margin-right: 5px;
+}
+.likes{
+  font-size: x-large;
+  font-weight: 100;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.dislikeGroup{
+  display: inline-flex
+}
+.thumbsDown{
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.dislikes{
+  font-size: x-large;
+  font-weight: 100;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }

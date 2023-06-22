@@ -7,9 +7,9 @@ import { BiDislike } from 'react-icons/bi'
 
 export default function PublicIssue(props){
 
-    const {issue, comment, imgUrl, user, like, dislike } = props
-    const { addComment, color } = useContext(PublicContext)
-    console.log(props)
+    const {issue, comment, imgUrl, user, likes, dislikes } = props
+    const { addComment, color, likeComment, dislikeComment } = useContext(PublicContext)
+    console.log('props',props)
 
     return(
         <div className="publicIssueWrapper">
@@ -22,8 +22,15 @@ export default function PublicIssue(props){
                 <div className="publicIcons">
                     <FaRegComments className="addComment" onClick={addComment}/>
                     <div className="publicLikes">
-                        <BiLike className="like" onClick={like} />
-                        <BiDislike className="dislike" onClick={dislike} /> 
+                        <div className="likeGroup">   
+                            <BiLike className="thumbsUp" onClick={likeComment} />
+                            <h1 className="likes">{likes}</h1>
+                        </div> 
+                        <div className="dislikeGroup">
+                            <BiDislike className="thumbsDown" onClick={dislikeComment} /> 
+                            <h1 className="dislikes">{dislikes}</h1>
+                        </div>
+
                     </div>
                 </div>
             </div>
