@@ -7,8 +7,9 @@ import { BiDislike } from 'react-icons/bi'
 
 export default function PublicIssue(props){
 
-    const {issue, comment, imgUrl, user, liked, disliked } = props
-    const { addComment, like, dislike, color } = useContext(PublicContext)
+    const {issue, comment, imgUrl, user, like, dislike } = props
+    const { addComment, color } = useContext(PublicContext)
+    console.log(props)
 
     return(
         <div className="publicIssueWrapper">
