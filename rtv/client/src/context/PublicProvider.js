@@ -22,13 +22,10 @@ export default function PublicProvider(props){
     function addComment(e){
         console.log(e.target)
     }
-    function likeComment(e){
-        console.log(e.target)
-        setColor("blue")
-        setLiked(true)
-        setDisliked(false)
+    function addLike(e){
+        console.log(e)
     }
-    function dislikeComment(e){
+    function addDislike(e){
         console.log(e.target)
         setColor("blue")
         setDisliked(true)
@@ -39,11 +36,9 @@ export default function PublicProvider(props){
         <PublicContext.Provider
             value={{
                 addComment,
-                likeComment,
-                dislikeComment,
-                color,
-                liked,
-                disliked
+                addDislike,
+                addLike,
+                color
             }}
         >
             { props.children }

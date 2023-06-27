@@ -8,11 +8,10 @@ export default function Public(){
   const { user: { username }, addIssue, issues, publicState, makePublic } = useContext(UserContext)
 
 
-console.log("public page",publicState)
 
   return (
     <div className="public">
-      <PublicIssueList publicState={publicState}/>
+      <PublicIssueList publicState={publicState} />
     </div>
   )
 }

@@ -24,7 +24,6 @@ export default function IssueForm(props){
     e.preventDefault()
     addIssue(inputs)
     setInputs(initInputs)
-    console.log('issues', inputs)
   }
 
   const { issue, comment, imgUrl } = inputs

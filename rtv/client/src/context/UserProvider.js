@@ -48,19 +48,21 @@ export default function UserProvider(props){
             const { user, token } = res.data
             localStorage.setItem("token", token)
             localStorage.setItem("user" , JSON.stringify(user))
+            console.log(user)
             getAllIssues()
             setPublicState(prevPublicState => ({
                 ...prevPublicState,
                 user
             }))
-            console.log(publicState)
+            console.log('publicState', publicState)
             getUserIssues()
             setUserState(prevUserState => ({
                 ...prevUserState,
                 user, 
                 token
-            
             }))
+            console.log('userState',userState)
+            
         })
         .catch(err => console.log(err.response.data.errMsg))
     }
@@ -108,10 +110,17 @@ export default function UserProvider(props){
                     ...prevState,
                     issues: [...prevState.issues, res.data]
                 }))
-                console.log('userstate',userState)
             })
             .catch(err => console.log(err.response.data.errMsg))
     }
+
+    function addLike(updates, issueId){
+        userAxios.put(`/api/issue/like/${issueId}`, updates)
+            .then(res => {
+                setUserState(prevUserState => prevUserState.map(issue => issue._id !== issueId ? issue : issue.data))
+            })
+    }
+    
 
     return(
         <UserContext.Provider
@@ -122,6 +131,7 @@ export default function UserProvider(props){
                 logout,
                 addIssue,
                 publicState
+                
             }}
         >
             { props.children }

@@ -1,6 +1,7 @@
 const express = require('express')
 const issueRouter = express.Router()
 const Issue = require('../models/issue')
+const user = require('../models/user')
 
 //get all issues
 issueRouter.get('/', (req, res, next) => {
@@ -27,6 +28,7 @@ issueRouter.get('/user', (req, res, next) => {
 //add new issue
 issueRouter.post('/', (req, res, next) => {
     req.body.user = req.auth._id
+    //const username = req.auth.username
     const newIssue = new Issue(req.body)
     newIssue.save((err, savedIssue) => {
         if(err){
@@ -49,7 +51,7 @@ issueRouter.delete('/:issueId', (req, res, next) => {
     )
 })
 
-//update issue
+//edit issue
 issueRouter.put('/:issueId', (req, res, next) => {
     Issue.findOneAndUpdate({ _id: req.params.issueId }, req.body, { new: true }, (err, updatedIssue) => {
         if(err){
@@ -60,11 +62,26 @@ issueRouter.put('/:issueId', (req, res, next) => {
     })
 })
 
-//like or dislike issue
+//like issue
 issueRouter.put('/like/:issueId', (req, res, next) => {
     Issue.findOneAndUpdate(
         {_id: req.params.issueId},
         {$inc: {likes: 1}},
+        {new: true},
+        (err, updatedIssue) => {
+            if(err){
+                res.status(500)
+                return next(err)
+            }
+            return res.status(201).send(updatedIssue)
+        }
+    )
+})
+//dislike issue
+issueRouter.put('/dislike/:issueId', (req, res, next) => {
+    Issue.findOneAndUpdate(
+        {_id: req.params.issueId},
+        {$inc: {dislikes: 1}},
         {new: true},
         (err, updatedIssue) => {
             if(err){

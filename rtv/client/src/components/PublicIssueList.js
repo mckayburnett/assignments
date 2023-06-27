@@ -6,13 +6,12 @@ export default function PublicIssueList(props){
 
     const { publicState } = props
     const pubIssues = publicState.issues
+    console.log(publicState)
     const issue = pubIssues && pubIssues.map((data) => data.issue)
-    console.log('issue',issue)
-    console.log('pubissues', pubIssues)
 
     return(
         <div>
-            {pubIssues ? pubIssues.map(issue => <PublicIssue {...issue} key={issue._id} />) : null }
+            {pubIssues ? pubIssues.map(issue => <PublicIssue {...issue} key={issue._id}  />) : null }
         </div>
     )
 }

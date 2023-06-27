@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { PublicContext } from '../context/PublicProvider.js'
+import { UserContext } from '../context/UserProvider.js'
 import { FaRegComments } from 'react-icons/fa'
 import { BiLike } from 'react-icons/bi'
 import { BiDislike } from 'react-icons/bi'
@@ -8,8 +9,12 @@ import { BiDislike } from 'react-icons/bi'
 export default function PublicIssue(props){
 
     const {issue, comment, imgUrl, user, likes, dislikes } = props
-    const { addComment, color, likeComment, dislikeComment } = useContext(PublicContext)
-    console.log('props',props)
+    const { addComment, color, addDislike, likeComment, addLike } = useContext(PublicContext)
+    
+    console.log(issue)
+    function click(){
+        addLike(user)
+    }
 
     return(
         <div className="publicIssueWrapper">
@@ -23,11 +28,11 @@ export default function PublicIssue(props){
                     <FaRegComments className="addComment" onClick={addComment}/>
                     <div className="publicLikes">
                         <div className="likeGroup">   
-                            <BiLike className="thumbsUp" onClick={likeComment} />
+                            <BiLike className="thumbsUp" onClick={addLike(user)} />
                             <h1 className="likes">{likes}</h1>
                         </div> 
                         <div className="dislikeGroup">
-                            <BiDislike className="thumbsDown" onClick={dislikeComment} /> 
+                            <BiDislike className="thumbsDown" onClick={click} /> 
                             <h1 className="dislikes">{dislikes}</h1>
                         </div>
 
