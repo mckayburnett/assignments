@@ -114,12 +114,7 @@ export default function UserProvider(props){
             .catch(err => console.log(err.response.data.errMsg))
     }
 
-    function addLike(updates, issueId){
-        userAxios.put(`/api/issue/like/${issueId}`, updates)
-            .then(res => {
-                setUserState(prevUserState => prevUserState.map(issue => issue._id !== issueId ? issue : issue.data))
-            })
-    }
+    
     
 
     return(

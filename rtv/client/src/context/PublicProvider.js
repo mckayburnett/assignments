@@ -23,13 +23,20 @@ export default function PublicProvider(props){
         console.log(e.target)
     }
     function addLike(e){
-        console.log(e)
+        like(e)
     }
     function addDislike(e){
-        console.log(e.target)
-        setColor("blue")
-        setDisliked(true)
-        setLiked(false)
+        console.log(e)
+    }
+
+    function like(e){
+        console.log(e)
+        userAxios.put(`/api/issue/like/${e}`)
+        .then(res => {
+            console.log(res)
+            })
+        .catch(err => console.log(err.response.data.errMsg))
+        
     }
 
     return(
