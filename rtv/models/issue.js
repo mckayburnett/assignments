@@ -22,16 +22,11 @@ const issueSchema = new Schema({
         type: Number,
         required: false
     },
-    replies: {
-        type: String,
-        required: false
-    },
     user: {
         type: Schema.Types.ObjectId,
         ref: "User",
         required: true
     }
-    //upvotes
 })
 
 module.exports = mongoose.model('Issue', issueSchema)
