@@ -26,17 +26,20 @@ export default function PublicProvider(props){
         like(e)
     }
     function addDislike(e){
-        console.log(e)
+        userAxios.put(`/api/issue/dislike/${e}`)
+        .then(res => {
+            console.log('res',res)
+            })
+        .catch(err => console.log(err.response.data.errMsg)) 
     }
 
     function like(e){
-        console.log(e)
         userAxios.put(`/api/issue/like/${e}`)
         .then(res => {
-            console.log(res)
+            console.log('res',res)
+            console.log('ua',userAxios)
             })
-        .catch(err => console.log(err.response.data.errMsg))
-        
+        .catch(err => console.log(err.response.data.errMsg))        
     }
 
     return(

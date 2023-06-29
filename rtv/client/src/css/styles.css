@@ -152,6 +152,9 @@
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-bottom: 20px;
 }
+.publicReply{
+  grid-column: 2/4;
+}
 strong{
   font: 700;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
