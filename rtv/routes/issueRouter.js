@@ -53,13 +53,18 @@ issueRouter.delete('/:issueId', (req, res, next) => {
 
 //edit issue
 issueRouter.put('/:issueId', (req, res, next) => {
-    Issue.findOneAndUpdate({ _id: req.params.issueId }, req.body, { new: true }, (err, updatedIssue) => {
-        if(err){
-            res.status(500)
-            return next(err)
+    Issue.findOneAndUpdate(
+        { _id: req.params.issueId }, 
+        req.body, 
+        { new: true }, 
+        (err, updatedIssue) => {
+            if(err){
+                res.status(500)
+                return next(err)
+            }
+            return res.status(201).send(updatedIssue)
         }
-        return res.status(201).send(updatedIssue)
-    })
+    )
 })
 
 //like issue

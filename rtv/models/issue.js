@@ -18,8 +18,12 @@ const issueSchema = new Schema({
         type: Number,
         required: false
     },
-    dislikes:{
+    dislikes: {
         type: Number,
+        required: false
+    },
+    replies: {
+        type: String,
         required: false
     },
     user: {

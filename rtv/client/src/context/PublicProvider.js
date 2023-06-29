@@ -14,41 +14,51 @@ userAxios.interceptors.request.use(config => {
 
 export default function PublicProvider(props){
 
-    //Public Icons
-    const [color, setColor] = useState("currentColor")
-    const [liked, setLiked] = useState(false)
-    const [disliked, setDisliked] = useState(false)
+    //user
+    const initState = { 
+        user: JSON.parse(localStorage.getItem("user")) || {},
+        token: localStorage.getItem("token") || "",
+        issues: []
+    }
+    const [userState, setUserState] = useState(initState)
 
-    function addComment(e){
-        console.log(e.target)
+    //public
+    const initPublic = {
+        pubUser: JSON.parse(localStorage.getItem("user")) || {},
+        pubIssues: []
     }
-    function addLike(e){
-        like(e)
-    }
+    const [publicState, setPublicState] = useState(initPublic)
+
     function addDislike(e){
+        console.log(e)
         userAxios.put(`/api/issue/dislike/${e}`)
         .then(res => {
             console.log('res',res)
             })
         .catch(err => console.log(err.response.data.errMsg)) 
     }
-
-    function like(e){
+    function addLike(e){
         userAxios.put(`/api/issue/like/${e}`)
         .then(res => {
             console.log('res',res)
-            console.log('ua',userAxios)
             })
         .catch(err => console.log(err.response.data.errMsg))        
+    }
+    function addReply(newReply, _id){
+        userAxios.put(`/api/issue/${_id}`, newReply)
+            .then(res => {
+                console.log(res.data)
+            })
+            .catch(err => console.log(err.response.data.errMsg))
     }
 
     return(
         <PublicContext.Provider
             value={{
-                addComment,
+                addReply,
                 addDislike,
                 addLike,
-                color
+                
             }}
         >
             { props.children }

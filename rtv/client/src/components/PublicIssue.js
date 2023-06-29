@@ -4,20 +4,21 @@ import { UserContext } from '../context/UserProvider.js'
 import { FaRegComments } from 'react-icons/fa'
 import { BiLike } from 'react-icons/bi'
 import { BiDislike } from 'react-icons/bi'
-import CommentForm from './CommentForm.js'
+import CommentForm from './ReplyForm.js'
 
 
 export default function PublicIssue(props){
 
     const {issue, comment, imgUrl, user, _id, likes, dislikes } = props
-    const { addComment, color, addDislike, likeComment, addLike } = useContext(PublicContext)
+    const { addReply, color, addDislike, likeComment, addLike } = useContext(PublicContext)
     
     const [commentClicked, setCommentClicked] = useState(false)
+    const [replyId, setReplyId] = useState("")
 
-    function clickComment(){
-        console.log('working')
+    function clickComment(e){
         setCommentClicked(true)
-        
+        setReplyId(_id)
+        console.log(replyId)
     }
     function clickLike(){
         addLike(_id)
@@ -49,7 +50,7 @@ export default function PublicIssue(props){
                 </div>
                 { commentClicked &&
                 <div className="publicReply">
-                    <CommentForm _id={_id}/>
+                    <CommentForm replyId={replyId} addReply={addReply} />
                 </div>
                 }
             </div>

@@ -203,3 +203,10 @@ strong{
   font-weight: 100;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
+.publicReply{
+  grid-column: 3/4;
+  width: 100%;
+}
+.replyForm{
+  width: 100%;
+}
