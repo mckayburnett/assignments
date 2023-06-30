@@ -1,7 +1,7 @@
 const express = require('express')
 const issueRouter = express.Router()
 const Issue = require('../models/issue')
-const user = require('../models/user')
+const User = require('../models/user')
 
 //get all issues
 issueRouter.get('/', (req, res, next) => {

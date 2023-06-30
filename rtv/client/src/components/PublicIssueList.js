@@ -8,10 +8,13 @@ export default function PublicIssueList(props){
     const pubIssues = publicState.issues
     console.log(publicState)
     const issue = pubIssues && pubIssues.map((data) => data.issue)
+    const mappedIssues = pubIssues.map(issue => issue.likes).sort((a,b) => a < b ? 1: -1)
+    console.log(mappedIssues)
+    console.log(pubIssues)
 
     return(
         <div>
-            {pubIssues ? pubIssues.map(issue => <PublicIssue {...issue} key={issue._id}  />) : null }
+            {mappedIssues ? mappedIssues.map(issue => <PublicIssue {...issue} key={issue._id}  />) : null }
         </div>
     )
 }
