@@ -2,10 +2,10 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const replySchema = new Schema({
-    reply: {
+    reply: [{
         type: String,
         required: true
-    },
+    }],
     issue: {
         type: Schema.Types.ObjectId,
         ref: "Issue",

@@ -5,24 +5,20 @@ const User = require('../models/user')
 const Reply = require('../models/reply')
 
 //add reply
-replyRouter.post('/:issueId', (req, res, next) => {
-    req.body.user = req.auth._id
-    const username = req.auth.user
-    const issueId = req.params.id
-    const newReply = new Reply({
-        reply: req.body.reply,
-        issue: issueId
-    })
-    newReply.save((err, savedReply) => {
-        if(err){
-            res.status(500)
-            return next(err)
-        }
-        const issueRelated = Issue.findById(issueId) 
-        issueRelated.reply.push(newReply)
-        return res.status(201).send(savedReply)
-    })
-})
+// replyRouter.put('/:issueId', (req, res, next) => {
+//     Reply.findOneAndUpdate(
+//         {_id: req.params.issueId},
+//         {$push: {reply: req.body}},
+//         (err, updatedReply) => {
+//             if(err){
+//                 res.status(500)
+//                 return next(err)
+//             }
+//             return res.status(201).send(updatedReply)
+//         }
+//     )
+// })
+
 
 //get all replies
 
