@@ -22,11 +22,15 @@ const issueSchema = new Schema({
         type: Number,
         required: false
     },
-    reply: [{
+    reply: {
         type: Schema.Types.ObjectId, 
         ref: "Reply",
-        require: false
-    }],
+        required: false
+    },
+    // reply: {
+    //     type: Array,
+    //     required: false
+    // },
     user: {
         type: Schema.Types.ObjectId,
         ref: "User",

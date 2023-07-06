@@ -5,19 +5,19 @@ const User = require('../models/user')
 const Reply = require('../models/reply')
 
 //add reply
-// replyRouter.put('/:issueId', (req, res, next) => {
-//     Reply.findOneAndUpdate(
-//         {_id: req.params.issueId},
-//         {$push: {reply: req.body}},
-//         (err, updatedReply) => {
-//             if(err){
-//                 res.status(500)
-//                 return next(err)
-//             }
-//             return res.status(201).send(updatedReply)
-//         }
-//     )
-// })
+replyRouter.put('/:issueId', (req, res, next) => {
+    Reply.findOneAndUpdate(
+        {_id: req.params.issueId},
+        {$push: {reply: req.body}},
+        (err, updatedReply) => {
+            if(err){
+                res.status(500)
+                return next(err)
+            }
+            return res.status(201).send(updatedReply)
+        }
+    )
+})
 
 
 //get all replies

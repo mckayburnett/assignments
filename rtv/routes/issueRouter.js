@@ -99,18 +99,18 @@ issueRouter.put('/dislike/:issueId', (req, res, next) => {
 })
 
 //add reply
-issueRouter.put('/reply/:issueId', (req, res, next) => {
-    Issue.findOneAndUpdate(
-        {_id: req.params.issueId},
-        {$push: {reply: req.body}},
-        (err, updatedReply) => {
-            if(err){
-                res.status(500)
-                return next(err)
-            }
-            return res.status(201).send(updatedReply)
-        }
-    )
-})
+// issueRouter.put('/reply/:issueId', (req, res, next) => {
+//     Issue.findOneAndUpdate(
+//         {_id: req.params.issueId},
+//         {$push: {reply: req.body}},
+//         (err, updatedReply) => {
+//             if(err){
+//                 res.status(500)
+//                 return next(err)
+//             }
+//             return res.status(201).send(updatedReply)
+//         }
+//     )
+// })
 
 module.exports = issueRouter
