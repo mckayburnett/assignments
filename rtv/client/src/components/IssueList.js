@@ -7,7 +7,7 @@ export default function IssueList(props){
 
   return (
     <div className="issue-list">
-       {issues ?  issues.map(issue => <Issue {...issue} key={issue._id} username={username}/>) : null } 
+       {issues ?  issues.map(issue => <Issue {...issue} key={issue._id} username={username} issues={issues} likes={issue.likes} dislikes={issue.dislikes}/>) : null } 
     </div>
   )
 }

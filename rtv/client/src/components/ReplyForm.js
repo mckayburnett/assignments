@@ -13,10 +13,12 @@ export default function ReplyForm(props){
     setReply(
       e.target.value
     )
+    console.log(reply)
   }
 
   function handleSubmit(e){
     e.preventDefault()
+    console.log("id", id, "reply", reply)
     addReply(reply, id)
     setReply("")
   }

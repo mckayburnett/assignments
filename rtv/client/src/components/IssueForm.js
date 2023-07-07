@@ -41,7 +41,7 @@ export default function IssueForm(props){
         name="issue" 
         value={issue} 
         onChange={handleChange} 
-        placeholder="Issue"/>
+        placeholder="Issue Title"/>
       <input 
         className="inputComment"
         type="text" 

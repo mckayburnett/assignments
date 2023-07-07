@@ -14,12 +14,18 @@
 
 .navbar {
   display: flex;
+  position: fixed;
+  width: 100%;
   justify-content: space-around;
   align-items: center;
   height: 40px;
-  background-color: #3339;
+  background-color: white;
+  border: 3px solid black;
 }
-
+.spacer{
+  height: 40px;
+  width: 100%;
+}
 .auth-container {
   display: flex;
   align-items: center;
@@ -60,11 +66,10 @@
 }
 
 .issue-list {
-
-}
-
-.todo {
-
+  position: relative;
+  padding-right: 450px;
+  width: 100%;
+  left: 10px;
 }
 
 .public {
@@ -75,7 +80,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 100%;
+  color: white;
+  background: rgb(2,0,36);
+  background: linear-gradient(326deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 35%, rgba(0,209,255,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .profile > h1 {
@@ -90,13 +100,15 @@
 }
 
 .profile > form {
-  display: flex;
-  flex-direction: column;
+  position: fixed;
   margin: 16px 0;
   border: 1px solid #3339;
   background-color: #aaa9;
   padding: 16px;
-  border-radius: 5px
+  border-radius: 5px;
+  right: 10px;
+  width: 400px;
+  text-align: center;
 }
 
 .profile > form > input,
@@ -120,13 +132,85 @@
   vertical-align: text-top;
   
 }
+.issue{
+  color: rgb(0, 0, 0);
+  border: 1px black solid;
+  border-radius: 40px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.501);
+  display: flex;
+}
+.issue > img{
+  border-radius: 20px;
+  width: 350px;
+}
+.issueTitle{
+  padding: 10px;
+  font-size: x-large;
+}
+.issueComment{
+  padding: 10px;
+  font-weight: 500;
+  font-size: large;
+}
+strong{
+  font-weight: 900;
+  font-size: large;
+}
+.profileIcons{
+  position: inherit;
+  left: 50%;
+  padding-top: 10px;
+}
+.addComment{
+  font-size: 35px;
+  cursor: pointer;
+}
+.publicLikes{
+  display:inline-flex;
+}
+.likeGroup{
+  margin-right: 20px;
+  display: inline-flex
+}
+.thumbsUp{
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.likes{
+  font-size: x-large;
+  font-weight: 100;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.dislikeGroup{
+  display: inline-flex
+}
+.thumbsDown{
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.dislikes{
+  font-size: x-large;
+  font-weight: 100;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
 /* public */
+.public{
+  color: white;
+  background: rgb(2,0,36);
+  background: linear-gradient(326deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 35%, rgba(0,209,255,1) 100%);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 .publicIssueWrapper{
   padding: 20px;
   align-self: center;
-  background-color: #eee9;
   align-items: center;
-  border: black 1px solid;
+  border-bottom: 1px solid white;
 }
 .publicInfoContainer{
   text-align: center;
@@ -138,13 +222,17 @@
   grid-column: 2/3;
   display: flex;
   justify-content: space-around;
+  border-radius: 20px;
+  border: 1px solid white;
 }
 .publicWords{
   text-align: left;
+  color: black;
   grid-column: 3/4;
-  border: 1px black solid;
+  border: 1px white solid;
   border-radius: 20px;
   padding: 10px;
+  background-color: rgba(255, 255, 255, 0.501);
 }
 .publicIssue{
   font-size: larger;
