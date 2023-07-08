@@ -2,6 +2,8 @@ import React from 'react'
 import { FaRegComments } from 'react-icons/fa'
 import { BiLike } from 'react-icons/bi'
 import { BiDislike } from 'react-icons/bi'
+import { FaTrash } from 'react-icons/fa'
+import { FaEdit } from 'react-icons/fa'
 
 
 export default function Issue(props){
@@ -10,6 +12,10 @@ export default function Issue(props){
 
   return (
     <div className="issue">
+      <div className="issueIcons">
+        <FaTrash className="trash"/>
+        <FaEdit className="edit"/>
+      </div>
       <img src={imgUrl} alt={imgUrl} />
       <div>
         <h1 className="issueTitle">{ issue }</h1>

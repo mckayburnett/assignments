@@ -191,6 +191,21 @@ strong{
   font-weight: 900;
   font-size: large;
 }
+.issueIcons{
+  position: absolute;
+  padding-top: 10px;
+  color: white;
+  padding-left: 10px;
+}
+.trash{
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.edit{
+  font-size: 23px;
+  cursor: pointer;
+}
 .profileIcons{
   position: absolute;
   padding-top: 10px;
