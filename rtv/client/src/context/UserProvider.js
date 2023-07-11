@@ -141,7 +141,6 @@ export default function UserProvider(props){
             }))
             })
             .catch(err => console.log(err.response.data.errMsg))
-            
     }
 
     
@@ -156,7 +155,9 @@ export default function UserProvider(props){
                 logout,
                 addIssue,
                 publicState,
-                deleteIssue
+                deleteIssue, 
+                getAllIssues,
+                getUserIssues
                 
             }}
         >
