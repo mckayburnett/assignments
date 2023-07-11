@@ -99,6 +99,7 @@ export default function UserProvider(props){
                 ...prevState,
                 issues: res.data
             }))
+            
         })
         .catch(err => console.log(err.response.data.errMsg))
     }
@@ -106,10 +107,18 @@ export default function UserProvider(props){
     function addIssue(newIssue){
         userAxios.post('/api/issue', newIssue)
             .then(res => {
+                const { user, token } = res.data
                 setUserState(prevState => ({
                     ...prevState,
                     issues: [...prevState.issues, res.data]
                 }))
+                getAllIssues()
+                setPublicState(prevPublicState => ({
+                    ...prevPublicState,
+                    user
+                }))
+                console.log('publicState', publicState)
+                getUserIssues()
             })
             .catch(err => console.log(err.response.data.errMsg))
     }
@@ -117,9 +126,22 @@ export default function UserProvider(props){
     function deleteIssue(issueId){
         userAxios.delete(`/api/issue/${issueId}`)
             .then(res => {
-                console.log(res)
+                const { user, token } = res.data
+                getAllIssues()
+            setPublicState(prevPublicState => ({
+                ...prevPublicState,
+                user
+            }))
+            console.log('publicState', publicState)
+            getUserIssues()
+            setUserState(prevUserState => ({
+                ...prevUserState,
+                user, 
+                token
+            }))
             })
             .catch(err => console.log(err.response.data.errMsg))
+            
     }
 
     
