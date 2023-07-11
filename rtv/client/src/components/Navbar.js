@@ -10,7 +10,7 @@ export default function Navbar(props){
       <Link to="/public">Public</Link>
       <button onClick={ logout }>Logout</button>
     </div>
-    <div class="spacer">
+    <div className="spacer">
       &nbsp;
     </div>
     </>

@@ -114,6 +114,14 @@ export default function UserProvider(props){
             .catch(err => console.log(err.response.data.errMsg))
     }
 
+    function deleteIssue(issueId){
+        userAxios.delete(`/api/issue/${issueId}`)
+            .then(res => {
+                console.log(res)
+            })
+            .catch(err => console.log(err.response.data.errMsg))
+    }
+
     
     
 
@@ -125,7 +133,8 @@ export default function UserProvider(props){
                 login,
                 logout,
                 addIssue,
-                publicState
+                publicState,
+                deleteIssue
                 
             }}
         >

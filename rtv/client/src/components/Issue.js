@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../context/UserProvider.js'
 import { FaRegComments } from 'react-icons/fa'
 import { BiLike } from 'react-icons/bi'
 import { BiDislike } from 'react-icons/bi'
@@ -9,11 +10,12 @@ import { FaEdit } from 'react-icons/fa'
 export default function Issue(props){
 
   const { username, issue, comment, imgUrl, _id, likes, dislikes } = props
-
+  const { deleteIssue } = useContext(UserContext)
+  console.log(_id)
   return (
     <div className="issue">
       <div className="issueIcons">
-        <FaTrash className="trash"/>
+        <FaTrash className="trash" onClick={()=>deleteIssue(_id)} />
         <FaEdit className="edit"/>
       </div>
       <img src={imgUrl} alt={imgUrl} />

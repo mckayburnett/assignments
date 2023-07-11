@@ -14,7 +14,6 @@ export default function Profile(){
     issues
   } = useContext(UserContext)
 
-
   return (
     <div className="profile">
       <h1>Welcome @{username}!</h1>
