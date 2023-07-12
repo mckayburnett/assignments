@@ -84,9 +84,8 @@ export default function PublicProvider(props){
         .catch(err => console.log(err.response.data.errMsg))        
     }
     function addReply(newReply, _id){
-    
- 
-        userAxios.put(`/api/issue/reply/${_id}`, newReply)
+        console.log('id:', _id, '  ---   newReply:', newReply)
+        userAxios.put(`/api/reply/${_id}`, newReply)
             .then(res => {
                 console.log(res, "args here")
                 

@@ -6,11 +6,9 @@ const Reply = require('../models/reply')
 
 //add reply
 replyRouter.put('/:issueId', (req, res, next) => {
-    console.log(req, res, "jessie", req.params.issueId);
-    Issue.findOneAndUpdate(
+    Reply.findOneAndUpdate(
         {_id: req.params.issueId},
-        {$push: {reply: req.body.reply}},
-        {upsert: true},
+        {$push: {text: req.body.text}},
         {new: true},
         (err, updatedReply) => {
             if(err){

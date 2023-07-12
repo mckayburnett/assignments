@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const replySchema = new Schema({
-    reply: {
+    text: {
         type: Array,
         required: true
     },

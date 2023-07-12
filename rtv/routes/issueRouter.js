@@ -67,9 +67,8 @@ issueRouter.put('/:issueId', (req, res, next) => {
     )
 })
 
-//like issue
+//like issue ($addToSet might help with making it so you can only add one like per userId)
 issueRouter.put('/like/:issueId', (req, res, next) => {
-    console.log(req, "mcayjj");
     Issue.findOneAndUpdate(
         {_id: req.params.issueId},
         {$inc: {likes: 1}},
