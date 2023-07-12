@@ -69,6 +69,7 @@ issueRouter.put('/:issueId', (req, res, next) => {
 
 //like issue
 issueRouter.put('/like/:issueId', (req, res, next) => {
+    console.log(req, "mcayjj");
     Issue.findOneAndUpdate(
         {_id: req.params.issueId},
         {$inc: {likes: 1}},

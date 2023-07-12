@@ -15,10 +15,9 @@ export default function PublicIssue(props){
     const [commentClicked, setCommentClicked] = useState(false)
     const [replyId, setReplyId] = useState("")
 
-    function clickComment(e){
+    function clickComment(){
         setCommentClicked(!commentClicked)
         setReplyId(_id)
-        console.log(replyId)
     }
     function clickLike(){
         addLike(_id)

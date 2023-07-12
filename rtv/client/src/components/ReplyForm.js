@@ -13,7 +13,6 @@ export default function ReplyForm(props){
     setReply(
       e.target.value
     )
-    console.log(reply)
   }
 
   function handleSubmit(e){
