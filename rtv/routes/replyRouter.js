@@ -11,6 +11,7 @@ replyRouter.put('/:issueId', (req, res, next) => {
         {$push: {text: req.body.text}},
         {new: true},
         (err, updatedReply) => {
+            console.log('res',res)
             if(err){
                 res.status(500)
                 return next(err)
