@@ -42,7 +42,6 @@ export default function PublicProvider(props){
             console.log('res', res.data)
         })
         .catch(err => console.log(err.response.data.errMsg))
-        console.log('get all working')  
     }
 
     function getUserIssues(){
@@ -60,27 +59,17 @@ export default function PublicProvider(props){
     function addDislike(e){
         userAxios.put(`/api/issue/dislike/${e}`)
         .then(res => {
-            const { user, token } = res.data
-            setPublicState(prevPublicState => ({
-                ...prevPublicState,
-                user
-            }))
-            getAllIssues()
-            console.log('publicState', publicState)
-            setUserState(prevUserState => ({
-                ...prevUserState,
-                user, 
-                token
-            }))
-            getUserIssues()
-            console.log('userstate',userState)
-        }) 
+            getAllIssues();
+            getUserIssues();
+            })
+        .catch(err => console.log(err.response.data.errMsg))        
     }
     function addLike(e){
         userAxios.put(`/api/issue/like/${e}`)
         .then(res => {
             getAllIssues();
             getUserIssues();
+            console.log(res)
             })
         .catch(err => console.log(err.response.data.errMsg))        
     }
@@ -100,7 +89,8 @@ export default function PublicProvider(props){
                 addDislike,
                 addLike,
                 publicState,
-                setPublicState
+                setPublicState, 
+                getAllIssues
             }}
         >
             { props.children }
