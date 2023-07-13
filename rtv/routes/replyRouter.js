@@ -8,10 +8,9 @@ const Reply = require('../models/reply')
 replyRouter.put('/:issueId', (req, res, next) => {
     Reply.findOneAndUpdate(
         {_id: req.params.issueId},
-        {$push: {text: req.body.text}},
+        {$push: {reply: req.body.text}},
         {new: true},
         (err, updatedReply) => {
-            console.log('res',res)
             if(err){
                 res.status(500)
                 return next(err)
@@ -20,6 +19,7 @@ replyRouter.put('/:issueId', (req, res, next) => {
         }
     )
 })
+
 
 
 //get all replies
