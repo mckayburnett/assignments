@@ -54,14 +54,12 @@ export default function UserProvider(props){
                 ...prevPublicState,
                 user
             }))
-            console.log('publicState', publicState)
             getUserIssues()
             setUserState(prevUserState => ({
                 ...prevUserState,
                 user, 
                 token
             }))
-            console.log('userState',userState)
             
         })
         .catch(err => console.log(err.response.data.errMsg))

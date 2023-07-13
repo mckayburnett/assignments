@@ -9,18 +9,23 @@ import CommentForm from './ReplyForm.js'
 
 export default function PublicIssue(props){
 
-    const {issue, comment, imgUrl, user, _id, likes, dislikes } = props
-    const { addReply, color, addDislike, likeComment, addLike } = useContext(PublicContext)
+    const { issue, comment, imgUrl, user, _id, likes, dislikes, pubIssues } = props
+    const { addReply, color, addDislike, likeComment, addLike, publicState, setPublicState } = useContext(PublicContext)
     
     const [commentClicked, setCommentClicked] = useState(false)
     const [replyId, setReplyId] = useState("")
 
+    const [likey, setLikey] = useState(likes)
     function clickComment(){
         setCommentClicked(!commentClicked)
         setReplyId(_id)
     }
     function clickLike(){
-        addLike(_id)
+        addLike(_id);
+        const index = pubIssues.findIndex(issue => issue._id === _id);
+        const updatedLikes = publicState.issues[index].likes
+        console.log(updatedLikes)
+        setLikey(updatedLikes)
     }
     function clickDislike(){
         addDislike(_id)
@@ -39,7 +44,7 @@ export default function PublicIssue(props){
                     <div className="publicLikes">
                         <div className="likeGroup">   
                             <BiLike className="thumbsUp" onClick={clickLike} />
-                            <h1 className="likes">{likes}</h1>
+                            <h1 className="likes">{likey}</h1>
                         </div> 
                         <div className="dislikeGroup">
                             <BiDislike className="thumbsDown" onClick={clickDislike} /> 

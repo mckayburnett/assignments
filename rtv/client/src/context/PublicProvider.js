@@ -39,10 +39,10 @@ export default function PublicProvider(props){
                 issues: res.data
             }))
             console.log("publicState",publicState.issues)
-            console.log('res.data', res)
+            console.log('res', res.data)
         })
         .catch(err => console.log(err.response.data.errMsg))
-        
+        console.log('get all working')  
     }
 
     function getUserIssues(){
@@ -79,7 +79,8 @@ export default function PublicProvider(props){
     function addLike(e){
         userAxios.put(`/api/issue/like/${e}`)
         .then(res => {
-            console.log('res',res)
+            getAllIssues();
+            getUserIssues();
             })
         .catch(err => console.log(err.response.data.errMsg))        
     }
@@ -98,7 +99,8 @@ export default function PublicProvider(props){
                 addReply,
                 addDislike,
                 addLike,
-                
+                publicState,
+                setPublicState
             }}
         >
             { props.children }

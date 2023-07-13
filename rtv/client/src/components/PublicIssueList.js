@@ -9,11 +9,11 @@ export default function PublicIssueList(props){
     console.log(publicState)
     const issue = pubIssues && pubIssues.map((data) => data.issue)
     const sortedIssues = pubIssues?.sort((a,b) => a.likes < b.likes ? 1: -1)
-    console.log(sortedIssues)
+    console.log('sorted issues',pubIssues)
     
     return(
         <div>
-            {sortedIssues ? sortedIssues.map(issue => <PublicIssue {...issue} key={issue._id}  />) : null }
+            {sortedIssues ? sortedIssues.map(issue => <PublicIssue {...issue} key={issue._id}  pubIssues={pubIssues}/>) : null }
         </div>
     )
 }
