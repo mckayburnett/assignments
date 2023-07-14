@@ -78,7 +78,7 @@ issueRouter.put('/like/:issueId', (req, res, next) => {
                 res.status(500)
                 return next(err)
             }
-            if(updatedIssue.userLikes){
+            if(updatedIssue){
                 res.status(403)
                 return next(new Error('Already liked post'))
             }
