@@ -23,17 +23,11 @@ export default function PublicIssue(props){
         setReplyId(_id)
     }
     function clickLike(){
+        addLike(_id)
         const index = pubIssues?.findIndex(issue => issue._id === _id);
         const updatedLikes = publicState?.issues[index]?.likes;
-        if(localStorage.issueLikeId === _id){
-        console.log("already liked post")
-        } else {
-        addLike(_id)
-        localStorage.setItem("issueLikeId", _id)
         getAllIssues();
         setLikey({likes: updatedLikes})
-        console.log(localStorage)
-        }
     }
     function clickDislike(){
         addDislike(_id)

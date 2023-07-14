@@ -22,6 +22,14 @@ const issueSchema = new Schema({
         type: Number,
         required: false
     },
+    userLikes: {
+        type: Array,
+        required: false
+    },
+    userDislikes: {
+        type: Array,
+        required: false
+    },
     reply: {
         type: Schema.Types.ObjectId, 
         ref: "Reply",

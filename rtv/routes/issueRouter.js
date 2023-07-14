@@ -71,12 +71,16 @@ issueRouter.put('/:issueId', (req, res, next) => {
 issueRouter.put('/like/:issueId', (req, res, next) => {
     Issue.findOneAndUpdate(
         {_id: req.params.issueId},
-        {$inc: {likes: 1}},
+        {$inc: {likes: 1}, $addToSet: {userLikes: req.auth._id}},
         {new: true},
         (err, updatedIssue) => {
             if(err){
                 res.status(500)
                 return next(err)
+            }
+            if(updatedIssue.userLikes){
+                res.status(403)
+                return next(new Error('Already liked post'))
             }
             return res.status(201).send(updatedIssue)
         }
@@ -86,12 +90,15 @@ issueRouter.put('/like/:issueId', (req, res, next) => {
 issueRouter.put('/dislike/:issueId', (req, res, next) => {
     Issue.findOneAndUpdate(
         {_id: req.params.issueId},
-        {$inc: {dislikes: 1}},
+        {$inc: {dislikes: 1}, $addToSet: {userDislikes: req.auth._id}},
         {new: true},
         (err, updatedIssue) => {
             if(err){
                 res.status(500)
                 return next(err)
+            }
+            if(updatedIssue.userDislikes){
+                return next(new Error('Already disliked post'))
             }
             return res.status(201).send(updatedIssue)
         }

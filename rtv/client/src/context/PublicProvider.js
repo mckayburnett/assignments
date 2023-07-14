@@ -69,9 +69,9 @@ export default function PublicProvider(props){
         .then(res => {
             getAllIssues();
             getUserIssues();
-            console.log(res)
+            console.log('res1', res.config.headers.Authorization)
             })
-        .catch(err => console.log(err.response.data.errMsg))        
+        .catch(err => console.log(err.response.data.errMsg))
     }
     function addReply(newReply, _id){
         userAxios.put(`/api/reply/${_id}`, newReply)
