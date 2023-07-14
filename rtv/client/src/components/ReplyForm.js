@@ -17,7 +17,6 @@ export default function ReplyForm(props){
 
   function handleSubmit(e){
     e.preventDefault()
-    console.log("id", id, "reply", reply)
     addReply(reply, id)
     setReply("")
   }

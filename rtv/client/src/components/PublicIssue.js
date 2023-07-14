@@ -23,19 +23,23 @@ export default function PublicIssue(props){
         setReplyId(_id)
     }
     function clickLike(){
+        getAllIssues()
         addLike(_id)
         const index = pubIssues?.findIndex(issue => issue._id === _id);
         const updatedLikes = publicState?.issues[index]?.likes;
+        console.log(publicState.issues)
         getAllIssues();
         setLikey({likes: updatedLikes})
     }
     function clickDislike(){
+        getAllIssues()
         addDislike(_id)
         const index = pubIssues.findIndex(issue => issue._id === _id);
         const updatedDislikes = publicState.issues[index].dislikes;
         getAllIssues();
         setDislikey({dislikes: updatedDislikes})
     }
+
 
     return(
         <div className="publicIssueWrapper">

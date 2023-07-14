@@ -69,7 +69,6 @@ export default function PublicProvider(props){
         .then(res => {
             getAllIssues();
             getUserIssues();
-            console.log('res1', res.config.headers.Authorization)
             })
         .catch(err => console.log(err.response.data.errMsg))
     }
@@ -77,7 +76,7 @@ export default function PublicProvider(props){
         userAxios.put(`/api/reply/${_id}`, newReply)
             .then(res => {
                 console.log(res)
-                
+                console.log('working reply')
             })
             .catch(err => console.log(err))
     }

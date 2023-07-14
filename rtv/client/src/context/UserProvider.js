@@ -126,10 +126,10 @@ export default function UserProvider(props){
             .then(res => {
                 const { user, token } = res.data
                 getAllIssues()
-            setPublicState(prevPublicState => ({
-                ...prevPublicState,
-                user
-            }))
+                setPublicState(prevPublicState => ({
+                    ...prevPublicState,
+                    user
+                }))
             console.log('publicState', publicState)
             getUserIssues()
             setUserState(prevUserState => ({
