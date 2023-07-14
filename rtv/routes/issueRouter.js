@@ -69,22 +69,46 @@ issueRouter.put('/:issueId', (req, res, next) => {
 
 //like issue ($addToSet might help with making it so you can only add one like per userId)
 issueRouter.put('/like/:issueId', (req, res, next) => {
-    Issue.findOneAndUpdate(
-        {_id: req.params.issueId},
-        {$inc: {likes: 1}, $addToSet: {userLikes: req.auth._id}},
-        {new: true},
-        (err, updatedIssue) => {
+    Issue.findOne(
+        {_id: req.params.issueId}, (err, foundIssue) => {
             if(err){
                 res.status(500)
                 return next(err)
             }
-            if(updatedIssue){
+            const liked = foundIssue.userLikes
+            if(liked.includes(req.auth._id)){
                 res.status(403)
                 return next(new Error('Already liked post'))
             }
-            return res.status(201).send(updatedIssue)
+            foundIssue.updateOne(
+                {$inc: {likes: 1}, $addToSet: {userLikes: req.auth._id}},
+                {new: true},
+                (err, updatedIssue) => {
+                    if(err){
+                        res.status(500)
+                        return next(err)
+                    }
+                    return res.status(201).send(updatedIssue)
+                }
+            ) 
         }
     )
+    // Issue.findOneAndUpdate(
+    //     {_id: req.params.issueId},
+    //     {$inc: {likes: 1}, $addToSet: {userLikes: req.auth._id}},
+    //     {new: true},
+    //     (err, updatedIssue) => {
+    //         if(err){
+    //             res.status(500)
+    //             return next(err)
+    //         }
+    //         if(updatedIssue.userLikes.includes(req.auth._id)){
+    //             res.status(403)
+    //             return next(new Error('Already liked post'))
+    //         }
+    //         return res.status(201).send(updatedIssue)
+    //     }
+    // )
 })
 //dislike issue
 issueRouter.put('/dislike/:issueId', (req, res, next) => {
