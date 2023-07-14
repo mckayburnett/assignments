@@ -96,19 +96,28 @@ issueRouter.put('/like/:issueId', (req, res, next) => {
 })
 //dislike issue
 issueRouter.put('/dislike/:issueId', (req, res, next) => {
-    Issue.findOneAndUpdate(
-        {_id: req.params.issueId},
-        {$inc: {dislikes: 1}, $addToSet: {userDislikes: req.auth._id}},
-        {new: true},
-        (err, updatedIssue) => {
+    Issue.findOne(
+        {_id: req.params.issueId}, (err, foundIssue) => {
             if(err){
                 res.status(500)
                 return next(err)
             }
-            if(updatedIssue.userDislikes){
+            const disliked = foundIssue.userDislikes
+            if(disliked.includes(req.auth._id)){
+                res.status(403)
                 return next(new Error('Already disliked post'))
             }
-            return res.status(201).send(updatedIssue)
+            foundIssue.updateOne(
+                {$inc: {dislikes: 1}, $addToSet: {userDislikes: req.auth._id}},
+                {new: true},
+                (err, updatedIssue) => {
+                    if(err){
+                        res.status(500)
+                        return next(err)
+                    }
+                    return res.status(201).send(updatedIssue)
+                }
+            ) 
         }
     )
 })
