@@ -35,11 +35,12 @@ replyRouter.put('/:issueId', (req, res, next) => {
         }
         if (!foundIssue.reply) {
             foundIssue.reply = {
-              text: [] // Initialize the text array if it's null
+              reply: req.body.text // Initialize the text array if it's null
             };
           }
         const reply = foundIssue.reply;
-        reply.text.push({ text: req.body.text });
+        reply.text.push(req.body.text);
+        console.log(reply.text)
         foundIssue.save((err, updatedIssue) => {
           if (err) {
             res.status(500);

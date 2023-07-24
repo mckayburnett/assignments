@@ -8,7 +8,12 @@
   text-decoration: none;
   white-space: none;
 }
-
+html{
+  background: rgb(2,0,36);
+  background: linear-gradient(326deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 35%, rgba(0,209,255,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 .app {
   background-color: #eee9;
 }
@@ -185,7 +190,7 @@
 .issueComment{
   padding: 10px;
   font-weight: 500;
-  font-size: large;
+  font-size: 1vw;
 }
 strong{
   font-weight: 900;

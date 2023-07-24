@@ -26,9 +26,9 @@ export default function PublicIssue(props){
         getAllIssues()
         addLike(_id)
         const index = pubIssues?.findIndex(issue => issue._id === _id);
-        const updatedLikes = publicState?.issues[index]?.likes;
         console.log(publicState.issues)
         getAllIssues();
+        const updatedLikes = publicState?.issues[index]?.likes;
         setLikey({likes: updatedLikes})
     }
     function clickDislike(){
