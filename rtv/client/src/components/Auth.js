@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react'
 import AuthForm from './AuthForm.js'
 import { UserContext } from '../context/UserProvider.js'
-import rtv from './images/rtv.png'
-import flags from './images/flags.jpg'
+import rtv from '../images/rtv.png'
+
 
 const initInputs = { username: "", password: "" }
 

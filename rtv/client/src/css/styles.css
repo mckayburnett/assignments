@@ -40,7 +40,12 @@ html{
   flex-direction: column;
   height: 100vh;
 }
-
+.rtv{
+  background-image: url('../images/flags.jpg');
+  background-position: center;
+  background-size: 300px;
+  background-position-y: top;
+}
 .auth-container > h1 {
   font-size: 2em;
   margin: 24px;
