@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react'
 import AuthForm from './AuthForm.js'
 import { UserContext } from '../context/UserProvider.js'
-import rtv from '../images/rtv.png'
 
 
 const initInputs = { username: "", password: "" }
@@ -33,7 +32,7 @@ export default function Auth(){
   return (
     <div className="auth-container">
       <div className="authSpacer"></div>
-      <img src={rtv} alt="" className="rtv"/>
+      <div className="flags">RTV</div>
       { toggle ?
         <>
           <AuthForm 

@@ -43,11 +43,17 @@ html{
 .authSpacer{
   height: 300px;
 }
-.rtv{
+.flags{
   position: absolute;
-  width: 300vw;
-  height: 200vh;
-  z-index: -1;
+  text-shadow: rgba(0, 0, 0, 0.137) 5px 5px 5px;
+  background-image: url('../images/flags.jpg');
+  background-position: top;
+  font-size: 30vw;
+  font-weight: 900;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; 
+  z-index: -1; 
 }
 .auth-container > h1 {
   font-size: 2em;
@@ -64,9 +70,10 @@ html{
   padding: 20px;
   border-radius: 5px;
   background-color: #aaa9;
-
   display: flex;
   flex-direction: column;
+  position: absolute;
+  bottom: 40px;
 }
 
 .auth-container > form > input {
@@ -80,7 +87,10 @@ html{
   padding: 8px;
   border-radius: 4px;
 }
-
+.member{
+  position: absolute;
+  bottom: 30px;
+}
 .issue-list {
   position: relative;
   padding-right: 450px;
