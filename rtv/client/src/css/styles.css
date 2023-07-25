@@ -40,11 +40,14 @@ html{
   flex-direction: column;
   height: 100vh;
 }
+.authSpacer{
+  height: 300px;
+}
 .rtv{
-  background-image: url('../images/flags.jpg');
-  background-position: center;
-  background-size: 300px;
-  background-position-y: top;
+  position: absolute;
+  width: 300vw;
+  height: 200vh;
+  z-index: -1;
 }
 .auth-container > h1 {
   font-size: 2em;

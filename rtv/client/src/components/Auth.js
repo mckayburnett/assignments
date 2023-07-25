@@ -32,11 +32,12 @@ export default function Auth(){
 
   return (
     <div className="auth-container">
+      <div className="authSpacer"></div>
       <img src={rtv} alt="" className="rtv"/>
-      <h1>Rock The Vote</h1>
       { toggle ?
         <>
           <AuthForm 
+            className="authForm"
             handleChange={handleChange}
             handleSubmit={handleSignup}
             inputs={inputs}
@@ -47,6 +48,7 @@ export default function Auth(){
       :
         <>
           <AuthForm 
+            className="authForm"
             handleChange={handleChange}
             handleSubmit={handleLogin}
             inputs={inputs}
