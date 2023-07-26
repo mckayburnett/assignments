@@ -7,7 +7,7 @@ export default function PublicIssueList(props){
     const { publicState } = props
     const pubIssues = publicState.issues
     console.log('publicState in list',publicState)
-    const issue = pubIssues && pubIssues.map((data) => data.issue)
+    //const issue = pubIssues && pubIssues.map((data) => data.issue)
     const sortedIssues = pubIssues?.sort((a,b) => a.likes < b.likes ? 1: -1)
     console.log('sorted issues',pubIssues)
     

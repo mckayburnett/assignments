@@ -69,11 +69,11 @@ export default function PublicIssue(props){
                     <ReplyForm replyId={replyId} addReply={addReply} />
                 </div>
                 }
-                { reply && 
+                
                 <div className="publicReplyContainer">
-                    <PublicReplies reply={reply}/>
+                    { reply && reply.map(replies => <PublicReplies {...replies} key={replies._id} reply={reply}/>)}
                 </div>
-                }
+                
             </div>
         </div>
     )
