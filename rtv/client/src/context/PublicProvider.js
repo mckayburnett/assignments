@@ -75,9 +75,8 @@ export default function PublicProvider(props){
     function addReply(newReply, _id){
         userAxios.put(`/api/reply/${_id}`, newReply)
             .then(res => {
-                console.log(res)
-                console.log('working reply')
-                console.log('reply texts', res.data)
+                console.log('res',res)
+                console.log('newReply', newReply)
             })
             .catch(err => console.log(err))
     }
