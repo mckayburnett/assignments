@@ -31,8 +31,7 @@ const issueSchema = new Schema({
         required: false
     },
     reply: {
-        type: Schema.Types.ObjectId, 
-        ref: "Reply",
+        type: [String],
         required: false
     },
     user: {

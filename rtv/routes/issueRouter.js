@@ -14,6 +14,8 @@ issueRouter.get('/', (req, res, next) => {
     })
 })
 
+
+
 //get issues by user id
 issueRouter.get('/user', (req, res, next) => {
     Issue.find({ user: req.auth._id }, (err, issues) => {

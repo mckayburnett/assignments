@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const replySchema = new Schema({
     text: {
-        type: Array,
+        type: [String],
         required: true
     },
     issue: {
