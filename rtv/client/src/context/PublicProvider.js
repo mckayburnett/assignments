@@ -77,7 +77,7 @@ export default function PublicProvider(props){
             .then(res => {
                 console.log(res)
                 console.log('working reply')
-                console.log('reply texts', res.data.reply)
+                console.log('reply texts', res.data)
             })
             .catch(err => console.log(err))
     }

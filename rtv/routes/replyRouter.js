@@ -22,8 +22,7 @@ const Reply = require('../models/reply')
 //     })
 // })
 replyRouter.put('/:issueId', (req, res, next) => {
-  Issue.findOne({ _id: req.params.issueId })
-    .exec((err, foundIssue) => {
+  Issue.findOne({ _id: req.params.issueId }, (err, foundIssue) => {
       if (err) {
         res.status(500);
         return next(err);
@@ -34,7 +33,7 @@ replyRouter.put('/:issueId', (req, res, next) => {
       }
 
       const newReply = new Reply({
-        text: req.body.text, // This should be a single string representing the reply text
+        text: req.body.text,
         issue: foundIssue._id,
         user: req.auth._id
       });
@@ -45,10 +44,7 @@ replyRouter.put('/:issueId', (req, res, next) => {
           return next(err);
         }
         console.log('savedReply', savedReply);
-
-        // Assuming that req.body.text is an array of strings representing multiple replies
-        foundIssue.reply.push(req.body.text); // Add the new reply texts to the array
-
+        foundIssue.reply.push(req.body.text);
         foundIssue.save((err, updatedIssue) => {
           if (err) {
             res.status(500);
