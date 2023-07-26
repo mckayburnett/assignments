@@ -5,22 +5,6 @@ const User = require('../models/user')
 const Reply = require('../models/reply')
 
 //add reply
-// replyRouter.put('/:issueId', (req, res, next) => {
-//     Issue.findOne( {_id: req.params.issueId}, (err, foundIssue) => {
-//         if(err){
-//             res.status(500)
-//             return next(err)
-//         }
-//         const reply = foundIssue.Reply
-//         reply.text.push(req.body)
-//         foundIssue.save((err, updatedIssue) => {
-//             if(err){
-//                 res.status(500)
-//             }
-//             return res.status(201).send(updatedIssue)
-//         })
-//     })
-// })
 replyRouter.put('/:issueId', (req, res, next) => {
   Issue.findOne({ _id: req.params.issueId }, (err, foundIssue) => {
       if (err) {
@@ -44,7 +28,7 @@ replyRouter.put('/:issueId', (req, res, next) => {
           return next(err);
         }
         console.log('savedReply', savedReply);
-        foundIssue.reply.push(req.body.text);
+        foundIssue.reply.push(savedReply._id);
         foundIssue.save((err, updatedIssue) => {
           if (err) {
             res.status(500);
@@ -56,6 +40,17 @@ replyRouter.put('/:issueId', (req, res, next) => {
       });
     });
 });
+
+//get replies
+replyRouter.get('/:replyId', (req, res, next) => {
+  Reply.find({ _id: req.params.replyId}, (err, foundId) => {
+    if(err){
+      res.status(500)
+      return next(err)
+    }
+    return res.status(200).send(foundId)
+  })
+})
   
     // Reply.findOneAndUpdate(
     //     {Issue: {reply: req.params.issueId}},

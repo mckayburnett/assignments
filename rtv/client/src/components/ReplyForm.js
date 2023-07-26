@@ -6,19 +6,19 @@ export default function ReplyForm(props){
 
   const { replyId, addReply } = props
   const [id, setId] = useState("")
-  const [reply, setReply] = useState("")
+  const [reply, setReply] = useState([])
 
   function handleChange(e){
     setId(replyId)
     setReply(
-      e.target.value
+      [e.target.value]
     )
   }
 
   function handleSubmit(e){
     e.preventDefault()
     addReply(reply, id)
-    setReply("")
+    setReply([])
   }
 
     return(

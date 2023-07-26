@@ -315,7 +315,7 @@ strong{
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-bottom: 20px;
 }
-.publicReply{
+.publicReplyForm{
   grid-column: 2/4;
 }
 strong{
@@ -366,10 +366,16 @@ strong{
   font-weight: 100;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
-.publicReply{
+.publicReplyForm{
   grid-column: 3/4;
   width: 100%;
 }
 .replyForm{
   width: 100%;
+}
+.publicReplyContainer{
+  grid-column: 3/4;
+}
+.publicReplies{
+
 }

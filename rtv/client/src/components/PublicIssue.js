@@ -4,12 +4,13 @@ import { UserContext } from '../context/UserProvider.js'
 import { FaRegComments } from 'react-icons/fa'
 import { BiLike } from 'react-icons/bi'
 import { BiDislike } from 'react-icons/bi'
-import CommentForm from './ReplyForm.js'
+import ReplyForm from './ReplyForm.js'
+import PublicReplies from './PublicReplies'
 
 
 export default function PublicIssue(props){
 
-    const { issue, comment, imgUrl, user, _id, likes, dislikes, pubIssues } = props
+    const { issue, comment, imgUrl, user, _id, likes, dislikes, pubIssues, reply } = props
     const { addReply, color, addDislike, likeComment, addLike, publicState, setPublicState, getAllIssues } = useContext(PublicContext)
     
     const [commentClicked, setCommentClicked] = useState(false)
@@ -17,6 +18,8 @@ export default function PublicIssue(props){
 
     const [likey, setLikey] = useState({likes: likes, token: ""})
     const [dislikey, setDislikey] = useState({dislikes: dislikes, token: ""})
+
+    console.log('!!!',reply)
 
     function clickComment(){
         setCommentClicked(!commentClicked)
@@ -63,8 +66,13 @@ export default function PublicIssue(props){
                     </div>
                 </div>
                 { commentClicked &&
-                <div className="publicReply">
-                    <CommentForm replyId={replyId} addReply={addReply} />
+                <div className="publicReplyForm">
+                    <ReplyForm replyId={replyId} addReply={addReply} />
+                </div>
+                }
+                { reply && 
+                <div className="publicReplyContainer">
+                    <PublicReplies reply={reply}/>
                 </div>
                 }
             </div>

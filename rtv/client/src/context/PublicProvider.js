@@ -75,11 +75,18 @@ export default function PublicProvider(props){
     function addReply(newReply, _id){
         userAxios.put(`/api/reply/${_id}`, newReply)
             .then(res => {
-                console.log('res',res)
+                console.log('res',res.data.reply)
                 console.log('newReply', newReply)
             })
             .catch(err => console.log(err))
     }
+    // function getReplyText(replyId){
+    //     userAxios.get(`/api/reply/${replyId}`)
+    //         .then(res => {
+    //             console.log(res.data)
+    //         })
+    //         .catch(err => console.log(err))
+    // }
 
     return(
         <PublicContext.Provider
@@ -89,7 +96,8 @@ export default function PublicProvider(props){
                 addLike,
                 publicState,
                 setPublicState, 
-                getAllIssues
+                getAllIssues,
+                
             }}
         >
             { props.children }
