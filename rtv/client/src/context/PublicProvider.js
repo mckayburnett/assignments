@@ -80,13 +80,13 @@ export default function PublicProvider(props){
             })
             .catch(err => console.log(err))
     }
-    // function getReplyText(replyId){
-    //     userAxios.get(`/api/reply/${replyId}`)
-    //         .then(res => {
-    //             console.log(res.data)
-    //         })
-    //         .catch(err => console.log(err))
-    // }
+    function getReplies(replyId){
+        userAxios.get(`/api/reply/${replyId}`)
+            .then(res => {
+                console.log(res.data)
+            })
+            .catch(err => console.log(err))
+    }
 
     return(
         <PublicContext.Provider
@@ -97,7 +97,7 @@ export default function PublicProvider(props){
                 publicState,
                 setPublicState, 
                 getAllIssues,
-                
+                getReplies
             }}
         >
             { props.children }

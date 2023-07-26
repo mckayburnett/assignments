@@ -19,7 +19,6 @@ export default function PublicIssue(props){
     const [likey, setLikey] = useState({likes: likes, token: ""})
     const [dislikey, setDislikey] = useState({dislikes: dislikes, token: ""})
 
-    console.log('!!!',reply)
 
     function clickComment(){
         setCommentClicked(!commentClicked)
