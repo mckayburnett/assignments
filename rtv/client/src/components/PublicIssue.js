@@ -11,7 +11,7 @@ import PublicReplies from './PublicReplies'
 export default function PublicIssue(props){
 
     const { issue, comment, imgUrl, user, _id, likes, dislikes, pubIssues, reply } = props
-    const { addReply, color, addDislike, likeComment, addLike, publicState, setPublicState, getAllIssues } = useContext(PublicContext)
+    const { addReply, color, addDislike, likeComment, addLike, publicState, setPublicState, getAllIssues, getReplies } = useContext(PublicContext)
     
     const [commentClicked, setCommentClicked] = useState(false)
     const [replyId, setReplyId] = useState("")

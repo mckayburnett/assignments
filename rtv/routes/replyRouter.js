@@ -51,22 +51,7 @@ replyRouter.get('/:replyId', (req, res, next) => {
     return res.status(200).send(foundId)
   })
 })
-  
-    // Reply.findOneAndUpdate(
-    //     {Issue: {reply: req.params.issueId}},
-    //     {$push: {text: req.body.text}},
-    //     {new: true},
-    //     (err, updatedReply) => {
-    //         if(err){
-    //             res.status(500)
-    //             return next(err)
-    //         }
-    //         return res.status(201).send(updatedReply)
-    //     }
-    // )
 
-
-//get all replies
 
 //get user replies  by id
 

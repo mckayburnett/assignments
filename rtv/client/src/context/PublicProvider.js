@@ -83,7 +83,7 @@ export default function PublicProvider(props){
     function getReplies(replyId){
         userAxios.get(`/api/reply/${replyId}`)
             .then(res => {
-                console.log('resdata',res.data)
+                console.log('resdata',res)
             })
             .catch(err => console.log(err))
     }
