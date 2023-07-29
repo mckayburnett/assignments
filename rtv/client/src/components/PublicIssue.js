@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { PublicContext } from '../context/PublicProvider.js'
 import { UserContext } from '../context/UserProvider.js'
 import { FaRegComments } from 'react-icons/fa'
@@ -11,7 +11,7 @@ import PublicReplies from './PublicReplies'
 export default function PublicIssue(props){
 
     const { issue, comment, imgUrl, user, _id, likes, dislikes, pubIssues, reply } = props
-    const { addReply, color, addDislike, likeComment, addLike, publicState, setPublicState, getAllIssues, getReplies } = useContext(PublicContext)
+    const { addReply, color, addDislike, likeComment, addLike, publicState, setPublicState, getAllIssues, getReplies, pubReplies } = useContext(PublicContext)
     
     const [commentClicked, setCommentClicked] = useState(false)
     const [replyId, setReplyId] = useState("")
@@ -20,29 +20,33 @@ export default function PublicIssue(props){
     const [dislikey, setDislikey] = useState({dislikes: dislikes, token: ""})
 
 
-    function clickComment(){
+    function clickComment(e){
         setCommentClicked(!commentClicked)
         setReplyId(_id)
     }
-    function clickLike(){
-        getAllIssues()
-        addLike(_id)
+    function clickLike() {
+        getAllIssues();
+        console.log('pubIssues:', pubIssues);
         const index = pubIssues?.findIndex(issue => issue._id === _id);
-        console.log(publicState.issues)
-        getAllIssues();
-        const updatedLikes = publicState?.issues[index]?.likes;
-        setLikey({likes: updatedLikes})
-    }
+        console.log('index:', index);
+        const updatedLikes = index >= 0 ? publicState?.issues[index]?.likes : likes + 1;
+        setLikey({ likes: updatedLikes });
+        addLike(_id);
+      }
     function clickDislike(){
-        getAllIssues()
-        addDislike(_id)
-        const index = pubIssues.findIndex(issue => issue._id === _id);
-        const updatedDislikes = publicState.issues[index].dislikes;
         getAllIssues();
-        setDislikey({dislikes: updatedDislikes})
+        console.log('pubIssues:', pubIssues);
+        const index = pubIssues?.findIndex(issue => issue._id === _id);
+        console.log('index:', index);
+        const updatedDislikes = index >= 0 ? publicState?.issues[index]?.likes : likes + 1;
+        setDislikey({ dislikes: updatedDislikes });
+        addDislike(_id);
     }
-
-
+    useEffect(() => {
+        console.log("working")
+        getReplies(_id)
+    },[])
+    
     return(
         <div className="publicIssueWrapper">
             <div className="publicInfoContainer">
@@ -71,7 +75,7 @@ export default function PublicIssue(props){
                 }
                 
                 <div className="publicReplyContainer">
-                    { reply && reply.map(replies => <PublicReplies {...replies} key={replies._id} reply={reply}/>)}
+                    {/* { reply && <PublicReplies key={reply._id} reply={reply}/>} */}
                 </div>
                 
             </div>

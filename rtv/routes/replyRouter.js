@@ -42,8 +42,8 @@ replyRouter.put('/:issueId', (req, res, next) => {
 });
 
 //get replies
-replyRouter.get('/:replyId', (req, res, next) => {
-  Reply.find({ _id: req.params.replyId}, (err, foundId) => {
+replyRouter.get('/issue/:issueId', (req, res, next) => {
+  Issue.find({ _id: req.params.issueId}, (err, foundId) => {
     if(err){
       res.status(500)
       return next(err)

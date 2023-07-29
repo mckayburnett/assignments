@@ -23,6 +23,9 @@ export default function PublicProvider(props){
     }
     const [userState, setUserState] = useState(initState)
 
+    const initReplies = []
+    const [pubReplies, setPubRepliles] = useState(initReplies)
+
     //public
     const initPublic = {
         pubUser: JSON.parse(localStorage.getItem("user")) || {},
@@ -80,10 +83,10 @@ export default function PublicProvider(props){
             })
             .catch(err => console.log(err))
     }
-    function getReplies(replyId){
-        userAxios.get(`/api/reply/${replyId}`)
+    function getReplies(issueId){
+        userAxios.get(`/api/reply/issue/${issueId}`)
             .then(res => {
-                console.log('resdata',res)
+                console.log(res)
             })
             .catch(err => console.log(err))
     }
@@ -97,7 +100,8 @@ export default function PublicProvider(props){
                 publicState,
                 setPublicState, 
                 getAllIssues,
-                getReplies
+                getReplies,
+                pubReplies
             }}
         >
             { props.children }

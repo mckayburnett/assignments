@@ -27,6 +27,17 @@ issueRouter.get('/user', (req, res, next) => {
     })
 })
 
+//get issue by issue id
+issueRouter.get('/:issueId', (req, res, next) => {
+    Issue.findById({_id: req.params.issueId}, (err, foundIssue) => {
+        if(err){
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(foundIssue)
+    })
+})
+
 //add new issue
 issueRouter.post('/', (req, res, next) => {
     req.body.user = req.auth._id
