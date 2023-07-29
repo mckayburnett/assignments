@@ -24,7 +24,7 @@ export default function PublicProvider(props){
     const [userState, setUserState] = useState(initState)
 
     const initReplies = []
-    const [pubReplies, setPubRepliles] = useState(initReplies)
+    const pubReplies = []
 
     //public
     const initPublic = {
@@ -86,7 +86,7 @@ export default function PublicProvider(props){
     function getReplies(issueId){
         userAxios.get(`/api/reply/issue/${issueId}`)
             .then(res => {
-                console.log(res)
+                console.log(res.data[0].reply)
             })
             .catch(err => console.log(err))
     }

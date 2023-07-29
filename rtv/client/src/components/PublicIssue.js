@@ -46,7 +46,7 @@ export default function PublicIssue(props){
         console.log("working")
         getReplies(_id)
     },[])
-    
+    console.log(pubReplies)
     return(
         <div className="publicIssueWrapper">
             <div className="publicInfoContainer">
