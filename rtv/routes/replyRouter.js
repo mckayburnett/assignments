@@ -41,7 +41,7 @@ replyRouter.put('/:issueId', (req, res, next) => {
     });
 });
 
-//get replies
+//get all replies
 replyRouter.get('/issue/:issueId', (req, res, next) => {
   Issue.find({ _id: req.params.issueId}, (err, foundId) => {
     if(err){
@@ -53,7 +53,17 @@ replyRouter.get('/issue/:issueId', (req, res, next) => {
 })
 
 
-//get user replies  by id
+//get reply text by replyId
+replyRouter.get('/:issueId', (req, res, next) => {
+  Issue.findById({_id: req.params.issueId}, (err, foundIssue) => {
+    if(err){
+      res.status(500)
+      return next(err)
+    }
+    return res.status(200).send(foundIssue)
+  })
+})
+
 
 //delete reply
 

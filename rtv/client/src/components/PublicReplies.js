@@ -5,16 +5,17 @@ import axios from 'axios'
 
 export default function PublicReplies(props){
 
-    const { text, user, issue, reply, key } = props
-    const { getReplies, pubReplies } = useContext(PublicContext)
+    const { replyId, issueId } = props
+    const { getReplies } = useContext(PublicContext)
     
-    // const testReply = reply.map(id => getReplies(id))
-    // console.log('testReply',testReply)
-    // console.log('pubReplies', pubReplies)
+    console.log('replyId',replyId)
+    console.log('issueId', issueId)
+    //get the reply text from replyId
+
     
     return(
         <div className="publicRepliesContainer">
-            {/* {testReply} */}
+            {}
         </div>
     )
 }

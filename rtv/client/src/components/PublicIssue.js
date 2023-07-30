@@ -5,7 +5,7 @@ import { FaRegComments } from 'react-icons/fa'
 import { BiLike } from 'react-icons/bi'
 import { BiDislike } from 'react-icons/bi'
 import ReplyForm from './ReplyForm.js'
-import PublicReplies from './PublicReplies'
+import PublicReplies from './PublicReplies.js'
 
 
 export default function PublicIssue(props){
@@ -18,7 +18,6 @@ export default function PublicIssue(props){
 
     const [likey, setLikey] = useState({likes: likes, token: ""})
     const [dislikey, setDislikey] = useState({dislikes: dislikes, token: ""})
-
 
     function clickComment(e){
         setCommentClicked(!commentClicked)
@@ -45,8 +44,9 @@ export default function PublicIssue(props){
     useEffect(() => {
         console.log("working")
         getReplies(_id)
+        console.log('pubReplies', pubReplies)
     },[])
-    console.log(pubReplies)
+    console.log('id', _id)
     return(
         <div className="publicIssueWrapper">
             <div className="publicInfoContainer">
@@ -75,7 +75,7 @@ export default function PublicIssue(props){
                 }
                 
                 <div className="publicReplyContainer">
-                    {/* { reply && <PublicReplies key={reply._id} reply={reply}/>} */}
+                    {pubReplies && pubReplies.map(replyId => <PublicReplies replyId={replyId} issueId={_id}/>)}
                 </div>
                 
             </div>
