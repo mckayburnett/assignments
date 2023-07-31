@@ -10,7 +10,7 @@ import PublicReplies from './PublicReplies.js'
 
 export default function PublicIssue(props){
 
-    const { issue, comment, imgUrl, user, _id, likes, dislikes, pubIssues, reply } = props
+    const { issue, comment, imgUrl, user, _id, likes, dislikes, pubIssues, reply, replies } = props
     const { addReply, color, addDislike, likeComment, addLike, publicState, setPublicState, getAllIssues, getReplies, pubReplies } = useContext(PublicContext)
     
     const [commentClicked, setCommentClicked] = useState(false)
@@ -41,12 +41,13 @@ export default function PublicIssue(props){
         setDislikey({ dislikes: updatedDislikes });
         addDislike(_id);
     }
-    useEffect(() => {
-        console.log("working")
-        getReplies(_id)
-        console.log('pubReplies', pubReplies)
-    },[])
-    console.log('id', _id)
+    console.log(replies)
+    // useEffect(() => {
+    //     getReplies(_id)
+    // },[])
+    // const replies = pubReplies.map(replyId => replyId)
+    // console.log('publicissuereplies',replies)
+
     return(
         <div className="publicIssueWrapper">
             <div className="publicInfoContainer">
@@ -75,7 +76,7 @@ export default function PublicIssue(props){
                 }
                 
                 <div className="publicReplyContainer">
-                    {pubReplies && pubReplies.map(replyId => <PublicReplies replyId={replyId} issueId={_id}/>)}
+                    {replies && replies.map(reply => <PublicReplies reply={reply}/>)}
                 </div>
                 
             </div>

@@ -86,7 +86,7 @@ export default function PublicProvider(props){
     function getReplies(issueId){
         userAxios.get(`/api/reply/issue/${issueId}`)
             .then(res => {
-                setPubReplies(res.data[0].reply)
+                setPubReplies(res.data)
             })
             .catch(err => console.log(err))
     }

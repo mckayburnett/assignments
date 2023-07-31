@@ -377,5 +377,6 @@ strong{
   grid-column: 3/4;
 }
 .publicReplies{
-
+  border: 1px black solid;
+  
 }

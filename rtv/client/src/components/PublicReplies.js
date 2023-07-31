@@ -5,17 +5,15 @@ import axios from 'axios'
 
 export default function PublicReplies(props){
 
-    const { replyId, issueId } = props
+    const { reply } = props
     const { getReplies } = useContext(PublicContext)
     
-    console.log('replyId',replyId)
-    console.log('issueId', issueId)
-    //get the reply text from replyId
 
-    
+    //get the reply text from replyId
+        
     return(
         <div className="publicRepliesContainer">
-            {}
+            <h1 className="publicReplies">{reply}</h1>
         </div>
     )
 }

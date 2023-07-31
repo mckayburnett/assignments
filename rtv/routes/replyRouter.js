@@ -48,19 +48,8 @@ replyRouter.get('/issue/:issueId', (req, res, next) => {
       res.status(500)
       return next(err)
     }
-    return res.status(200).send(foundId)
-  })
-})
-
-
-//get reply text by replyId
-replyRouter.get('/:issueId', (req, res, next) => {
-  Issue.findById({_id: req.params.issueId}, (err, foundIssue) => {
-    if(err){
-      res.status(500)
-      return next(err)
-    }
-    return res.status(200).send(foundIssue)
+    const replies = foundId[0].reply
+    return res.status(200).send(replies)
   })
 })
 
