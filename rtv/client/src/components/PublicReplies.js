@@ -6,11 +6,12 @@ import axios from 'axios'
 export default function PublicReplies(props){
 
     const { reply } = props
-    const { getReplies } = useContext(PublicContext)
+    const { getReplies, pubReplies } = useContext(PublicContext)
     
-
-    //get the reply text from replyId
-        
+    console.log(reply)
+    // useEffect(() => {
+    //     getReplies(reply)
+    // },[reply])
     return(
         <div className="publicRepliesContainer">
             <h1 className="publicReplies">{reply}</h1>

@@ -41,13 +41,10 @@ export default function PublicIssue(props){
         setDislikey({ dislikes: updatedDislikes });
         addDislike(_id);
     }
-    console.log(replies)
-    // useEffect(() => {
-    //     getReplies(_id)
-    // },[])
-    // const replies = pubReplies.map(replyId => replyId)
-    // console.log('publicissuereplies',replies)
-
+    console.log('replyreply', reply.map(id => id))
+    useEffect(() => {
+        reply.map(id => getReplies(id))
+    },[reply])
     return(
         <div className="publicIssueWrapper">
             <div className="publicInfoContainer">
@@ -76,7 +73,7 @@ export default function PublicIssue(props){
                 }
                 
                 <div className="publicReplyContainer">
-                    {replies && replies.map(reply => <PublicReplies reply={reply}/>)}
+                    {replies && replies.map(reply => <PublicReplies reply={reply} key={reply}/>)}
                 </div>
                 
             </div>

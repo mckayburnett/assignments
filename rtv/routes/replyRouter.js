@@ -40,7 +40,16 @@ replyRouter.put('/:issueId', (req, res, next) => {
       });
     });
 });
-
+//get reply by id
+replyRouter.get('/:replyId', (req, res, next) => {
+  Reply.findOne({_id: req.params.replyId}, (err, foundReply) => {
+    if(err){
+      res.status(500)
+      return next(err)
+    }
+    return res.status(200).send(foundReply.text)
+  })
+})
 //get all replies
 replyRouter.get('/issue/:issueId', (req, res, next) => {
   Issue.find({ _id: req.params.issueId}, (err, foundId) => {
@@ -49,7 +58,14 @@ replyRouter.get('/issue/:issueId', (req, res, next) => {
       return next(err)
     }
     const replies = foundId[0].reply
-    return res.status(200).send(replies)
+    Reply.find({_id: replies}, (err, replyInfo) => {
+      if(err){
+        res.status(500)
+        return next(err)
+      }
+      return res.status(200).send(replyInfo)
+    })
+    // return res.status(200).send(replies)
   })
 })
 
