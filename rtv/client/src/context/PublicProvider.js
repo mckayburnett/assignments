@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 
@@ -87,6 +87,7 @@ export default function PublicProvider(props){
         userAxios.get(`/api/reply/${replyId}`)
             .then(res => {
                 console.log(res.data[0])
+                setPubReplies(res.data[0])
             })
             .catch(err => console.log(err))
     }

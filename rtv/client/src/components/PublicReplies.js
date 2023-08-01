@@ -8,13 +8,15 @@ export default function PublicReplies(props){
     const { reply } = props
     const { getReplies, pubReplies } = useContext(PublicContext)
     
-    console.log(reply)
-    // useEffect(() => {
-    //     getReplies(reply)
-    // },[reply])
+    useEffect(() => {
+        getReplies(reply)
+      }, [reply])
+    
+    console.log('pubreplies', pubReplies)
+    
     return(
         <div className="publicRepliesContainer">
-            <h1 className="publicReplies">{reply}</h1>
+            <h1 className="publicReplies">{pubReplies}</h1>
         </div>
     )
 }

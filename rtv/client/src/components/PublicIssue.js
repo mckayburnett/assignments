@@ -19,6 +19,8 @@ export default function PublicIssue(props){
     const [likey, setLikey] = useState({likes: likes, token: ""})
     const [dislikey, setDislikey] = useState({dislikes: dislikes, token: ""})
 
+    const [responses, setResponses] = useState("")
+
     function clickComment(e){
         setCommentClicked(!commentClicked)
         setReplyId(_id)
@@ -41,10 +43,8 @@ export default function PublicIssue(props){
         setDislikey({ dislikes: updatedDislikes });
         addDislike(_id);
     }
-    console.log('replyreply', reply.map(id => id))
-    useEffect(() => {
-        reply.map(id => getReplies(id))
-    },[reply])
+    
+    
     return(
         <div className="publicIssueWrapper">
             <div className="publicInfoContainer">
