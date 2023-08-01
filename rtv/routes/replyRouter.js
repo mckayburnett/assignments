@@ -47,7 +47,7 @@ replyRouter.get('/:replyId', (req, res, next) => {
       res.status(500)
       return next(err)
     }
-    return res.status(200).send(foundReply.text)
+    return res.status(200).send(foundReply)
   })
 })
 //get all replies

@@ -7,10 +7,10 @@ export default function PublicIssueList(props){
     const { publicState } = props
     const pubIssues = publicState.issues
     const sortedIssues = pubIssues?.sort((a,b) => a.likes < b.likes ? 1: -1)
-    
+
     return(
         <div>
-            {sortedIssues ? sortedIssues.map(issue => <PublicIssue {...issue} key={issue._id}  pubIssues={pubIssues} replies={issue.reply}/>) : null }
+            {sortedIssues ? sortedIssues.map(issue => <PublicIssue {...issue} key={issue._id}  pubIssues={pubIssues} replies={issue.reply} sortedIssues={sortedIssues}/>) : null }
         </div>
     )
 }

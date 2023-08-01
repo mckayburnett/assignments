@@ -23,8 +23,10 @@ export default function PublicProvider(props){
     }
     const [userState, setUserState] = useState(initState)
 
-    const initReplies = []
-    const [pubReplies, setPubReplies] = useState([])
+    const initReplies = {
+        replies: []
+    }
+    const [pubReplies, setPubReplies] = useState(initReplies)
 
     //public
     const initPublic = {
@@ -41,8 +43,6 @@ export default function PublicProvider(props){
                 // user: res.user,
                 issues: res.data
             }))
-            console.log("publicState",publicState.issues)
-            console.log('res', res.data)
         })
         .catch(err => console.log(err.response.data.errMsg))
     }
@@ -83,11 +83,15 @@ export default function PublicProvider(props){
             })
             .catch(err => console.log(err))
     }
-    function getReplies(replyId){
-        userAxios.get(`/api/reply/${replyId}`)
+    function getReplies(issueId){
+        userAxios.get(`/api/reply/issue/${issueId}`)
             .then(res => {
-                console.log(res.data[0])
-                setPubReplies(res.data[0])
+                setPubReplies(prev => ({
+                    ...prev,
+                    replies: res.data
+                }))
+                console.log('res.data',res.data)
+                console.log('pubReplies from context',pubReplies)
             })
             .catch(err => console.log(err))
     }

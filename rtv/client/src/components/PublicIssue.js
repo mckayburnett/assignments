@@ -12,14 +12,14 @@ export default function PublicIssue(props){
 
     const { issue, comment, imgUrl, user, _id, likes, dislikes, pubIssues, reply, replies } = props
     const { addReply, color, addDislike, likeComment, addLike, publicState, setPublicState, getAllIssues, getReplies, pubReplies } = useContext(PublicContext)
-    
+
     const [commentClicked, setCommentClicked] = useState(false)
+    const [viewCommentsClicked, setViewCommentsClicked] = useState(false)
     const [replyId, setReplyId] = useState("")
 
     const [likey, setLikey] = useState({likes: likes, token: ""})
     const [dislikey, setDislikey] = useState({dislikes: dislikes, token: ""})
 
-    const [responses, setResponses] = useState("")
 
     function clickComment(e){
         setCommentClicked(!commentClicked)
@@ -43,8 +43,10 @@ export default function PublicIssue(props){
         setDislikey({ dislikes: updatedDislikes });
         addDislike(_id);
     }
-    
-    
+    function viewComments(){
+        setViewCommentsClicked(prev => !prev)
+        getReplies(_id)
+    }
     return(
         <div className="publicIssueWrapper">
             <div className="publicInfoContainer">
@@ -72,9 +74,16 @@ export default function PublicIssue(props){
                 </div>
                 }
                 
+                {  viewCommentsClicked ?
                 <div className="publicReplyContainer">
-                    {replies && replies.map(reply => <PublicReplies reply={reply} key={reply}/>)}
+                    <button onClick={viewComments}>Hide Comments</button>
+                    {pubReplies.length > 0 ? pubReplies.map(data => <PublicReplies {...data} key={data._id} data={data}/>): <h1>No Comments</h1>}
                 </div>
+                :
+                <div className="publicReplyContainer">
+                    <button onClick={viewComments}>Show Comments</button>
+                </div>
+                }
                 
             </div>
         </div>

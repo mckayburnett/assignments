@@ -5,18 +5,13 @@ import axios from 'axios'
 
 export default function PublicReplies(props){
 
-    const { reply } = props
-    const { getReplies, pubReplies } = useContext(PublicContext)
-    
-    useEffect(() => {
-        getReplies(reply)
-      }, [reply])
-    
-    console.log('pubreplies', pubReplies)
+    const { data } = props
+
+    console.log('testing data from public replies')
     
     return(
         <div className="publicRepliesContainer">
-            <h1 className="publicReplies">{pubReplies}</h1>
+            <h1 className="publicReplies">{}</h1>
         </div>
     )
 }
