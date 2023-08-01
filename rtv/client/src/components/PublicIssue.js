@@ -16,7 +16,7 @@ export default function PublicIssue(props){
     const [commentClicked, setCommentClicked] = useState(false)
     const [viewCommentsClicked, setViewCommentsClicked] = useState(false)
     const [replyId, setReplyId] = useState("")
-
+    const [passReplies, setPassReplies] = useState("")
     const [likey, setLikey] = useState({likes: likes, token: ""})
     const [dislikey, setDislikey] = useState({dislikes: dislikes, token: ""})
 
@@ -44,8 +44,9 @@ export default function PublicIssue(props){
         addDislike(_id);
     }
     function viewComments(){
-        setViewCommentsClicked(prev => !prev)
         getReplies(_id)
+        setViewCommentsClicked(!viewCommentsClicked)
+        console.log('pubreplies',pubReplies)
     }
     return(
         <div className="publicIssueWrapper">
@@ -77,7 +78,7 @@ export default function PublicIssue(props){
                 {  viewCommentsClicked ?
                 <div className="publicReplyContainer">
                     <button onClick={viewComments}>Hide Comments</button>
-                    {pubReplies.length > 0 ? pubReplies.map(data => <PublicReplies {...data} key={data._id} data={data}/>): <h1>No Comments</h1>}
+                    {pubReplies && pubReplies.replies.map(data => <PublicReplies {...data} key={data._id} data={data}/>)}
                 </div>
                 :
                 <div className="publicReplyContainer">

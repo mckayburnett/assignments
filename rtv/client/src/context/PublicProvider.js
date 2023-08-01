@@ -86,15 +86,17 @@ export default function PublicProvider(props){
     function getReplies(issueId){
         userAxios.get(`/api/reply/issue/${issueId}`)
             .then(res => {
+                res.data.length > 0 && console.log('working')
+                console.log('res.data',res.data)
                 setPubReplies(prev => ({
                     ...prev,
                     replies: res.data
                 }))
-                console.log('res.data',res.data)
-                console.log('pubReplies from context',pubReplies)
+
             })
             .catch(err => console.log(err))
     }
+    
 
     return(
         <PublicContext.Provider

@@ -7,11 +7,11 @@ export default function PublicReplies(props){
 
     const { data } = props
 
-    console.log('testing data from public replies')
+    console.log('testing data from public replies', data.text)
     
     return(
         <div className="publicRepliesContainer">
-            <h1 className="publicReplies">{}</h1>
+            <h1 className="publicReplies">{data.text}</h1>
         </div>
     )
 }
