@@ -16,7 +16,6 @@ export default function PublicIssue(props){
     const [commentClicked, setCommentClicked] = useState(false)
     const [viewCommentsClicked, setViewCommentsClicked] = useState(false)
     const [replyId, setReplyId] = useState("")
-    const [passReplies, setPassReplies] = useState("")
     const [likey, setLikey] = useState({likes: likes, token: ""})
     const [dislikey, setDislikey] = useState({dislikes: dislikes, token: ""})
 
@@ -24,6 +23,7 @@ export default function PublicIssue(props){
     function clickComment(e){
         setCommentClicked(!commentClicked)
         setReplyId(_id)
+        console.log('e',e)
     }
     function clickLike() {
         getAllIssues();

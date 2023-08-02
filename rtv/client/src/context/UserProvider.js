@@ -27,6 +27,11 @@ export default function UserProvider(props){
     }
     const [publicState, setPublicState] = useState(initPublic)
 
+    const initReplies = {
+        replies: []
+    }
+    const [profReplies, setProfReplies] = useState(initReplies)
+
     function signup(credentials){
         axios.post('/auth/signup', credentials)
         .then(res => {
@@ -140,7 +145,19 @@ export default function UserProvider(props){
             })
             .catch(err => console.log(err.response.data.errMsg))
     }
+    function getReplies(issueId){
+        userAxios.get(`/api/reply/issue/${issueId}`)
+            .then(res => {
+                res.data.length > 0 && console.log('working')
+                console.log('res.data',res.data)
+                setProfReplies(prev => ({
+                    ...prev,
+                    replies: res.data
+                }))
 
+            })
+            .catch(err => console.log(err))
+    }
     
     
 
@@ -155,7 +172,10 @@ export default function UserProvider(props){
                 publicState,
                 deleteIssue, 
                 getAllIssues,
-                getUserIssues
+                getUserIssues,
+                getReplies,
+                profReplies,
+                setProfReplies
                 
             }}
         >

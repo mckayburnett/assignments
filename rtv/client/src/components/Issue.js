@@ -1,17 +1,33 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { UserContext } from '../context/UserProvider.js'
 import { FaRegComments } from 'react-icons/fa'
 import { BiLike } from 'react-icons/bi'
 import { BiDislike } from 'react-icons/bi'
 import { FaTrash } from 'react-icons/fa'
 import { FaEdit } from 'react-icons/fa'
+import ProfileReplies from './ProfileReplies.js'
 
 
 export default function Issue(props){
 
   const { username, issue, comment, imgUrl, _id, likes, dislikes } = props
-  const { deleteIssue } = useContext(UserContext)
-  console.log(_id)
+  const { deleteIssue, getReplies, profReplies, setProfReplies } = useContext(UserContext)
+
+  const [commentClicked, setCommentClicked] = useState(false)
+  const [viewCommentsClicked, setViewCommentsClicked] = useState(false)
+
+  //for adding a comment
+  function clickComment(e){
+    setCommentClicked(!commentClicked)
+    //setReplyId(_id)
+    console.log(e)
+  }
+  //for viewing comments
+  function viewComments(){
+  getReplies(_id)
+  setViewCommentsClicked(!viewCommentsClicked)
+  }
+
   return (
     <div className="issue">
       <div className="issueIcons">
@@ -35,7 +51,18 @@ export default function Issue(props){
                 </div>
             </div>
         </div>
+        
       </div>
+      {  viewCommentsClicked ?
+        <div className="profileReplyContainer">
+            <button onClick={viewComments}>Hide Comments</button>
+            {profReplies && profReplies.replies.map(data => <ProfileReplies {...data} key={data._id} data={data}/>)}
+        </div>
+      :
+        <div className="profileReplyContainer">
+            <button onClick={viewComments}>Show Comments</button>
+        </div>
+      }
     </div>
   )
 }
