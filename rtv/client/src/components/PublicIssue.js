@@ -46,7 +46,7 @@ export default function PublicIssue(props){
     function viewComments(){
         getReplies(_id)
         setViewCommentsClicked(!viewCommentsClicked)
-        console.log('pubreplies',pubReplies)
+        console.log('pubreplies',pubReplies.replies[_id])
     }
     return(
         <div className="publicIssueWrapper">
@@ -57,7 +57,13 @@ export default function PublicIssue(props){
                     <h2 className="publicComment"><strong>{user}{" "}</strong>{" "}{comment}</h2>                   
                 </div>
                 <div className="publicIcons">
-                    <FaRegComments className="addComment" onClick={clickComment}/>
+                    { !commentClicked ? 
+                        <FaRegComments className="addComment" onClick={clickComment}/> 
+                    : 
+                        <div className="publicReplyForm">
+                            <ReplyForm replyId={replyId} addReply={addReply} setCommentClicked={setCommentClicked} commentClicked={commentClicked}/>
+                        </div>
+                    }
                     <div className="publicLikes">
                         <div className="likeGroup">   
                             <BiLike className="thumbsUp" onClick={clickLike} />
@@ -69,20 +75,14 @@ export default function PublicIssue(props){
                         </div>
                     </div>
                 </div>
-                { commentClicked &&
-                <div className="publicReplyForm">
-                    <ReplyForm replyId={replyId} addReply={addReply} />
-                </div>
-                }
-                
                 {  viewCommentsClicked ?
                 <div className="publicReplyContainer">
-                    <button onClick={viewComments}>Hide Comments</button>
-                    {pubReplies && pubReplies.replies.map(data => <PublicReplies {...data} key={data._id} data={data}/>)}
+                    <button className="commentsButton" onClick={viewComments}>Hide Comments</button>
+                    {pubReplies.replies[_id] && pubReplies.replies[_id].map(data => <PublicReplies {...data} key={data._id} data={data}/>)}
                 </div>
                 :
                 <div className="publicReplyContainer">
-                    <button onClick={viewComments}>Show Comments</button>
+                    <button className="commentsButton" onClick={viewComments}>Show Comments</button>
                 </div>
                 }
                 

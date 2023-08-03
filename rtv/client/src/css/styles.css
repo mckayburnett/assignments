@@ -271,6 +271,10 @@ strong{
   font-weight: 100;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
+.profileReplyContainer{
+  display: inline;
+  padding: 20px;
+}
 
 /* public */
 .public{
@@ -317,6 +321,20 @@ strong{
 }
 .publicReplyForm{
   grid-column: 2/4;
+}
+.replyInput{
+  height: 70px;
+  width: 95%;
+}
+.replyCancel{
+  display:inline-block;
+  margin: 5px;
+  width: 60px;
+}
+.replyPost{
+  display: inline-block;
+  margin: 5px;
+  width: 60px;
 }
 strong{
   font: 700;
@@ -384,7 +402,12 @@ strong{
   background-color: rgba(255, 255, 255, 0.501);
   font-weight: 100;
   text-align: left;
+  width: max-content;
 }
 .publicReplies > strong{
   font-size: medium;
+}
+.commentsButton{
+  display:flex;
+  margin-bottom: 10px;    
 }

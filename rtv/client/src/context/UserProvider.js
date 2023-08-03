@@ -28,7 +28,7 @@ export default function UserProvider(props){
     const [publicState, setPublicState] = useState(initPublic)
 
     const initReplies = {
-        replies: []
+        replies: {}
     }
     const [profReplies, setProfReplies] = useState(initReplies)
 
@@ -152,7 +152,10 @@ export default function UserProvider(props){
                 console.log('res.data',res.data)
                 setProfReplies(prev => ({
                     ...prev,
-                    replies: res.data
+                    replies: {
+                        ...prev.replies,
+                        [issueId]: res.data
+                    }
                 }))
 
             })

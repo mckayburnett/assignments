@@ -39,30 +39,31 @@ export default function Issue(props){
         <h1 className="issueTitle">{ issue }</h1>
         <h3 className="issueComment"><strong>{ username } </strong> { comment }</h3>
         <div className="profileIcons">
-            <FaRegComments className="addComment" /*onClick={clickComment}*//>
-            <div className="publicLikes">
-                <div className="likeGroup">   
-                    <BiLike className="thumbsUp" /*onClick={clickLike}*/ />
-                    <h1 className="likes">{likes}</h1>
-                </div> 
-                <div className="dislikeGroup">
-                    <BiDislike className="thumbsDown" /*onClick={clickDislike}*/ /> 
-                    <h1 className="dislikes">{dislikes}</h1>
-                </div>
+          <FaRegComments className="addComment" /*onClick={clickComment}*//>
+          <div className="publicLikes">
+              <div className="likeGroup">   
+                  <BiLike className="thumbsUp" /*onClick={clickLike}*/ />
+                  <h1 className="likes">{likes}</h1>
+              </div> 
+              <div className="dislikeGroup">
+                  <BiDislike className="thumbsDown" /*onClick={clickDislike}*/ /> 
+                  <h1 className="dislikes">{dislikes}</h1>
+              </div>
+          </div>
+          {  viewCommentsClicked ?
+            <div className="profileReplyContainer">
+              <button onClick={viewComments}>Hide Comments</button>
+              {profReplies.replies[_id] && profReplies.replies[_id].map(data => <ProfileReplies {...data} key={data._id} data={data}/>)}
             </div>
+          :
+            <div className="profileReplyContainer">
+              <button onClick={viewComments}>Show Comments</button>
+            </div>
+          }
         </div>
         
       </div>
-      {  viewCommentsClicked ?
-        <div className="profileReplyContainer">
-            <button onClick={viewComments}>Hide Comments</button>
-            {profReplies && profReplies.replies.map(data => <ProfileReplies {...data} key={data._id} data={data}/>)}
-        </div>
-      :
-        <div className="profileReplyContainer">
-            <button onClick={viewComments}>Show Comments</button>
-        </div>
-      }
+      
     </div>
   )
 }

@@ -4,7 +4,7 @@ import { UserContext } from '../context/UserProvider.js'
 
 export default function ReplyForm(props){
 
-  const { replyId, addReply } = props
+  const { replyId, addReply, setCommentClicked, commentClicked } = props
   const [id, setId] = useState("")
   const [reply, setReply] = useState([])
 
@@ -24,11 +24,15 @@ export default function ReplyForm(props){
     return(
       <form className="replyForm" onSubmit={handleSubmit}>
         <input 
+          className="replyInput"
           type="text" 
           name="reply" 
           value={reply} 
           onChange={handleChange} 
-          placeholder="Reply here"/>
+          placeholder="Reply here"
+        />
+        <button className="replyCancel" onClick={() => setCommentClicked(!commentClicked)}>Cancel</button>
+        <button className="replyPost" onClick={handleSubmit}>Post</button>
       </form>
     )
 }
