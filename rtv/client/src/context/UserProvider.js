@@ -145,6 +145,14 @@ export default function UserProvider(props){
             })
             .catch(err => console.log(err.response.data.errMsg))
     }
+    function addReply(newReply, _id){
+        userAxios.put(`/api/reply/${_id}`, newReply)
+            .then(res => {
+                console.log('res',res.data.reply)
+                console.log('newReply', newReply)
+            })
+            .catch(err => console.log(err))
+    }
     function getReplies(issueId){
         userAxios.get(`/api/reply/issue/${issueId}`)
             .then(res => {
@@ -176,10 +184,10 @@ export default function UserProvider(props){
                 deleteIssue, 
                 getAllIssues,
                 getUserIssues,
+                addReply,
                 getReplies,
                 profReplies,
-                setProfReplies
-                
+                setProfReplies 
             }}
         >
             { props.children }

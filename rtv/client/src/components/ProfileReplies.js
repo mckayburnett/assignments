@@ -10,7 +10,11 @@ export default function ProfileReplies(props){
     
     return(
         <div className="profilecRepliesContainer">
-            <h1 className="profileReplies"><strong>{data.user} </strong> {data.text}</h1>
+            { data.text.length > 0 ? 
+                <h1 className="profileReplies"><strong>{data.user} </strong> {data.text}</h1> 
+            : 
+                <h1 className="profileReplies">No Comments</h1>
+            }
         </div>
     )
 }
