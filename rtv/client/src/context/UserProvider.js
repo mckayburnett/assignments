@@ -135,7 +135,6 @@ export default function UserProvider(props){
                     ...prevPublicState,
                     user
                 }))
-            console.log('publicState', publicState)
             getUserIssues()
             setUserState(prevUserState => ({
                 ...prevUserState,

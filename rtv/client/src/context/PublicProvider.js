@@ -78,16 +78,20 @@ export default function PublicProvider(props){
     function addReply(newReply, _id){
         userAxios.put(`/api/reply/${_id}`, newReply)
             .then(res => {
-                console.log('res',res.data.reply)
-                console.log('newReply', newReply)
+                console.log(res, newReply)
+                setPubReplies(prev => ({
+                    ...prev,
+                    replies: {
+                        ...prev.replies,
+                        [_id]: newReply
+                    }
+                }))
             })
             .catch(err => console.log(err))
     }
     function getReplies(issueId){
         userAxios.get(`/api/reply/issue/${issueId}`)
             .then(res => {
-                res.data.length > 0 && console.log('working')
-                console.log('res.data',res.data)
                 setPubReplies(prev => ({
                     ...prev,
                     replies: {

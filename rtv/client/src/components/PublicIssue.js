@@ -61,7 +61,7 @@ export default function PublicIssue(props){
                         <FaRegComments className="addComment" onClick={clickComment}/> 
                     : 
                         <div className="publicReplyForm">
-                            <ReplyForm replyId={replyId} addReply={addReply} setCommentClicked={setCommentClicked} commentClicked={commentClicked}/>
+                            <ReplyForm key={replyId} replyId={replyId} addReply={addReply} setCommentClicked={setCommentClicked} commentClicked={commentClicked}/>
                         </div>
                     }
                     <div className="publicLikes">

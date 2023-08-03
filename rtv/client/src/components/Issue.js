@@ -42,21 +42,21 @@ export default function Issue(props){
         <h3 className="issueComment"><strong>{ username } </strong> { comment }</h3>
         <div className="profileIcons">
         { !commentClicked ? 
-                        <FaRegComments className="addComment" onClick={clickComment}/> 
-                    : 
-                        <div className="publicReplyForm">
-                            <ReplyForm replyId={replyId} addReply={addReply} setCommentClicked={setCommentClicked} commentClicked={commentClicked}/>
-                        </div>
-                    }
+          <FaRegComments className="addComment" onClick={clickComment}/> 
+        : 
+          <div className="publicReplyForm">
+            <ReplyForm replyId={replyId} addReply={addReply} setCommentClicked={setCommentClicked} commentClicked={commentClicked}/>
+          </div>
+        }
           <div className="publicLikes">
-              <div className="likeGroup">   
-                  <BiLike className="thumbsUp" /*onClick={clickLike}*/ />
-                  <h1 className="likes">{likes}</h1>
-              </div> 
-              <div className="dislikeGroup">
-                  <BiDislike className="thumbsDown" /*onClick={clickDislike}*/ /> 
-                  <h1 className="dislikes">{dislikes}</h1>
-              </div>
+            <div className="likeGroup">   
+              <BiLike className="thumbsUp" /*onClick={clickLike}*/ />
+              <h1 className="likes">{likes}</h1>
+            </div> 
+            <div className="dislikeGroup">
+              <BiDislike className="thumbsDown" /*onClick={clickDislike}*/ /> 
+              <h1 className="dislikes">{dislikes}</h1>
+            </div>
           </div>
           {  viewCommentsClicked ?
             <div className="profileReplyContainer">
@@ -69,9 +69,7 @@ export default function Issue(props){
             </div>
           }
         </div>
-        
       </div>
-      
     </div>
   )
 }

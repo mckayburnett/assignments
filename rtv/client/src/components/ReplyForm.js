@@ -31,8 +31,8 @@ export default function ReplyForm(props){
           onChange={handleChange} 
           placeholder="Reply here"
         />
-        <button className="replyCancel" onClick={() => setCommentClicked(!commentClicked)}>Cancel</button>
-        <button className="replyPost" onClick={handleSubmit}>Post</button>
+        <button className="replyCancel" type="button" onClick={() => setCommentClicked(!commentClicked)}>Cancel</button>
+        <button className="replyPost" type="button" onClick={handleSubmit}>Post</button>
       </form>
     )
 }

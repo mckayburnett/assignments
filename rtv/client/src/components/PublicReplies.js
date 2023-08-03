@@ -6,12 +6,10 @@ import axios from 'axios'
 export default function PublicReplies(props){
 
     const { data } = props
-
-    console.log('testing data from public replies', data)
     
     return(
         <div className="publicRepliesContainer">
-            <h1 className="publicReplies"><strong>{data.user} </strong> {data.text}</h1>
+            { data ? <h1 className="publicReplies"><strong>{data.user} </strong> {data.text}</h1> : <h1 className="pubReplies">No Replies</h1>}
         </div>
     )
 }
