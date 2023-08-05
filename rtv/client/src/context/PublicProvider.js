@@ -39,10 +39,12 @@ export default function PublicProvider(props){
     function getUsername(userId){
         axios.get(`/auth/username/${userId}`)
         .then(res => {
-            setUsername(res.data)
+            console.log(res.data)
         })
         .catch(err => console.log(err.response.data.errMsg))
     }
+    
+    
     function getAllIssues(){
         userAxios.get('/api/issue')
         .then(res => {
