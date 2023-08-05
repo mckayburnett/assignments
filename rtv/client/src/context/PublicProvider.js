@@ -27,6 +27,7 @@ export default function PublicProvider(props){
         replies: {}
     }
     const [pubReplies, setPubReplies] = useState(initReplies)
+    const [username, setUsername] = useState("")
 
     //public
     const initPublic = {
@@ -35,6 +36,13 @@ export default function PublicProvider(props){
     }
     const [publicState, setPublicState] = useState(initPublic)
 
+    function getUsername(userId){
+        axios.get(`/auth/username/${userId}`)
+        .then(res => {
+            setUsername(res.data)
+        })
+        .catch(err => console.log(err.response.data.errMsg))
+    }
     function getAllIssues(){
         userAxios.get('/api/issue')
         .then(res => {
@@ -108,6 +116,8 @@ export default function PublicProvider(props){
     return(
         <PublicContext.Provider
             value={{
+                getUsername,
+                username,
                 addReply,
                 addDislike,
                 addLike,

@@ -9,16 +9,17 @@ import PublicReplies from './PublicReplies.js'
 
 
 export default function PublicIssue(props){
-
     const { issue, comment, imgUrl, user, _id, likes, dislikes, pubIssues, reply, replies } = props
-    const { addReply, color, addDislike, likeComment, addLike, publicState, setPublicState, getAllIssues, getReplies, pubReplies } = useContext(PublicContext)
+    const { getUsername, username, addReply, color, addDislike, likeComment, addLike, publicState, setPublicState, getAllIssues, getReplies, pubReplies } = useContext(PublicContext)
 
     const [commentClicked, setCommentClicked] = useState(false)
     const [viewCommentsClicked, setViewCommentsClicked] = useState(false)
     const [replyId, setReplyId] = useState("")
     const [likey, setLikey] = useState({likes: likes, token: ""})
     const [dislikey, setDislikey] = useState({dislikes: dislikes, token: ""})
-
+    useEffect(() => {
+        getUsername(user)
+    })
 
     function clickComment(e){
         setCommentClicked(!commentClicked)
@@ -54,7 +55,7 @@ export default function PublicIssue(props){
                 <img className="publicImage" src={imgUrl} alt={imgUrl} width={300}/>
                 <div className="publicWords">
                     <h1 className="publicIssue">{issue}</h1>
-                    <h2 className="publicComment"><strong>{user}{" "}</strong>{" "}{comment}</h2>                   
+                    <h2 className="publicComment"><strong>{username}{" "}</strong>{" "}{comment}</h2>                   
                 </div>
                 <div className="publicIcons">
                     { !commentClicked ? 

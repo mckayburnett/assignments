@@ -53,4 +53,15 @@ authRouter.post('/login', (req, res, next) => {
     })
 })
 
+//get username
+authRouter.get('/username/:userId', (req, res, next) => {
+    User.findOne({_id: req.params.userId}, (err, foundUsername) => {
+        if(err){
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(foundUsername.username)
+    })
+})
+
 module.exports = authRouter 

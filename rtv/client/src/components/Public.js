@@ -7,10 +7,9 @@ export default function Public(){
 
   const { user: { username }, addIssue, issues, publicState, makePublic } = useContext(UserContext)
 
-
   return (
     <div className="public">
-      <PublicIssueList publicState={publicState} />
+      <PublicIssueList publicState={publicState} username={username}/>
     </div>
   )
 }

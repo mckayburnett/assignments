@@ -169,9 +169,20 @@ html{
 }
 /* profile */
 .username{
-  font-size: xxx-large;
-  -webkit-text-fill-color: rgb(154, 60, 72);
-  -webkit-text-stroke: rgb(57, 112, 171) 2px;
+  font-size: 80px;
+  -webkit-text-stroke: rgb(255, 255, 255) 2px;
+  background-image: url('../images/flags.jpg');
+  background-position: center right;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; 
+  text-shadow: rgba(0, 0, 0, 0.374) 5px 5px 5px;
+  z-index: -1; 
+}
+.profile > h1{
+  font-size: 60px;
+  text-shadow: rgba(0, 0, 0, 0.374) 5px 5px 5px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 .inputImg{
   width: 300px;
