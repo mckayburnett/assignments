@@ -23,7 +23,7 @@ export default function ReplyForm(props){
 
     return(
       <form className="replyForm" onSubmit={handleSubmit}>
-        <input 
+        <textarea 
           className="replyInput"
           type="text" 
           name="reply" 

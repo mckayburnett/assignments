@@ -44,7 +44,7 @@ export default function Issue(props){
         { !commentClicked ? 
           <FaRegComments className="addComment" onClick={clickComment}/> 
         : 
-          <div className="publicReplyForm">
+          <div className="profileReplyForm">
             <ReplyForm replyId={replyId} addReply={addReply} setCommentClicked={setCommentClicked} commentClicked={commentClicked}/>
           </div>
         }

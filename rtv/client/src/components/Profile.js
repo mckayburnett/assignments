@@ -16,7 +16,7 @@ export default function Profile(){
 
   return (
     <div className="profile">
-      <h1>Welcome @{username}!</h1>
+      <h1><strong className="username">{username}'s</strong> Profile Page</h1>
       <IssueForm addIssue={addIssue}/>
       <IssueList issues={issues} username={username}/>
     </div>
