@@ -5,6 +5,7 @@ import axios from 'axios'
 export default function ProfileReplies(props){
 
     const { data } = props
+    console.log('data',data)
     
     return(
         <div className="profilecRepliesContainer">

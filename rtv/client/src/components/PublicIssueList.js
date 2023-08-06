@@ -13,7 +13,7 @@ export default function PublicIssueList(props){
 
     return(
         <div>
-            {sortedIssues ? sortedIssues.map(issue => <PublicIssue {...issue} key={issue._id}  pubIssues={pubIssues} replies={issue.reply} sortedIssues={sortedIssues} user={issue.user}/>) : null }
+            {sortedIssues ? sortedIssues.map(issue => <PublicIssue {...issue} key={issue._id} getUsername={getUsername} pubIssues={pubIssues} replies={issue.reply} sortedIssues={sortedIssues} user={issue.user}/>) : null }
         </div>
     )
 }

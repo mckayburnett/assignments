@@ -9,8 +9,8 @@ import PublicReplies from './PublicReplies.js'
 
 
 export default function PublicIssue(props){
-    const { issue, comment, imgUrl, user, _id, likes, dislikes, pubIssues, reply, replies } = props
-    const { getUsername, username, addReply, color, addDislike, likeComment, addLike, publicState, setPublicState, getAllIssues, getReplies, pubReplies } = useContext(PublicContext)
+    const { issue, comment, imgUrl, user, username, _id, likes, dislikes, pubIssues, reply, replies, getUsername } = props
+    const { addReply, color, addDislike, likeComment, addLike, publicState, setPublicState, getAllIssues, getReplies, pubReplies } = useContext(PublicContext)
 
     const [commentClicked, setCommentClicked] = useState(false)
     const [viewCommentsClicked, setViewCommentsClicked] = useState(false)
@@ -25,18 +25,14 @@ export default function PublicIssue(props){
     }
     function clickLike() {
         getAllIssues();
-        console.log('pubIssues:', pubIssues);
         const index = pubIssues?.findIndex(issue => issue._id === _id);
-        console.log('index:', index);
         const updatedLikes = index >= 0 ? publicState?.issues[index]?.likes : likes + 1;
         setLikey({ likes: updatedLikes });
         addLike(_id);
       }
     function clickDislike(){
         getAllIssues();
-        console.log('pubIssues:', pubIssues);
         const index = pubIssues?.findIndex(issue => issue._id === _id);
-        console.log('index:', index);
         const updatedDislikes = index >= 0 ? publicState?.issues[index]?.likes : likes + 1;
         setDislikey({ dislikes: updatedDislikes });
         addDislike(_id);
@@ -45,13 +41,14 @@ export default function PublicIssue(props){
         getReplies(_id)
         setViewCommentsClicked(!viewCommentsClicked)
     }
+  
     return(
         <div className="publicIssueWrapper">
             <div className="publicInfoContainer">
                 <img className="publicImage" src={imgUrl} alt={imgUrl} width={300}/>
                 <div className="publicWords">
                     <h1 className="publicIssue">{issue}</h1>
-                    <h2 className="publicComment"><strong>{issue.username}{" "}</strong>{" "}{comment}</h2>                   
+                    <h2 className="publicComment"><strong>{username}{" "}</strong>{" "}{comment}</h2>                   
                 </div>
                 <div className="publicIcons">
                     { !commentClicked ? 

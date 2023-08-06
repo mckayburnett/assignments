@@ -47,14 +47,17 @@ export default function PublicProvider(props){
     
     function getAllIssues(){
         userAxios.get('/api/issue')
-        .then(res => {
-            setPublicState(prevState => ({
+            .then(res => {
+                const issuesWithUsername = res.data.map(issue => ({
+                    ...issue,
+                    username: issue.user.username // Assuming the user field in the issue contains the user data
+                }));
+                setPublicState(prevState => ({
                 ...prevState,
-                // user: res.user,
-                issues: res.data
-            }))
-        })
-        .catch(err => console.log(err.response.data.errMsg))
+                issues: issuesWithUsername
+                }));
+            })
+            .catch(err => console.log(err.response.data.errMsg));
     }
 
     function getUserIssues(){

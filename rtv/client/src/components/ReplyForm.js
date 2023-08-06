@@ -19,6 +19,7 @@ export default function ReplyForm(props){
     e.preventDefault()
     addReply(reply, id)
     setReply([])
+    setCommentClicked(!commentClicked)
   }
 
     return(
