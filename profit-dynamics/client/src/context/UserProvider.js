@@ -1,6 +1,8 @@
 import axios from "axios"
 import React, { useState } from 'react'
 
+export const UserContext = React.createContext()
+
 export default function UserProvider(props){
 
     const initState = {
@@ -18,4 +20,13 @@ export default function UserProvider(props){
             })
     }
 
+    return(
+        <UserContext.Provider
+            value={{
+
+            }}
+        >
+            { props.children }
+        </UserContext.Provider>
+    )
 }
