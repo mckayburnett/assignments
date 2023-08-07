@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react"
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import React, { useState, useContext } from "react"
+import { BrowserRouter as Routes, Route, Link, Navigate } from "react-router-dom"
+import { UserContext } from "./context/UserProvider.js"
 import Sales from "./components/Sales.js"
 import Home from "./components/Home.js"
 
 export default function App(){
-
+  const { token } = useContext(UserContext)
   const [signInToggle, setSignInToggle] = useState(false)
   const [confirmToggle, setConfirmToggle] = useState()
   const [incorrectToggle, setIncorrectToggle] = useState(false)
