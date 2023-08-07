@@ -6,9 +6,9 @@ export default function Navbar(props){
   return (
     <>
     <div className="navbar">
-      <Link to="/profile">Profile</Link>
-      <Link to="/public">Public</Link>
-      <button onClick={ logout }>Logout</button>
+      <Link to="/profile" className="navProf">Profile</Link>
+      <Link to="/public" className="navPub">Public</Link>
+      <h1 className="navLog" onClick={ logout }>Logout</h1>
     </div>
     <div className="spacer">
       &nbsp;

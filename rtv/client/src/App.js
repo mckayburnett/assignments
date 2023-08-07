@@ -16,7 +16,7 @@ export default function App() {
       <Routes>
         <Route 
           path="/"
-          element={ token ? <Navigate to='/profile' /> : <Auth />}
+          element={ token ? <Navigate to='/public' /> : <Auth />}
         />
         <Route 
           path="/profile"

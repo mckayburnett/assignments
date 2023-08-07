@@ -9,6 +9,7 @@ export default function Public(){
 
   return (
     <div className="public">
+      <h1 className="publicName">Public Page</h1>
       <PublicIssueList publicState={publicState} username={username}/>
     </div>
   )

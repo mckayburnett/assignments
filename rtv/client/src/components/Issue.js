@@ -40,6 +40,16 @@ export default function Issue(props){
       <div>
         <h1 className="issueTitle">{ issue }</h1>
         <h3 className="issueComment"><strong>{ username } </strong> { comment }</h3>
+        {  viewCommentsClicked ?
+            <div className="profileReplyContainer">
+              <button onClick={viewComments}>Hide Comments</button>
+              {profReplies.replies[_id] && profReplies.replies[_id].map(data => <ProfileReplies {...data} key={data._id} data={data}/>)}
+            </div>
+          :
+            <div className="profileReplyContainer">
+              <button onClick={viewComments}>Show Comments</button>
+            </div>
+          }
         <div className="profileIcons">
         { !commentClicked ? 
           <FaRegComments className="addComment" onClick={clickComment}/> 
@@ -57,17 +67,7 @@ export default function Issue(props){
               <BiDislike className="thumbsDown" /*onClick={clickDislike}*/ /> 
               <h1 className="dislikes">{dislikes}</h1>
             </div>
-          </div>
-          {  viewCommentsClicked ?
-            <div className="profileReplyContainer">
-              <button onClick={viewComments}>Hide Comments</button>
-              {profReplies.replies[_id] && profReplies.replies[_id].map(data => <ProfileReplies {...data} key={data._id} data={data}/>)}
-            </div>
-          :
-            <div className="profileReplyContainer">
-              <button onClick={viewComments}>Show Comments</button>
-            </div>
-          }
+          </div> 
         </div>
       </div>
     </div>

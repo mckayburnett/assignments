@@ -30,6 +30,22 @@ html{
   border: 3px solid black;
   z-index: 101;
 }
+.navProf{
+  color: rgb(171, 20, 20);
+  font-weight: 900;
+  font-size: x-large;
+}
+.navPub{
+  color: rgb(171, 20, 20);
+  font-weight: 900;
+  font-size: x-large;
+}
+.navLog{
+  color: rgb(171, 20, 20);
+  cursor: pointer;
+  font-weight: 900;
+  font-size: x-large;
+}
 .spacer{
   height: 40px;
   width: 100%;
@@ -216,7 +232,8 @@ html{
 }
 .issue > img{
   border-radius: 20px;
-  width: 350px;
+  max-width: 350px;
+  max-height: 270px;
 }
 .issueTitle{
   padding: 10px;
@@ -247,8 +264,7 @@ strong{
   cursor: pointer;
 }
 .profileIcons{
-  position: absolute;
-  padding-top: 10px;
+  position: relative;
   color: white;
   padding-left: 10px;
 }
@@ -291,12 +307,16 @@ strong{
   display:inline-flex
 }
 .profileReplyContainer{
-  display: inline-flex;
-  padding: 20px;
+  display: flexbox;
+  padding: 10px;
+  max-width: 100%;
 }
 .profileReplies{
   color: black;
   font-weight: 100;
+  padding: 5px;
+  border: 2px blue solid;
+  border-radius: 15px;
 }
 .profileReplies > strong {
   font-size: medium;
@@ -310,6 +330,18 @@ strong{
   height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+.publicName{
+  font-size: 80px;
+  text-align: center;
+  -webkit-text-stroke: rgb(255, 255, 255) 2px;
+  background-image: url('../images/flags.jpg');
+  background-position: left;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; 
+  text-shadow: rgba(0, 0, 0, 0.374) 5px 5px 5px;
+  z-index: -1; 
 }
 .publicIssueWrapper{
   padding: 20px;
