@@ -36,27 +36,31 @@ export default function Home(){
             <div className="companyWrapper">
                 <div className="companyName" data-text="Dynamic Development">Dynamic Development</div>
             </div>
-            { toggle ?
-        <>
-          <AuthForm 
-            handleChange={handleChange}
-            handleSubmit={handleSignup}
-            inputs={inputs}
-            btnText="Sign up"
-          />
-          <p className="member" onClick={() => setToggle(prev => !prev)}>Already a member?</p>
-        </>
-      :
-        <>
-          <AuthForm 
-            handleChange={handleChange}
-            handleSubmit={handleLogin}
-            inputs={inputs}
-            btnText="Login"
-          />
-          <p className="member" onClick={() => setToggle(prev => !prev)}>Not a member?</p>
-        </>
-      }
+        { toggle ?
+            <div className="formContainer">
+                <AuthForm 
+                    handleChange={handleChange}
+                    handleSubmit={handleSignup}
+                    inputs={inputs}
+                    btnText="Sign up"
+                    memberText="Already a member?"
+                    toggle={toggle}
+                    setToggle={setToggle}
+                />
+            </div>
+        :
+            <div className="formContainer">
+                <AuthForm 
+                    handleChange={handleChange}
+                    handleSubmit={handleLogin}
+                    inputs={inputs}
+                    btnText="Login"
+                    memberText="Not a member?"
+                    toggle={toggle}
+                    setToggle={setToggle}
+                />
+            </div>
+        }
         </div>
     )
 }
