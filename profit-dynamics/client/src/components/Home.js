@@ -9,7 +9,7 @@ export default function Home(){
     const [inputs, setInputs] = useState(initInputs)
     const [toggle, setToggle] = useState(false)
   
-    const { signup, login } = useContext(UserContext)
+    const { signup, login, logout } = useContext(UserContext)
   
     function handleChange(e){
       const {name, value} = e.target

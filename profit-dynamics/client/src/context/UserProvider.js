@@ -17,13 +17,42 @@ export default function UserProvider(props){
                 const { user, token } = res.data
                 localStorage.setItem("token", token)
                 localStorage.setItem("user", JSON.stringify(user))
+                setUserState(prevState => ({
+                    ...prevState,
+                    user,
+                    token
+                }))
             })
+    }
+    function login(credentials){
+        axios.post('/auth/login', credentials)
+            .then(res => {
+                const { user, token } = res.data
+                localStorage.setItem("token", token)
+                localStorage.setItem("user", JSON.stringify(user))
+                setUserState(prevState => ({
+                    ...prevState,
+                    user,
+                    token
+                }))
+            })
+    }
+    function logout(){
+        localStorage.removeItem("user")
+        localStorage.removeItem("token")
+        setUserState({
+            user: {},
+            token: ""
+        })
     }
 
     return(
         <UserContext.Provider
             value={{
-
+                ...userState,
+                signup,
+                login,
+                logout
             }}
         >
             { props.children }

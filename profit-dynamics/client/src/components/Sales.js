@@ -7,42 +7,49 @@ import AddDataForm from "./AddDataForm"
 
 export default function Sales(props){
     
-const [sales, setSales] = useState([])
-const [dateOne, setDateOne] = useState([])
-const [dateTwo, setDateTwo] = useState([])
-const [graphSales, setGraphSales] = useState([])
-const [dataSet1, setDataSet1] = useState([])
-const [dataSet2, setDataSet2] = useState([])
-const [viewAdd, setViewAdd] = useState(false)
-const [viewChart, setViewChart] = useState(true)
-const [generate, setGenerate] = useState(false)
-function toggleChart(){
-  setViewChart(false)
+  const [sales, setSales] = useState([])
+  const [dateOne, setDateOne] = useState([])
+  const [dateTwo, setDateTwo] = useState([])
+  const [graphSales, setGraphSales] = useState([])
+  const [dataSet1, setDataSet1] = useState([])
+  const [dataSet2, setDataSet2] = useState([])
+  const [viewAdd, setViewAdd] = useState(false)
+  const [viewChart, setViewChart] = useState(true)
+  const [generate, setGenerate] = useState(false)
+  function toggleChart(){
+    setViewChart(false)
 }
+
+  const userAxios = axios.create()
+  userAxios.interceptors.request.use(config => {
+    const token = localStorage.getItem("token")
+    config.headers.Authorization = `Bearer ${token}`
+    return config
+  })
 
 
 //axios functions
   function getSales(){
-    axios.get("/sales")
+    userAxios.get("/api/sales")
       .then(res => setSales(res.data))
       .catch(err => console.log(err.response.data.errMsg))
   }
   function addSale(newSale){
-    axios.post("/sales", newSale)
+    userAxios.post("/api/sales", newSale)
       .then(res => {
         setSales(prevSales => [...prevSales, res.data])
       })
       .catch(err => console.log(err))
   }
   function deleteSale(saleId){
-    axios.delete(`/sales/${saleId}`)
+    userAxios.delete(`/api/sales/${saleId}`)
       .then(res => {
         setSales(prevSales => prevSales.filter(sale => sale._id !== saleId))
       })
       .catch(err => console.log(err))
   }
   function editSale(updates, saleId){
-    axios.put(`/sales/${saleId}`, updates)
+    userAxios.put(`/api/sales/${saleId}`, updates)
       .then(res => {
         setSales(prevSales => prevSales.map(sale => sale._id !== saleId ? sale : res.data))
       })
@@ -133,14 +140,12 @@ const dropdownDates = mappedDates.map((sale) => <option value={sale}>{sale}</opt
           :
           <></>
         }
-        { viewAdd ? 
+        { viewAdd && 
               <AddDataForm 
                   addSale={addSale}
                   viewAdd={viewAdd}
                   setViewAdd={setViewAdd}
               />
-              :
-              <></>
             }
           { viewChart ? 
             <></>
