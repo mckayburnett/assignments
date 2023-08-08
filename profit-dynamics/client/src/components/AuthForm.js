@@ -24,7 +24,7 @@ export default function AuthForm(props){
                 placeholder="Password"
             />
         </label>
-      <button className="signUpIn">{ btnText }</button>
+      <button>{ btnText }</button>
       <p className="member" onClick={() => setToggle(!toggle)}>{memberText}</p>
     </form>
   )
