@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import UserProvider from '../context/UserProvider.js'
+import { UserContext } from '../context/UserProvider.js'
 
 export default function Navbar(props){
   
-    const { logout } = useContext(UserProvider)
+    const { logout } = useContext(UserContext)
 
   return (
     <>
