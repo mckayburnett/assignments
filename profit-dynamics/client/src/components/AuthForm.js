@@ -12,7 +12,7 @@ export default function AuthForm(props){
   } = props
   
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="authForm">
       <input 
         type="text" 
         value={email} 
