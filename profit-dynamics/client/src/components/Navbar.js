@@ -8,8 +8,10 @@ export default function Navbar(props){
 
   return (
     <div className="navbar">
-      <Link to="/" className="navHome">Home</Link>
-      <Link to="/sales" className="navSales">Sales</Link>
+      <div className="links">  
+        <Link to="/" className="navHome" onClick={ logout }>Home</Link>
+        <Link to="/sales" className="navSales">Sales</Link>
+      </div>  
       <h1 className="navLog" onClick={ logout }>Logout</h1>
     </div> 
   )

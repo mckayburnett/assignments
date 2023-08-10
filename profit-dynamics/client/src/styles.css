@@ -49,6 +49,61 @@ img{
 .signOutLink:link{
   text-decoration: none;
 }
+
+/*nvabar*/
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100;
+  padding: 0px 10px 0px 10px
+}
+.links{
+  align-self: center;
+  margin: 30px;
+}
+.navHome{
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: x-large;
+  align-self: center;
+  border: 1px whitesmoke solid;
+  padding: 10px;
+  border-radius: 10px;
+}
+.navHome:hover{
+  background-color: rgb(27, 120, 39);
+}
+.navSales{
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: x-large;
+  align-self: center;
+  margin-left: 50px;
+  border: 1px whitesmoke solid;
+  padding: 10px;
+  border-radius: 10px;
+}
+.navSales:hover{
+  background-color: rgb(27, 120, 39);
+}
+.navLog{
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: x-large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100;
+  border: 1px whitesmoke solid;
+  padding: 10px;
+  align-self: center;
+  margin-right: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.navLog:hover{
+  background-color: rgb(27, 120, 39);
+}
+
 /*home page*/
 .homeBackground{
   width: 100vw;
