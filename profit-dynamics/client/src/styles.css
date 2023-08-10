@@ -555,8 +555,15 @@ label {
 }
 .radioButtons{
   position: absolute;
-  left: -10px;
+  display: inline;
+  left: 10px;
   bottom: 25%;
+}
+.integer{
+  display: inline;
+}
+.percentage{
+  display: inline;
 }
 .closeButton{
   font-size: medium;
