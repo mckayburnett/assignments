@@ -8,7 +8,7 @@ export default function AuthForm(props){
     <form onSubmit={handleSubmit} className="authForm">
         <label>
             <input 
-                type="text" 
+                type="email" 
                 value={email} 
                 name="email" 
                 onChange={handleChange} 
