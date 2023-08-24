@@ -31,10 +31,10 @@ userSchema.pre("save", function(next){
         next()
     })
 })
-userSchema.methods.checkPassword = function(passwordAttempt, callback){
+userSchema.methods.checkPassword = function(passwordAttempt, callbakc){
     bcrypt.compare(passwordAttempt, this.password, (err, isMatch) => {
-        if(err) callback(err)
-        return callback(null, isMatch)
+        if(err) callbakc(err)
+        return callbakc(null, isMatch)
     })
 }
 userSchema.methods.withoutPassword = function(){
