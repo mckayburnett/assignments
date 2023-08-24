@@ -8,8 +8,6 @@ const { expressjwt } = require("express-jwt")
 app.use(express.json())
 app.use(morgan("dev"))
 
-
-mongoose.set("strictQuery", true)
 mongoose.connect("mongodb://localhost:27017/fake-data-db", () => console.log("connected to fake-data-db"))
 
 app.use("/auth", require("./routes/authRouter.js"))
@@ -24,10 +22,7 @@ app.use((err, req, res, next) => {
     return res.send({errMsg: err.message})
 })
 
-app.listen(3000, () => {
-    console.log("This server is running on port 3000")
+
+app.listen(9000, () => {
+    console.log("This server is running on port 9000")
 })
-
-// SZdIi8kS1sVNZGIr
-//mongodb+srv://mckayburnett:SZdIi8kS1sVNZGIr@cluster0.ybbepim.mongodb.net/
-

@@ -99,8 +99,8 @@ export default function ChartData(props){
                 <div className="customizeBox">Customization
                     <p className="line1">Line 1 Color</p>
                     <p className="line2">Line 2 Color</p>
-                    <input className="colors1" type='color' onChange={handleColor1} value={color1}></input>
-                    <input className="colors2" type='color' onChange={handleColor2} value={color2}></input>
+                    <input className="colors1" type='color' onChange={handleColor1} value="#ff0000"></input>
+                    <input className="colors2" type='color' onChange={handleColor2} value="#0000ff"></input>
                     <select className="chartType" onChange={handleChart}>
                         <option value="">--Chart Type--</option>
                         <option value="LineChart">Line Chart</option>
