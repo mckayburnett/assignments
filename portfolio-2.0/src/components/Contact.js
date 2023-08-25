@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { FaLinkedin } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 import { FaFileAlt } from "react-icons/fa"
-import resume from "../images/resume.png"
+import resume from "../images/myResume.png"
 
 const Contact = React.forwardRef((props, ref) => {
 
