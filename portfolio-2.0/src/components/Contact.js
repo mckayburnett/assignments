@@ -8,7 +8,7 @@ const Contact = React.forwardRef((props, ref) => {
 
     return(
         <div className="contactWrapper" id="contact" ref={ref}>
-            <form action="https://formsubmit.co/mckay.burnett.coding@gmail.com" method="POST">
+            <form action="43af040197c1ce1dc876bd606666812a" method="POST">
                 <h1 className="contactTitle">{`{"Say Hi."}`}</h1>
                 <input type="text" name="name" placeholder="First and Last Name" required />
                 <input type= "text" name="message" placeholder="Message" required />
