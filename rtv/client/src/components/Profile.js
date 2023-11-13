@@ -14,6 +14,7 @@ export default function Profile(){
     issues
   } = useContext(UserContext)
 
+  console.log(issues,"THIS IS THE TEST")
   return (
     <div className="profile">
       <h1><strong className="username">{username}'s</strong> Profile Page</h1>

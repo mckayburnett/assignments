@@ -64,4 +64,4 @@ const randomRange = () => {
     playerOne.print();
 }
 
-var intervalId = setInterval(randomRange, 1500)
+var intervalId = setInterval(randomRange, 100)

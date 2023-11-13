@@ -8,7 +8,7 @@ head.style.fontStyle = "bold";
 var subtitle = document.createElement("h3");
 header.append(subtitle);
 
-subtitle.innerHTML += '<span class= "name">McKay</span> wrote the JavaScript';
+subtitle.innerHTML = '<span class= "name">McKay</span> wrote the JavaScript';
 subtitle.style.textAlign= 'center';
 subtitle.style.fontSize= "medium";
 

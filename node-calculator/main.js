@@ -1,34 +1,30 @@
-const readlineSync = require("readline-sync");
+const readlineSync = require("readline-sync")
 
-function add() {
+function add(){
     return +num1 + +num2
-};
-function subtract() {
+}
+function subtract(){
     return num1 - num2
-};
-function multiply() {
+}
+function multiply(){
     return num1 * num2
-};
-function divide() {
+}
+function divide(){
     return num1 / num2
-};
+}
 
+const num1 = readlineSync.question("please enter your first number: ")
+const num2 = readlineSync.question("please enter your second number: ")
+const operation = readlineSync.question("please enter the operation to perform (add, subtract, multiply, divide):")
 
-
-const num1 = readlineSync.question("Please enter your first number: ");
-const num2 = readlineSync.question("Please enter your second number: ");
-const operation = readlineSync.question('Please enter the operation to perform (' + ['add', ' subtract', ' multiply', ' or divide): '])
-    switch (operation) {
-        case 'add':
-            console.log('The result is: ' + add())
-        break
-        case 'subtract':
-            console.log('The result is: ' + subtract())
-        break
-        case 'multiply':
-            console.log('The result is: ' + multiply())
-        break
-        case 'divide':
-            console.log('The result is: ' + divide())
-        break
-    };
+if(operation === "add"){
+    console.log("the result is: ", add())
+} else if(operation ==="subtract"){
+    console.log("the result is: ", subtract())
+} else if(operation === "multiply"){
+    console.log("the result is: ", multiply())
+} else if(operation === "divide"){
+    console.log("the result is: ", divide())
+} else{
+    console.log("operation not recognized, please start again and only use 'add', 'subtract', 'multiply', or 'divide'.")
+}
